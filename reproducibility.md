@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton, Arcus Education, Children's Hospital of Philadelphia
 email:    paytonk@chop.edu
-version:  0.0.1
+version:  0.0.2
 language: en
 narrator: US English Female
 comment:  Reproducibility is essential to scientific efforts.  Generalizability and data reuse are also important for the application and expansion of scientific inquiry. Technology can help achieve these goals.
@@ -17,7 +17,7 @@ border: 1px solid grey;">
 
 This module provides learners with an approachable introduction to research reproducibility, generalizability, and reuse, and how technical approaches can help.
 
-**Estimated time to completion**: 1 hour
+**Estimated time to completion**: 1 hour didactic instruction, 1 hour personal work.
 
 **Pre-requisites**: It is helpful if learners have conducted research, are familiar with peer-reviewed literature, and have experience using data and methods developed by other people.    
 
@@ -40,9 +40,24 @@ Your live session is facilitated by [Joy Payton](https://linkedin.com/in/joypayt
 Contents
 ========
 
-* [Reproducibility](#Reproducibility)
-* [Generalizability](#Generalizability)
+* [Concepts](#Concepts)
+  * [Reproducibility](#Reproducibility)
+  * [Generalizability](#Generalizability)
+  * [Reuse](#Reuse)
+  * [A Data Management and Sharing Snafu](#A-Data-Management-and-Sharing-Snafu)
+* [Tools for Better Practices](#Tools-for-Better-Practices)
+    * [Scripts](#Scripts)
+    * [Data management and metadata](#Data-management-and-metadata)]
+    * [Version Control](#Version-Control)
+    * [Dependency Management](#Dependency-Management)
+* [Additional Materials](#Additional-Materials)
+* [Homework](#Homework)
 
+## Concepts
+
+The concepts of **reproducibility**, **generalizability**, and **reuse** will frame the problem space that we'll describe in this module.  These concepts will be illustrated in a (charming if rage-inducing) YouTube video, *A Data Management and Sharing Snafu*.
+
+After exploring these concepts, we'll go over some methods to address these challenges, using technology.
 
 ### Reproducibility
 
@@ -90,14 +105,20 @@ The reuse of data and other research assets has numerous challenges.  You may ha
 * Data that is not well described or labeled, or is stored in a "supplemental materials" page without context
 * Overly strict informed consent documents that prevent researchers from reusing their own data or sharing it with colleagues
 
+Survey results from a recent poll conducted by Arcus librarians and archivists (experts in data reusability) appear to indicate that CHOP researchers generally want to make their data reusable, but believe that regulatory, ethical, or technical constraints prevent them from doing so.  Planning ahead for data reuse is an important part of experimental design, IRB interaction, subject consent, and documentation of data and methods.
+
+> Read more: Want to get a quick overview of some of the privacy practices that regulate responsible data sharing?  Check out this brief article: https://education.arcus.chop.edu/privacy-overview/
+
+
 ### A Data Management and Sharing Snafu
 
 This is an approachable and humorous introduction to the practical impact of poor research practices leading to downstream impact.  As you listen, try to identify problematic research practices which could have been prevented by more careful use of technology.  Which of these mistakes have you encountered personally?  Which have you committed?
 
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/66oNv_DJuPc?cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Tools for Better Practices
+
+Here we aim to provide a broad overview of how some tools can provide help for
 
 ### Scripts
 
@@ -127,9 +148,39 @@ It's easy to understand why many researchers prefer point-and-click over writing
 
 ### Data management and metadata
 
-Data management is a critical pain point for many data users.
+**Data management** includes the organization, annotation, and preservation of data and metadata related to your research or clinical project.
 
-### Version control
+Data management is a critical pain point for many data users.  What's the best way to wrangle the data files needed to carry out a project?  Should documents be stored in a common drive?  Using what kinds of subfolders?  How should researchers deal with emails that are sent back and forth between researchers to define a specific cohort?  How should analysts describe and how data is analyzed?  Even a small project organized by a single researcher can be complex, and when a team of several researchers and supporting staff are involved, individual data management practices can collide.  A few topics that fall under the category of data management include:
+
+* File naming standards for project files
+* The format in which data is collected, and where it is stored
+* How data is backed up and kept private
+* Where regulatory files such as protocols are kept
+* How processes and procedures are stored and kept up to date
+* Who has access to what assets and when that access expires
+
+Importantly, NIH will require data sharing & management plan for all grants starting Jan 2023, and it's worth practicing the skills for developing a robust plan.
+
+**Metadata** is, in its simplest definition, data about data. Some examples of metadata might include:
+
+* Who collected the data?
+* When was the data collected?
+* What units does the data use?
+* What kind of thing is the data measuring?
+* What are the expected values?
+* Are there any codes for specific cases (e.g. missing vs. unwilling to answer)?
+
+Metadata can be found in many places. Sometimes it's implicit, as when it appears in variable names.  The variable "weight_kg", for example, discloses both the measure and the units. Often metadata is found more fully explained in **data dictionaries** or **codebooks**, where variables in a dataset are described more completely. Sometimes metadata can be found almost in passing, mentioned in an abstract or in the methods section of a paper, or in some descriptive text that accompanies a data download or a figure.
+
+Creating useful metadata is a crucial step in reproducible science.  It's essential in helping run an efficient project involving multiple people, since helpful metadata can help reduce incorrect data collection, recording, and storage.  Metadata can help explain or contextualize some findings (e.g. when the time of day of a blood draw affects lab results).  It can also support the use, discovery, and access of data over time.
+
+Metadata can exist at various levels of a project. Some metadata is overarching and describes an entire project (e.g. the institution that oversaw the data collection), some metadata catalogs and classifies the tools or products of research like datasets, code files, and auxiliary files, while other metadata adheres to a specific data field (e.g. the make and model of a medical device that gave a certain measurement).  
+
+REDCap is one example of software that explicitly creates a data dictionary that includes information such as the name and description of a variable, the kind of input that can appear there (alphanumeric, numeric, email format, etc.), and whether a field could identify a subject or not.  
+
+> Discover:  Arcus has a team of librarians and archivists who have created materials to help CHOP scientists with data management.  See "Research Data Management Resources" at https://www.research.chop.edu/arcus/resources.  These materials tend to be very practical and can be used right away to improve data management!
+
+### Version Control
 
 Version control is the discipline of tracking changes to files in a way that captures important information such as who made the change and why.  It also allows for reversion to previous versions of a file.
 
@@ -137,13 +188,16 @@ Many of us use "home grown" version control systems, such as using file names to
 
 Technological solutions for version control have been around for decades, and one system in particular has won the bulk of the market share in version control -- **git**.  Git is free, open source version control software.  Part of the Clinical Decision Support rotation includes a brief training in the use of git, especially in the context of the use of GitHub software, which is used by many software and data workers because of how well it integrates with git and expands its capabilities by way of proprietary add-ons.
 
-### Dependencies
+### Dependency Management
 
 If you've ever created a slide show in one computer only to have it look terrible in another, you know the problem that dependencies can cause.  Dependencies are requirements such as (in our example) having fonts installed, having a default group of settings turned on, and having access to particular files.  Dependencies that are well-documented and understood will help make research more reproducible.  Dependencies that are undocumented or not known about will inevitably cause problems.  Sometimes it isn't clear whether something is a dependency (this value or program *must* be the same as what you used) or just a circumstance (you used a particular version of Python but there's no reason to think that previous or subsequent versions wouldn't work just as well).  For this reason, recording both known and possible dependencies is a helpful practice. Common dependencies in research and data analytics include:
 
 * Operating system: does your use of particular programs require the use of Microsoft Windows 10 or later?
 * Regional data formatting: does your analysis assume that decimal values use a period, not a comma, to set off the decimal value?
 * Program versions: did you conduct your analysis in R 3.6?  Have you tried it in 3.7?
+* Technical data formatting: does your analysis expect a .csv of data with specified columns holding certain measures?
+
+Dependency management is an approach that ideally makes it easy to determine the precise set of tools and inputs required by your analysis, provides examples where applicable, and potentially includes installation information or a file (like a Dockerfile) that includes the exact versions of code used in the original research, in order to create a container (e.g. a Docker container) that can perform the analysis under the original conditions.  At the very least, every analysis should contain information about what tools were used and which version of each was employed.
 
 ## Additional Materials
 
@@ -165,3 +219,11 @@ Among many other quotable moments, Oliver drives home the point of how research 
 >"In science, you don't just get to cherry-pick the parts that justify what what you were going to do anyway! ... And look, this is dangerous... that is what leads people to think that manmade climate change isn't real or that vaccines cause autism...."
 
 To watch this (intermittently NSFW) segment, [watch it directly in YouTube](https://www.youtube.com/watch?v=0Rnq1NpHdmw).
+
+## Homework
+
+Consider a project you have now or are considering as part of your fellowship.  This could be actual research or clinical quality improvement work, or even personal research (such as "determining the best place to move when I retire").  Assume that you need to be prepared to pass this work off to someone else and don't relish being barraged with daily emails asking questions about what you meant or how to interpret a value.  Start drawing / jotting down a data management plan that includes:
+
+* An overall template of what files will go in what folders, with some sample file names
+* A small data dictionary that captures a few important variables of interest
+* A plan for how to update documents -- which ones need to have all versions maintained, and which can be overwritten and old versions discarded?
