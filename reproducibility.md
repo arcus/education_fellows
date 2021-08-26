@@ -11,7 +11,8 @@ comment:  Reproducibility is essential to scientific efforts.  Generalizability 
 
 <div style="background-color:#e0ffe0;
 padding: 1em;
-border: 1px solid grey;">
+border: 1px solid grey;
+margin: 1em;">
 
 ## Overview
 
@@ -31,6 +32,7 @@ This module provides learners with an approachable introduction to research repr
 
 </div>
 
+
 Instructor Introduction
 =======
 
@@ -41,15 +43,17 @@ Contents
 ========
 
 * [Concepts](#Concepts)
+
   * [Reproducibility](#Reproducibility)
   * [Generalizability](#Generalizability)
   * [Reuse](#Reuse)
   * [A Data Management and Sharing Snafu](#A-Data-Management-and-Sharing-Snafu)
 * [Tools for Better Practices](#Tools-for-Better-Practices)
-    * [Scripts](#Scripts)
-    * [Data management and metadata](#Data-management-and-metadata)]
-    * [Version Control](#Version-Control)
-    * [Dependency Management](#Dependency-Management)
+
+  * [Scripts](#Scripts)
+  * [Data management and metadata](#Data-management-and-metadata)]
+  * [Version Control](#Version-Control)
+  * [Dependency Management](#Dependency-Management)
 * [Additional Materials](#Additional-Materials)
 * [Homework](#Homework)
 
@@ -63,7 +67,7 @@ After exploring these concepts, we'll go over some methods to address these chal
 
 ### Reproducibility
 
-You may hear the terms **"reproducibility"** and/or **"replicability"**.  Jargon varies by field and you may see either or both terms to refer to similar problems -- the inability to precisely redo analyses on original data or to carefully apply the original methods to new data.  Here, I follow what is becoming more customary and using the term "reproducible" to refer to both efforts.
+You may hear the terms **"reproducibility"** and/or **"replicability"**, depending on context.  Jargon varies by field and you may see either or both terms used to refer to similar goals: the ability to (1) precisely redo analyses on original data to confirm the original findings or (2) to carefully apply the original methods to new data to confirm findings in a different dataset.  Here, I follow what is becoming more customary and using the term "reproducible" to refer to both efforts.
 
 The **"reproducibility crisis"** refers to the problem in peer-reviewed research in which studies *cannot* be reproduced or replicated because of insufficient information, or in which studies *fail* to be reproduced or replicated because of preventable problems in the initial research.  This is problematic because it means wasted time and money, reduced public trust in science, unverifiable claims, and lost chances for scientific consensus.
 
@@ -197,7 +201,9 @@ Version control is the discipline of tracking changes to files in a way that cap
 
 Many of us use "home grown" version control systems, such as using file names to capture who most recently added comments to a grant proposal or the date of a particular data download.  The difficulty with this is that each member of a team or lab may use different file naming protocols, and within a few months, the number of files can proliferate wildly.  Collaborators may feel unsure about deleting old versions of files, and data and file hoarding leads to delays and confusion.
 
-Technological solutions for version control have been around for decades, and one system in particular has won the bulk of the market share in version control -- **git**.  Git is free, open source version control software.  Part of the Clinical Decision Support rotation includes a brief training in the use of git, especially in the context of the use of GitHub software, which is used by many software and data workers because of how well it integrates with git and expands its capabilities by way of proprietary add-ons.
+Technological solutions for version control have been around for decades, and one system in particular has won the bulk of the market share in version control -- **git**.  Git is free, open source version control software.  Part of the Clinical Decision Support rotation includes a brief training in the use of git, especially in the context of the use of **GitHub** software, which is used by many software and data workers because of how well it integrates with git and expands its capabilities by way of proprietary add-ons.
+
+Git and GitHub are distinct organizations with different products.  Git is a free, open-source version control system, and GitHub is a company that provides services to make it easier to use git for software development and related uses.  GitHub has free tier use as well as paid services.  At CHOP, we have an enterprise version of GitHub that is accessible only on the CHOP network.  Additionally, some CHOP users use GitHub.com, which is a public website run by GitHub.  Finally, many GitHub users find that the Github Desktop software is useful for using git.
 
 ### Dependency Management
 
@@ -233,8 +239,16 @@ To watch this (intermittently NSFW) segment, [watch it directly in YouTube](http
 
 ## Homework
 
-Consider a project you have now or are considering as part of your fellowship.  This could be actual research or clinical quality improvement work, or even personal research (such as "determining the best place to move when I retire").  Assume that you need to be prepared to pass this work off to someone else and don't relish being barraged with daily emails asking questions about what you meant or how to interpret a value.  Start drawing / jotting down a data management plan that includes:
+1.  Consider a project you have now or are considering as part of your fellowship.  This could be actual research or clinical quality improvement work, or even personal research (such as "determining the best place to move when I retire").  Assume that you need to be prepared to pass this work off to someone else and don't relish being barraged with daily emails asking questions about what you meant or how to interpret a value.  Start drawing / jotting down a data management plan that includes:
 
 * An overall template of what files will go in what folders, with some sample file names
 * A small data dictionary that captures a few important variables of interest
 * A plan for how to update documents -- which ones need to have all versions maintained, and which can be overwritten and old versions discarded?
+
+2.  If you don't already have GitHub accounts, please do the following:
+
+* While behind the CHOP firewall, log in to https://github.research.chop.edu and log in (upper right) using your typical CHOP credentials.
+* Navigate to https://github.com and create a new account (it's free).
+* Consider [downloading Github Desktop](https://desktop.github.com/)
+
+3.  Search online to compare the license costs of tools like Matlab, SAS, SPSS, and Stata.  Are these per-user costs?  
