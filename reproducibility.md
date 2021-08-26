@@ -7,7 +7,7 @@ narrator: US English Female
 comment:  Reproducibility is essential to scientific efforts.  Generalizability and data reuse are also important for the application and expansion of scientific inquiry. Technology can help achieve these goals.
 -->
 
-# Reproducibility, Generalizability, and Reuse
+# Reproducibility, Generalizability, and Reuse: How Technology Can Help
 
 <div style="background-color:#e0ffe0;
 padding: 1em;
@@ -55,11 +55,15 @@ Contents
 
 ## Concepts
 
-The concepts of **reproducibility**, **generalizability**, and **reuse** will frame the problem space that we'll describe in this module.  These concepts will be illustrated in a (charming if rage-inducing) YouTube video, *A Data Management and Sharing Snafu*.
+The concepts of **reproducibility**, **generalizability**, and **reuse** will frame the problem space that we'll describe in this module.  We'll define these terms and give some examples.  
+
+These concepts will be illustrated in a (charming if rage-inducing) YouTube video, *A Data Management and Sharing Snafu*.
 
 After exploring these concepts, we'll go over some methods to address these challenges, using technology.
 
 ### Reproducibility
+
+You may hear the terms **"reproducibility"** and/or **"replicability"**.  Jargon varies by field and you may see either or both terms to refer to similar problems -- the inability to precisely redo analyses on original data or to carefully apply the original methods to new data.  Here, I follow what is becoming more customary and using the term "reproducible" to refer to both efforts.
 
 The **"reproducibility crisis"** refers to the problem in peer-reviewed research in which studies *cannot* be reproduced or replicated because of insufficient information, or in which studies *fail* to be reproduced or replicated because of preventable problems in the initial research.  This is problematic because it means wasted time and money, reduced public trust in science, unverifiable claims, and lost chances for scientific consensus.
 
@@ -70,6 +74,10 @@ Examples of reproducibility problems exist at small and large scale:
 * Being unable to perform required computation because of reliance on expensive, deprecated, or proprietary software or hardware
 * Results that don't replicate due to poor statistical practices, such as "p-hacking", "HARKing", or multiple tests without correction
 
+If you've ever tried to replicate an analysis or study procedure from just the methods section of a paper, you probably experienced it as something like this (used with artist's permission):
+
+![Humorous illustration of "how to draw a horse"](img/horse.png)
+
 > Think about it: when have you been frustrated by a process or study that had poor reproducibility?  Have you ever put **yourself** in a bad situation because you didn't think ahead to how you'd need to replicate your actions?
 
 ### Generalizability
@@ -78,8 +86,11 @@ Research is **generalizable** if findings can be applied to a broad population.
 
 Historically, biomedical and social science research projects have struggled with generalizability due to unrepresentative data.  For example, the acronym **"WEIRD"** refers to the tendency of psychological studies to rely on subjects (often undergraduate students) who are disproportionately from **W**estern, **E**ducated, **I**ndustrialized, **R**ich, and **D**eveloped cultures -- cultures which, compared with the global population as a whole, are indeed weird.  
 
-> Read more: in 2010 Joseph Henrich and others published a brief in *Nature* coining "WEIRD" to describe skewed participation in psychological studies.  The citation below includes a link to this piece in Penn libraries. <br/><br/>
-> Henrich, Joseph, et al. "Most people are not WEIRD: to understand human psychology, behavioural scientists must stop doing most of their experiments on Westerners." *Nature*, vol. 466, no. 7302, 2010, p. 29. *Gale In Context: Science*, https://link.gale.com/apps/doc/A230766048/SCIC?u=upenn_main&sid=summon&xid=b438bdf6.
+> Read more: in 2010 Joseph Henrich and others published a brief in *Nature* coining "WEIRD" to describe skewed participation in psychological studies.  The citation below includes a link to this piece in Penn libraries.
+
+<div style = "margin-left: 40px; text-indent: -40px;">
+Henrich, Joseph, et al. "Most people are not WEIRD: to understand human psychology, behavioural scientists must stop doing most of their experiments on Westerners." *Nature*, vol. 466, no. 7302, 2010, p. 29. *Gale In Context: Science*, https://link.gale.com/apps/doc/A230766048/SCIC?u=upenn_main&sid=summon&xid=b438bdf6.
+</div>
 
 Until recently, many biomedical studies were conducted on disproportionately male populations and ignored disease presentation or pharmacodynamics in women and girls (or even female lab animals).  In 1993, the [NIH Revitalization Act](https://www.ncbi.nlm.nih.gov/books/NBK236531/) began requiring NIH-funded clinical research to include women as subjects.  Two decades later, Janine Clayton and Francis Collins wrote a pointed call to action, again in *Nature*, indicating that bench researchers had not willingly followed best practices and needed NIH to force them to use female animals and cells:
 
