@@ -78,9 +78,9 @@ Examples of reproducibility problems exist at small and large scale:
 * Being unable to perform required computation because of reliance on expensive, deprecated, or proprietary software or hardware
 * Results that don't replicate due to poor statistical practices, such as "p-hacking", "HARKing", or multiple tests without correction
 
-If you've ever tried to replicate an analysis or study procedure from just the methods section of a paper, you probably experienced it as something like this (used with artist's permission):
+![Humorous illustration of "how to draw a horse"](img/horse.png "Used with permission of artist.  Original at https://oktop.tumblr.com/post/15352780846")
+If you've ever tried to replicate an analysis or study procedure from just the methods section of a paper, you probably experienced it as something like this.
 
-![Humorous illustration of "how to draw a horse"](img/horse.png)
 
 > Think about it: when have you been frustrated by a process or study that had poor reproducibility?  Have you ever put **yourself** in a bad situation because you didn't think ahead to how you'd need to replicate your actions?
 
@@ -91,8 +91,7 @@ Research is **generalizable** if findings can be applied to a broad population.
 Historically, biomedical and social science research projects have struggled with generalizability due to unrepresentative data.  For example, the acronym **"WEIRD"** refers to the tendency of psychological studies to rely on subjects (often undergraduate students) who are disproportionately from **W**estern, **E**ducated, **I**ndustrialized, **R**ich, and **D**eveloped cultures -- cultures which, compared with the global population as a whole, are indeed weird.  
 
 > Read more: in 2010 Joseph Henrich and others published a brief in *Nature* coining "WEIRD" to describe skewed participation in psychological studies.  The citation below includes a link to this piece in Penn libraries.
-
-<div style = "margin-left: 40px; text-indent: -40px;">
+<div style = "margin-left: 40px; text-indent: -40px; font-size:0.8em;">
 Henrich, Joseph, et al. "Most people are not WEIRD: to understand human psychology, behavioural scientists must stop doing most of their experiments on Westerners." *Nature*, vol. 466, no. 7302, 2010, p. 29. *Gale In Context: Science*, https://link.gale.com/apps/doc/A230766048/SCIC?u=upenn_main&sid=summon&xid=b438bdf6.
 </div>
 
@@ -104,7 +103,7 @@ In early 2016, a policy requiring the consideration of sex as a biological varia
 
 > Listen to Janine Clayton speak about scientific rigor and female animal inclusion (5 minute listen): https://www.wbur.org/hereandnow/2014/05/20/nih-female-animals
 
-In wearable sensor and computer vision development, overwhelmingly white engineers using skewed samples have failed to realize that the optical sensors and computer vision algorithms they created may perform less well on dark skin. See, for example, https://www.statnews.com/2019/07/24/fitbit-accuracy-dark-skin/ and https://www.nytimes.com/2018/06/21/opinion/facial-analysis-technology-bias.html.
+In wearable sensor and computer vision development, engineers using skewed samples have failed to realize that the optical sensors and computer vision algorithms they created may perform less well on dark skin. See, for example, https://www.statnews.com/2019/07/24/fitbit-accuracy-dark-skin/ and https://www.nytimes.com/2018/06/21/opinion/facial-analysis-technology-bias.html.
 
 The challenge of generalizability is closely linked to reproducibility.  For example, a study that demonstrates the effectiveness of exercise to improve functioning in depressed suburban teenagers may not generalize to city-dwelling adults.  In order to gain broader generalizability, this promising experiment on a limited population should be reproduced in a broader or different population.  If the original study is difficult to reproduce, however, such broader application may prove impossible.
 
