@@ -80,7 +80,11 @@ If you've ever tried to replicate an analysis or study procedure from just the m
 
 ![Humorous illustration of "how to draw a horse"](img/horse.png)
 
-> Think about it: when have you been frustrated by a process or study that had poor reproducibility?  Have you ever put **yourself** in a bad situation because you didn't think ahead to how you'd need to replicate your actions?
+<div class = "hint">
+
+Think about it: when have you been frustrated by a process or study that had poor reproducibility?  Have you ever put **yourself** in a bad situation because you didn't think ahead to how you'd need to replicate your actions?
+
+</div>
 
 ### Generalizability
 
@@ -88,10 +92,18 @@ Research is **generalizable** if findings can be applied to a broad population.
 
 Historically, biomedical and social science research projects have struggled with generalizability due to unrepresentative data.  For example, the acronym **"WEIRD"** refers to the tendency of psychological studies to rely on subjects (often undergraduate students) who are disproportionately from **W**estern, **E**ducated, **I**ndustrialized, **R**ich, and **D**eveloped cultures -- cultures which, compared with the global population as a whole, are indeed weird.  
 
-> Read more: in 2010 Joseph Henrich and others published a brief in *Nature* coining "WEIRD" to describe skewed participation in psychological studies.  The citation below includes a link to this piece in Penn libraries.
+<div class = "hint">
+
+Read more: in 2010 Joseph Henrich and others published a brief in *Nature* coining "WEIRD" to describe skewed participation in psychological studies.  The citation below includes a link to this piece in Penn libraries.
+
 <div style = "margin-left: 40px; text-indent: -40px; font-size:0.8em;">
+
 Henrich, Joseph, et al. "Most people are not WEIRD: to understand human psychology, behavioural scientists must stop doing most of their experiments on Westerners." *Nature*, vol. 466, no. 7302, 2010, p. 29. *Gale In Context: Science*, https://link.gale.com/apps/doc/A230766048/SCIC?u=upenn_main&sid=summon&xid=b438bdf6.
+
 </div>
+
+</div>
+
 
 Until recently, many biomedical studies were conducted on disproportionately male populations and ignored disease presentation or pharmacodynamics in women and girls (or even female lab animals).  In 1993, the [NIH Revitalization Act](https://www.ncbi.nlm.nih.gov/books/NBK236531/) began requiring NIH-funded clinical research to include women as subjects.  Two decades later, Janine Clayton and Francis Collins wrote a pointed call to action, again in *Nature*, indicating that bench researchers had not willingly followed best practices and needed NIH to force them to use female animals and cells:
 
@@ -99,7 +111,11 @@ Until recently, many biomedical studies were conducted on disproportionately mal
 
 In early 2016, a policy requiring the consideration of sex as a biological variable (SABV) went into effect, and applications for NIH funding were required to comply with best practices related to sex-inclusive experimental design.  Progress in NIH's SABV efforts were [recently reported in a 2020 article](https://orwh.od.nih.gov/in-the-spotlight/all-articles/orwh-releases-progress-report-sex-biological-variable-policy).
 
-> Listen to Janine Clayton speak about scientific rigor and female animal inclusion (5 minute listen): https://www.wbur.org/hereandnow/2014/05/20/nih-female-animals
+<div class = "hint">
+
+Listen to Janine Clayton speak about scientific rigor and female animal inclusion (5 minute listen): https://www.wbur.org/hereandnow/2014/05/20/nih-female-animals
+
+</div>
 
 In wearable sensor and computer vision development, engineers using skewed samples have failed to realize that the optical sensors and computer vision algorithms they created may perform less well on dark skin. See, for example, https://www.statnews.com/2019/07/24/fitbit-accuracy-dark-skin/ and https://www.nytimes.com/2018/06/21/opinion/facial-analysis-technology-bias.html.
 
@@ -119,8 +135,11 @@ The reuse of data and other research assets has numerous challenges.  You may ha
 
 Survey results from a recent poll conducted by Arcus librarians and archivists (experts in data reusability) appear to indicate that CHOP researchers generally want to make their data reusable, but believe that regulatory, ethical, or technical constraints prevent them from doing so.  Planning ahead for data reuse is an important part of experimental design, IRB interaction, subject consent, and documentation of data and methods.
 
-> Read more: Want to get a quick overview of some of the privacy practices that regulate responsible data sharing?  Check out this brief article: https://education.arcus.chop.edu/privacy-overview/
+<div class = "hint">
 
+Read more: Want to get a quick overview of some of the privacy practices that regulate responsible data sharing?  Check out this brief article: https://education.arcus.chop.edu/privacy-overview/
+
+<div class = "hint">
 
 ### A Data Management and Sharing Snafu
 

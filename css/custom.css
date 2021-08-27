@@ -17,13 +17,17 @@ h2, h3, h4 {
   display: none;
 }
 
+.lia-quote{
+  position: relative;
+  padding-left: 5rem;
+}
 .lia-quote:before {
     display: block;
-    padding-left: 10px;
+    padding-left: 1rem;
     content: "\201C";
-    font-size: 80px;
+    font-size: 7rem;
     position: absolute;
-    left: -20px;
-    top: -20px;
-    color: #7a7a7a;
+    left: 0rem;
+    top: -1rem;
+    color: rgb(var(--color-text));
 }
