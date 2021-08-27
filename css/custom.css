@@ -3,16 +3,27 @@ h2, h3, h4 {
 }
 
 .hint {
-  background-color: #e0ffe0;
+  background-color: rgba(var(--color-highlight),.15);
   padding: 1em;
   border: 1px solid grey;
   margin: 1em;
 }
 
 .lia-variant-dark .hint {
-  color: rgb(75,75,75);
+  color: rgb(var(--color-text));
 }
 
 .lia-header {
   display: none;
+}
+
+.lia-quote:before {
+    display: block;
+    padding-left: 10px;
+    content: "\201C";
+    font-size: 80px;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    color: #7a7a7a;
 }

@@ -10,10 +10,7 @@ link:     https://cdn.jsdelivr.net/gh/arcus/education_fellows/css/custom.css
 
 # Reproducibility, Generalizability, and Reuse: How Technology Can Help
 
-<div style="background-color:#e0ffe0;
-padding: 1em;
-border: 1px solid grey;
-margin: 1em;">
+<div class = "hint">
 
 ## Overview
 
