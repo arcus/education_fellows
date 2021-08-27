@@ -1,0 +1,14 @@
+h2, h3, h4 {
+  margin: 1.5em 0em;
+}
+
+.hint {
+  background-color: #e0ffe0;
+  padding: 1em;
+  border: 1px solid grey;
+  margin: 1em;
+}
+
+.lia-variant-dark .hint {
+  color: black;
+}

@@ -36,7 +36,7 @@ This module provides learners with an approachable introduction to research repr
 Instructor Introduction
 =======
 
-Your live session is facilitated by [Joy Payton](https://linkedin.com/in/joypayton), who leads [data education efforts](https://education.arcus.chop.edu) within the [Arcus program](https://arcus.chop.edu) within the [Research Institute](https://www.research.chop.edu) of the [Children's Hospital of Philadelphia](https://www.chop.edu).
+Your live session is facilitated by [Joy Payton](https://linkedin.com/in/joypayton), who leads [data education efforts](https://education.arcus.chop.edu) within the [Arcus program](https://arcus.chop.edu), which is an initiative of the [Research Institute](https://www.research.chop.edu) of the [Children's Hospital of Philadelphia](https://www.chop.edu).
 
 
 Contents
@@ -78,9 +78,9 @@ Examples of reproducibility problems exist at small and large scale:
 * Being unable to perform required computation because of reliance on expensive, deprecated, or proprietary software or hardware
 * Results that don't replicate due to poor statistical practices, such as "p-hacking", "HARKing", or multiple tests without correction
 
-![Humorous illustration of "how to draw a horse"](img/horse.png "Used with permission of artist.  Original at https://oktop.tumblr.com/post/15352780846")
-If you've ever tried to replicate an analysis or study procedure from just the methods section of a paper, you probably experienced it as something like this.
+If you've ever tried to replicate an analysis or study procedure from just the methods section of a paper, you probably experienced it as something like this:
 
+![Humorous illustration of "how to draw a horse"](img/horse.png "Used with permission of artist.  Original at https://oktop.tumblr.com/post/15352780846")
 
 > Think about it: when have you been frustrated by a process or study that had poor reproducibility?  Have you ever put **yourself** in a bad situation because you didn't think ahead to how you'd need to replicate your actions?
 
@@ -155,9 +155,7 @@ We can contrast scripts with tools that don't record every step explicitly.  Exc
 It's worth considering the words of an archaeological team that wrote an article about reproducible research for a lay audience in a [2017 *Slate* article](https://slate.com/technology/2017/07/how-to-make-a-study-reproducible.html):
 
 >However, while many researchers do this work by pointing and clicking using off-the-shelf software, we tried as much as possible to write scripts in the R programming language.
-Pointing and clicking generally leaves no traces of important decisions made during data analysis. Mouse-driven analyses leave the researcher with a final result, but none of the steps to get that result is saved. This makes it difficult to retrace the steps of an analysis, and check the assumptions made by the researcher.
-...
-It's easy to understand why many researchers prefer point-and-click over writing scripts for their data analysis. Often that's what they were taught as students. It's hard work and time-consuming to learn new analysis tools among the pressures of teaching, applying for grants, doing fieldwork and writing publications. Despite these challenges, there is an accelerating shift away from point-and-click toward scripted analyses in many areas of science.
+Pointing and clicking generally leaves no traces of important decisions made during data analysis. Mouse-driven analyses leave the researcher with a final result, but none of the steps to get that result is saved. This makes it difficult to retrace the steps of an analysis, and check the assumptions made by the researcher. <br/> ... <br/>It's easy to understand why many researchers prefer point-and-click over writing scripts for their data analysis. Often that's what they were taught as students. It's hard work and time-consuming to learn new analysis tools among the pressures of teaching, applying for grants, doing fieldwork and writing publications. Despite these challenges, there is an accelerating shift away from point-and-click toward scripted analyses in many areas of science.
 
 
 ### Data management and metadata
@@ -238,7 +236,9 @@ To watch this (intermittently NSFW) segment, [watch it directly in YouTube](http
 
 ## Homework
 
-1.  Consider a project you have now or are considering as part of your fellowship.  This could be actual research or clinical quality improvement work, or even personal research (such as "determining the best place to move when I retire").  Assume that you need to be prepared to pass this work off to someone else and don't relish being barraged with daily emails asking questions about what you meant or how to interpret a value.  Start drawing / jotting down a data management plan that includes:
+1.  Consider a project you have now or are considering as part of your fellowship.  This could be actual research or clinical quality improvement work, or even personal research (such as "determining the best place to move when I retire").  
+
+Assume that you need to be prepared to pass this work off to someone else and don't relish being barraged with daily emails asking questions about what you meant or how to interpret a value.  Start drawing / jotting down a data management plan that includes:
 
 * An overall template of what files will go in what folders, with some sample file names
 * A small data dictionary that captures a few important variables of interest
@@ -251,3 +251,5 @@ To watch this (intermittently NSFW) segment, [watch it directly in YouTube](http
 * Consider [downloading Github Desktop](https://desktop.github.com/)
 
 3.  Search online to compare the license costs of tools like Matlab, SAS, SPSS, and Stata.  Are these per-user costs?  
+
+4.  
