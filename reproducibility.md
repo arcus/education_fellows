@@ -71,7 +71,16 @@ The **"reproducibility crisis"** refers to the problem in peer-reviewed research
 
 <div class = "hint" style = "align-items: center; display: flex;">
 
-<div style = "margin: 2rem; max-width: 50%"> If you've ever tried to replicate an analysis or study procedure from just the methods section of a paper, you probably experienced it as something like this! </div>
+<div style = "margin: 2rem; max-width: 50%"> If you've ever tried to replicate an analysis or study procedure from just the methods section of a paper, you probably experienced it as something like this!
+
+Providing vague methods that can't be easily reproduced can be a product of many factors, such as:
+
+* Preserving word count
+* Assuming that implicit steps will be understood by others
+* Feeling vulnerable about close scrutiny
+* Not having methods well documented
+
+ </div>
 
 <div style = "margin: 2rem; max-width: 50%; float:left;">
 ![Humorous illustration of "how to draw a horse"](img/horse.png)
@@ -79,12 +88,12 @@ The **"reproducibility crisis"** refers to the problem in peer-reviewed research
 
 </div>
 
-Examples of reproducibility problems exist at small and large scale:
+Examples of reproducibility problems exist at small and large scale.  Importantly, reproducibility affects not just interaction between collaborators (or rivals), but also between "current you" and "you six months ago".  Perhaps you have felt the impact of non-reproducible research:
 
 * Experiencing dread at trying to reproduce your own findings a few months after doing it the first time
 * Being stymied by a collaborator's cryptic notes that don't explain how to do a particular analysis step
 * Being unable to perform required computation because of reliance on expensive, deprecated, or proprietary software or hardware
-* Results that don't replicate due to poor statistical practices, such as "p-hacking", "HARKing", or multiple tests without correction
+* Results that don't replicate due to poor statistical practices, such as "p-hacking", "HARKing", convenient outlier selection, or multiple tests without correction
 
 
 <div class = "hint">
