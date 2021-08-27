@@ -71,15 +71,19 @@ The **"reproducibility crisis"** refers to the problem in peer-reviewed research
 
 <div class = "hint" style = "align-items: center; display: flex;">
 
-<div style = "margin: 2rem; max-width: 50%"> If you've ever tried to replicate an analysis or study procedure from just the methods section of a paper, you probably experienced it as something like this!
+<div style = "margin: 2rem; max-width: 50%"> If you've ever tried to replicate an analysis or study procedure from just the methods section of a paper, you probably experienced it as something like "drawing a horse" as shown here.
 
-Providing vague methods that can't be easily reproduced can be a product of many factors, such as:
+<br/><br/>
 
-* Preserving word count
+Providing vague methods that can't be easily reproduced can be a product of many factors influencing manuscript authors, such as:
+
+* Preserving word count for other sections
 * Assuming that implicit steps will be understood by others
 * Feeling vulnerable about close scrutiny
-* Not having methods well documented
+* Not having methods well documented to begin with
+* Obscuring practices that might prompt manuscript rejection or unfavorable review
 
+When describing a multi-step task that should be able to be carried out by others, explicit step by step instructions are key.
  </div>
 
 <div style = "margin: 2rem; max-width: 50%; float:left;">

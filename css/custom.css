@@ -13,11 +13,16 @@ h2, h3, h4 {
   display: none;
 }
 
+.lia_header_middle {
+  background: url(https://github.com/arcus/education_fellows/raw/main/img/chop-logo.svg);
+  background-repeat: no-repeat;
+}
+
 .lia-quote{
   position: relative;
   padding-left: 5rem;
   margin: 3rem 0rem;
-  
+
 }
 .lia-quote:before {
     display: block;
