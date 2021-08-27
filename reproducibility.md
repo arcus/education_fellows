@@ -5,7 +5,7 @@ version:  0.0.2
 language: en
 narrator: US English Female
 comment:  Reproducibility is essential to scientific efforts.  Generalizability and data reuse are also important for the application and expansion of scientific inquiry. Technology can help achieve these goals.
-link:     https://cdn.jsdelivr.net/gh/arcus/education_fellows/css/custom.css
+link:     https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/custom.css
 -->
 
 # Reproducibility, Generalizability, and Reuse: How Technology Can Help
