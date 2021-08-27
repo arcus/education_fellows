@@ -5,7 +5,7 @@ h2, h3, h4 {
 .hint {
   background-color: rgba(var(--color-highlight),.15);
   padding: 1em;
-  border: 1px solid grey;
+  border: 1px dashed rgba(var(--color-highlight));
   margin: 1em;
 }
 
