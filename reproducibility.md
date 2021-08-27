@@ -72,9 +72,11 @@ The **"reproducibility crisis"** refers to the problem in peer-reviewed research
 <div class = "hint" style = "display: flex;
             align-items: center;">
 
-<span style = "margin: 2rem;"> If you've ever tried to replicate an analysis or study procedure from just the methods section of a paper, you probably experienced it as something like this! </span>
+<div style = "margin: 2rem; max-width: 50%"> If you've ever tried to replicate an analysis or study procedure from just the methods section of a paper, you probably experienced it as something like this! </div>
 
+<div style = "margin: 2rem; max-width: 50%">
 ![Humorous illustration of "how to draw a horse"](img/horse.png)
+</div>
 
 </div>
 
