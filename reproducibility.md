@@ -69,14 +69,21 @@ You may hear the terms **"reproducibility"** and/or **"replicability"**, dependi
 
 The **"reproducibility crisis"** refers to the problem in peer-reviewed research in which studies *cannot* be reproduced or replicated because of insufficient information, or in which studies *fail* to be reproduced or replicated because of preventable problems in the initial research.  This is problematic because it means wasted time and money, reduced public trust in science, unverifiable claims, and lost chances for scientific consensus.
 
-<div class = "hint" style = "display: flex;
-            align-items: center;">
+<div class = "hint" style = "align-items: center;">
 
 <div style = "margin: 2rem; max-width: 50%"> If you've ever tried to replicate an analysis or study procedure from just the methods section of a paper, you probably experienced it as something like this! </div>
 
 <div style = "margin: 2rem; max-width: 50%">
 ![Humorous illustration of "how to draw a horse"](img/horse.png)
 </div>
+
+</div>
+
+<div class = "hint" style = "align-items: center;">
+
+
+![Humorous illustration of "how to draw a horse"](img/horse.png)
+If you've ever tried to replicate an analysis or study procedure from just the methods section of a paper, you probably experienced it as something like this!
 
 </div>
 
