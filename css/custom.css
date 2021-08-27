@@ -13,7 +13,7 @@ h2, h3, h4 {
   display: none;
 }
 
-.lia_header_middle {
+.lia-header__middle {
   background: url(https://github.com/arcus/education_fellows/raw/main/img/chop-logo.svg);
   background-repeat: no-repeat;
 }
@@ -28,6 +28,25 @@ h2, h3, h4 {
     display: block;
     padding-left: 1rem;
     content: "\201C";
+    font-size: 7rem;
+    position: absolute;
+    left: 0rem;
+    top: -1rem;
+    color: rgb(var(--color-highlight));
+}
+
+.question{
+  background-color: rgba(var(--lia-yellow),.15);
+  border: 1px solid rgba(var(--color-highlight));
+  position: relative;
+  padding: 1em 1em 1em 5rem;
+  margin: 3rem 0rem;
+
+}
+.question:before {
+    display: block;
+    padding-left: 1rem;
+    content: "?";
     font-size: 7rem;
     position: absolute;
     left: 0rem;

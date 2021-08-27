@@ -73,8 +73,6 @@ The **"reproducibility crisis"** refers to the problem in peer-reviewed research
 
 <div style = "margin: 2rem; max-width: 50%"> If you've ever tried to replicate an analysis or study procedure from just the methods section of a paper, you probably experienced it as something like "drawing a horse" as shown here.
 
-<br/><br/>
-
 Providing vague methods that can't be easily reproduced can be a product of many factors influencing manuscript authors, such as:
 
 * Preserving word count for other sections
@@ -100,7 +98,7 @@ Examples of reproducibility problems exist at small and large scale.  Importantl
 * Results that don't replicate due to poor statistical practices, such as "p-hacking", "HARKing", convenient outlier selection, or multiple tests without correction
 
 
-<div class = "hint">
+<div class = "question">
 
 Think about it: when have you been frustrated by a process or study that had poor reproducibility?  Have you ever put **yourself** in a bad situation because you didn't think ahead to how you'd need to replicate your actions?
 
@@ -124,8 +122,9 @@ Henrich, Joseph, et al. "Most people are not WEIRD: to understand human psycholo
 
 </div>
 
+Until recently, many biomedical studies were conducted on disproportionately male populations and ignored disease presentation or pharmacodynamics in women and girls (or even female lab animals).  In 1993, the [NIH Revitalization Act](https://www.ncbi.nlm.nih.gov/books/NBK236531/) began requiring NIH-funded clinical research to include women as subjects.  
 
-Until recently, many biomedical studies were conducted on disproportionately male populations and ignored disease presentation or pharmacodynamics in women and girls (or even female lab animals).  In 1993, the [NIH Revitalization Act](https://www.ncbi.nlm.nih.gov/books/NBK236531/) began requiring NIH-funded clinical research to include women as subjects.  Two decades later, Janine Clayton and Francis Collins wrote a pointed call to action, again in *Nature*, indicating that bench researchers had not willingly followed best practices and needed NIH to force them to use female animals and cells:
+This mandate did not require the same inclusivity in bench research, but NIH encouraged adoption of sex-balanced research outside of human subjects.  Two decades after the 1993 legislation, Janine Clayton and Francis Collins wrote a pointed call to action, again in *Nature*, indicating that bench researchers had not willingly followed best practices and needed NIH to force them to use female animals and cells:
 
 > There has not been a corresponding revolution in experimental design and analyses in cell and animal research — despite multiple calls to action. Publications often continue to neglect sex-based considerations and analyses in preclinical studies. Reviewers, for the most part, are not attuned to this failure. The over-reliance on male animals and cells in preclinical research obscures key sex differences that could guide clinical studies. And it might be harmful: women experience higher rates of adverse drug reactions than men do. Furthermore, inadequate inclusion of female cells and animals in experiments and inadequate analysis of data by sex may well contribute to the troubling rise of irreproducibility in preclinical biomedical research, which the NIH is now actively working to address.
 
@@ -133,7 +132,7 @@ In early 2016, a policy requiring the consideration of sex as a biological varia
 
 <div class = "hint">
 
-Listen to Janine Clayton speak about scientific rigor and female animal inclusion (5 minute listen): https://www.wbur.org/hereandnow/2014/05/20/nih-female-animals
+Listen to Janine Clayton speak about scientific rigor and female animal inclusion (5 minute listen): https://www.wbur.org/hereandnow/2014/05/20/nih-female-animals.
 
 </div>
 
@@ -142,6 +141,13 @@ In wearable sensor and computer vision development, engineers using skewed sampl
 The challenge of generalizability is closely linked to reproducibility.  For example, a study that demonstrates the effectiveness of exercise to improve functioning in depressed suburban teenagers may not generalize to city-dwelling adults.  In order to gain broader generalizability, this promising experiment on a limited population should be reproduced in a broader or different population.  If the original study is difficult to reproduce, however, such broader application may prove impossible.
 
 Technological solutions cannot correct recruitment bias or white overrepresentation in research personnel.  Careful use of technology can, however, add to research transparency and reproducibility and promote honest disclosure of challenges to generalizability.
+
+<div class = "question">
+
+How can research bias be quantified and disclosed using technology?  How can bias be reduced and generalizability improved in your research area?
+
+</div>
+
 
 ### Reuse
 
@@ -163,13 +169,22 @@ Read more: Want to get a quick overview of some of the privacy practices that re
 
 ### A Data Management and Sharing Snafu
 
-This is an approachable and humorous introduction to the practical impact of poor research practices leading to downstream impact.  As you listen, try to identify problematic research practices which could have been prevented by more careful use of technology.  Which of these mistakes have you encountered personally?  Which have you committed?
+This is an approachable and humorous introduction to the practical impact of poor research practices leading to downstream impact.  
+
+<div class = "question">
+
+As you listen to the video, try to identify problematic research practices which could have been prevented by more careful use of technology.  Which of these mistakes have you encountered personally?  Which have you committed?
+
+</div>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/66oNv_DJuPc?cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Tools for Better Practices
 
-Here we aim to provide a broad overview of how some tools can provide help for
+Here we aim to provide a broad overview of how some tools and practices (scripts, data management and metdata, version control, and dependency management) can ameliorate some of the challenges we've outlined earlier.  Technology alone cannot solve the reproducibility crisis, but tools can support researchers who are trying to apply rigor and clarity to their research efforts.
+
+Areas we won't cover here, but are critical to the consistent production of reproducible science, include researcher bias, research incentivization, publication bias, research culture, and more.
+
 
 ### Scripts
 
@@ -180,7 +195,7 @@ Here we aim to provide a broad overview of how some tools can provide help for
 * Reporting statistical characteristics (for example, finding quartiles, median values, or standard deviations)
 * Conducting statistical tests (e.g. ANOVA, two-sample t-tests, effect size)
 * Creating models (such as a linear or logistic model or a more complex machine learning algorithm like clustering or random forest classification)
-* Saving interim datasets (e.g. storing a "cleaned" version of data for use in later steps or creating a deidentified version of data)
+* Saving interim datasets (e.g. storing a "cleaned" version of data for use in later steps, or creating a deidentified version of data)
 * Creating data visualizations (such as boxplots, Q-Q plots, ROCs, and many more)
 * Communicating methods and findings in a step-by-step way (e.g. writing a methods section from within the steps of analysis)
 * And more....
