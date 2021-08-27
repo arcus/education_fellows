@@ -3,23 +3,21 @@ h2, h3, h4 {
 }
 
 .hint {
-  background-color: rgba(var(--color-highlight),.15);
+  background-color: rgba(var(--lia-success),.15);
   padding: 1em;
-  border: 1px dashed rgba(var(--color-highlight));
+  border: 2px dashed rgba(var(--color-highlight));
   margin: 1em;
 }
 
-.lia-variant-dark .hint {
-  color: rgb(var(--color-text));
-}
-
-.lia-header {
+.lia_header__logo {
   display: none;
 }
 
 .lia-quote{
   position: relative;
   padding-left: 5rem;
+  margin: 3rem 0rem;
+  
 }
 .lia-quote:before {
     display: block;
@@ -29,5 +27,5 @@ h2, h3, h4 {
     position: absolute;
     left: 0rem;
     top: -1rem;
-    color: rgb(var(--color-text));
+    color: rgb(var(--color-highlight));
 }
