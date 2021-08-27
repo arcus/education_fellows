@@ -206,8 +206,7 @@ We can contrast scripts with tools that don't record every step explicitly.  Exc
 
 It's worth considering the words of an archaeological team that wrote an article about reproducible research for a lay audience in a [2017 *Slate* article](https://slate.com/technology/2017/07/how-to-make-a-study-reproducible.html):
 
->However, while many researchers do this work by pointing and clicking using off-the-shelf software, we tried as much as possible to write scripts in the R programming language.
-Pointing and clicking generally leaves no traces of important decisions made during data analysis. Mouse-driven analyses leave the researcher with a final result, but none of the steps to get that result is saved. This makes it difficult to retrace the steps of an analysis, and check the assumptions made by the researcher. <br/> ... <br/>It's easy to understand why many researchers prefer point-and-click over writing scripts for their data analysis. Often that's what they were taught as students. It's hard work and time-consuming to learn new analysis tools among the pressures of teaching, applying for grants, doing fieldwork and writing publications. Despite these challenges, there is an accelerating shift away from point-and-click toward scripted analyses in many areas of science.
+>However, while many researchers do this work by pointing and clicking using off-the-shelf software, we tried as much as possible to write scripts in the R programming language.<br/><br/>Pointing and clicking generally leaves no traces of important decisions made during data analysis. Mouse-driven analyses leave the researcher with a final result, but none of the steps to get that result is saved. This makes it difficult to retrace the steps of an analysis, and check the assumptions made by the researcher. <br/><br/> ... <br/><br/>It's easy to understand why many researchers prefer point-and-click over writing scripts for their data analysis. Often that's what they were taught as students. It's hard work and time-consuming to learn new analysis tools among the pressures of teaching, applying for grants, doing fieldwork and writing publications. Despite these challenges, there is an accelerating shift away from point-and-click toward scripted analyses in many areas of science.
 
 
 ### Data management and metadata
@@ -242,7 +241,11 @@ Metadata can exist at various levels of a project. Some metadata is overarching 
 
 REDCap is one example of software that explicitly creates a data dictionary that includes information such as the name and description of a variable, the kind of input that can appear there (alphanumeric, numeric, email format, etc.), and whether a field could identify a subject or not.  
 
-> Discover:  Arcus has a team of librarians and archivists who have created materials to help CHOP scientists with data management.  See "Research Data Management Resources" at https://www.research.chop.edu/arcus/resources.  These materials tend to be very practical and can be used right away to improve data management!
+<div class = "hint">
+
+Discover:  Arcus has a team of librarians and archivists who have created materials to help CHOP scientists with data management.  See "Research Data Management Resources" at https://www.research.chop.edu/arcus/resources.  These materials tend to be very practical and can be used right away to improve data management!
+
+</div>
 
 ### Version Control
 
