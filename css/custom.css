@@ -10,5 +10,9 @@ h2, h3, h4 {
 }
 
 .lia-variant-dark .hint {
-  color: black;
+  color: rgb(75,75,75);
+}
+
+.lia-header {
+  display: none;
 }
