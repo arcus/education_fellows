@@ -86,6 +86,9 @@ When describing a multi-step task that should be able to be carried out by other
 
 <div style = "margin: 2rem; max-width: 50%; float:left;">
 ![Humorous illustration of "how to draw a horse"](img/horse.png)
+
+Courtesy of artist. [Original work](https://oktop.tumblr.com/post/15352780846)
+
 </div>
 
 </div>
@@ -307,4 +310,5 @@ Assume that you need to be prepared to pass this work off to someone else and do
 
 3.  Search online to compare the license costs of tools like Matlab, SAS, SPSS, and Stata.  Are these per-user costs?  
 
-4.  
+4.  "Why make that chart quickly in Excel when you could spend hours trying to make it in R?"  
+Ed Himelblau is a cartoonist and geneticist who has described his computational challenges in both prose and art in a recent [piece in *Nature*](https://www.nature.com/articles/d41586-021-01485-y).  Which of his drawings most resonates with how you feel when considering learning coding? 
