@@ -5,6 +5,7 @@ version:  0.0.2
 language: en
 narrator: US English Female
 comment:  Reproducibility is essential to scientific efforts.  Generalizability and data reuse are also important for the application and expansion of scientific inquiry. Technology can help achieve these goals.
+link:     https://cdn.jsdelivr.net/gh/arcus/education_fellows/css/custom.css
 -->
 
 # Reproducibility, Generalizability, and Reuse: How Technology Can Help
@@ -80,7 +81,7 @@ Examples of reproducibility problems exist at small and large scale:
 
 If you've ever tried to replicate an analysis or study procedure from just the methods section of a paper, you probably experienced it as something like this:
 
-![Humorous illustration of "how to draw a horse"](img/horse.png "Used with permission of artist.  Original at https://oktop.tumblr.com/post/15352780846")
+![Humorous illustration of "how to draw a horse"](img/horse.png)
 
 > Think about it: when have you been frustrated by a process or study that had poor reproducibility?  Have you ever put **yourself** in a bad situation because you didn't think ahead to how you'd need to replicate your actions?
 
