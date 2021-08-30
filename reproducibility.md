@@ -258,7 +258,11 @@ Many of us use "home grown" version control systems, such as using file names to
 
 Technological solutions for version control have been around for decades, and one system in particular has won the bulk of the market share in version control -- **git**.  Git is free, open source version control software.  Part of the Clinical Decision Support rotation includes a brief training in the use of git, especially in the context of the use of **GitHub** software, which is used by many software and data workers because of how well it integrates with git and expands its capabilities by way of proprietary add-ons.
 
+<div style = "margin: 2rem auto; max-width: 50%;">
+
 ![XKCD Cartoon](img/git_commit_2x.png)
+
+</div>
 
 (Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1296.)
 
