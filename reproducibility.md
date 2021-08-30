@@ -258,7 +258,11 @@ Many of us use "home grown" version control systems, such as using file names to
 
 Technological solutions for version control have been around for decades, and one system in particular has won the bulk of the market share in version control -- **git**.  Git is free, open source version control software.  Part of the Clinical Decision Support rotation includes a brief training in the use of git, especially in the context of the use of **GitHub** software, which is used by many software and data workers because of how well it integrates with git and expands its capabilities by way of proprietary add-ons.
 
-Git and GitHub are distinct organizations with different products.  Git is a free, open-source version control system, and GitHub is a company that provides services to make it easier to use git for software development and related uses.  GitHub has free tier use as well as paid services.  At CHOP, we have an enterprise version of GitHub that is accessible only on the CHOP network.  Additionally, some CHOP users use GitHub.com, which is a public website run by GitHub.  Finally, many GitHub users find that the Github Desktop software is useful for using git.
+![XKCD Cartoon](img/git_commit_2x.png)
+
+(Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1296.)
+
+Git and GitHub are distinct organizations with different products.  Git is a free, open-source version control system, and GitHub is a company that provides services to make it easier to use git for software development and related uses.  GitHub has free tier use as well as paid services.  At CHOP, we have an enterprise version of GitHub that is accessible only on the CHOP network.  Additionally, some CHOP users use GitHub.com, which is a public website run by GitHub.  Finally, many GitHub users find that the [GitHub Desktop](https://desktop.github.com/) software is useful for using git.
 
 ### Dependency Management
 
@@ -275,7 +279,9 @@ Dependency management is an approach that ideally makes it easy to determine the
 
 Non-technical tools that you'll need along the way include a tolerance for ambiguity, the willingness to be a beginner, and practiced rebuttals to the self-critic / impostor syndrome.
 
-The tools we're describing here are often complex and are used differently by different constituencies.  It can be intimidating to learn how to use git, for example, from people who work in large software development teams.  Users like this have years of experience with established project management "milestones", each tied to a "sprint" with "issues" that link to "commits" and specific naming conventions for each "branch", along with demands to "always squash and merge!".  
+The tools we're describing here are often complex and are used differently by different constituencies.  It can be intimidating to learn how to use git, for example, from people who work in large software development teams.  Users like this have years of experience with established **agile** project management practices.  They may refer to **milestones**, each related to one or more **sprints**.  They may use short acronyms (**LGTM!**) within **issues**, including linking to **commits**, and have specific naming conventions for each **branch**, along with demands to "always **squash and merge**!".  Teams with established norms may make inside jokes or references that make it seem like any mistake or deviation from procedure is a huge problem.
+
+Do ***you*** have to learn all of this?  What's centrally important, and what's optional or ancillary?  It can be daunting even to simply get started when you run into scenarios like this one.
 
 Jargon abounds in the tech field, and unfortunately, so does **gatekeeping.**
 
@@ -284,6 +290,10 @@ By gatekeeping, we mean that with or without intent, some people with greater te
 * Using lots of TLAs (Three Letter Acronyms) without context or explanation.
 * Snarky, unhelpful comments on Stack Overflow when a new user poses a question that doesn't meet the standards of a well-crafted, reproducible example.
 * Condescension which can mask insecurity, with words like "well, clearly you should..." or "oh, just...", which add nothing to the conversation except a display of dominance.
+
+![XKCD Cartoon](img/ten_thousand_2x.png)
+
+(Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1053.)
 
 As learners, we ask that you build your core competencies and non-technical skills by:
 
