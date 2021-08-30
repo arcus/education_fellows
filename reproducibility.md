@@ -346,6 +346,7 @@ Assume that you need to be prepared to pass this work off to someone else and do
 * While behind the CHOP firewall, log in to https://github.research.chop.edu and log in (upper right) using your typical CHOP credentials.
 * Navigate to https://github.com and create a new account (it's free).
 * Consider [downloading Github Desktop](https://desktop.github.com/)
+* Check out [the GitHub repo that contains this educational material](https://github.com/arcus/education_fellows).  Check out the **[commit history](https://github.com/arcus/education_fellows/commits/main)**.  Pick one commit and see if you can figure out what changed, by whom, when, and why.
 
 3.  Search online to compare the license costs of tools like Matlab, SAS, SPSS, and Stata.  Are these per-user costs?  
 
