@@ -256,17 +256,19 @@ Version control is the discipline of tracking changes to files in a way that cap
 
 Many of us use "home grown" version control systems, such as using file names to capture who most recently added comments to a grant proposal or the date of a particular data download.  The difficulty with this is that each member of a team or lab may use different file naming protocols, and within a few months, the number of files can proliferate wildly.  Collaborators may feel unsure about deleting old versions of files, and data and file hoarding leads to delays and confusion.
 
-Technological solutions for version control have been around for decades, and one system in particular has won the bulk of the market share in version control -- **git**.  Git is free, open source version control software.  Part of the Clinical Decision Support rotation includes a brief training in the use of git, especially in the context of the use of **GitHub** software, which is used by many software and data workers because of how well it integrates with git and expands its capabilities by way of proprietary add-ons.
+Technological solutions for version control have been around for decades, and one system in particular has won the bulk of the market share in version control -- **git**.  Git is free, open source version control software.  Part of the Clinical Decision Support rotation includes a brief training in the use of git, especially in the context of the use of **GitHub** software, which is used by many software and data workers because of how well it integrates with git and expands its capabilities by way of proprietary add-ons.  
 
-<div style = "margin: 2rem auto; max-width: 50%;">
+We won't go into details at this point but one of the helpful aspects of git is that it allows you to see what changed, when, and by whom, in your files, along with a helpful (we hope) comment describing the change.  See below for a humorous interpretation (which isn't that far off the mark).
+
+<div style = "margin: 2rem auto; max-width: 50%; font-size:0.8em; align: center;">
 
 ![XKCD Cartoon](img/git_commit_2x.png)
 
-</div>
-
 (Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1296.)
 
-Git and GitHub are distinct organizations with different products.  Git is a free, open-source version control system, and GitHub is a company that provides services to make it easier to use git for software development and related uses.  GitHub has free tier use as well as paid services.  At CHOP, we have an enterprise version of GitHub that is accessible only on the CHOP network.  Additionally, some CHOP users use GitHub.com, which is a public website run by GitHub.  Finally, many GitHub users find that the [GitHub Desktop](https://desktop.github.com/) software is useful for using git.
+</div>
+
+Git and GitHub are distinct organizations with different products.  Git is a free, open-source version control system, and GitHub is a company that provides services to make it easier to use git for software development and related uses.  GitHub has free tier use as well as paid services.  At CHOP, we have an [enterprise version of GitHub](https://github.research.chop.edu) that is accessible only on the CHOP network.  Additionally, some CHOP users use [GitHub.com](https://github.com), which is a public website run by GitHub.  Finally, many git users find that the [GitHub Desktop](https://desktop.github.com/) software is useful for using git.
 
 ### Dependency Management
 
