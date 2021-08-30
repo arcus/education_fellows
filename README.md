@@ -35,4 +35,4 @@ Custom css is what allows us extra bells and whistles such as the CHOP Research 
 
 We could, however, use inline or block css within the markdown file itself.  Liascript [provides some examples](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaScript/docs/master/README.md#43) of how to do this.
 
-You can see examples of inline css embedded in <div> tags in [markdown.md](markdown.md), around where the "horse" cartoon appears.  Liascript seems to make some assumptions about image size and location that didn't work well for us, which is why we baked in some styling in that section just to make things explicit for Liascript.
+You can see examples of inline css embedded in <div> tags in [reproducibility.md](reproducibility.md), around where the "horse" cartoon appears.  Liascript seems to make some assumptions about image size and location that didn't work well for us, which is why we baked in some styling in that section just to make things explicit for Liascript.
