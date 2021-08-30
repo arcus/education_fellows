@@ -29,4 +29,10 @@ One solution is to use a CDN that re-packages GitHub contents for use in a web p
 
 Since CDNs generally have a refresh rate that doesn't meet the "let's try this really quickly" pace of development in GitHub, another option is to host your script in another publicly accessible location.  In our case, we've made use of the AWS S3 service to host a custom css file.  This means updating the S3 version of the file as well as the version hosted here, in this GitHub, but the extra headache is worth it.
 
-Custom css is what allows us extra bells and whistles such as the CHOP Research Institute logo, custom "question" and "hint" boxes and enhanced block quote sections.
+## CSS
+
+Custom css is what allows us extra bells and whistles such as the CHOP Research Institute logo, custom "question" and "hint" boxes and enhanced block quote sections.  We use a .css script hosted in AWS (but the source of which is stored here, in [css/custom.css](css/custom.css)).  
+
+We could, however, use inline or block css within the markdown file itself.  Liascript [provides some examples](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaScript/docs/master/README.md#43) of how to do this.
+
+You can see examples of inline css embedded in <div> tags in [markdown.md](markdown.md), around where the "horse" cartoon appears.  Liascript seems to make some assumptions about image size and location that didn't work well for us, which is why we baked in some styling in that section just to make things explicit for Liascript.
