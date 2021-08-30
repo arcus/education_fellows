@@ -271,6 +271,29 @@ If you've ever created a slide show in one computer only to have it look terribl
 
 Dependency management is an approach that ideally makes it easy to determine the precise set of tools and inputs required by your analysis, provides examples where applicable, and potentially includes installation information or a file (like a Dockerfile) that includes the exact versions of code used in the original research, in order to create a container (e.g. a Docker container) that can perform the analysis under the original conditions.  At the very least, every analysis should contain information about what tools were used and which version of each was employed.
 
+### Non-Technical Tools
+
+Non-technical tools that you'll need along the way include a tolerance for ambiguity, the willingness to be a beginner, and practiced rebuttals to the self-critic / impostor syndrome.
+
+The tools we're describing here are often complex and are used differently by different constituencies.  It can be intimidating to learn how to use git, for example, from people who work in large software development teams.  Users like this have years of experience with established project management "milestones", each tied to a "sprint" with "issues" that link to "commits" and specific naming conventions for each "branch", along with demands to "always squash and merge!".  
+
+Jargon abounds in the tech field, and unfortunately, so does **gatekeeping.**
+
+By gatekeeping, we mean that with or without intent, some people with greater technical experience can suggest that people with less experience don't belong or shouldn't participate.  This can take a lot of forms, such as:
+
+* Using lots of TLAs (Three Letter Acronyms) without context or explanation.
+* Snarky, unhelpful comments on Stack Overflow when a new user poses a question that doesn't meet the standards of a well-crafted, reproducible example.
+* Condescension which can mask insecurity, with words like "well, clearly you should..." or "oh, just...", which add nothing to the conversation except a display of dominance.
+
+As learners, we ask that you build your core competencies and non-technical skills by:
+
+* Asking instructors to repeat ourselves, spell terms and explicitate acronyms
+* Asking for help with self-education.  Ask your peers and instructors for additional resources as well as criteria for evaluating whether a page you found is useful or not
+* Calling out your instructors if we act as gatekeepers.  We were beginners once, too!
+* Pushing back on your inner critic.  You belong here.
+* Having a sense of humor around failing code.  Your instructors have to Google syntax, too!  
+* Becoming aware of the physical and psychological markers of fatigue, frustration, and the need for a break.
+
 ## Additional Materials
 
 ### John Oliver
