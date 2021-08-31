@@ -6,7 +6,8 @@ language: en
 narrator: US English Female
 comment:  Reproducibility is essential to scientific efforts.  Generalizability and data reuse are also important for the application and expansion of scientific inquiry. Technology can help achieve these goals.
 link:     https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/custom.css
-logo: https://raw.githubusercontent.com/arcus/education_fellows/main/img/favicon.ico
+logo: https://github.com/arcus/education_fellows/raw/main/img/chop-logo.svg
+icon: https://github.com/arcus/education_fellows/raw/main/img/favicon.ico
 -->
 
 # Reproducibility, Generalizability, and Reuse: How Technology Can Help
@@ -298,9 +299,13 @@ By gatekeeping, we mean that with or without intent, some people with greater te
 * Snarky, unhelpful comments on Stack Overflow when a new user poses a question that doesn't meet the standards of a well-crafted, reproducible example.
 * Condescension which can mask insecurity, with words like "well, clearly you should..." or "oh, just...", which add nothing to the conversation except a display of dominance.
 
+<div style = "margin: 2rem auto; max-width: 50%; font-size:0.8em; align: center;">
+
 ![XKCD Cartoon](img/ten_thousand_2x.png)
 
 (Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1053.)
+
+</div>
 
 As learners, we ask that you build your core competencies and non-technical skills by:
 
