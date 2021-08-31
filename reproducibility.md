@@ -9,8 +9,6 @@ link:     https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/
 logo: https://github.com/arcus/education_fellows/raw/main/img/chop-icon.png
 -->
 
-<link rel="icon" href="https://github.com/arcus/education_fellows/raw/main/img/favicon.ico" sizes="any">
-
 # Reproducibility, Generalizability, and Reuse: How Technology Can Help
 
 <div class = "hint">
