@@ -15,19 +15,21 @@ logo: https://github.com/arcus/education_fellows/raw/main/img/chop-icon.png
 
 ## Overview
 
-This module provides learners with an approachable introduction to research reproducibility, generalizability, and reuse, and how technical approaches can help.
+This module provides learners with an approachable introduction to the concepts and impact of **research reproducibility**, **generalizability**, and **data reuse**, and how technical approaches can help make these goals more attainable.
+
+**Is this module right for me?**: **If you currently conduct research or expect to in the future**, the concepts we talk about here are important to grasp.  This material will help you understand much of the current literature and debate around how research should be conducted, and will provide you with a starting point for understanding why some practices (like writing code, even for researchers who have never programmed a computer) are gaining traction in the research field.  **If research doesn't form part of your future plans, but you want to *use* research** (for example, as a clinician or public health official), this material will help you form criteria for what research to consider the most rigorous and useful and help you understand why science can seem to vacillate or be self-contradictory.
 
 **Estimated time to completion**: 1 hour didactic instruction, 1 hour personal work.
 
-**Pre-requisites**: It is helpful if learners have conducted research, are familiar with peer-reviewed literature, and have experience using data and methods developed by other people.    
+**Pre-requisites**: It is helpful if learners have conducted research, are familiar with -- by reading or writing -- peer-reviewed literature, and have experience using data and methods developed by other people.  There is no need to have any specific scientific or medical domain knowledge or technical background.    
 
 **Format**: This module uses text and video and is intended to accompany an in-person or otherwise synchronous presentation.  Materials contained here will allow for review after a live session.
 
 **Learning Objectives**:  After completion of this module, learners will be able to:
 
-* Explain the importance of reproducible methods
-* Give an example of a reproducible method in data acquisition and analysis
-* Give an example of a reproducible method in data management and metadata
+* Explain the importance of conducting research that is **reproducible** (can be re-done by a different, unaffiliated scientist)
+* Give an example of a data analysis method that helps research be more reproducible
+* Give an example of a method in the organization and description of documents, datasets, and other files that helps research be more reproducible
 
 </div>
 
@@ -41,6 +43,7 @@ Your live session is facilitated by [Joy Payton](https://linkedin.com/in/joypayt
 Contents
 ========
 
+* [Before We Get Started](#Before-We-Get-Started)
 * [Concepts](#Concepts)
 
   * [Reproducibility](#Reproducibility)
@@ -56,6 +59,46 @@ Contents
 * [Additional Materials](#Additional-Materials)
 * [Homework](#Homework)
 
+  * [John Oliver](#John-Oliver)
+  * [For Excel Users](#For-Excel-Users)
+  * [Mentioned in This Module](#Mentioned-in-This-Module)
+
+## Before We Get Started
+
+Non-technical tools that you'll need along the way, in this module and elsewhere, include a tolerance for ambiguity, the willingness to be a beginner, and practiced rebuttals to the self-critic / impostor syndrome.
+
+The tools we're describing in this material are often complex and are used differently by different constituencies.  It can be intimidating to learn how to use **git**, for example, from people who work in large software development teams.  Users like these have years of experience with established **agile** project management practices.  They may refer to **milestones**, each related to one or more **sprints**.  They may use short acronyms (**LGTM!**) within **issues**, including linking to **commits**, and have specific naming conventions for each **branch**, along with demands to "always **squash and merge**!".  Teams with established norms may make inside jokes or references that make it seem like any mistake or deviation from procedure is a huge problem.
+
+Do ***you*** have to learn all of this?  What's centrally important, and what's optional or ancillary?  It can be daunting even to simply get started when you run into scenarios like this one.
+
+Jargon abounds in the tech field, and unfortunately, so does **gatekeeping.**
+
+By gatekeeping, we mean that with or without intent, some people with greater technical experience can suggest that people with less experience don't belong or shouldn't participate.  This can take a lot of forms, such as:
+
+* Using lots of TLAs (Three Letter Acronyms) without context or explanation.
+* Snarky, unhelpful comments on Stack Overflow when a new user poses a question that doesn't meet the standards of a well-crafted, reproducible example.
+* Condescension which can mask insecurity, with words like "well, clearly you should..." or "oh, just...", which add nothing to the conversation except a display of dominance.
+
+We propose an approach that is more gate **opening** than gate **keeping** and includes positive regard such as delight at sharing knowledge.  We're not alone:
+
+<div style = "margin: 2rem auto; max-width: 50%; font-size:0.8em; align: center;">
+
+![XKCD Cartoon](img/ten_thousand_2x.png)
+
+(Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1053.)
+
+</div>
+
+As learners, we ask that you build your core competencies and non-technical skills by:
+
+* Asking instructors to repeat ourselves, spell terms and explicitate acronyms.
+* Asking for help with self-education.  Ask your peers and instructors for additional resources as well as criteria for evaluating whether a page you found is useful or not.
+* Calling out your instructors if we act as gatekeepers.  We were beginners once, too!
+* Pushing back on your inner critic.  You belong here.
+* Having a sense of humor around failing code.  Your instructors have to Google syntax, too!  
+* Becoming aware of the physical and psychological markers of fatigue, frustration, and the need for a break.
+* Recalling your own ability to master difficult material.  The fact that something feels staggeringly difficult today doesn't mean it will always be so challenging.
+
 ## Concepts
 
 The concepts of **reproducibility**, **generalizability**, and **reuse** will frame the problem space that we'll describe in this module.  We'll define these terms and give some examples.  
@@ -66,13 +109,13 @@ After exploring these concepts, we'll go over some methods to address these chal
 
 ### Reproducibility
 
-You may hear the terms **"reproducibility"** and/or **"replicability"**, depending on context.  Jargon varies by field and you may see either or both terms used to refer to similar goals: the ability to (1) precisely redo analyses on original data to confirm the original findings or (2) to carefully apply the original methods to new data to confirm findings in a different dataset.  Here, I follow what is becoming more customary and using the term "reproducible" to refer to both efforts.
+You may hear the terms **"reproducibility"** and/or **"replicability"**, depending on context.  Jargon varies by field and you may see either or both terms used to refer to similar goals: the ability to (1) precisely redo analyses on original data to check the original findings or (2) to carefully apply the original methods to new data to test findings in a different dataset.  Here, we usually follow what is becoming more customary and use the term "reproducible" to refer to both efforts.
 
 The **"reproducibility crisis"** refers to the problem in peer-reviewed research in which studies *cannot* be reproduced or replicated because of insufficient information, or in which studies *fail* to be reproduced or replicated because of preventable problems in the initial research.  This is problematic because it means wasted time and money, reduced public trust in science, unverifiable claims, and lost chances for scientific consensus.
 
 <div class = "hint" style = "align-items: center; display: flex;">
 
-<div style = "margin: 2rem; max-width: 50%"> If you've ever tried to replicate an analysis or study procedure from just the methods section of a paper, you probably experienced it as something like "drawing a horse" as shown here.
+<div style = "margin: 2rem; max-width: 50%"> If you've ever tried to reproduce an analysis or study procedure from just the methods section of a paper, you probably experienced it as something like "drawing a horse" as shown here.
 
 Providing vague methods that can't be easily reproduced can be a product of many factors influencing manuscript authors, such as:
 
@@ -94,13 +137,12 @@ Courtesy of artist. [Original work](https://oktop.tumblr.com/post/15352780846)
 
 </div>
 
-Examples of reproducibility problems exist at small and large scale.  Importantly, reproducibility affects not just interaction between collaborators (or rivals), but also between "current you" and "you six months ago".  Perhaps you have felt the impact of non-reproducible research:
+Examples of reproducibility problems exist at small and large scale.  Importantly, reproducibility affects not just interaction between scientific collaborators (or rivals), but also between "current you" and "you six months ago".  Perhaps you have felt the impact of non-reproducible research:
 
 * Experiencing dread at trying to reproduce your own findings a few months after doing it the first time
 * Being stymied by a collaborator's cryptic notes that don't explain how to do a particular analysis step
 * Being unable to perform required computation because of reliance on expensive, deprecated, or proprietary software or hardware
 * Results that don't replicate due to poor statistical practices, such as "p-hacking", "HARKing", convenient outlier selection, or multiple tests without correction
-
 
 <div class = "question">
 
@@ -126,13 +168,13 @@ Henrich, Joseph, et al. "Most people are not WEIRD: to understand human psycholo
 
 </div>
 
-Until recently, many biomedical studies were conducted on disproportionately male populations and ignored disease presentation or pharmacodynamics in women and girls (or even female lab animals).  In 1993, the [NIH Revitalization Act](https://www.ncbi.nlm.nih.gov/books/NBK236531/) began requiring NIH-funded clinical research to include women as subjects.  
+Until recently, many biomedical studies were conducted on disproportionately male populations and ignored disease presentation, physiology, and pharmacodynamics in women and girls (or even female lab animals).  In 1993, the [NIH Revitalization Act](https://www.ncbi.nlm.nih.gov/books/NBK236531/) began requiring NIH-funded clinical research to include women as subjects.  
 
-This mandate did not require the same inclusivity in bench research, but NIH encouraged adoption of sex-balanced research outside of human subjects.  Two decades after the 1993 legislation, Janine Clayton and Francis Collins wrote a pointed call to action, again in *Nature*, indicating that bench researchers had not willingly followed best practices and needed NIH to force them to use female animals and cells:
+This mandate did not require the same inclusivity in bench research, but NIH encouraged adoption of sex-balanced research outside of human subjects.  Two decades after the 1993 legislation, Janine Clayton and Francis Collins wrote a [pointed call to action in *Nature*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5101948/), indicating that bench researchers had not willingly followed best practices and that NIH apparently needed to require the use of female animals and cells:
 
 > There has not been a corresponding revolution in experimental design and analyses in cell and animal research — despite multiple calls to action. Publications often continue to neglect sex-based considerations and analyses in preclinical studies. Reviewers, for the most part, are not attuned to this failure. The over-reliance on male animals and cells in preclinical research obscures key sex differences that could guide clinical studies. And it might be harmful: women experience higher rates of adverse drug reactions than men do. Furthermore, inadequate inclusion of female cells and animals in experiments and inadequate analysis of data by sex may well contribute to the troubling rise of irreproducibility in preclinical biomedical research, which the NIH is now actively working to address.
 
-In early 2016, a policy requiring the consideration of sex as a biological variable (SABV) went into effect, and applications for NIH funding were required to comply with best practices related to sex-inclusive experimental design.  Progress in NIH's SABV efforts were [recently reported in a 2020 article](https://orwh.od.nih.gov/in-the-spotlight/all-articles/orwh-releases-progress-report-sex-biological-variable-policy).
+In early 2016, a policy requiring the consideration of sex as a biological variable (SABV) went into effect, and applications for NIH funding were required to comply with best practices related to sex-inclusive experimental design.  Progress in NIH's SABV efforts were [recently reported in a 2020 article](https://pubmed.ncbi.nlm.nih.gov/31971851/).
 
 <div class = "hint">
 
@@ -140,22 +182,22 @@ Listen to Janine Clayton speak about scientific rigor and female animal inclusio
 
 </div>
 
-In wearable sensor and computer vision development, engineers using skewed samples have failed to realize that the optical sensors and computer vision algorithms they created may perform less well on dark skin. See, for example, https://www.statnews.com/2019/07/24/fitbit-accuracy-dark-skin/ and https://www.nytimes.com/2018/06/21/opinion/facial-analysis-technology-bias.html.
+Human bias doesn't just lead to potentially misleading studies, but to potentially misleading research tools as well.  For example, in wearable sensor and computer vision development, engineers using skewed samples failed to realize that the optical sensors and computer vision algorithms they created may perform less well on dark skin. See, for example, https://www.statnews.com/2019/07/24/fitbit-accuracy-dark-skin/ and https://www.nytimes.com/2018/06/21/opinion/facial-analysis-technology-bias.html.
 
 The challenge of generalizability is closely linked to reproducibility.  For example, a study that demonstrates the effectiveness of exercise to improve functioning in depressed suburban teenagers may not generalize to city-dwelling adults.  In order to gain broader generalizability, this promising experiment on a limited population should be reproduced in a broader or different population.  If the original study is difficult to reproduce, however, such broader application may prove impossible.
 
-Technological solutions cannot correct recruitment bias or white overrepresentation in research personnel.  Careful use of technology can, however, add to research transparency and reproducibility and promote honest disclosure of challenges to generalizability.
+Technological solutions alone cannot correct human problems such as recruitment bias or white overrepresentation in research personnel.  Careful use of technology can, however, add to research transparency and reproducibility and promote honest disclosure of challenges to generalizability.
 
 <div class = "question">
 
-How can research bias be quantified and disclosed using technology?  How can bias be reduced and generalizability improved in your research area?
+Can research bias be quantified and disclosed using technology?  How can bias be reduced and generalizability improved in your research area?
 
 </div>
 
 
 ### Reuse
 
-In addition to reproducibility, another important element of research is the ability to reuse assets such as data and methods to related research that may not be a direct replication.  Researchers may hypothesize that a computer vision approach used to analyze moles might be useful as well in other areas of medicine that need edge detection, such as tumor classification.  Longitudinal data that provides rich phenotyping of a cohort of patients with hypermobility syndromes may be useful not just to the original orthopedic researcher community but also to cardiologists interested in comorbid vascular and ANS conditions.  Data reuse allows researchers to collaborate in ways that advance cross-domain knowledge and professional interaction, as well as honoring the time and energy of human subjects whose data can be leveraged to get as much scientific value as possible.
+In addition to reproducibility, another important element of research is the ability to **reuse** assets such as data and methods to related research that may not be a direct replication.  Researchers may hypothesize that a computer vision approach used to analyze moles might be useful as well in other areas of medicine that need edge detection, such as tumor classification.  Longitudinal data that provides rich phenotyping of a cohort of patients with hypermobility syndromes may be useful not just to the original orthopedic researcher community but also to cardiologists interested in comorbid vascular and ANS conditions.  The reuse of research data and methods allows researchers to collaborate in ways that advance cross-domain knowledge and professional interaction, as well as honoring the time and energy of human subjects whose data can be leveraged to get as much scientific value as possible.
 
 The reuse of data and other research assets has numerous challenges.  You may have experienced problems in this area such as:
 
@@ -163,7 +205,7 @@ The reuse of data and other research assets has numerous challenges.  You may ha
 * Data that is not well described or labeled, or is stored in a "supplemental materials" page without context
 * Overly strict informed consent documents that prevent researchers from reusing their own data or sharing it with colleagues
 
-Survey results from a recent poll conducted by Arcus librarians and archivists (experts in data reusability) appear to indicate that CHOP researchers generally want to make their data reusable, but believe that regulatory, ethical, or technical constraints prevent them from doing so.  Planning ahead for data reuse is an important part of experimental design, IRB interaction, subject consent, and documentation of data and methods.
+Survey results from a recent poll conducted by Arcus librarians and archivists (experts in data reusability) appear to indicate that CHOP researchers generally want to make their data reusable, but report (possibly incorrectly) that regulatory, ethical, or technical constraints prevent them from doing so.  Planning ahead for data reuse is an important part of grant writing, experimental design, IRB interaction, subject consent, and documentation of data and methods.
 
 <div class = "hint">
 
@@ -181,14 +223,13 @@ As you listen to the video, try to identify problematic research practices which
 
 </div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/66oNv_DJuPc?cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!?[A Data Management and Sharing Snafu](https://www.youtube.com/watch?v=66oNv_DJuPc?cc_load_policy=1)
 
 ## Tools for Better Practices
 
 Here we aim to provide a broad overview of how some tools and practices (scripts, data management and metdata, version control, and dependency management) can ameliorate some of the challenges we've outlined earlier.  Technology alone cannot solve the reproducibility crisis, but tools can support researchers who are trying to apply rigor and clarity to their research efforts.
 
-Areas we won't cover here, but are critical to the consistent production of reproducible science, include researcher bias, research incentivization, publication bias, research culture, and more.
-
+Areas we won't cover here, but are critical to the consistent production of reproducible science, include researcher bias, research incentivization, publication bias, research culture, mentorship, and more.  While we assert that proper use of technology is a **necessary** part of reproducible science, technology alone is not **sufficient**.
 
 ### Scripts
 
@@ -197,21 +238,20 @@ Areas we won't cover here, but are critical to the consistent production of repr
 * Ingesting data (for example, accessing a .csv file or downloading the latest data from REDCap)
 * Reshaping and cleaning data (such as removing rows that don't meet given conditions for completeness or correctness, combining data from two or more sources, or creating a new field using two or more existing fields)
 * Reporting statistical characteristics (for example, finding quartiles, median values, or standard deviations)
-* Conducting statistical tests (e.g. ANOVA, two-sample t-tests, effect size)
+* Conducting statistical tests (e.g. ANOVA, two-sample t-tests, Cohen's effect size)
 * Creating models (such as a linear or logistic model or a more complex machine learning algorithm like clustering or random forest classification)
 * Saving interim datasets (e.g. storing a "cleaned" version of data for use in later steps, or creating a deidentified version of data)
 * Creating data visualizations (such as boxplots, Q-Q plots, ROCs, and many more)
 * Communicating methods and findings in a step-by-step way (e.g. writing a methods section from within the steps of analysis)
 * And more....
 
-Scripts may be written in free, open source tools like R, Python, Julia, and Octave, or, with care, can be extracted from commercial tools (such as a syntax file).  It's important to realize that good scripts are complete and don't rely on human memory of steps that aren't recorded in the script.  For example, using a point-and-click solution like Excel to clean data prior to analyzing it using code relies on human memory of what was done in Excel.  
+Scripts may be written in free, open source tools like R, Python, Julia, and Octave, or, with care, can be extracted from commercial tools (for instance, by using a syntax file).  It's important to realize that good scripts are complete and don't rely on human memory of steps that aren't recorded in the script.  For example, using a point-and-click solution like Excel to clean data prior to analyzing it using code relies on human memory of what was done in Excel.
 
-We can contrast scripts with tools that don't record every step explicitly.  Excel is one example we've already touched on.  You may also have been exposed to SAS, SPSS, and Stata, all of which have a point-and-click element as well as the possibility of scripted analysis.  However, most users of these tools depend on un-scripted actions such as cleaning data beforehand in a separate program and the use of point-and-click, menu driven selections.  For this reason, we suggest the use of R and Python for most research purposes.  These are widely used, well-documented and tested, and have a scientific and medical user base that is friendly for beginners.  Additionally, these tools are free and open-source, which allows for greater reproducibility, including in lower-resourced settings.
+We can contrast scripts with tools that don't record every step explicitly.  Excel is one example we've already touched on.  You may also have been exposed to SAS, SPSS, and Stata, all of which have a point-and-click element as well as the possibility of scripted analysis.  However, many users of these tools depend on un-scripted actions such as cleaning data beforehand in a separate program and the use of point-and-click, menu driven selections.  For this reason, we suggest the use of R and Python for most research purposes.  These are widely used, well-documented and tested, and have a scientific and medical user base that is friendly for beginners.  Additionally, these tools are free and open-source, which allows for greater reproducibility, including in lower-resourced settings.  However, learning these tools requires an investment of time and energy that can be difficult for a busy clinician or scientist to justify, especially when one has already developed considerable experience in point-and-click analysis.
 
 It's worth considering the words of an archaeological team that wrote an article about reproducible research for a lay audience in a [2017 *Slate* article](https://slate.com/technology/2017/07/how-to-make-a-study-reproducible.html):
 
 >However, while many researchers do this work by pointing and clicking using off-the-shelf software, we tried as much as possible to write scripts in the R programming language.<br/><br/>Pointing and clicking generally leaves no traces of important decisions made during data analysis. Mouse-driven analyses leave the researcher with a final result, but none of the steps to get that result is saved. This makes it difficult to retrace the steps of an analysis, and check the assumptions made by the researcher. <br/><br/> ... <br/><br/>It's easy to understand why many researchers prefer point-and-click over writing scripts for their data analysis. Often that's what they were taught as students. It's hard work and time-consuming to learn new analysis tools among the pressures of teaching, applying for grants, doing fieldwork and writing publications. Despite these challenges, there is an accelerating shift away from point-and-click toward scripted analyses in many areas of science.
-
 
 ### Data management and metadata
 
@@ -235,13 +275,13 @@ Importantly, NIH will require data sharing & management plan for all grants star
 * What units does the data use?
 * What kind of thing is the data measuring?
 * What are the expected values?
-* Are there any codes for specific cases (e.g. missing vs. unwilling to answer)?
+* Are there any codes for specific cases (e.g. missing vs. unwilling to answer vs. does not apply)?
 
 Metadata can be found in many places. Sometimes it's implicit, as when it appears in variable names.  The variable "weight_kg", for example, discloses both the measure and the units. Often metadata is found more fully explained in **data dictionaries** or **codebooks**, where variables in a dataset are described more completely. Sometimes metadata can be found almost in passing, mentioned in an abstract or in the methods section of a paper, or in some descriptive text that accompanies a data download or a figure.
 
 Creating useful metadata is a crucial step in reproducible science.  It's essential in helping run an efficient project involving multiple people, since helpful metadata can help reduce incorrect data collection, recording, and storage.  Metadata can help explain or contextualize some findings (e.g. when the time of day of a blood draw affects lab results).  It can also support the use, discovery, and access of data over time.
 
-Metadata can exist at various levels of a project. Some metadata is overarching and describes an entire project (e.g. the institution that oversaw the data collection), some metadata catalogs and classifies the tools or products of research like datasets, code files, and auxiliary files, while other metadata adheres to a specific data field (e.g. the make and model of a medical device that gave a certain measurement).  
+Metadata can exist at various levels of a project. For example, some metadata is overarching and describes an entire project (e.g. the institution that oversaw the data collection), while other metadata adheres to a specific data field (e.g. the make and model of a medical device that gave a certain measurement).  
 
 REDCap is one example of software that explicitly creates a data dictionary that includes information such as the name and description of a variable, the kind of input that can appear there (alphanumeric, numeric, email format, etc.), and whether a field could identify a subject or not.  
 
@@ -257,9 +297,9 @@ Version control is the discipline of tracking changes to files in a way that cap
 
 Many of us use "home grown" version control systems, such as using file names to capture who most recently added comments to a grant proposal or the date of a particular data download.  The difficulty with this is that each member of a team or lab may use different file naming protocols, and within a few months, the number of files can proliferate wildly.  Collaborators may feel unsure about deleting old versions of files, and data and file hoarding leads to delays and confusion.
 
-Technological solutions for version control have been around for decades, and one system in particular has won the bulk of the market share in version control -- **git**.  Git is free, open source version control software.  Part of the Clinical Decision Support rotation includes a brief training in the use of git, especially in the context of the use of **GitHub** software, which is used by many software and data workers because of how well it integrates with git and expands its capabilities by way of proprietary add-ons.  
+Technological solutions for version control have been around for decades, and one system in particular has won the bulk of the market share in version control -- **git**.  Git is free, open source version control software.  Part of the Clinical Decision Support rotation of the Clinical Informatics fellowship includes a brief training in the use of git, especially in the context of the use of **GitHub** software, which is used by many software and data workers because of how well it integrates with git and expands its capabilities by way of proprietary add-ons.  
 
-We won't go into details at this point but one of the helpful aspects of git is that it allows you to see what changed, when, and by whom, in your files, along with a helpful (we hope) comment describing the change.  See below for a humorous interpretation (which isn't that far off the mark).
+We won't go into details at this point, but one of the helpful aspects of git is that it allows you to see what changed, when, and by whom, in your files, along with a helpful (we hope) comment describing the change.  See below for a humorous interpretation (which isn't that far off the mark).
 
 <div style = "margin: 2rem auto; max-width: 50%; font-size:0.8em; align: center;">
 
@@ -269,51 +309,20 @@ We won't go into details at this point but one of the helpful aspects of git is 
 
 </div>
 
-Git and GitHub are distinct organizations with different products.  Git is a free, open-source version control system, and GitHub is a company that provides services to make it easier to use git for software development and related uses.  GitHub has free tier use as well as paid services.  At CHOP, we have an [enterprise version of GitHub](https://github.research.chop.edu) that is accessible only on the CHOP network.  Additionally, some CHOP users use [GitHub.com](https://github.com), which is a public website run by GitHub.  Finally, many git users find that the [GitHub Desktop](https://desktop.github.com/) software is useful for using git.
+Git and GitHub are distinct organizations with different products.  Git is a free, open-source version control system, and GitHub is a company that provides services to make it easier to use git for software development and related uses.  GitHub has free tier use as well as paid services.  At CHOP, we have an [enterprise version of GitHub](https://github.research.chop.edu) that is accessible only on the CHOP network.  Additionally, some CHOP users use [GitHub.com](https://github.com), which is a public website run by GitHub.  Finally, many git users find that the [GitHub Desktop](https://desktop.github.com/) software is useful for working with git.
 
 ### Dependency Management
 
-If you've ever created a slide show in one computer only to have it look terrible in another, you know the problem that dependencies can cause.  Dependencies are requirements such as (in our example) having fonts installed, having a default group of settings turned on, and having access to particular files.  Dependencies that are well-documented and understood will help make research more reproducible.  Dependencies that are undocumented or not known about will inevitably cause problems.  Sometimes it isn't clear whether something is a dependency (this value or program *must* be the same as what you used) or just a circumstance (you used a particular version of Python but there's no reason to think that previous or subsequent versions wouldn't work just as well).  For this reason, recording both known and possible dependencies is a helpful practice. Common dependencies in research and data analytics include:
+If you've ever created a slide show in one computer only to have it look terrible in another, you know the problem that **dependencies** can cause.  Dependencies are requirements such as (in our slide show example) having the same fonts installed, having a default group of settings turned on, having the same verison of PowerPoint or other software running, and having access to particular image or sound files.  Dependencies that are well-documented and understood will help make research more reproducible.  Dependencies that are undocumented or not known about will inevitably cause problems.  Sometimes it isn't clear whether something is a hard dependency (this value or program *must* be the same as what you used) or just a circumstance (you used a particular version of Python but there's no reason to think that previous or subsequent versions wouldn't work just as well).  For this reason, recording both known and possible dependencies is a helpful practice. Common dependencies in research and data analytics include:
 
-* Operating system: does your use of particular programs require the use of Microsoft Windows 10 or later?
+* Operating system: does your use of particular software require the use of Microsoft Windows 10 or later?
 * Regional data formatting: does your analysis assume that decimal values use a period, not a comma, to set off the decimal value?
 * Program versions: did you conduct your analysis in R 3.6?  Have you tried it in 3.7?
 * Technical data formatting: does your analysis expect a .csv of data with specified columns holding certain measures?
+* Access to reference files: are you aligning to hg38 or to a previous reference genome?
+* Hardware requirements: does your research paradigm require a particular kind of hardware for generating stimuli or recording response?
 
-Dependency management is an approach that ideally makes it easy to determine the precise set of tools and inputs required by your analysis, provides examples where applicable, and potentially includes installation information or a file (like a Dockerfile) that includes the exact versions of code used in the original research, in order to create a container (e.g. a Docker container) that can perform the analysis under the original conditions.  At the very least, every analysis should contain information about what tools were used and which version of each was employed.
-
-### Non-Technical Tools
-
-Non-technical tools that you'll need along the way include a tolerance for ambiguity, the willingness to be a beginner, and practiced rebuttals to the self-critic / impostor syndrome.
-
-The tools we're describing here are often complex and are used differently by different constituencies.  It can be intimidating to learn how to use git, for example, from people who work in large software development teams.  Users like this have years of experience with established **agile** project management practices.  They may refer to **milestones**, each related to one or more **sprints**.  They may use short acronyms (**LGTM!**) within **issues**, including linking to **commits**, and have specific naming conventions for each **branch**, along with demands to "always **squash and merge**!".  Teams with established norms may make inside jokes or references that make it seem like any mistake or deviation from procedure is a huge problem.
-
-Do ***you*** have to learn all of this?  What's centrally important, and what's optional or ancillary?  It can be daunting even to simply get started when you run into scenarios like this one.
-
-Jargon abounds in the tech field, and unfortunately, so does **gatekeeping.**
-
-By gatekeeping, we mean that with or without intent, some people with greater technical experience can suggest that people with less experience don't belong or shouldn't participate.  This can take a lot of forms, such as:
-
-* Using lots of TLAs (Three Letter Acronyms) without context or explanation.
-* Snarky, unhelpful comments on Stack Overflow when a new user poses a question that doesn't meet the standards of a well-crafted, reproducible example.
-* Condescension which can mask insecurity, with words like "well, clearly you should..." or "oh, just...", which add nothing to the conversation except a display of dominance.
-
-<div style = "margin: 2rem auto; max-width: 50%; font-size:0.8em; align: center;">
-
-![XKCD Cartoon](img/ten_thousand_2x.png)
-
-(Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1053.)
-
-</div>
-
-As learners, we ask that you build your core competencies and non-technical skills by:
-
-* Asking instructors to repeat ourselves, spell terms and explicitate acronyms
-* Asking for help with self-education.  Ask your peers and instructors for additional resources as well as criteria for evaluating whether a page you found is useful or not
-* Calling out your instructors if we act as gatekeepers.  We were beginners once, too!
-* Pushing back on your inner critic.  You belong here.
-* Having a sense of humor around failing code.  Your instructors have to Google syntax, too!  
-* Becoming aware of the physical and psychological markers of fatigue, frustration, and the need for a break.
+Dependency management is an approach that makes it easier to determine the precise set of tools and inputs required by your data collection and analysis.  Every research effort should document which tools were used and which version of each was employed.  This can be as simple as a text file, or could include installation instructions or even a file that includes the exact versions of software used in the original research, in order to create a computer environment that can perform the analysis under the original conditions.
 
 ## Additional Materials
 
@@ -336,11 +345,33 @@ Among many other quotable moments, Oliver drives home the point of how research 
 
 To watch this (intermittently NSFW) segment, [watch it directly in YouTube](https://www.youtube.com/watch?v=0Rnq1NpHdmw).
 
+### For Excel Users
+
+* An Arcus educator shares some harm reduction techniques for Excel users: https://education.arcus.chop.edu/excel-caveats/
+* A former user of Excel shares why he's moved on to using scripted code and gives helpful hints to those still using Excel: https://education.arcus.chop.edu/the-spreadsheet-betrayal/
+
+### Mentioned in This Module
+
+* [How to Draw a Horse](https://oktop.tumblr.com/post/15352780846)
+* [Henrich, Joseph, et al. "Most people are not WEIRD: to understand human psychology, behavioural scientists must stop doing most of their experiments on Westerners."](https://link.gale.com/apps/doc/A230766048/SCIC?u=upenn_main&sid=summon&xid=b438bdf6)
+* [NIH Revitalization Act](https://www.ncbi.nlm.nih.gov/books/NBK236531/)
+* [NIH to balance sex in cell and animal studies](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5101948/)
+* [Sex as a Biological Variable: A 5-Year Progress Report and Call to Action](https://pubmed.ncbi.nlm.nih.gov/31971851/)
+* [NIH: Scientists Must Include Female Animals In Testing](https://www.wbur.org/hereandnow/2014/05/20/nih-female-animals)
+* [Fitbits and other wearables may not accurately track heart rates in people of color](https://www.statnews.com/2019/07/24/fitbit-accuracy-dark-skin/)
+* [When the Robot Doesn’t See Dark Skin](https://www.nytimes.com/2018/06/21/opinion/facial-analysis-technology-bias.html)
+* [Data Sharing and Privacy: A Very Cursory Overview](https://education.arcus.chop.edu/privacy-overview/)
+* [A Data Management and Sharing Snafu](https://www.youtube.com/watch?v=66oNv_DJuPc?cc_load_policy=1)
+* [Here’s How We Made Our Study Reproducible](https://slate.com/technology/2017/07/how-to-make-a-study-reproducible.html)
+* [Arcus Resources](https://www.research.chop.edu/arcus/resources)
+* [Git Commit](https://xkcd.com/1296)
+* [Enterprise GitHub](https://github.research.chop.edu)
+* [GitHub.com](https://github.com)
+* [GitHub Desktop](https://desktop.github.com/)
+
 ## Homework
 
-1.  Consider a project you have now or are considering as part of your fellowship.  This could be actual research or clinical quality improvement work, or even personal research (such as "determining the best place to move when I retire").  
-
-Assume that you need to be prepared to pass this work off to someone else and don't relish being barraged with daily emails asking questions about what you meant or how to interpret a value.  Start drawing / jotting down a data management plan that includes:
+1.  Consider a project you have now or are considering as part of your fellowship.  This could be actual research or clinical quality improvement work, or even personal research (such as "determining the best place to move when I retire"). <br/><br/>Assume that you need to be prepared to pass this work off to someone else and don't relish being barraged with daily emails asking questions about what you meant or how to interpret a value.  Start drawing / jotting down a data management plan that includes:
 
 * An overall template of what files will go in what folders, with some sample file names
 * A small data dictionary that captures a few important variables of interest
@@ -355,5 +386,4 @@ Assume that you need to be prepared to pass this work off to someone else and do
 
 3.  Search online to compare the license costs of tools like Matlab, SAS, SPSS, and Stata.  Are these per-user costs?  
 
-4.  "Why make that chart quickly in Excel when you could spend hours trying to make it in R?"  
-Ed Himelblau is a cartoonist and geneticist who has described his computational challenges in both prose and art in a recent [piece in *Nature*](https://www.nature.com/articles/d41586-021-01485-y).  Which of his drawings most resonates with how you feel when considering learning coding?
+4.  Perhaps you share this ironic sentiment from Ed Himelblau: "Why make that chart quickly in Excel when you could spend hours trying to make it in R?"  <br/><br/>Himelblau is a cartoonist and geneticist who has described his computational challenges in both prose and art in a recent [piece in *Nature*](https://www.nature.com/articles/d41586-021-01485-y).  Which of his drawings most resonates with how you feel when considering learning coding?
