@@ -7,6 +7,7 @@ narrator: US English Female
 comment:  Reproducibility is essential to scientific efforts.  Generalizability and data reuse are also important for the application and expansion of scientific inquiry. Technology can help achieve these goals.
 link:     https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/custom.css
 logo: https://github.com/arcus/education_fellows/raw/main/img/chop-icon.png
+icon: https://github.com/arcus/education_fellows/raw/main/img/favicon.ico
 -->
 
 # Reproducibility, Generalizability, and Reuse: How Technology Can Help
@@ -17,7 +18,11 @@ logo: https://github.com/arcus/education_fellows/raw/main/img/chop-icon.png
 
 This module provides learners with an approachable introduction to the concepts and impact of **research reproducibility**, **generalizability**, and **data reuse**, and how technical approaches can help make these goals more attainable.
 
-**Is this module right for me?**: **If you currently conduct research or expect to in the future**, the concepts we talk about here are important to grasp.  This material will help you understand much of the current literature and debate around how research should be conducted, and will provide you with a starting point for understanding why some practices (like writing code, even for researchers who have never programmed a computer) are gaining traction in the research field.  **If research doesn't form part of your future plans, but you want to *use* research** (for example, as a clinician or public health official), this material will help you form criteria for what research to consider the most rigorous and useful and help you understand why science can seem to vacillate or be self-contradictory.
+### Is this module right for me?
+
+**If you currently conduct research or expect to in the future**, the concepts we talk about here are important to grasp.  This material will help you understand much of the current literature and debate around how research should be conducted, and will provide you with a starting point for understanding why some practices (like writing code, even for researchers who have never programmed a computer) are gaining traction in the research field.  **If research doesn't form part of your future plans, but you want to *use* research** (for example, as a clinician or public health official), this material will help you form criteria for what research to consider the most rigorous and useful and help you understand why science can seem to vacillate or be self-contradictory.
+
+### Details
 
 **Estimated time to completion**: 1 hour didactic instruction, 1 hour personal work.
 
@@ -57,11 +62,12 @@ Contents
   * [Version Control](#Version-Control)
   * [Dependency Management](#Dependency-Management)
 * [Additional Materials](#Additional-Materials)
-* [Homework](#Homework)
 
+  * [Center for Open Science](#Center-for-Open_Science)
   * [John Oliver](#John-Oliver)
   * [For Excel Users](#For-Excel-Users)
   * [Mentioned in This Module](#Mentioned-in-This-Module)
+* [Homework](#Homework)
 
 ## Before We Get Started
 
@@ -326,6 +332,17 @@ Dependency management is an approach that makes it easier to determine the preci
 
 ## Additional Materials
 
+Enjoy some supplemental materials that you might find useful, and feel free to suggest additions!  
+
+
+### Center for Open Science
+
+The Center for Open Science is one of the foremost thought leaders in reproducible science.  Their materials provide rich reading material and practical support for researchers and explore topics that are beyond the scope of this training, including how incentivization is contributing to ineffective science.  
+
+>The mission of the Center for Open Science (COS) is to increase openness, integrity, and reproducibility of research. We envision a future scholarly community in which the process, content, and outcomes of research are openly accessible by default. All scholarly content is preserved and connected and transparency is an aspirational good for scholarly services. All stakeholders are included and respected in the research lifecycle and share pursuit of truth as the primary incentive and motivation for scholarship. Achieving the mission requires culture change in the incentives that drive researchers’ behavior, the infrastructure that supports research, and the business models that dominate scholarly communication. This Strategic Plan is the result of collective effort by the COS team, board, and community stakeholders.
+
+<a href = "https://www.cos.io/" target="blank">COS Website</a>
+
 ### John Oliver
 
 A 20-minute long clip from John Oliver's infotainment show "Last Week Tonight" includes off-color language and adult references but is a great introduction to topics including:
@@ -382,8 +399,11 @@ To watch this (intermittently NSFW) segment, [watch it directly in YouTube](http
 * While behind the CHOP firewall, log in to https://github.research.chop.edu and log in (upper right) using your typical CHOP credentials.
 * Navigate to https://github.com and create a new account (it's free).
 * Consider [downloading Github Desktop](https://desktop.github.com/)
-* Check out [the GitHub repo that contains this educational material](https://github.com/arcus/education_fellows).  Check out the **[commit history](https://github.com/arcus/education_fellows/commits/main)**.  Pick one commit and see if you can figure out what changed, by whom, when, and why.
 
-3.  Search online to compare the license costs of tools like Matlab, SAS, SPSS, and Stata.  Are these per-user costs?  
+3. Check out [the GitHub repo that contains this educational material](https://github.com/arcus/education_fellows).  Check out the **[commit history](https://github.com/arcus/education_fellows/commits/main)**.  Pick one commit and see if you can figure out what changed, by whom, when, and why.
 
-4.  Perhaps you share this ironic sentiment from Ed Himelblau: "Why make that chart quickly in Excel when you could spend hours trying to make it in R?"  <br/><br/>Himelblau is a cartoonist and geneticist who has described his computational challenges in both prose and art in a recent [piece in *Nature*](https://www.nature.com/articles/d41586-021-01485-y).  Which of his drawings most resonates with how you feel when considering learning coding?
+4.  Search online to compare the license costs of tools like Matlab, SAS, SPSS, and Stata.  Are these per-user costs?  
+
+5.  Perhaps you share this ironic sentiment from Ed Himelblau: "Why make that chart quickly in Excel when you could spend hours trying to make it in R?"  <br/><br/>Himelblau is a cartoonist and geneticist who has described his computational challenges in both prose and art in a recent [piece in *Nature*](https://www.nature.com/articles/d41586-021-01485-y).  Which of his drawings most resonates with how you feel when considering learning coding?
+
+6.  Consider some of the basic tools and principles offered by the <a href = "https://www.cos.io/" target = "blank">Center for Open Science</a>.  Explore, for example, their <a href = "https://www.cos.io/blog" target="blank">blog</a> or their <a href = "https://www.cos.io/communities/scientists-and-researchers" target = "blank">community page for scientists and researchers</a>.  Can you find materials to bring to a journal club or conversation with your mentor?
