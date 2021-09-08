@@ -1,12 +1,13 @@
 <!--
 author:   Joy Payton, Arcus Education, Children's Hospital of Philadelphia
 email:    paytonk@chop.edu
-version:  0.0.2
+version:  0.1.0
 language: en
 narrator: US English Female
 comment:  Reproducibility is essential to scientific efforts.  Generalizability and data reuse are also important for the application and expansion of scientific inquiry. Technology can help achieve these goals.
 link:     https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/custom.css
 logo: https://github.com/arcus/education_fellows/raw/main/img/chop-icon.png
+icon: https://github.com/arcus/education_fellows/raw/main/img/favicon.ico
 -->
 
 # Reproducibility, Generalizability, and Reuse: How Technology Can Help
@@ -17,7 +18,11 @@ logo: https://github.com/arcus/education_fellows/raw/main/img/chop-icon.png
 
 This module provides learners with an approachable introduction to the concepts and impact of **research reproducibility**, **generalizability**, and **data reuse**, and how technical approaches can help make these goals more attainable.
 
-**Is this module right for me?**: **If you currently conduct research or expect to in the future**, the concepts we talk about here are important to grasp.  This material will help you understand much of the current literature and debate around how research should be conducted, and will provide you with a starting point for understanding why some practices (like writing code, even for researchers who have never programmed a computer) are gaining traction in the research field.  **If research doesn't form part of your future plans, but you want to *use* research** (for example, as a clinician or public health official), this material will help you form criteria for what research to consider the most rigorous and useful and help you understand why science can seem to vacillate or be self-contradictory.
+### Is this module right for me?
+
+**If you currently conduct research or expect to in the future**, the concepts we talk about here are important to grasp.  This material will help you understand much of the current literature and debate around how research should be conducted, and will provide you with a starting point for understanding why some practices (like writing code, even for researchers who have never programmed a computer) are gaining traction in the research field.  **If research doesn't form part of your future plans, but you want to *use* research** (for example, as a clinician or public health official), this material will help you form criteria for what research to consider the most rigorous and useful and help you understand why science can seem to vacillate or be self-contradictory.
+
+### Details
 
 **Estimated time to completion**: 1 hour didactic instruction, 1 hour personal work.
 
@@ -37,7 +42,7 @@ This module provides learners with an approachable introduction to the concepts 
 Instructor Introduction
 =======
 
-Your live session is facilitated by [Joy Payton](https://linkedin.com/in/joypayton), who leads [data education efforts](https://education.arcus.chop.edu) within the [Arcus program](https://arcus.chop.edu), which is an initiative of the [Research Institute](https://www.research.chop.edu) of the [Children's Hospital of Philadelphia](https://www.chop.edu).
+Your live session is facilitated by <a href = "https://linkedin.com/in/joypayton" target = "blank">Joy Payton</a>, who leads <a href = "https://education.arcus.chop.edu" target = "blank">data education efforts</a> within the <a href = "https://arcus.chop.edu" target = "blank">Arcus program</a>, which is an initiative of the <a href = "https://www.research.chop.edu" target = "blank"> Research Institute</a> of the <a href = "https://www.chop.edu" target = "blank"> Children's Hospital of Philadelphia</a>.
 
 
 Contents
@@ -57,11 +62,11 @@ Contents
   * [Version Control](#Version-Control)
   * [Dependency Management](#Dependency-Management)
 * [Additional Materials](#Additional-Materials)
-* [Homework](#Homework)
 
   * [John Oliver](#John-Oliver)
   * [For Excel Users](#For-Excel-Users)
   * [Mentioned in This Module](#Mentioned-in-This-Module)
+* [Homework](#Homework)
 
 ## Before We Get Started
 
@@ -85,7 +90,7 @@ We propose an approach that is more gate **opening** than gate **keeping** and i
 
 ![XKCD Cartoon](img/ten_thousand_2x.png)
 
-(Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1053.)
+(Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at <a href = "https://xkcd.com/1053" target = "blank">https://xkcd.com/1053</a>.)
 
 </div>
 
@@ -131,7 +136,7 @@ When describing a multi-step task that should be able to be carried out by other
 <div style = "margin: 2rem; max-width: 50%; float:left;">
 ![Humorous illustration of "how to draw a horse"](img/horse.png)
 
-Courtesy of artist. [Original work](https://oktop.tumblr.com/post/15352780846)
+Courtesy of artist. <a href = "https://oktop.tumblr.com/post/15352780846" target = "blank">Original work</a>
 
 </div>
 
@@ -162,27 +167,27 @@ Read more: in 2010 Joseph Henrich and others published a brief in *Nature* coini
 
 <div style = "margin-left: 40px; text-indent: -40px; font-size:0.8em;">
 
-Henrich, Joseph, et al. "Most people are not WEIRD: to understand human psychology, behavioural scientists must stop doing most of their experiments on Westerners." *Nature*, vol. 466, no. 7302, 2010, p. 29. *Gale In Context: Science*, https://link.gale.com/apps/doc/A230766048/SCIC?u=upenn_main&sid=summon&xid=b438bdf6.
+Henrich, Joseph, et al. "Most people are not WEIRD: to understand human psychology, behavioural scientists must stop doing most of their experiments on Westerners." *Nature*, vol. 466, no. 7302, 2010, p. 29. *Gale In Context: Science*, <a href = "https://link.gale.com/apps/doc/A230766048/SCIC?u=upenn_main&sid=summon&xid=b438bdf6" target = "blank">https://link.gale.com/apps/doc/A230766048/SCIC?u=upenn_main&sid=summon&xid=b438bdf6</a>.
 
 </div>
 
 </div>
 
-Until recently, many biomedical studies were conducted on disproportionately male populations and ignored disease presentation, physiology, and pharmacodynamics in women and girls (or even female lab animals).  In 1993, the [NIH Revitalization Act](https://www.ncbi.nlm.nih.gov/books/NBK236531/) began requiring NIH-funded clinical research to include women as subjects.  
+Until recently, many biomedical studies were conducted on disproportionately male populations and ignored disease presentation, physiology, and pharmacodynamics in women and girls (or even female lab animals).  In 1993, the <a href = "https://www.ncbi.nlm.nih.gov/books/NBK236531/" target = "blank">NIH Revitalization Act</a> began requiring NIH-funded clinical research to include women as subjects.  
 
-This mandate did not require the same inclusivity in bench research, but NIH encouraged adoption of sex-balanced research outside of human subjects.  Two decades after the 1993 legislation, Janine Clayton and Francis Collins wrote a [pointed call to action in *Nature*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5101948/), indicating that bench researchers had not willingly followed best practices and that NIH apparently needed to require the use of female animals and cells:
+This mandate did not require the same inclusivity in bench research, but NIH encouraged adoption of sex-balanced research outside of human subjects.  Two decades after the 1993 legislation, Janine Clayton and Francis Collins wrote a <a href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5101948/" target = "blank">pointed call to action in *Nature*</a>, indicating that bench researchers had not willingly followed best practices and that NIH apparently needed to require the use of female animals and cells:
 
 > There has not been a corresponding revolution in experimental design and analyses in cell and animal research — despite multiple calls to action. Publications often continue to neglect sex-based considerations and analyses in preclinical studies. Reviewers, for the most part, are not attuned to this failure. The over-reliance on male animals and cells in preclinical research obscures key sex differences that could guide clinical studies. And it might be harmful: women experience higher rates of adverse drug reactions than men do. Furthermore, inadequate inclusion of female cells and animals in experiments and inadequate analysis of data by sex may well contribute to the troubling rise of irreproducibility in preclinical biomedical research, which the NIH is now actively working to address.
 
-In early 2016, a policy requiring the consideration of sex as a biological variable (SABV) went into effect, and applications for NIH funding were required to comply with best practices related to sex-inclusive experimental design.  Progress in NIH's SABV efforts were [recently reported in a 2020 article](https://pubmed.ncbi.nlm.nih.gov/31971851/).
+In early 2016, a policy requiring the consideration of sex as a biological variable (SABV) went into effect, and applications for NIH funding were required to comply with best practices related to sex-inclusive experimental design.  Progress in NIH's SABV efforts were <a href = "https://pubmed.ncbi.nlm.nih.gov/31971851/" target = "blank">recently reported in a 2020 article</a>.
 
 <div class = "hint">
 
-Listen to Janine Clayton speak about scientific rigor and female animal inclusion (5 minute listen): https://www.wbur.org/hereandnow/2014/05/20/nih-female-animals.
+Listen to Janine Clayton speak about scientific rigor and female animal inclusion (5 minute listen): <a href = "https://www.wbur.org/hereandnow/2014/05/20/nih-female-animals" target = "blank">https://www.wbur.org/hereandnow/2014/05/20/nih-female-animals<a/>.
 
 </div>
 
-Human bias doesn't just lead to potentially misleading studies, but to potentially misleading research tools as well.  For example, in wearable sensor and computer vision development, engineers using skewed samples failed to realize that the optical sensors and computer vision algorithms they created may perform less well on dark skin. See, for example, https://www.statnews.com/2019/07/24/fitbit-accuracy-dark-skin/ and https://www.nytimes.com/2018/06/21/opinion/facial-analysis-technology-bias.html.
+Human bias doesn't just lead to potentially misleading studies, but to potentially misleading research tools as well.  For example, in wearable sensor and computer vision development, engineers using skewed samples failed to realize that the optical sensors and computer vision algorithms they created may perform less well on dark skin. See, for example, <a href = "https://www.statnews.com/2019/07/24/fitbit-accuracy-dark-skin/" target = "blank">https://www.statnews.com/2019/07/24/fitbit-accuracy-dark-skin/</a> and <a href = "https://www.nytimes.com/2018/06/21/opinion/facial-analysis-technology-bias.html" target = "blank">https://www.nytimes.com/2018/06/21/opinion/facial-analysis-technology-bias.html</a>.
 
 The challenge of generalizability is closely linked to reproducibility.  For example, a study that demonstrates the effectiveness of exercise to improve functioning in depressed suburban teenagers may not generalize to city-dwelling adults.  In order to gain broader generalizability, this promising experiment on a limited population should be reproduced in a broader or different population.  If the original study is difficult to reproduce, however, such broader application may prove impossible.
 
@@ -209,7 +214,7 @@ Survey results from a recent poll conducted by Arcus librarians and archivists (
 
 <div class = "hint">
 
-Read more: Want to get a quick overview of some of the privacy practices that regulate responsible data sharing?  Check out this brief article: https://education.arcus.chop.edu/privacy-overview/
+Read more: Want to get a quick overview of some of the privacy practices that regulate responsible data sharing?  Check out this brief article: <a href = "https://education.arcus.chop.edu/privacy-overview/" target = "blank">https://education.arcus.chop.edu/privacy-overview/</a>
 
 </div>
 
@@ -227,9 +232,9 @@ As you listen to the video, try to identify problematic research practices which
 
 ## Tools for Better Practices
 
-Here we aim to provide a broad overview of how some tools and practices (scripts, data management and metdata, version control, and dependency management) can ameliorate some of the challenges we've outlined earlier.  Technology alone cannot solve the reproducibility crisis, but tools can support researchers who are trying to apply rigor and clarity to their research efforts.
+Here we aim to provide a broad overview of how a handful of technical tools and practices (scripts, data management and metadata, version control, and dependency management) can ameliorate some of the challenges we've outlined earlier.  Technology alone cannot solve the reproducibility crisis, but tools can support researchers who are trying to apply rigor and clarity to their research efforts.
 
-Areas we won't cover here, but are critical to the consistent production of reproducible science, include researcher bias, research incentivization, publication bias, research culture, mentorship, and more.  While we assert that proper use of technology is a **necessary** part of reproducible science, technology alone is not **sufficient**.
+There are many topics we won't cover here, despite the fact that they play critical roles in the consistent production of reproducible science.  These include researcher bias, practices of preregistration, research incentivization, publication bias, research culture, mentorship, promotion and tenure, MTAs, monetization and commercialization, and more.  While we assert that proper use of technology is a **necessary** part of reproducible science, technology alone is not **sufficient**.  
 
 ### Scripts
 
@@ -249,7 +254,7 @@ Scripts may be written in free, open source tools like R, Python, Julia, and Oct
 
 We can contrast scripts with tools that don't record every step explicitly.  Excel is one example we've already touched on.  You may also have been exposed to SAS, SPSS, and Stata, all of which have a point-and-click element as well as the possibility of scripted analysis.  However, many users of these tools depend on un-scripted actions such as cleaning data beforehand in a separate program and the use of point-and-click, menu driven selections.  For this reason, we suggest the use of R and Python for most research purposes.  These are widely used, well-documented and tested, and have a scientific and medical user base that is friendly for beginners.  Additionally, these tools are free and open-source, which allows for greater reproducibility, including in lower-resourced settings.  However, learning these tools requires an investment of time and energy that can be difficult for a busy clinician or scientist to justify, especially when one has already developed considerable experience in point-and-click analysis.
 
-It's worth considering the words of an archaeological team that wrote an article about reproducible research for a lay audience in a [2017 *Slate* article](https://slate.com/technology/2017/07/how-to-make-a-study-reproducible.html):
+It's worth considering the words of an archaeological team that wrote an article about reproducible research for a lay audience in a <a href = "https://slate.com/technology/2017/07/how-to-make-a-study-reproducible.html" target = "blank">2017 *Slate* article<a/>:
 
 >However, while many researchers do this work by pointing and clicking using off-the-shelf software, we tried as much as possible to write scripts in the R programming language.<br/><br/>Pointing and clicking generally leaves no traces of important decisions made during data analysis. Mouse-driven analyses leave the researcher with a final result, but none of the steps to get that result is saved. This makes it difficult to retrace the steps of an analysis, and check the assumptions made by the researcher. <br/><br/> ... <br/><br/>It's easy to understand why many researchers prefer point-and-click over writing scripts for their data analysis. Often that's what they were taught as students. It's hard work and time-consuming to learn new analysis tools among the pressures of teaching, applying for grants, doing fieldwork and writing publications. Despite these challenges, there is an accelerating shift away from point-and-click toward scripted analyses in many areas of science.
 
@@ -287,7 +292,7 @@ REDCap is one example of software that explicitly creates a data dictionary that
 
 <div class = "hint">
 
-Discover:  Arcus has a team of librarians and archivists who have created materials to help CHOP scientists with data management.  See "Research Data Management Resources" at https://www.research.chop.edu/arcus/resources.  These materials tend to be very practical and can be used right away to improve data management!
+Discover:  Arcus has a team of librarians and archivists who have created materials to help CHOP scientists with data management.  See "Research Data Management Resources" at <a href = "https://www.research.chop.edu/arcus/resources" target = "blank">https://www.research.chop.edu/arcus/resources<a/>.  These materials tend to be very practical and can be used right away to improve data management!
 
 </div>
 
@@ -305,11 +310,11 @@ We won't go into details at this point, but one of the helpful aspects of git is
 
 ![XKCD Cartoon](img/git_commit_2x.png)
 
-(Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at https://xkcd.com/1296.)
+(Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at <a href = "https://xkcd.com/1296" target = "blank">https://xkcd.com/1296</a>.)
 
 </div>
 
-Git and GitHub are distinct organizations with different products.  Git is a free, open-source version control system, and GitHub is a company that provides services to make it easier to use git for software development and related uses.  GitHub has free tier use as well as paid services.  At CHOP, we have an [enterprise version of GitHub](https://github.research.chop.edu) that is accessible only on the CHOP network.  Additionally, some CHOP users use [GitHub.com](https://github.com), which is a public website run by GitHub.  Finally, many git users find that the [GitHub Desktop](https://desktop.github.com/) software is useful for working with git.
+Git and GitHub are distinct organizations with different products.  Git is a free, open-source version control system, and GitHub is a company that provides services to make it easier to use git for software development and related uses.  GitHub has free tier use as well as paid services.  At CHOP, we have an <a href = "https://github.research.chop.edu" target = "blank">enterprise version of GitHub</a> that is accessible only on the CHOP network.  Additionally, some CHOP users use <a href = "https://github.com)" target = "blank">GitHub.com</a>, which is a public website run by GitHub.  Finally, many git users find that the <a href = "https://desktop.github.com/" target = "blank">GitHub Desktop</a> software is useful for working with git.
 
 ### Dependency Management
 
@@ -325,6 +330,15 @@ If you've ever created a slide show in one computer only to have it look terribl
 Dependency management is an approach that makes it easier to determine the precise set of tools and inputs required by your data collection and analysis.  Every research effort should document which tools were used and which version of each was employed.  This can be as simple as a text file, or could include installation instructions or even a file that includes the exact versions of software used in the original research, in order to create a computer environment that can perform the analysis under the original conditions.
 
 ## Additional Materials
+
+### Center for Open Science
+
+The Center for Open Science is one of the foremost thought leaders in reproducible science.  Their materials provide rich reading material and practical support for researchers and explore topics that are beyond the scope of this training, including how incentivization is contributing to ineffective science.  
+
+>The mission of the Center for Open Science (COS) is to increase openness, integrity, and reproducibility of research. We envision a future scholarly community in which the process, content, and outcomes of research are openly accessible by default. All scholarly content is preserved and connected and transparency is an aspirational good for scholarly services. All stakeholders are included and respected in the research lifecycle and share pursuit of truth as the primary incentive and motivation for scholarship. Achieving the mission requires culture change in the incentives that drive researchers’ behavior, the infrastructure that supports research, and the business models that dominate scholarly communication. This Strategic Plan is the result of collective effort by the COS team, board, and community stakeholders.
+
+<a href = "https://www.cos.io/" target="blank">COS Website</a>
+
 
 ### John Oliver
 
@@ -343,31 +357,31 @@ Among many other quotable moments, Oliver drives home the point of how research 
 
 >"In science, you don't just get to cherry-pick the parts that justify what what you were going to do anyway! ... And look, this is dangerous... that is what leads people to think that manmade climate change isn't real or that vaccines cause autism...."
 
-To watch this (intermittently NSFW) segment, [watch it directly in YouTube](https://www.youtube.com/watch?v=0Rnq1NpHdmw).
+To watch this (intermittently NSFW) segment, <a href = "https://www.youtube.com/watch?v=0Rnq1NpHdmw" target = "blank">watch it directly in YouTube</a>.
 
 ### For Excel Users
 
-* An Arcus educator shares some harm reduction techniques for Excel users: https://education.arcus.chop.edu/excel-caveats/
-* A former user of Excel shares why he's moved on to using scripted code and gives helpful hints to those still using Excel: https://education.arcus.chop.edu/the-spreadsheet-betrayal/
+* An Arcus educator shares some harm reduction techniques for Excel users: <a href = "https://education.arcus.chop.edu/excel-caveats/" target = "blank">https://education.arcus.chop.edu/excel-caveats/</a>
+* A former user of Excel shares why he's moved on to using scripted code and gives helpful hints to those still using Excel: <a href = "https://education.arcus.chop.edu/the-spreadsheet-betrayal/" target = "blank">https://education.arcus.chop.edu/the-spreadsheet-betrayal/</a>
 
 ### Mentioned in This Module
 
-* [How to Draw a Horse](https://oktop.tumblr.com/post/15352780846)
-* [Henrich, Joseph, et al. "Most people are not WEIRD: to understand human psychology, behavioural scientists must stop doing most of their experiments on Westerners."](https://link.gale.com/apps/doc/A230766048/SCIC?u=upenn_main&sid=summon&xid=b438bdf6)
-* [NIH Revitalization Act](https://www.ncbi.nlm.nih.gov/books/NBK236531/)
-* [NIH to balance sex in cell and animal studies](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5101948/)
-* [Sex as a Biological Variable: A 5-Year Progress Report and Call to Action](https://pubmed.ncbi.nlm.nih.gov/31971851/)
-* [NIH: Scientists Must Include Female Animals In Testing](https://www.wbur.org/hereandnow/2014/05/20/nih-female-animals)
-* [Fitbits and other wearables may not accurately track heart rates in people of color](https://www.statnews.com/2019/07/24/fitbit-accuracy-dark-skin/)
-* [When the Robot Doesn’t See Dark Skin](https://www.nytimes.com/2018/06/21/opinion/facial-analysis-technology-bias.html)
-* [Data Sharing and Privacy: A Very Cursory Overview](https://education.arcus.chop.edu/privacy-overview/)
-* [A Data Management and Sharing Snafu](https://www.youtube.com/watch?v=66oNv_DJuPc?cc_load_policy=1)
-* [Here’s How We Made Our Study Reproducible](https://slate.com/technology/2017/07/how-to-make-a-study-reproducible.html)
-* [Arcus Resources](https://www.research.chop.edu/arcus/resources)
-* [Git Commit](https://xkcd.com/1296)
-* [Enterprise GitHub](https://github.research.chop.edu)
-* [GitHub.com](https://github.com)
-* [GitHub Desktop](https://desktop.github.com/)
+* <a href = "https://oktop.tumblr.com/post/15352780846" target = "blank">How to Draw a Horse</a>
+* <a href = "https://link.gale.com/apps/doc/A230766048/SCIC?u=upenn_main&sid=summon&xid=b438bdf6" target = "blank">Henrich, Joseph, et al. "Most people are not WEIRD: to understand human psychology, behavioural scientists must stop doing most of their experiments on Westerners."</a>
+* <a href = "https://www.ncbi.nlm.nih.gov/books/NBK236531/" target = "blank">NIH Revitalization Act</a>
+* <a href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5101948/" target = "blank">NIH to balance sex in cell and animal studies</a>
+* <a href = "https://pubmed.ncbi.nlm.nih.gov/31971851/" target = "blank">Sex as a Biological Variable: A 5-Year Progress Report and Call to Action</a>
+* <a href = "https://www.wbur.org/hereandnow/2014/05/20/nih-female-animals" target = "blank">NIH: Scientists Must Include Female Animals In Testing</a>
+* <a href = "https://www.statnews.com/2019/07/24/fitbit-accuracy-dark-skin/" target = "blank">Fitbits and other wearables may not accurately track heart rates in people of color</a>
+* <a href = "https://www.nytimes.com/2018/06/21/opinion/facial-analysis-technology-bias.html" target = "blank">When the Robot Doesn’t See Dark Skin</a>
+* <a href = "https://education.arcus.chop.edu/privacy-overview/" target = "blank">Data Sharing and Privacy: A Very Cursory Overview</a>
+* <a href = "https://www.youtube.com/watch?v=66oNv_DJuPc?cc_load_policy=1" target = "blank">A Data Management and Sharing Snafu</a>
+* <a href = "https://slate.com/technology/2017/07/how-to-make-a-study-reproducible.html" target = "blank">Here’s How We Made Our Study Reproducible</a>
+* <a href = "https://www.research.chop.edu/arcus/resources" target = "blank">Arcus Resources</a>
+* <a href = "https://xkcd.com/1296" target = "blank">Git Commit</a>
+* <a href = "https://github.research.chop.edu" target = "blank">Enterprise GitHub</a>
+* <a href = "https://github.com" target = "blank">GitHub.com</a>
+* <a href = "https://desktop.github.com/" target = "blank">GitHub Desktop</a>
 
 ## Homework
 
@@ -379,11 +393,14 @@ To watch this (intermittently NSFW) segment, [watch it directly in YouTube](http
 
 2.  If you don't already have GitHub accounts, please do the following:
 
-* While behind the CHOP firewall, log in to https://github.research.chop.edu and log in (upper right) using your typical CHOP credentials.
-* Navigate to https://github.com and create a new account (it's free).
-* Consider [downloading Github Desktop](https://desktop.github.com/)
-* Check out [the GitHub repo that contains this educational material](https://github.com/arcus/education_fellows).  Check out the **[commit history](https://github.com/arcus/education_fellows/commits/main)**.  Pick one commit and see if you can figure out what changed, by whom, when, and why.
+* While behind the CHOP firewall, log in to <a href = "https://github.research.chop.edu" target = "blank">https://github.research.chop.edu</a> and log in (upper right) using your typical CHOP credentials.
+* Navigate to <a href = "https://github.com" target = "blank">https://github.com</a> and create a new account (it's free).
+* Consider <a href = "https://desktop.github.com/" target = "blank">downloading Github Desktop</a>
 
-3.  Search online to compare the license costs of tools like Matlab, SAS, SPSS, and Stata.  Are these per-user costs?  
+3. Check out <a href = "https://github.com/arcus/education_fellows" target = "blank">the GitHub repo that contains this educational material</a>.  Check out the <a href = "https://github.com/arcus/education_fellows/commits/main" target = "blank">**commit history**</a>.  Pick one commit and see if you can figure out what changed, by whom, when, and why.
 
-4.  Perhaps you share this ironic sentiment from Ed Himelblau: "Why make that chart quickly in Excel when you could spend hours trying to make it in R?"  <br/><br/>Himelblau is a cartoonist and geneticist who has described his computational challenges in both prose and art in a recent [piece in *Nature*](https://www.nature.com/articles/d41586-021-01485-y).  Which of his drawings most resonates with how you feel when considering learning coding?
+4.  Search online to compare the license costs of tools like Matlab, SAS, SPSS, and Stata.  Are these per-user costs?  
+
+5.  Perhaps you share this ironic sentiment from Ed Himelblau: "Why make that chart quickly in Excel when you could spend hours trying to make it in R?"  <br/><br/>Himelblau is a cartoonist and geneticist who has described his computational challenges in both prose and art in a recent <a href = "https://www.nature.com/articles/d41586-021-01485-y" target="blank">piece in *Nature*</a>.  Which of his drawings most resonates with how you feel when considering learning coding?
+
+6. Consider some of the basic tools and principles offered by the <a href = "https://www.cos.io/" target = "blank">Center for Open Science</a>.  Explore, for example, their <a href = "https://www.cos.io/blog" target="blank">blog</a> or their <a href = "https://www.cos.io/communities/scientists-and-researchers" target = "blank">community page for scientists and researchers</a>.  Can you find materials to bring to a journal club or conversation with your mentor?
