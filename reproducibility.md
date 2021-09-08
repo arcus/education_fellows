@@ -86,14 +86,11 @@ By gatekeeping, we mean that with or without intent, some people with greater te
 
 We propose an approach that is more gate **opening** than gate **keeping** and includes positive regard such as delight at sharing knowledge.  We're not alone:
 
-
 <div style = "margin: 2rem auto; max-width: 50%; font-size:0.8em; align: center;">
-
 
 ![XKCD Cartoon](img/ten_thousand_2x.png)
 
 (Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at <a href = "https://xkcd.com/1053" target = "blank">https://xkcd.com/1053</a>.)
-
 
 </div>
 
@@ -164,22 +161,17 @@ Research is **generalizable** if findings can be applied to a broad population.
 
 Historically, biomedical and social science research projects have struggled with generalizability due to unrepresentative data.  For example, the acronym **"WEIRD"** refers to the tendency of psychological studies to rely on subjects (often undergraduate students) who are disproportionately from **W**estern, **E**ducated, **I**ndustrialized, **R**ich, and **D**eveloped cultures -- cultures which, compared with the global population as a whole, are indeed weird.  
 
-
 <div class = "hint">
-
 
 Read more: in 2010 Joseph Henrich and others published a brief in *Nature* coining "WEIRD" to describe skewed participation in psychological studies.  The citation below includes a link to this piece in Penn libraries.
 
-
 <div style = "margin-left: 40px; text-indent: -40px; font-size:0.8em;">
-
 
 Henrich, Joseph, et al. "Most people are not WEIRD: to understand human psychology, behavioural scientists must stop doing most of their experiments on Westerners." *Nature*, vol. 466, no. 7302, 2010, p. 29. *Gale In Context: Science*, <a href = "https://link.gale.com/apps/doc/A230766048/SCIC?u=upenn_main&sid=summon&xid=b438bdf6" target = "blank">https://link.gale.com/apps/doc/A230766048/SCIC?u=upenn_main&sid=summon&xid=b438bdf6</a>.
 
-
-</div>
 </div>
 
+</div>
 
 Until recently, many biomedical studies were conducted on disproportionately male populations and ignored disease presentation, physiology, and pharmacodynamics in women and girls (or even female lab animals).  In 1993, the <a href = "https://www.ncbi.nlm.nih.gov/books/NBK236531/" target = "blank">NIH Revitalization Act</a> began requiring NIH-funded clinical research to include women as subjects.  
 
