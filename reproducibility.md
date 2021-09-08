@@ -84,18 +84,19 @@ By gatekeeping, we mean that with or without intent, some people with greater te
 * Snarky, unhelpful comments on Stack Overflow when a new user poses a question that doesn't meet the standards of a well-crafted, reproducible example.
 * Condescension which can mask insecurity, with words like "well, clearly you should..." or "oh, just...", which add nothing to the conversation except a display of dominance.
 
-We propose an approach that is more gate **opening** than gate **keeping** and includes positive regard such as delight at sharing knowledge.  We're not alone:
+We propose an approach that is more gate **opening** than gate **keeping** and includes positive regard such as delight at sharing knowledge.  We're not alone.
 
-
+<lia-keep>
 <div style = "margin: 2rem auto; max-width: 50%; font-size:0.8em; align: center;">
-
+</lia-keep>
 
 ![XKCD Cartoon](img/ten_thousand_2x.png)
 
-(Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at <a href = "https://xkcd.com/1053" target = "blank">https://xkcd.com/1053</a>.)
+(Image used under a Creative Commons Attribution-NonCommercial 2.5 License.  Original post at <lia-keep><a href = "https://xkcd.com/1053" target = "blank">https://xkcd.com/1053</a></lia-keep>.)
 
-
+<lia-keep>
 </div>
+</lia-keep>
 
 As learners, we ask that you build your core competencies and non-technical skills by:
 
