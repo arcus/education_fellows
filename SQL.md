@@ -22,12 +22,12 @@ Contents
 ========
 
 * [What is SQL](#What-is-SQL)
- * [When Should SQL Be Used](#When-Should-SQL-Be-Used)
- * [When Should SQL Not be Used](#When-Should-SQL-Not-be-Used)
+    * [When Should SQL Be Used](#When-Should-SQL-Be-Used)
+    * [When Should SQL Not be Used](#When-Should-SQL-Not-be-Used)
 * [Basic SQL Syntax](#Basic-SQL-Syntax)
- * [Select Statement](#Select-Statement)
- * [Where Clause](#Where-Clause)
- * [Group By](#Group-By)
+    * [Select Statement](#Select-Statement)
+    * [Where Clause](#Where-Clause)
+    * [Group By](#Group-By)
 
 ## What is SQL
 ### When Should SQL Be Used
