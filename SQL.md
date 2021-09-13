@@ -21,9 +21,9 @@ logo:     https://github.com/arcus/education_fellows/raw/main/img/chop-icon.png
 Contents
 ========
 
-* [What is SQL](#What-is-SQL)
-    * [When Should SQL Be Used](#When-Should-SQL-Be-Used)
-    * [When Should SQL Not be Used](#When-Should-SQL-Not-be-Used)
+* [What is SQL?](#What-is-SQL)
+    * [When Should SQL Be Used?](#When-Should-SQL-Be-Used)
+    * [When Should SQL Not be Used?](#When-Should-SQL-Not-be-Used)
 * [Basic SQL Syntax](#Basic-SQL-Syntax)
     * [Select Statement](#Select-Statement)
     * [Case Statment](#Case-Statement)
