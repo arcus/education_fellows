@@ -26,12 +26,43 @@ Contents
     * [When Should SQL Not be Used](#When-Should-SQL-Not-be-Used)
 * [Basic SQL Syntax](#Basic-SQL-Syntax)
     * [Select Statement](#Select-Statement)
+    * [Case Statment](#Case-Statement)
     * [Where Clause](#Where-Clause)
+        * [Comparison Operators](#Comparison-Operators)
+        * [Logical Operators](#Logical-Operators)
     * [Group By](#Group-By)
+        * [Aggregate Functions](#Aggregate-Functions)
+        * [Having Clause](#Having-Clause)
+* [Advanced SQL Syntax](#Advanced-SQL-Syntax) 
+    * [Wildcard Operators](#Wildcard-Operators)
+        * [Like Statment](#Like-Statment)
+        * [Regular Expression Functions](#Regular-Expression-Functions)
+    * [Sub Queries](#Sub-Queries)
+    * [With Statement](#With-Statement)
+    * [Exists Statment](#Exists-Statment)
+* [SQL Joins](#SQL-Joins)
+    * [Inner Join](#Inner-Join)
+    * [Left Join](#Left-Join)
+    * [Cross Join](#Cross-Join)
+* [Advanced SQL Syntax II (Bonus Round!)](#Advanced-SQL-Syntax-II-Bonus-Round)
+    * [Ordered Analytic Functions](#Ordered-Analytic-Functions)
+* [DDL - Data Definition Language](#DDL-Data-Definition-Language)
+    * [Create Table](#Create-Table)
+    * [Create View](#Create-View)
+    * [Dropping Tables/Views](#Dropping-Tables-Views)
+    * [Altering Tables/Views](#Altering-Tables-Views)
+    * [Renaming Tables](#Renaming-Tables)
+    * [Adding Columns](#Adding-Columns)
+    * [Recasting Columns](#Recasting-Columns)
+* [DML - Data Manipulation Language](#DML-Data-Manipulation-Language)
+    * [Update Statment](#Update-Statment)
+    * [Insert Statment](#Insert-Statment)
+    * [Delete Statment](#Delete-Statment)
 
-## What is SQL
-### When Should SQL Be Used
-### When Should SQL Not be Used
+
+## What is SQL?
+### When Should SQL Be Used?
+### When Should SQL Not be Used?
 
 ## Basic SQL Syntax
 ### Select Statement
@@ -43,7 +74,7 @@ Contents
 #### Comparison Operators
 #### Logical Operators
 ### Group By Statement
-#### aggregate Functions
+#### Aggregate Functions
 #### Having Clause
 
 ## Advanced SQL Syntax
@@ -55,19 +86,14 @@ Contents
 ### Exists Statment
 
 ## SQL Joins
-### What are SQL Joins?
 ### Inner Join
 ### Left Join
 ### Cross Join
 
 ## Advanced SQL Syntax II (Bonus Round!)
 ### Ordered Analytic Functions
-#### RANK()
-#### SUM()
-#### COUNT()
 
 ## DDL - Data Definition Language
-
 > **NOTE**: Up until now all of the code we have looked at have been examples of **DQL** (Data Query Language).
 
 ### Create Table
@@ -79,7 +105,6 @@ Contents
 #### Recasting Columns
 
 ## DML - Data Manipulation Language
-
 ### Update Statment
 ### Insert Statment
 ### Delete Statment
