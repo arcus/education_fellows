@@ -46,7 +46,7 @@ Contents
     * [Cross Join](#Cross-Join)
 * [Advanced SQL Syntax II (Bonus Round!)](#Advanced-SQL-Syntax-II-Bonus-Round)
     * [Ordered Analytic Functions](#Ordered-Analytic-Functions)
-* [DDL - Data Definition Language](#DDL-Data-Definition-Language)
+* [DDL - Data Definition Language](#DDL---Data-Definition-Language)
     * [Create Table](#Create-Table)
     * [Create View](#Create-View)
     * [Dropping Tables/Views](#Dropping-Tables-Views)
