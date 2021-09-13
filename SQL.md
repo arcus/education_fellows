@@ -54,7 +54,7 @@ Contents
     * [Renaming Tables](#Renaming-Tables)
     * [Adding Columns](#Adding-Columns)
     * [Recasting Columns](#Recasting-Columns)
-* [DML - Data Manipulation Language](#DML-Data-Manipulation-Language)
+* [DML - Data Manipulation Language](#dml---data-manipulation-language)
     * [Update Statment](#Update-Statment)
     * [Insert Statment](#Insert-Statment)
     * [Delete Statment](#Delete-Statment)
