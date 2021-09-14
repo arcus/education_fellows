@@ -4,13 +4,6 @@ h2, h3, h4 {
   margin: 1.5em 0em;
 }
 
-caption {
-  display: block;
-  padding: 1rem;
-  font-weight: bolder;
-  border: 1px solid rgb(var(--lia-grey));
-}
-
 # Customizations to classes
 
 .hint {
