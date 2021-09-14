@@ -108,7 +108,13 @@ For all of these "downstream analytics" use cases, you will want to use an actua
 
 ## Basic SQL Syntax
 
-The sections that follow will provide an overview of the basic syntax and structure used when composing SQL "queries".
+The sections that follow will provide an overview of the basic syntax and structure used for composing SQL "**queries**".
+
+> **Vocabulary Note**:
+> 
+> **Queires** are essentially questions or requests for data, written in a specific strucutre that your Relational Database can understand.
+
+**SECTION CONTENTS**
 
 * [Select Statement](#Select-Statement)
 * [Case Statment](#Case-Statement)
