@@ -84,21 +84,23 @@ More specifically, **SQL** is best suited for composing/structuring/formatting d
 > 
 > SQL was created in the early 1970's by IBM as a method for more easily accessing information from their internal database system. 
 > 
-> By 1979 Relational Software, Inc. (now Oracle Corporation) released the first commercially available implementation of SQL as a part of their Oracle V2 database application.
+> By 1979 Relational Software, Inc. (now Oracle Corporation) released the first commercially available implementation of **SQL** as a part of their Oracle V2 database application.
 > 
 > Today **SQL** is the most common programing language for extracting and organizing data in Relational Database Systems.
 
 Ideally, all of your Data Transformations should be done using SQL in order to ensure that the final dataset exported from your queries doesn't require any additional major transformation before analysis work can begin. 
 
-The reason for this is that, especially for large datasets, SQL is a much more efficient tool for large-scale data transformations than your traditional scripting or analytic packages.
+The reason for this is that, especially for large datasets, **SQL** is a much more efficient tool for large-scale data transformations than your traditional scripting or analytic packages.
 
 Additionally, making sure that all of your data transformations are done using **SQL** is an easy way to ensure greater reproducibility and standardization of your work (just be sure to save/document all of your **SQL** queries!).
 
 ### When Should SQL Not be Used?
 
-<p>Although SQL is great for organizing your data into meaningful reports for data extraction, it is not a great tool to do for your actual analysis work (this is where you will want to turn to other tools like R or Python).</p>
+Although **SQL** is great for organizing your data into meaningful reports for data extraction, it is not a great tool to do for your actual analysis work (this is where you will want to turn to other tools like **R** or **Python**).
 
-<p>SQL also doesn’t have any capabilities to directly support Data Visualization work, and despite having many functions for text parsing it is not the tool you want to use for any NLP (Natural Language Processing) work; again, you’ll want to look to tools like R or Python for this type or downstream analysis work.</p>
+>
+
+**SQL** also doesn’t have any capabilities to directly support Data Visualization work, and despite having many functions for text parsing it is not the tool you want to use for any NLP (Natural Language Processing) work; again, you’ll want to look to tools like **R** or **Python** for this type or downstream analysis work.
 
 ## Basic SQL Syntax
 ### Select Statement
