@@ -8,6 +8,21 @@ comment:  Learn to use R and RStudio in this introduction that uses an Arcus tra
 link:     https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/custom.css
 logo: https://github.com/arcus/education_fellows/raw/main/img/chop-icon.png
 icon: https://github.com/arcus/education_fellows/raw/main/img/favicon.ico
+
+if($imgExt[1] === 'gif') {
+    $img.attr('src', $img.data('alt')).attr('data-alt', $imgSrc);
+  } else {
+    $img.attr('src', $imgAlt).attr('data-alt', $img.data('alt'));
+  }
+
+  // Add play class to help with the styling.
+  $this.toggleClass('play');
+
+});
+
+})(jQuery);
+</script>
+@end
 -->
 
 # Intro to R and RStudio
@@ -97,11 +112,7 @@ summary(breast_cancer_data$HOMA)
 
 You can write R code and execute it in many ways, including using the command line, the R console, and in a Jupyter notebook.  Here, however, we're going to concentrate on using RStudio.
 
-[Go back to the table of contents](#Contents)
-
 ## What is RStudio?
-
-*10 minute read*
 
 RStudio is an **IDE**, or **Integrated Development Environment**, which pulls together (integrates) useful tools like help files, image viewers,  data previews, and version control for people writing (developing) code, and it puts all these tools together in a visually pleasing and helpful environment.  It's an add-on tool that makes working with R easier because it gives extra help and context.
 
@@ -109,8 +120,12 @@ RStudio is an **IDE**, or **Integrated Development Environment**, which pulls to
 
 We could run the code above in a simple **R console**, which is what you get when you install R by itself without using RStudio.  This isn't the most user friendly experience! In the screen recording shown below, we are **not** using RStudio, but rather the R Console.
 
-|![R.app, or the R Console](https://github.com/arcus/education_r_intensive/blob/main/images/r_console.gif?raw=true)|
-|--|
+<div style="display:none">@gifPreload</div>
+
+<figure>
+  <img src="https://github.com/arcus/education_fellows/blob/main/img/r_console.png?raw=true" height="500" width="800" alt="R.app, or the R Console" data-alt="https://github.com/arcus/education_fellows/blob/main/img/r_console.gif?raw=true">
+</figure>
+
 
 Above, you can see that the R console had to open a new program (in a Mac, it's the Quartz viewer) to display the histogram.  You can't tell much about the `breast_cancer_data` datset and you don't get tips and support around using R.  For example, here are some questions you may have after watching the animation above.
 
@@ -125,7 +140,13 @@ Using the R.app or R console tool means very basic, bare-bones support for you a
 
 On the other hand, you could run the same code in RStudio and see something like this:
 
-|![RStudio](https://github.com/arcus/education_r_intensive/blob/main/images/rstudio.gif?raw=true)|
+
+<figure>
+  <img src="https://github.com/arcus/education_fellows/blob/main/img/rstudio.png?raw=true" height="500" width="800" alt="R.app, or the R Console" data-alt="https://github.com/arcus/education_fellows/blob/main/img/rstudio.gif?raw=true">
+</figure>
+
+
+|![RStudio](https://github.com/arcus/education_fellows/blob/main/img/rstudio.gif?raw=true)|
 |--|
 
 Using RStudio, you:
@@ -142,27 +163,14 @@ Using RStudio, you:
 
 RStudio is the preferred method for most uses of R, and it's generally what we use to teach.
 
-[Go back to the table of contents](#Contents)
 
 ## Starting RStudio
 
-*10 minutes hands-on*
+You don't have to have R and RStudio installed on your local computer to learn how to use them.  For this course, we're going to use a "training lab" in Arcus, which contains data stored in a SQL database and has R and RStudio installed as part of the basic toolset.
 
-You don't have to have R and RStudio installed on your local computer to learn how to use them.  We've provided a simple environment you can use.  It will probably take a few minutes to load up, especially if it's "cold" (hasn't been used by anyone lately).  
+We've provided a simple environment you can use.  It will probably take a few minutes to load up, especially if it's "cold" (hasn't been used by anyone lately).  
 
-If you already clicked on the "launch binder" button as the first activity, you can simply open that tab on your browser.
-
-Didn't click it before?  No worries! Click below and an RStudio environment will open in your browser window.  We suggest using Chrome for this.  
-
-While you wait for RStudio to load, come back here and read a bit more.
-
-[![Binder](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/arcus/education_r_intensive/main?urlpath=rstudio) **← Click the "launch binder" button!**
-
-<div style="background-color:#cceeff;
-padding: 1em;
-border: 1px solid grey;">
-
-### While You're Waiting...
+### On Your Own Computer:
 
 Do you wonder where you can install R and RStudio, and how much they'll cost your lab?
 
@@ -172,26 +180,23 @@ You can run R and RStudio:
 
 * From your local computer (download a Windows, Mac, or linux version of R](https://cran.rstudio.com/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download))
 * On a cloud service provider like [RStudio.cloud](https://rstudio.cloud)
-* On a server that your research center provides
-* On a temporary environment someone prepares for you, like our Pangeo Binder environment
+* On a server that your lab or clinic provides
+* On a temporary environment someone prepares for you, like a Pangeo Binder environment
 
 A to-do list for you to consider:
 
-* <input type="checkbox"> Try installing [R](https://cran.rstudio.com/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) to your computing device.
-* <input type="checkbox"> Not ready to commit to downloading R and RStudio yet?  Create a free [RStudio.cloud](https://rstudio.cloud) account!
-* <input type="checkbox"> Ask your colleagues who use R and RStudio where they do their work in R, and if there are any steps you need to take to get access (like request access to a server at your lab or workplace)
-* <input type="checkbox"> [Cloud Tools for the Unconvinced](https://education.arcus.chop.edu/r-python-cloud/).  This brief article (2 minute read) introduces [RStudio.cloud](https://rstudio.cloud) and includes a link to a project you can look at, copy, and learn from.
+* Try installing [R](https://cran.rstudio.com/) and [RStudio](https://www.rstudio.com/products/rstudio/download/#download) to your computing device.
+* Not ready to commit to downloading R and RStudio yet?  Create a free [RStudio.cloud](https://rstudio.cloud) account!
+* Ask your colleagues who use R and RStudio where they do their work in R, and if there are any steps you need to take to get access (like request access to a server at your lab or workplace)
+* [Cloud Tools for the Unconvinced](https://education.arcus.chop.edu/r-python-cloud/).  This brief article (2 minute read) introduces [RStudio.cloud](https://rstudio.cloud) and includes a link to a project you can look at, copy, and learn from.
 
-</div>
+### RStudio in Arcus Lab
 
-### Still waiting?
+The Arcus training lab is a customized suite of tools and data developed by a team of developers here at CHOP.  It includes tools that are customarily used in reproducible data analysis.
 
-While things are loading, you might see an image like this, and it might stay this way for a few minutes.  Be patient!  If you have a few friends to do this together with, it can help speed things up, since the environment will have been recently used and ready to deploy more quickly.
+Many teams use Arcus labs: both "training" labs, which have pre-assigned deidentified clinical data, and "scientific project" labs, in which the data is specified by the researcher.  In order to save costs, we automatically "sleep" the labs when they aren't being used.  You'll need to start up your lab once you log in.
 
-|![Pangeo Load Screen](https://github.com/arcus/education_r_intensive/blob/main/images/pangeo.png?raw=true)|
-|--|
 
-### Finally Loaded!
 
 Once your environment has loaded, you will be able to see something like the following:
 
