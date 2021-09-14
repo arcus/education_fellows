@@ -156,7 +156,7 @@ RStudio is an **IDE**, or **Integrated Development Environment**, which pulls to
 
 ### Without RStudio
 
-We could run the code above in a simple **R console**, which is what you get when you install R by itself without using RStudio.  This isn't the most user friendly experience! In the screen recording shown below, we are **not** using RStudio, but rather the R Console.
+We could run the code above in a simple **R console**, which is what you get when you install R by itself without using RStudio.  This isn't the most user friendly experience! In the screen recording shown below, we are **not** using RStudio, but rather the R Console.  Click on the image to play the gif.
 
 <div style="display:none">@gifPreload</div>
 
@@ -176,7 +176,7 @@ Using the R.app or R console tool means very basic, bare-bones support for you a
 
 ### With RStudio
 
-On the other hand, you could run the same code in RStudio and see something like this:
+On the other hand, you could run the same code in RStudio and see something like this (click on the image to play the gif):
 
 <div style="display:none">@gifPreload</div>
 
