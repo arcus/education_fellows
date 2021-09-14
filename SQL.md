@@ -61,8 +61,43 @@ Contents
 
 
 ## What is SQL?
+
+To put it simply, SQL (**S**tructured **Q**uery **L**anguage) is the programing language used to interact with “**Relational Databases**”.
+
+> **Vocabulary Note**:
+> 
+> A **Relational Database** is a type of database that stores data in objects called Tables. Tables themselves are objects comprised of Columns and Rows (similar to data in an Excel file). 
+>
+> Tables within the database are related to one another by shared columns, sometimes referred to as "join keys" (more on join keys later!).
+>
+> The primary benefit of the **Relational Databases** model is the ability to use these "join keys" to create complex reports combining information from multiple tables to derive meaningful information from your data (this is done using SQL!)
+
+You can think of **SQL** as the super-secret code that you can use to “ask explicit questions” about the information in your Relational Database.
+
 ### When Should SQL Be Used?
+
+SQL should be used any time you need to access data stored within a **Relational Database**.
+
+More specifically, **SQL** is best suited for composing/structuring/formatting datasets for export and downstream analysis in programs like R or Python.
+
+> **Historical Note**:
+> 
+> SQL was created in the early 1970's by IBM as a method for more easily accessing information from their internal database system. 
+> 
+> By 1979 Relational Software, Inc. (now Oracle Corporation) released the first commercially available implementation of SQL as a part of their Oracle V2 database application.
+> 
+> Today **SQL** is the most common programing language for extracting and organizing data in Relational Database Systems.
+
+Ideally, all of your Data Transformations should be done using SQL in order to ensure that the final dataset exported from your queries doesn't require any additional major transformation before analysis work can begin. 
+
+The reason for this is that, especially for large datasets, SQL is a much more efficient tool for large-scale data transformations than your traditional scripting or analytic packages.
+
+Additionally, making sure that all of your data transformations are done using **SQL** is an easy way to ensure greater reproducibility and standardization of your work (just be sure to save/document all of your **SQL** queries!).
+
 ### When Should SQL Not be Used?
+
+Although SQL is great for organizing your data into meaningful reports for data extraction, it is not a great tool to do for your actual analysis work (this is where you will want to turn to other tools like R or Python).
+SQL also doesn’t have any capabilities to directly support Data Visualization work, and despite having many functions for text parsing it is not the tool you want to use for any NLP (Natural Language Processing) work; again, you’ll want to look to tools like R or Python for this type or downstream analysis work.
 
 ## Basic SQL Syntax
 ### Select Statement
