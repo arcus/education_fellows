@@ -117,16 +117,19 @@ Colloquially people often refer to the different SQL dialects as different "flav
 
 Some Popular "Flavors" of SQL:
 
-* **MySQL** (open source)
-* **SQLite** (open source)
-* **PostgreSQL** (open source)
-* **Oracle** (proprietary)
-* **BigQuery** (proprietary)
+* [**MySQL**](https://www.mysql.com/) (open source)
+* [**SQLite**](https://www.sqlite.org) (open source)
+* [**PostgreSQL**](https://www.postgresql.org/) (open source)
+* [**Oracle**](https://www.oracle.com/database/technologies/appdev/sql.html) (proprietary)
+* [**BigQuery**](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax) (proprietary)
 
 The most common difference between different SQL "flavors" are the availability of different functions that users can use for data manipulation, as well as the types of error messages that will be returned to the user when running code with syntax issues.
 
 That said, knowing the specific "flavor" of SQL your database uses is especially useful when first getting started writting queries and troubleshooting errors.
 
+> **Important Note**:
+>
+>Throughout the remainder of this documenation we will be using the [**BigQuery**](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax) SQL syntax to write our code (this is the "Flavor" of SQL used).
 
 ## Basic SQL Syntax
 
@@ -156,9 +159,11 @@ The sections that follow will provide an overview of the basic syntax and struct
 * [Having Clause](#Having-Clause)
 
 ### Select Statement
-#### Select All Columns
-#### Select Specific Columns
-#### Select Distinct Values
+
+**Select All Columns**
+**Select Specific Columns**
+**Select Distinct Values**
+
 ### Case Statement
 ### Where Clause
 #### Comparison Operators
