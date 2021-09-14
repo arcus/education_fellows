@@ -112,7 +112,7 @@ The sections that follow will provide an overview of the basic syntax and struct
 
 > **Vocabulary Note**:
 > 
-> **Queires** are essentially questions or requests for data, written in a specific strucutre that your Relational Database can understand.
+> **Queries** are essentially questions or requests for data, written in a specific structure that your Relational Database can understand.
 
 **SECTION CONTENTS**
 
