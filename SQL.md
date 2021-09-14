@@ -15,7 +15,7 @@ logo:     https://github.com/arcus/education_fellows/raw/main/img/chop-icon.png
 ## Overview
 
 <div class = "hint">
-
+This Training Module will provide an overview of SQL.
 </div>
 
 Contents
@@ -24,6 +24,7 @@ Contents
 * [What is SQL?](#What-is-SQL)
     * [When Should SQL Be Used?](#When-Should-SQL-Be-Used)
     * [When Should SQL Not be Used?](#When-Should-SQL-Not-be-Used)
+    * [Are all Implementations of SQL The Same?](#Are-all-Implementations-of-SQL-The-Same)
 * [Basic SQL Syntax](#Basic-SQL-Syntax)
     * [Select Statement](#Select-Statement)
     * [Case Statment](#Case-Statement)
@@ -107,6 +108,25 @@ Despite having many functions for text parsing, **SQL** is not the tool/language
 **SQL** also doesn’t have any capabilities to directly support Data Visualization work.
 
 For all of these "downstream analytics" use cases, you will want to use an actual analytical programing language or tool like **R** or **Python**.
+
+### Are all Implementations of SQL The Same?
+
+Although all SQL implementations have a similar structure, and the same basic syntax, each different SQL database product often has its own minor variations in dialect.
+
+Colloquially people often refer to the different SQL dialects as different "flavors" of SQL.
+
+Some Popular "Flavors" of SQL:
+
+* **MySQL** (open source)
+* **SQLite** (open source)
+* **PostgreSQL** (open source)
+* **Oracle** (proprietary)
+* **BigQuery** (proprietary)
+
+The most common difference between different SQL "flavors" are the availability of different functions that users can use for data manipulation, as well as the types of error messages that will be returned to the user when running code with syntax issues.
+
+That said, knowing the specific "flavor" of SQL your database uses is especially useful when first getting started writting queries and troubleshooting errors.
+
 
 ## Basic SQL Syntax
 
