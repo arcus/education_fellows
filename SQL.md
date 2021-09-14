@@ -110,11 +110,17 @@ For all of these "downstream analytics" use cases, you will want to use an actua
 
 ## Basic SQL Syntax
 
-The sections that follow will provide an overview of the basic syntax and structure used for composing SQL "**queries**".
+At a high level, you’re going to have to provide three peaces of information when constructing **SQL** "**queries**":
+
+ 1. What’s the name of the **Table(s)** where the data is stored?
+ - What **Column(s)** from the Table do you want to look at?
+ - What **filtering condition(s)** do you want to apply to your data pull? 
 
 > **Vocabulary Note**:
 > 
 > **Queries** are essentially questions or requests for data, written in a specific structure that your Relational Database can understand.
+
+The sections that follow will provide an overview of the basic syntax and structure used for composing **SQL** "**queries**" using these 3 peaces of information.
 
 **SECTION CONTENTS**
 
