@@ -161,8 +161,50 @@ The sections that follow will provide an overview of the basic syntax and struct
 ### Select Statement
 
 **Select All Columns**
+
+```sql
+select *
+from arcus.patient
+limit 10
+
+```
+
 **Select Specific Columns**
+
+```sql
+select
+  patient.pat_id
+  ,patient.sex
+  ,patient.race
+  ,patient.ethnicity
+  ,patient.state_abbr
+from arcus.patient
+
+
+```
+
 **Select Distinct Values**
+
+```sql
+select distinct
+  patient.sex
+  ,patient.ethnicity
+from arcus.patient
+
+```
+
+**Ordering Results of Select Statement**
+
+```sql
+select distinct
+  patient.sex
+  ,patient.ethnicity
+from arcus.patient
+order by
+  patient.sex ASC
+  ,patient.ethnicity DESC
+
+```
 
 ### Case Statement
 ### Where Clause
