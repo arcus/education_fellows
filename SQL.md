@@ -62,8 +62,6 @@ Contents
 
 ## What is SQL?
 
-![](img/sql.png)
-
 To put it simply, SQL (**S**tructured **Q**uery **L**anguage) is the programing language used to interact with “**Relational Databases**”.
 
 > **Vocabulary Note**:
