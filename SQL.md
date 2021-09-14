@@ -122,6 +122,8 @@ At a high level, you’re going to have to provide three peaces of information w
 
 The sections that follow will provide an overview of the basic syntax and structure used for composing **SQL** "**queries**" using these 3 peaces of information.
 
+<hr><hr>
+
 **SECTION CONTENTS**
 
 * [Select Statement](#Select-Statement)
