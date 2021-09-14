@@ -162,7 +162,9 @@ We could run the code above in a simple **R console**, which is what you get whe
 
 <figure style = "border: 1px solid rgb(var(--color-border))">
   <img src="https://github.com/arcus/education_fellows/blob/joy-clicktoplay/img/r_console.png?raw=true" height="500" width="800" alt="R.app, or the R Console" data-alt="https://github.com/arcus/education_fellows/blob/joy-clicktoplay/img/r_console.gif?raw=true">
-<caption style = "width:100%">Click on the image to play the demo.</caption>
+
+<caption>Click on the image to play the demo.</caption>
+
 </figure>
 
 
@@ -183,8 +185,10 @@ On the other hand, you could run the same code in RStudio and see something like
 
 <figure style = "border: 1px solid rgb(var(--color-border))">
   <img src="https://github.com/arcus/education_fellows/blob/joy-clicktoplay/img/rstudio.png?raw=true" height="500" width="800" alt="R.app, or the R Console" data-alt="https://github.com/arcus/education_fellows/blob/main/img/rstudio.gif?raw=true">
+
+<caption>Click on the image to play the demo.</caption>
+
 </figure>
-<caption style = "width:100%">Click on the image to play the demo.</caption>
 
 Using RStudio, you:
 
