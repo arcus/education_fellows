@@ -113,8 +113,8 @@ For all of these "downstream analytics" use cases, you will want to use an actua
 At a high level, you’re going to have to provide three peaces of information when constructing **SQL** "**queries**":
 
  1. What’s the name of the **Table(s)** where the data is stored?
- - What **Column(s)** from the Table do you want to look at?
- - What **filtering condition(s)** do you want to apply to your data pull? 
+ 2. What **Column(s)** from the Table do you want to look at?
+ 3. What **filtering condition(s)** do you want to apply to your data pull? 
 
 > **Vocabulary Note**:
 > 
