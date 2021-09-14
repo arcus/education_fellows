@@ -160,7 +160,7 @@ We could run the code above in a simple **R console**, which is what you get whe
 
 <div style="display:none">@gifPreload</div>
 
-<figure style = "border: 1px solid rgb(var(--color-border))">
+<figure style = "border: 1px solid rgb(var(--lia-grey))">
   <img src="https://github.com/arcus/education_fellows/blob/joy-clicktoplay/img/r_console.png?raw=true" height="500" width="800" alt="R.app, or the R Console" data-alt="https://github.com/arcus/education_fellows/blob/joy-clicktoplay/img/r_console.gif?raw=true">
 
 <caption>Click on the image to play the demo.</caption>
@@ -183,7 +183,7 @@ On the other hand, you could run the same code in RStudio and see something like
 
 <div style="display:none">@gifPreload</div>
 
-<figure style = "border: 1px solid rgb(var(--color-border))">
+<figure style = "border: 1px solid rgb(var(--lia-grey))">
   <img src="https://github.com/arcus/education_fellows/blob/joy-clicktoplay/img/rstudio.png?raw=true" height="500" width="800" alt="R.app, or the R Console" data-alt="https://github.com/arcus/education_fellows/blob/main/img/rstudio.gif?raw=true">
 
 <caption>Click on the image to play the demo.</caption>
