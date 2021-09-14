@@ -68,6 +68,8 @@ To put it simply, SQL (**S**tructured **Q**uery **L**anguage) is the programing 
 > 
 > A **Relational Database** is a type of database that stores data in objects called Tables. Tables themselves are objects comprised of Columns and Rows (similar to data in an Excel file). 
 >
+> ![](img/example-table.png)
+>
 > Tables within the database are related to one another by shared columns, sometimes referred to as "join keys" (more on join keys later!).
 >
 > The primary benefit of the **Relational Databases** model is the ability to use these "join keys" to create complex reports combining information from multiple tables to derive meaningful information from your data (this is done using SQL!)
