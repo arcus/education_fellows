@@ -96,6 +96,8 @@ Additionally, making sure that all of your data transformations are done using *
 
 ### When Should SQL Not be Used?
 
+![](img/misusing-tools.jpeg)
+
 Although **SQL** is a great tool for organizing your data into meaningful reports for data extraction, it is not a great tool to do for your actual analysis work.
 
 Despite having many functions for text parsing, **SQL** is not the tool/language you want to use for any NLP (Natural Language Processing) work.
