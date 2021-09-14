@@ -96,11 +96,13 @@ Additionally, making sure that all of your data transformations are done using *
 
 ### When Should SQL Not be Used?
 
-Although **SQL** is great for organizing your data into meaningful reports for data extraction, it is not a great tool to do for your actual analysis work (this is where you will want to turn to other tools like **R** or **Python**).
+Although **SQL** is a great tool for organizing your data into meaningful reports for data extraction, it is not a great tool to do for your actual analysis work.
 
->
+Despite having many functions for text parsing, **SQL** is not the tool/language you want to use for any NLP (Natural Language Processing) work.
 
-**SQL** also doesn’t have any capabilities to directly support Data Visualization work, and despite having many functions for text parsing it is not the tool you want to use for any NLP (Natural Language Processing) work; again, you’ll want to look to tools like **R** or **Python** for this type or downstream analysis work.
+**SQL** also doesn’t have any capabilities to directly support Data Visualization work.
+
+For all of these "downstream analytics" use cases, you will want to use an actual analytical programing language or tool like **R** or **Python**.
 
 ## Basic SQL Syntax
 ### Select Statement
