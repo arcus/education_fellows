@@ -107,6 +107,18 @@ Despite having many functions for text parsing, **SQL** is not the tool/language
 For all of these "downstream analytics" use cases, you will want to use an actual analytical programing language or tool like **R** or **Python**.
 
 ## Basic SQL Syntax
+
+The sections that follow will provide an overview of the basic syntax and structure used when composing SQL "queries".
+
+* [Select Statement](#Select-Statement)
+* [Case Statment](#Case-Statement)
+* [Where Clause](#Where-Clause)
+* [Comparison Operators](#Comparison-Operators)
+* [Logical Operators](#Logical-Operators)
+* [Group By](#Group-By)
+* [Aggregate Functions](#Aggregate-Functions)
+* [Having Clause](#Having-Clause)
+
 ### Select Statement
 #### Select All Columns
 #### Select Specific Columns
