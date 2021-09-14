@@ -1,6 +1,10 @@
+# Customizations to html tags
+
 h2, h3, h4 {
   margin: 1.5em 0em;
 }
+
+# Customizations to classes
 
 .hint {
   background-color: rgba(var(--lia-success),.15);
