@@ -15,7 +15,7 @@ logo:     https://github.com/arcus/education_fellows/raw/main/img/chop-icon.png
 ## Overview
 
 <div class = "hint">
-This Training Module will provide an overview of SQL.
+This Training Module will provide an overview of SQL (<b>S</b>tructured <b>Q</b>uery <b>L</b>anguage).
 </div>
 
 Contents
