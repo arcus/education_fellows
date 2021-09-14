@@ -129,7 +129,7 @@ That said, knowing the specific "flavor" of SQL your database uses is especially
 
 > **Important Note**:
 >
->Throughout the remainder of this documenation we will be using the [**BigQuery**](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax) SQL syntax to write our code (this is the "Flavor" of SQL used).
+>Throughout the remainder of this documenation we will be using the [**BigQuery**](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax) SQL syntax to write our code (this is the "Flavor" of SQL used in Arcus Labs here at CHOP).
 
 ## Basic SQL Syntax
 
