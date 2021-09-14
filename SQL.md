@@ -29,11 +29,9 @@ Contents
     * [Select Statement](#Select-Statement)
     * [Case Statment](#Case-Statement)
     * [Where Clause](#Where-Clause)
-        * [Comparison Operators](#Comparison-Operators)
-        * [Logical Operators](#Logical-Operators)
-    * [Group By](#Group-By)
-        * [Aggregate Functions](#Aggregate-Functions)
-        * [Having Clause](#Having-Clause)
+    * [Aggregate Functions](#Aggregate-Functions)
+    * [Group By Statement](#Group-By-Statement)    
+    * [Having Clause](#Having-Clause)
 * [Advanced SQL Syntax](#Advanced-SQL-Syntax) 
     * [Wildcard Operators](#Wildcard-Operators)
         * [Like Statment](#Like-Statment)
@@ -152,10 +150,8 @@ The sections that follow will provide an overview of the basic syntax and struct
 * [Select Statement](#Select-Statement)
 * [Case Statment](#Case-Statement)
 * [Where Clause](#Where-Clause)
-* [Comparison Operators](#Comparison-Operators)
-* [Logical Operators](#Logical-Operators)
-* [Group By](#Group-By)
 * [Aggregate Functions](#Aggregate-Functions)
+* [Group By](#Group-By)
 * [Having Clause](#Having-Clause)
 
 ### Select Statement
@@ -207,9 +203,96 @@ order by
 ```
 
 ### Case Statement
+
+```sql
+select
+  patient.pat_id
+  ,patient.state_abbr
+  ,case
+    when patient.state_abbr = 'PA' then 1
+    when patient.state_abbr <> 'PA' then 0
+    when patient.state_abbr is null then -1
+    else 0
+   end is_pa_resident
+from arcus.patient
+
+```
+
 ### Where Clause
-#### Comparison Operators
-#### Logical Operators
+
+
+**Comparison Operators**
+
+```sql
+select * 
+from arcus.encounter
+where
+  appt_age = 2
+
+```
+
+```sql
+select * 
+from arcus.encounter
+where
+  appt_age <= 2
+
+```
+
+```sql
+select * 
+from arcus.encounter
+where
+  appt_age >= 2
+
+```
+
+```sql
+select * 
+from arcus.encounter
+where
+  appt_age <> 2
+
+```
+
+**Logical Operators**
+
+
+```sql
+select * 
+from arcus.encounter
+where
+  pat_encounter_num = 1
+  and (
+    appt_age = 0
+    or appt_age = 1
+    or appt_age = 2
+  )
+  
+```
+
+```sql
+select * 
+from arcus.encounter
+where
+  pat_encounter_num = 1
+  and appt_age in (
+    0
+    ,1
+    ,2
+  )
+  
+```
+
+```sql
+select * 
+from arcus.encounter
+where
+  pat_encounter_num = 1
+  appt_age between 0 and 2
+  
+```
+
 ### Group By Statement
 #### Aggregate Functions
 #### Having Clause
