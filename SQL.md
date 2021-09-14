@@ -28,7 +28,10 @@ Contents
 * [Basic SQL Syntax](#Basic-SQL-Syntax)
     * [Select Statement](#Select-Statement)
     * [Case Statment](#Case-Statement)
+    * [Order By Statement](#Order-By-Statement)
     * [Where Clause](#Where-Clause)
+        * [Comparison Operators](#Comparison-Operators)
+        * [Logical Operators](#Logical-Operators)
     * [Aggregate Functions](#Aggregate-Functions)
     * [Group By Statement](#Group-By-Statement)    
     * [Having Clause](#Having-Clause)
@@ -148,8 +151,11 @@ The sections that follow will provide an overview of the basic syntax and struct
 **SECTION CONTENTS**
 
 * [Select Statement](#Select-Statement)
+* [Order By Statement](#Order-By-Statement)
 * [Case Statment](#Case-Statement)
 * [Where Clause](#Where-Clause)
+* [Comparison Operators](#Comparison-Operators)
+* [Logical Operators](#Logical-Operators)
 * [Aggregate Functions](#Aggregate-Functions)
 * [Group By](#Group-By)
 * [Having Clause](#Having-Clause)
@@ -189,18 +195,6 @@ from arcus.patient
 
 ```
 
-**Ordering Results of Select Statement**
-
-```sql
-select distinct
-  patient.sex
-  ,patient.ethnicity
-from arcus.patient
-order by
-  patient.sex ASC
-  ,patient.ethnicity DESC
-
-```
 
 ### Case Statement
 
@@ -217,11 +211,35 @@ select
 from arcus.patient
 
 ```
+### Order By Statement
+
+```sql
+select
+  patient.pat_id
+  ,patient.state_abbr
+  ,case
+    when patient.state_abbr = 'PA' then 1
+    when patient.state_abbr <> 'PA' then 0
+    when patient.state_abbr is null then -1
+    else 0
+   end is_pa_resident
+from arcus.patient
+order by
+  ,case
+    when patient.state_abbr = 'PA' then 1
+    when patient.state_abbr <> 'PA' then 0
+    when patient.state_abbr is null then -1
+    else 0
+   end DESC
+  ,patient.state_abbr ASC
+  ,patient.pat_id
+
+```
 
 ### Where Clause
 
 
-**Comparison Operators**
+#### Comparison Operators
 
 ```sql
 select * 
@@ -255,8 +273,9 @@ where
 
 ```
 
-**Logical Operators**
+#### Logical Operators
 
+**AND/OR**
 
 ```sql
 select * 
@@ -271,6 +290,8 @@ where
   
 ```
 
+**IN**
+
 ```sql
 select * 
 from arcus.encounter
@@ -283,6 +304,8 @@ where
   )
   
 ```
+
+**BETWEEN**
 
 ```sql
 select * 
