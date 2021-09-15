@@ -146,6 +146,14 @@ At a high level, you’re going to have to provide three peaces of information w
 
 The sections that follow will provide an overview of the basic syntax and structure used for composing **SQL** "**queries**" using these 3 peaces of information.
 
+
+You put these basic peaces of information together as shown below to create a SQL query: 
+
+```sql
+SELECT _2_ FROM _1_ WHERE _3_ ;
+
+```
+
 <hr><hr>
 
 **SECTION CONTENTS**
@@ -162,16 +170,25 @@ The sections that follow will provide an overview of the basic syntax and struct
 
 ### Select Statement
 
+A **Select Statement** is used to specify which columns you would like to have returned as output from your **SQL** query.
+
+The basic components of a **Select Statement** are the `SELECT` and `FROM` key words. 
+
+The `FROM` key word is used to specify the table you would like to use as the base of your query, and the `SELECT` key word is used to provide a list of columns (from the table(s) referenced in your query) that you would like returned as output.
+
 **Select All Columns**
+
+If you would like to return ALL of the columns from the table(s) specified in your SQL query, you can use the `*` wild card character as shown in the example below:
 
 ```sql
 select *
 from arcus.patient
-limit 10
 
 ```
 
 **Select Specific Columns**
+
+If you would only like to return a specif set of columns in your select statement you will need to list out each of those columns seperated by a comma.
 
 ```sql
 select
@@ -182,8 +199,8 @@ select
   ,patient.state_abbr
 from arcus.patient
 
-
 ```
+
 
 **Select Distinct Values**
 
@@ -195,6 +212,11 @@ from arcus.patient
 
 ```
 
+
+
+> **Side Note**:
+> 
+> The `LIMIT` clause can be used to limit the output of your SQL output to no more than a specific number of rows. If used, the limit clause must be the last line in your query.
 
 ### Case Statement
 
@@ -235,6 +257,9 @@ order by
   ,patient.pat_id
 
 ```
+
+
+
 
 ### Where Clause
 
