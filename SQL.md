@@ -21,45 +21,6 @@ This Training Module will provide an overview of SQL (<b>S</b>tructured <b>Q</b>
 Contents
 ========
 
-* [What is SQL?](#What-is-SQL)
-    * [When Should SQL Be Used?](#When-Should-SQL-Be-Used)
-    * [When Should SQL Not be Used?](#When-Should-SQL-Not-be-Used)
-    * [Are all Implementations of SQL The Same?](#Are-all-Implementations-of-SQL-The-Same)
-* [Basic SQL Syntax](#Basic-SQL-Syntax)
-    * [Select Statement](#Select-Statement)
-    * [Case Statment](#Case-Statement)
-    * [Order By Statement](#Order-By-Statement)
-    * [Where Clause](#Where-Clause)
-        * [Comparison Operators](#Comparison-Operators)
-        * [Logical Operators](#Logical-Operators)
-    * [Aggregate Functions](#Aggregate-Functions)
-    * [Group By Statement](#Group-By-Statement)    
-    * [Having Clause](#Having-Clause)
-* [Advanced SQL Syntax](#Advanced-SQL-Syntax) 
-    * [Wildcard Operators](#Wildcard-Operators)
-        * [Like Statment](#Like-Statment)
-        * [Regular Expression Functions](#Regular-Expression-Functions)
-    * [Sub Queries](#Sub-Queries)
-    * [With Statement](#With-Statement)
-    * [Exists Statment](#Exists-Statment)
-* [SQL Joins](#SQL-Joins)
-    * [Inner Join](#Inner-Join)
-    * [Left Join](#Left-Join)
-    * [Cross Join](#Cross-Join)
-* [Advanced SQL Syntax II (Bonus Round!)](#Advanced-SQL-Syntax-II-Bonus-Round)
-    * [Ordered Analytic Functions](#Ordered-Analytic-Functions)
-* [DDL - Data Definition Language](#DDL---Data-Definition-Language)
-    * [Create Table](#Create-Table)
-    * [Create View](#Create-View)
-    * [Dropping Tables/Views](#dropping-tablesviews)
-    * [Altering Tables/Views](#altering-tablesviews)
-    * [Renaming Tables](#Renaming-Tables)
-    * [Adding Columns](#Adding-Columns)
-    * [Recasting Columns](#Recasting-Columns)
-* [DML - Data Manipulation Language](#dml---data-manipulation-language)
-    * [Update Statment](#Update-Statment)
-    * [Insert Statment](#Insert-Statment)
-    * [Delete Statment](#Delete-Statment)
 
 
 ## What is SQL?
@@ -158,11 +119,11 @@ The sections that follow will provide an overview of this basic **SQL** syntax a
 **SECTION CONTENTS**
 
 * [Select Statement](#Select-Statement)
-* [Order By Statement](#Order-By-Statement)
-* [Case Statment](#Case-Statement)
 * [Where Clause](#Where-Clause)
 * [Comparison Operators](#Comparison-Operators)
 * [Logical Operators](#Logical-Operators)
+* [Case Statment](#Case-Statement)
+* [Order By Statement](#Order-By-Statement)
 * [Aggregate Functions](#Aggregate-Functions)
 * [Group By](#Group-By)
 * [Having Clause](#Having-Clause)
@@ -216,52 +177,8 @@ from arcus.patient
 > 
 > Though not required for a single table select statement, it is a good idea to follow this practice any time you are writing a select statement in order to make sure its clear which table each column is coming from. Doing this will make things less error-prone if you ever want to add additional tables to your query and will make it easier for other programmers to read your code.
 
-
-### Case Statement
-
-```sql
-select
-  patient.pat_id
-  ,patient.state_abbr
-  ,case
-    when patient.state_abbr = 'PA' then 1
-    when patient.state_abbr <> 'PA' then 0
-    when patient.state_abbr is null then -1
-    else 0
-   end is_pa_resident
-from arcus.patient
-
-```
-### Order By Statement
-
-```sql
-select
-  patient.pat_id
-  ,patient.state_abbr
-  ,case
-    when patient.state_abbr = 'PA' then 1
-    when patient.state_abbr <> 'PA' then 0
-    when patient.state_abbr is null then -1
-    else 0
-   end is_pa_resident
-from arcus.patient
-order by
-  ,case
-    when patient.state_abbr = 'PA' then 1
-    when patient.state_abbr <> 'PA' then 0
-    when patient.state_abbr is null then -1
-    else 0
-   end DESC
-  ,patient.state_abbr ASC
-  ,patient.pat_id
-
-```
-
-> **Side Note**:
-> 
-> The `LIMIT` clause can be used to limit the output of your SQL output to no more than a specific number of rows. If used, the limit clause must be the last line in your query.
-
 ### Where Clause
+
 
 
 #### Comparison Operators
@@ -340,6 +257,53 @@ where
   appt_age between 0 and 2
   
 ```
+
+
+
+
+### Case Statement
+
+```sql
+select
+  patient.pat_id
+  ,patient.state_abbr
+  ,case
+    when patient.state_abbr = 'PA' then 1
+    when patient.state_abbr <> 'PA' then 0
+    when patient.state_abbr is null then -1
+    else 0
+   end is_pa_resident
+from arcus.patient
+
+```
+### Order By Statement
+
+```sql
+select
+  patient.pat_id
+  ,patient.state_abbr
+  ,case
+    when patient.state_abbr = 'PA' then 1
+    when patient.state_abbr <> 'PA' then 0
+    when patient.state_abbr is null then -1
+    else 0
+   end is_pa_resident
+from arcus.patient
+order by
+  ,case
+    when patient.state_abbr = 'PA' then 1
+    when patient.state_abbr <> 'PA' then 0
+    when patient.state_abbr is null then -1
+    else 0
+   end DESC
+  ,patient.state_abbr ASC
+  ,patient.pat_id
+
+```
+
+> **Side Note**:
+> 
+> The `LIMIT` clause can be used to limit the output of your SQL output to no more than a specific number of rows. If used, the limit clause must be the last line in your query.
 
 ### Group By Statement
 #### Aggregate Functions
