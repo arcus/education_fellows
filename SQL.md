@@ -144,9 +144,6 @@ At a high level, you’re going to have to provide three peaces of information w
 > 
 > **Queries** are essentially questions or requests for data, written in a specific structure that your Relational Database can understand.
 
-The sections that follow will provide an overview of the basic syntax and structure used for composing **SQL** "**queries**" using these 3 peaces of information.
-
-
 You put these basic peaces of information together as shown below to create a SQL query: 
 
 ```sql
@@ -155,6 +152,8 @@ SELECT _2_ FROM _1_ WHERE _3_ ;
 ```
 
 <hr><hr>
+
+The sections that follow will provide an overview of the basic syntax and structure used for composing **SQL** "**queries**" using these 3 peaces of information.
 
 **SECTION CONTENTS**
 
