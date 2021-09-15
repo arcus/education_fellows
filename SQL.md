@@ -126,21 +126,21 @@ Some Popular "Flavors" of SQL:
 
 The most common difference between different SQL "flavors" are the availability of different functions that users can use for data manipulation, as well as the types of error messages that will be returned to the user when running code with syntax issues.
 
-That said, knowing the specific "flavor" of SQL your database uses is especially useful when first getting started writting queries and troubleshooting errors.
+That said, knowing the specific "flavor" of SQL your database uses is especially useful when first getting started writing queries and troubleshooting errors.
 
 > **Important Note**:
 >
->Throughout the remainder of this documenation we will be using the [**BigQuery**](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax) SQL syntax to write our code (this is the "Flavor" of SQL used in Arcus Labs here at CHOP).
+>Throughout the remainder of this documentation we will be using the [**BigQuery**](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax) SQL syntax to write our code (this is the "Flavor" of SQL used in Arcus Labs here at CHOP).
 
 ## Basic SQL Syntax
 
-At a high level, you’re going to have to provide three peaces of information when constructing **SQL** "**queries**":
+At a high level, you’re going to have to provide three pieces of information when constructing **SQL** "**queries**":
 
  1. The name of the **Table(s)** where the data is stored.
  2. The **Column(s)** from the **Table(s)** you want to look at.
- 3. The **filtering condition(s)** you want to applied to your data pull. 
+ 3. The **filtering condition(s)** you want to apply to your data pull. 
 
-You put these basic peaces of information together using the syntax shown below to create a SQL query: 
+You put these basic pieces of information together using the syntax shown below to create a SQL query: 
 
 ```sql
 SELECT _2_ FROM _1_ WHERE _3_
@@ -166,7 +166,8 @@ The sections that follow will provide an overview of this basic **SQL** syntax a
 * [Having Clause](#Having-Clause)
 
 ### Select Statement
-A **Select Statement** is used to specify which columns you would like to have returned as output from your **SQL** query.
+
+The **Select Statement** is used to specify which columns you would like to have returned as output from your **SQL** query.
 
 The basic components of a **Select Statement** are the `SELECT` and `FROM` keywords. 
 
@@ -186,7 +187,7 @@ from arcus.patient
 
 > **Additinal Info**:
 > 
-> Notice that the `FROM` line of this query is followed by 2 words seperated by a period. 
+> Notice that the `FROM` line of this query is followed by 2 words separated by a period. 
 > 
 > The first word is the name of the schema/catalog that your data is stored in, and the second word is the name of the specific data Table you would like to reference.
 > 
@@ -194,7 +195,7 @@ from arcus.patient
 
 **Select Specific Columns**
 
-If you would only like to return a specif set of columns in your select statement you will need to list out each of those columns separated by a comma:
+If you would only like to return a specif set of columns in your select statement you will need explicitly to list out each of those columns after the select keyword, with each separate column reference separated by a comma:
 
 ```sql
 select
@@ -211,7 +212,7 @@ from arcus.patient
 > 
 > Notice that each column listed in the **Select Statement** first lists the name of the table that the column belongs to, then the name of the column itself (separated by a period). 
 > 
-> Though not required for a single table select statment, it is a good idea to follow this practice any time you are writing a select statement in order to make sure its clear which table each column is coming from. Doing this will make things less error prone if you ever want to add additional tables to your query, and will make it easier for other programers to read your code.
+> Though not required for a single table select statement, it is a good idea to follow this practice any time you are writing a select statement in order to make sure its clear which table each column is coming from. Doing this will make things less error-prone if you ever want to add additional tables to your query and will make it easier for other programmers to read your code.
 
 **Select Distinct Values**
 
