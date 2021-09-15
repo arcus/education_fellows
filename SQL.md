@@ -155,7 +155,7 @@ WHERE _3_
 
 <hr><hr>
 
-The sections that follow will provide an overview of this basic SQL syntax and go into more detail.
+The sections that follow will provide an overview of this basic SQL syntax and go into more detail on additional modifications to this basic syntax you can use to .
 
 **SECTION CONTENTS**
 
