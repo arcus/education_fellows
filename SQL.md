@@ -179,40 +179,19 @@ from arcus.patient
 
 ### Where Clause
 
+The **Where Clause** is the section of your query used to specify any "filtering logic" that should be applied to your query before returning any output. 
 
-The **Where Clause** is the sesction of your query used to specify any "filtering logic" that should be applied to your query before returning its final output.
-
-**List of Comparison Operators**
-
-character|name
----|---
-=|equal
-<|less than
-<=|less than or equal to
->|greater than
->=|greater than or equal to
-
-**List of Logical Operators**
-
-keyword|function
----|---
-and|
-or|
-not|
-in|
-between|
-
-
+The below example uses the **Where Clause** to filter output on only those records that represent the 1st encounter for each patient.
 
 ```sql
 select * 
 from arcus.encounter
 where
-  pat_encounter_num = 1
-  and appt_age <= 2
+  encounter.pat_encounter_num = 1
   
 ```
 
+Although the above example lists only one constraint for the dataset, the **where clause** can contain any number of filtering arguments needed. Check out the code block below for an example of a where clause that includes multiple constraints, and makes use of both **Comparison** and **Logical** Operators.
 
 ```sql
 select * 
@@ -228,7 +207,21 @@ where
 ```
 
 
-```sql
+
+>Test
+>
+>```sql
+select * 
+from arcus.encounter
+where
+  pat_encounter_num = 1
+  and appt_age <= 2
+  
+>```
+>
+>test
+>
+>```sql
 select * 
 from arcus.encounter
 where
@@ -239,17 +232,18 @@ where
     ,2
   )
   
-```
-
-
-```sql
+>```
+>
+>test
+>
+>```sql
 select * 
 from arcus.encounter
 where
   pat_encounter_num = 1
   appt_age between 0 and 2
   
-```
+>```
 
 
 
