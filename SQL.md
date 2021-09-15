@@ -140,10 +140,6 @@ At a high level, you’re going to have to provide three peaces of information w
  2. The **Column(s)** from the **Table(s)** you want to look at.
  3. The **filtering condition(s)** you want to applied to your data pull. 
 
-> **Vocabulary Note**:
-> 
-> **Queries** are essentially questions or requests for data, written in a specific structure that your Relational Database can understand.
-
 You put these basic peaces of information together as shown below to create a SQL query: 
 
 ```sql
@@ -152,6 +148,10 @@ FROM _1_
 WHERE _3_
 
 ```
+
+> **Vocabulary Note**:
+> 
+> **Queries** are essentially questions or requests for data, written in a specific structure that your Relational Database can understand.
 
 <hr><hr>
 
