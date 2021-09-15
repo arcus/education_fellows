@@ -188,7 +188,11 @@ from arcus.patient
 
 > **Additinal Info**:
 > 
-> Notice
+> Notice that the `FROM` line of this query is followed by 2 words seperated by a period. 
+> 
+> The first word is the name of the schema/catalog that your data is stored in, and the second word is the name of the specific data Table you would like to reference.
+> 
+> This format is known as Dot Notation.
 
 **Select Specific Columns**
 
