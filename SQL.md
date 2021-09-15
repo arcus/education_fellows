@@ -183,8 +183,6 @@ from arcus.patient
 
 ```
 
-> 
-
 > **Additinal Info**:
 > 
 > Notice that the `FROM` line of this query is followed by 2 words separated by a period. 
