@@ -216,21 +216,6 @@ from arcus.patient
 > 
 > Though not required for a single table select statement, it is a good idea to follow this practice any time you are writing a select statement in order to make sure its clear which table each column is coming from. Doing this will make things less error-prone if you ever want to add additional tables to your query and will make it easier for other programmers to read your code.
 
-**Select Distinct Values**
-
-```sql
-select distinct
-  patient.sex
-  ,patient.ethnicity
-from arcus.patient
-
-```
-
-
-
-> **Side Note**:
-> 
-> The `LIMIT` clause can be used to limit the output of your SQL output to no more than a specific number of rows. If used, the limit clause must be the last line in your query.
 
 ### Case Statement
 
@@ -272,8 +257,9 @@ order by
 
 ```
 
-
-
+> **Side Note**:
+> 
+> The `LIMIT` clause can be used to limit the output of your SQL output to no more than a specific number of rows. If used, the limit clause must be the last line in your query.
 
 ### Where Clause
 
