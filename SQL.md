@@ -189,7 +189,7 @@ from arcus.patient
 > 
 > Notice that the `FROM` line of this query is followed by 2 words separated by a period. 
 > 
-> The first word is the name of the schema/catalog that your data is stored in, and the second word is the name of the specific data Table you would like to reference.
+> The first word is the name of the Schema/Catalog that your data is stored in, and the second word is the name of the specific data Table you would like to reference as the base of your query.
 > 
 > This format is known as Dot Notation.
 
@@ -211,6 +211,8 @@ from arcus.patient
 > **PRO Tip:**
 > 
 > Notice that each column listed in the **Select Statement** first lists the name of the table that the column belongs to, then the name of the column itself (separated by a period). 
+> 
+> This is another example of the use of Dot Notation in SQL.
 > 
 > Though not required for a single table select statement, it is a good idea to follow this practice any time you are writing a select statement in order to make sure its clear which table each column is coming from. Doing this will make things less error-prone if you ever want to add additional tables to your query and will make it easier for other programmers to read your code.
 
