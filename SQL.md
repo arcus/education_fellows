@@ -152,7 +152,9 @@ SELECT _2_ FROM _1_ WHERE _3_
 > **Queries** are essentially questions or requests for data, written in a specific structure that your Relational Database can understand.
 
 The sections that follow will provide an overview of this basic **SQL** syntax and go into detail on additional modifications to this basic syntax that can be used to format the output from your queries.
+
 <hr><hr>
+
 **SECTION CONTENTS**
 
 * [Select Statement](#Select-Statement)
