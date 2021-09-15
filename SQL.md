@@ -191,7 +191,9 @@ where
   
 ```
 
-Although the above example lists only one constraint for the dataset, the **where clause** can contain any number of filtering arguments needed. Check out the code block below for an example of a where clause that includes multiple constraints, and makes use of both **Comparison** and **Logical** Operators.
+Although the above example lists only one constraint for the dataset, the **where clause** can contain any number of filtering arguments needed. 
+
+Check out the code block below for an example of a where clause that includes multiple constraints, and makes use of both **Comparison** and **Logical** Operators. 
 
 ```sql
 select * 
@@ -206,46 +208,9 @@ where
   
 ```
 
-
-
->Test
->
->```sql
-select * 
-from arcus.encounter
-where
-  pat_encounter_num = 1
-  and appt_age <= 2
-  
->```
->
->test
->
->```sql
-select * 
-from arcus.encounter
-where
-  pat_encounter_num = 1
-  and appt_age in (
-    0
-    ,1
-    ,2
-  )
-  
->```
->
->test
->
->```sql
-select * 
-from arcus.encounter
-where
-  pat_encounter_num = 1
-  appt_age between 0 and 2
-  
->```
-
-
+> **Additional Reading**:
+> 
+> To read more about the basic types of "Operators" avaiable for use in a SQL query, click [here](https://www.tutorialspoint.com/sql/sql-operators.htm) for some helpful documentation from **tutorialspoint.com**.
 
 
 ### Case Statement
@@ -287,10 +252,6 @@ order by
   ,patient.pat_id
 
 ```
-
-> **Side Note**:
-> 
-> The `LIMIT` clause can be used to limit the output of your SQL output to no more than a specific number of rows. If used, the limit clause must be the last line in your query.
 
 ### Group By Statement
 #### Aggregate Functions
