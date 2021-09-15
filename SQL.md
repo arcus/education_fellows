@@ -143,9 +143,7 @@ At a high level, you’re going to have to provide three peaces of information w
 You put these basic peaces of information together using the syntax shown below to create a SQL query: 
 
 ```sql
-SELECT _2_
-FROM _1_ 
-WHERE _3_
+SELECT _2_ FROM _1_ WHERE _3_
 
 ```
 
@@ -170,12 +168,11 @@ The sections that follow will provide an overview of this basic **SQL** syntax a
 * [Having Clause](#Having-Clause)
 
 ### Select Statement
-
 A **Select Statement** is used to specify which columns you would like to have returned as output from your **SQL** query.
 
-The basic components of a **Select Statement** are the `SELECT` and `FROM` key words. 
+The basic components of a **Select Statement** are the `SELECT` and `FROM` keywords. 
 
-The `FROM` key word is used to specify the table you would like to use as the base of your query, and the `SELECT` key word is used to provide a list of columns (from the table(s) referenced in your query) that you would like returned as output.
+The `FROM` keyword is used to specify the table you would like to use as the base of your query, and the `SELECT` keyword is used to provide a list of columns (from the table(s) referenced in your query) that you would like returned as output.
 
 **Select All Columns**
 
@@ -187,9 +184,15 @@ from arcus.patient
 
 ```
 
+> 
+
+> **Additinal Info**:
+> 
+> Notice
+
 **Select Specific Columns**
 
-If you would only like to return a specif set of columns in your select statement you will need to list out each of those columns seperated by a comma.
+If you would only like to return a specif set of columns in your select statement you will need to list out each of those columns separated by a comma:
 
 ```sql
 select
@@ -202,6 +205,11 @@ from arcus.patient
 
 ```
 
+> **PRO Tip:**
+> 
+> Notice that each column listed in the **Select Statement** first lists the name of the table that the column belongs to, then the name of the column itself (separated by a period). 
+> 
+> Though not required for a single table select statment, it is a good idea to follow this practice any time you are writing a select statement in order to make sure its clear which table each column is coming from. Doing this will make things less error prone if you ever want to add additional tables to your query, and will make it easier for other programers to read your code.
 
 **Select Distinct Values**
 
