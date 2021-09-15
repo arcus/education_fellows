@@ -180,44 +180,39 @@ from arcus.patient
 ### Where Clause
 
 
+The **Where Clause** is the sesction of your query used to specify any "filtering logic" that should be applied to your query before returning its final output.
 
-#### Comparison Operators
+**List of Comparison Operators**
 
-```sql
-select * 
-from arcus.encounter
-where
-  appt_age = 2
+character|name|function
+---|---|---
+=|
+<|
+<=|
+>|
+>=|
 
-```
+**List of Logical Operators**
 
-```sql
-select * 
-from arcus.encounter
-where
-  appt_age <= 2
+keyword|function
+---|---
+and|
+or|
+not|
+in|
+between|
 
-```
 
-```sql
-select * 
-from arcus.encounter
-where
-  appt_age >= 2
-
-```
 
 ```sql
 select * 
 from arcus.encounter
 where
-  appt_age <> 2
-
+  pat_encounter_num = 1
+  and appt_age <= 2
+  
 ```
 
-#### Logical Operators
-
-**AND/OR**
 
 ```sql
 select * 
@@ -232,7 +227,6 @@ where
   
 ```
 
-**IN**
 
 ```sql
 select * 
@@ -247,7 +241,6 @@ where
   
 ```
 
-**BETWEEN**
 
 ```sql
 select * 
