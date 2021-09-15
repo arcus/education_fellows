@@ -140,7 +140,7 @@ At a high level, you’re going to have to provide three peaces of information w
  2. The **Column(s)** from the **Table(s)** you want to look at.
  3. The **filtering condition(s)** you want to applied to your data pull. 
 
-You put these basic peaces of information together as shown below to create a SQL query: 
+You put these basic peaces of information together using the syntax shown below to create a SQL query: 
 
 ```sql
 SELECT _2_
@@ -155,7 +155,7 @@ WHERE _3_
 
 <hr><hr>
 
-The sections that follow will provide an overview of this basic SQL syntax and go into more detail on additional modifications to this basic syntax you can use to .
+The sections that follow will provide an overview of this basic **SQL** syntax and go into detail on additional modifications to this basic syntax that can be used to format the output from your queries.
 
 **SECTION CONTENTS**
 
