@@ -184,13 +184,13 @@ The **Where Clause** is the sesction of your query used to specify any "filterin
 
 **List of Comparison Operators**
 
-character|name|function
----|---|---
-=|
-<|
-<=|
->|
->=|
+character|name
+---|---
+=|equal
+<|less than
+<=|less than or equal to
+>|greater than
+>=|greater than or equal to
 
 **List of Logical Operators**
 
