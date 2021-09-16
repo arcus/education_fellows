@@ -209,8 +209,8 @@ where
 > 
 > To read more about the basic types of "Operators" avaiable for use in a SQL query, click [here](https://www.tutorialspoint.com/sql/sql-operators.htm) for some helpful documentation from **tutorialspoint.com**.
 
-### Group By Statement
-#### Aggregate Functions
+### Aggregate Functions
+#### Group By Statement
 #### Having Clause
 
 
