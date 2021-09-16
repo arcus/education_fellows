@@ -166,7 +166,7 @@ from arcus.patient
 
 ```
 
-> **PRO Tip:**
+> **Additional Info:**
 > 
 > Notice that each column listed in the **Select Statement** first lists the name of the table that the column belongs to, then the name of the column itself (separated by a period). 
 > 
