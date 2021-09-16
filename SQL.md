@@ -21,6 +21,7 @@ This Training Module will provide an overview of SQL (<b>S</b>tructured <b>Q</b>
 Contents
 ========
 
+* [What is SQL?](#What-is-SQL)
 
 
 ## What is SQL?
@@ -53,7 +54,7 @@ More specifically, **SQL** is best suited for composing/structuring/formatting d
 > 
 > Today **SQL** is the most common programing language for extracting and organizing data in Relational Database Systems.
 
-Ideally, all of your Data Transformations should be done using SQL in order to ensure that the final dataset exported from your queries doesn't require any additional major transformation before analysis work can begin. 
+Ideally, all of your Data Transformations should be done using SQL in order to ensure that the final dataset exported from your queries don't require any additional major transformations before the analysis phase of your work can begin. 
 
 The reason for this is that, especially for large datasets, **SQL** is a much more efficient tool for large-scale data transformations than your traditional scripting or analytic packages.
 
@@ -63,7 +64,7 @@ Additionally, making sure that all of your data transformations are done using *
 
 ![](img/misusing-tools.jpeg)
 
-Although **SQL** is a great tool for organizing your data into meaningful reports for data extraction, it is not a great tool to do for your actual analysis work.
+Although **SQL** is a great tool for organizing your data into meaningful reports for data extraction, it is not a great tool to use for your actual analysis work.
 
 Despite having many functions for text parsing, **SQL** is not the tool/language you want to use for any NLP (Natural Language Processing) work.
 
@@ -120,10 +121,6 @@ The sections that follow will provide an overview of this basic **SQL** syntax a
 
 * [Select Statement](#Select-Statement)
 * [Where Clause](#Where-Clause)
-* [Comparison Operators](#Comparison-Operators)
-* [Logical Operators](#Logical-Operators)
-* [Case Statment](#Case-Statement)
-* [Order By Statement](#Order-By-Statement)
 * [Aggregate Functions](#Aggregate-Functions)
 * [Group By](#Group-By)
 * [Having Clause](#Having-Clause)
@@ -212,6 +209,15 @@ where
 > 
 > To read more about the basic types of "Operators" avaiable for use in a SQL query, click [here](https://www.tutorialspoint.com/sql/sql-operators.htm) for some helpful documentation from **tutorialspoint.com**.
 
+### Group By Statement
+#### Aggregate Functions
+#### Having Clause
+
+
+
+
+
+## Advanced SQL Syntax
 
 ### Case Statement
 
@@ -228,6 +234,9 @@ select
 from arcus.patient
 
 ```
+
+### Distinct Clause
+
 ### Order By Statement
 
 ```sql
@@ -253,12 +262,8 @@ order by
 
 ```
 
-### Group By Statement
-#### Aggregate Functions
-#### Having Clause
+#### Limit Clause
 
-## Advanced SQL Syntax
-#### Wildcard Operators
 #### Like Statment
 #### Regular Expression Functions
 ### Sub Queries
