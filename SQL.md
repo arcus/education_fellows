@@ -153,7 +153,7 @@ from arcus.patient
 
 **Select Specific Columns**
 
-If you would only like to return a specific set of columns in your select statement you will need explicitly to list out each of those columns after the select keyword, with each separate column reference separated by a comma:
+If you would only like to return a specific set of columns in your select statement you will need to explicitly list out each of those columns after the select keyword, with each separate column reference separated by a comma:
 
 ```sql
 select
