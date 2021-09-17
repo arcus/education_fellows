@@ -262,10 +262,9 @@ order by
 
 ```
 
-#### Limit Clause
-
-#### Like Statment
-#### Regular Expression Functions
+### Limit Clause
+### Like Statment
+### Regular Expression Functions
 ### Sub Queries
 ### With Statement
 ### Exists Statment
