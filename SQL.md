@@ -12,7 +12,8 @@ logo:     https://github.com/arcus/education_fellows/raw/main/img/chop-icon.png
 
 # SQL : Structured Query Language
 
-## Overview
+Overview
+========
 
 <div class = "hint">
 This Training Module will provide an overview of SQL (<b>S</b>tructured <b>Q</b>uery <b>L</b>anguage).
@@ -25,12 +26,9 @@ Contents
 
   * [When Should SQL Be Used?](#When-Should-SQL-Be-Used)
   * [When Should SQL Not be Used?](#When-Should-SQL-Not-be-Used)
+  * [Are all Implementations of SQL The Same?](#Are-all-Implementations-of-SQL-The-Same)
 
 
-
-|field1|field2|
-|---|---
-|a|b|
 
 ## What is SQL?
 
