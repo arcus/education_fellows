@@ -62,7 +62,7 @@ Contents
   * [Regular Expression Functions](#Regular-Expression-Functions)
   * [Ordered Analytic Functions](#Ordered-Analytic-Functions)
 
-* [DDL - Data Definition Language](#DDL---Data-Definition-Language)
+* [DDL - Data Definition Language](#ddl---data-definition-language)
 
   * [Create Table](#Create-Table)
   * [Create View](#Create-View)
@@ -72,7 +72,7 @@ Contents
   * [Adding Columns](#Adding-Columns)
   * [Recasting Columns](#Recasting-Columns)
 
-* [DML - Data Manipulation Language](#DML---Data-Manipulation-Language)
+* [DML - Data Manipulation Language](#dml---data-manipulation-language)
 
   * [Update Statment](#Update-Statment)
   * [Insert Statment](#Insert-Statment)
