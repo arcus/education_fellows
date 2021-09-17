@@ -22,11 +22,11 @@ This Training Module will provide an overview of SQL (<b>S</b>tructured <b>Q</b>
 Contents
 ========
 
-* [What is SQL?](#What-is-SQL)
+* [What is SQL?](#what-is-sql)
 
-  * [When Should SQL Be Used?](#When-Should-SQL-Be-Used)
-  * [When Should SQL Not be Used?](#When-Should-SQL-Not-be-Used)
-  * [Are all Implementations of SQL The Same?](#Are-all-Implementations-of-SQL-The-Same)
+  * [When Should SQL Be Used?](#when-should-sql-be-used)
+  * [When Should SQL Not be Used?](#when-should-sql-not-be-used)
+  * [Are all Implementations of SQL The Same?](#are-all-implementations-of-sql-the-same)
 
 * [Basic SQL Syntax](#Basic-SQL-Syntax)
 
