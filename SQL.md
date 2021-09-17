@@ -47,8 +47,9 @@ Contents
   * [Case Statement](#Case-Statement)
   * [Like Statment](#Like-Statment)
   * [Sub Queries](#Sub-Queries)
-  
+
     * [With Statement](#With-Statement)
+
     * [Exists Statment](#Exists-Statment)
 
 * [SQL Joins](#SQL-Joins)
