@@ -28,7 +28,54 @@ Contents
   * [When Should SQL Not be Used?](#When-Should-SQL-Not-be-Used)
   * [Are all Implementations of SQL The Same?](#Are-all-Implementations-of-SQL-The-Same)
 
+* [Basic SQL Syntax](#Basic-SQL-Syntax)
 
+  * [Select Statement](#Select-Statement)
+  * [Where Clause](#Where-Clause)
+  * [Aggregate Functions](#Aggregate-Functions)
+
+    * [Group By Statement](#Group-By-Statement)
+
+      * [Having Clause](#Having-Clause)
+
+  * [Order By Statement](#Order-By-Statement)
+
+* [Advanced SQL Syntax](#Advanced-SQL-Syntax)
+
+  * [Distinct Clause](#Distinct-Clause)
+  * [Limit Clause](#Limit-Clause)
+  * [Case Statement](#Case-Statement)
+  * [Like Statment](#Like-Statment)
+  * [Sub Queries](#Sub-Queries)
+    * [With Statement](#With-Statement)
+    * [Exists Statment](#Exists-Statment)
+
+* [SQL Joins](#SQL-Joins)
+
+  * [Inner Join](#Inner-Join)
+  * [Left Join](#Left-Join)
+  * [Cross Join](#Cross-Join)
+
+* [Advanced SQL Syntax II](#Advanced-SQL-Syntax-II)
+
+  * [Regular Expression Functions](#Regular-Expression-Functions)
+  * [Ordered Analytic Functions](#Ordered-Analytic-Functions)
+
+* [DDL - Data Definition Language](#DDL---Data-Definition-Language)
+
+  * [Create Table](#Create-Table)
+  * [Create View](#Create-View)
+  * [Dropping Tables/Views](#Dropping-TablesViews)
+  * [Altering Tables/Views](#Altering-TablesViews)
+  * [Renaming Tables](#Renaming-Tables)
+  * [Adding Columns](#Adding-Columns)
+  * [Recasting Columns](#Recasting-Columns)
+
+* [DML - Data Manipulation Language](#DML---Data-Manipulation-Language)
+
+  * [Update Statment](#Update-Statment)
+  * [Insert Statment](#Insert-Statment)
+  * [Delete Statment](#Delete-Statment)
 
 ## What is SQL?
 
@@ -252,7 +299,7 @@ from arcus.patient
 ### Left Join
 ### Cross Join
 
-## Advanced SQL Syntax II (Bonus Round!)
+## Advanced SQL Syntax II
 ### Regular Expression Functions
 ### Ordered Analytic Functions
 
