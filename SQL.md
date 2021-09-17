@@ -47,6 +47,7 @@ Contents
   * [Case Statement](#Case-Statement)
   * [Like Statment](#Like-Statment)
   * [Sub Queries](#Sub-Queries)
+  
     * [With Statement](#With-Statement)
     * [Exists Statment](#Exists-Statment)
 
@@ -65,8 +66,8 @@ Contents
 
   * [Create Table](#Create-Table)
   * [Create View](#Create-View)
-  * [Dropping Tables/Views](#Dropping-TablesViews)
-  * [Altering Tables/Views](#Altering-TablesViews)
+  * [Dropping Tables/Views](#dropping-tablesviews)
+  * [Altering Tables/Views](#altering-tablesviews)
   * [Renaming Tables](#Renaming-Tables)
   * [Adding Columns](#Adding-Columns)
   * [Recasting Columns](#Recasting-Columns)
