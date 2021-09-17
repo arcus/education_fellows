@@ -180,6 +180,22 @@ from arcus.patient
 > 
 > Though not required for a single table select statement, it is a good idea to follow this practice any time you are writing a select statement in order to make sure its clear which table each column is coming from. Doing this will make things less error-prone if you ever want to add additional tables to your query and will make it easier for other programmers to read your code.
 
+### Case Statement
+
+```sql
+select
+  patient.pat_id
+  ,patient.state_abbr
+  ,case
+    when patient.state_abbr = 'PA' then 1
+    when patient.state_abbr <> 'PA' then 0
+    when patient.state_abbr is null then -1
+    else 0
+   end is_pa_resident
+from arcus.patient
+
+```
+
 ### Where Clause
 
 The **Where Clause** is the section of your query used to specify any "filtering logic" that should be applied to your query before returning any output. 
@@ -217,58 +233,12 @@ where
 
 ### Aggregate Functions
 #### Group By Statement
-#### Having Clause
-
-
-
+##### Having Clause
+### Order By Statement
+### Limit Clause
 
 
 ## Advanced SQL Syntax
-
-### Case Statement
-
-```sql
-select
-  patient.pat_id
-  ,patient.state_abbr
-  ,case
-    when patient.state_abbr = 'PA' then 1
-    when patient.state_abbr <> 'PA' then 0
-    when patient.state_abbr is null then -1
-    else 0
-   end is_pa_resident
-from arcus.patient
-
-```
-
-### Distinct Clause
-
-### Order By Statement
-
-```sql
-select
-  patient.pat_id
-  ,patient.state_abbr
-  ,case
-    when patient.state_abbr = 'PA' then 1
-    when patient.state_abbr <> 'PA' then 0
-    when patient.state_abbr is null then -1
-    else 0
-   end is_pa_resident
-from arcus.patient
-order by
-  ,case
-    when patient.state_abbr = 'PA' then 1
-    when patient.state_abbr <> 'PA' then 0
-    when patient.state_abbr is null then -1
-    else 0
-   end DESC
-  ,patient.state_abbr ASC
-  ,patient.pat_id
-
-```
-
-### Limit Clause
 ### Like Statment
 ### Regular Expression Functions
 ### Sub Queries
