@@ -24,6 +24,7 @@ Contents
 * [What is SQL?](#What-is-SQL)
 
     * [When Should SQL Be Used?](#When-Should-SQL-Be-Used)
+
     * [When Should SQL Not be Used?](#When-Should-SQL-Not-be-Used)
 
 
