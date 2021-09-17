@@ -29,9 +29,9 @@ Contents
 
 
 
-field1|field2
----|---
-a|b
+|field1|field2|
+|---|---
+|a|b|
 
 ## What is SQL?
 
