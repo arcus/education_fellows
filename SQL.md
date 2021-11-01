@@ -145,7 +145,7 @@ The **Select Statement** is used to specify which columns you would like to have
 
 The basic components of a **Select Statement** are the `SELECT` and `FROM` keywords. 
 
-The `FROM` keyword is used to specify the table you would like to use as the base of your query, and the `SELECT` keyword is used to provide a list of columns (from the table(s) referenced in your query) that you would like returned as output.
+> The `FROM` keyword is used to specify the table you would like to use as the base of your query, and the `SELECT` keyword is used to provide a list of columns (from the table(s) referenced in your query) that you would like returned as output.
 
 **Select All Columns**
 
