@@ -340,8 +340,11 @@ where
 #### Like Statment
 
 `like`
-`%`
-`_`
+
+|Operator|Description|
+|---|---|
+|`%`|"Wild Card" for 0 or more characters.|
+|`_`|"Wild Card" for exactly 1 characters.|
 `upper(..)` 
 
 `not like `
@@ -528,7 +531,11 @@ order by
 
 #### With Statement
 
-`with` `x as ()`
+The **WITH** statement can be used to create a "temporary table(s)" that will be created before your primary **SELECT** statement runs; an which will be dropped as soon as your query returns results. 
+
+> This approach is often use to increase code readability, but can also be used to increase query performance in certain situations.
+
+The code block below provides and example of using the `with` statement to create a "temp table" called **strawberry_allergies** that is then refrences in the `from` clause of the main `select` statement:
 
 ```sql
 with
@@ -546,6 +553,7 @@ order by
 
 ```
 
+> Note: For more on using the **WITH** statement, follow this [link](https://www.w3schools.com/sql/sql_groupby.asp).
 
 #### Exists Statment
 
