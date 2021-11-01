@@ -131,8 +131,8 @@ The sections that follow will provide an overview of this basic **SQL** syntax a
 
 * [Select Statement](#Select-Statement)
 
-  * [Adding Comments](#Adding-Comments)
   * [Aliasing](#Aliasing)
+  * [Adding Comments](#Adding-Comments)
 
 * [Distinct Clause](#Distinct-Clause)
 * [Order By Statement](#Order-By-Statement)
@@ -189,6 +189,31 @@ from arcus.patient
 > 
 > Though not required for a single table select statement, it is a good idea to follow this practice any time you are writing a select statement in order to make sure its clear which table each column is coming from. Doing this will make things less error-prone if you ever want to add additional tables to your query and will make it easier for other programmers to read your code.
 
+### Aliasing
+
+In SQL, it is possible to assigne a custom (or "short hand") name to a table or column in your query using a tequnique called **Aliasing**.
+
+> **Aliasing** *Tables* can be helpful for a **SQL** programmer so that they don't have to type out the full name of a table each time they want to make reference to it. 
+
+> **Aliasing** *Columns* can be helpful to consumers of your data by assigning clearer, more "comprehensible", names for a given column than the name that might be assgined to it in the database.
+
+**Aliases** are assigned by placing the `as` key word directly after the item (table/column) you would like to alias, followed by the name you would like to assign as its **alias**.
+
+In the example below, we can see **Aliasing** being used to rename the `patient` table to `p`, and renaming the `pat_id` and `state_abbr` columns to `unique_patient_id` and `state_shortname`.
+
+```sql
+select
+  p.pat_id as unique_patient_id
+  ,p.sex
+  ,p.race
+  ,p.ethnicity
+  ,p.state_abbr as state_shortname
+from arcus.patient as p
+
+```
+
+> **Note**: We will see aliasing again in a few other contexts later on in this documentation, however I wanted to be sure to make you aware of these 2 most basic/common cases of aliasing before moving fowards.
+
 ### Adding Comments
 
 Before diving into any more explicit SQL coding, its important to understand the concept of adding "comments" to your **SQL** code.
@@ -222,31 +247,6 @@ from arcus.patient
     Aren't Comments Great!
 */
 ```
-
-### Aliasing
-
-In SQL, it is possible to assigne a custom (or "short hand") name to a table or column in your query using a tequnique called **Aliasing**.
-
-> **Aliasing** *Tables* can be helpful for a **SQL** programmer so that they don't have to type out the full name of a table each time they want to make reference to it. 
-
-> **Aliasing** *Columns* can be helpful to consumers of your data by assigning clearer, more "comprehensible", names for a given column than the name that might be assgined to it in the database.
-
-**Aliases** are assigned by placing the `as` key word directly after the item (table/column) you would like to alias, followed by the name you would like to assign as its **alias**.
-
-In the example below, we can see **Aliasing** being used to rename the `patient` table to `p`, and renaming the `pat_id` and `state_abbr` columns to `unique_patient_id` and `state_shortname`.
-
-```sql
-select
-  p.pat_id as unique_patient_id
-  ,p.sex
-  ,p.race
-  ,p.ethnicity
-  ,p.state_abbr as state_shortname
-from arcus.patient as p
-
-```
-
-> **Note**: We will see aliasing again in a few other contexts later on in this documentation, however I wanted to be sure to make you aware of these 2 most basic/common cases of aliasing before moving fowards.
 
 ### Distinct Clause
 
