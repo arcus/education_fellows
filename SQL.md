@@ -264,7 +264,7 @@ from arcus.patient
 
 ```
 
-> **Pro Tip**: The distinct `clause` can also be especially useful for remove duplicate rows from any result set; in the event that duplicate rows would cause errors during analysis.
+> **Pro Tip**: The `distinct` clause is especially useful for removing duplicates rows from the result set of your `SQL` queries; in the event that duplicate rows would cause errors during analysis.
 
 ### Order By Statement
 
@@ -289,7 +289,7 @@ order by
 
 The `limit` clause can be used to limit the result set of your select statement to (at most) a pre-defined number of rows.
 
-To do this all you need to do is add the word `limit` as the last line of your query, followed by the number of rows you would like your result set truncated at. 
+> To do this all you need to do is add the word `limit` as the last line of your query, followed by the number of rows you would like your result set truncated at. 
 
 The example below pulls all columns from the encounter table, and limits the result set to only 10 rows.
 
