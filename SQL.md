@@ -131,6 +131,7 @@ The sections that follow will provide an overview of this basic **SQL** syntax a
 
 * [Select Statement](#Select-Statement)
 * [Adding Comments](#Adding-Comments)
+* [Aliasing](#Aliasing)
 * [Distinct Clause](#Distinct-Clause)
 * [Order By Statement](#Order-By-Statement)
 * [Limit Clause](#Limit-Clause)
@@ -161,7 +162,7 @@ from arcus.patient
 > 
 > The first word is the name of the Schema/Catalog that your data is stored in, and the second word is the name of the specific data Table you would like to reference as the base of your query.
 > 
-> This format is known as Dot Notation.
+> This format is known as "**Dot Notation**".
 
 **Select Specific Columns**
 
@@ -182,15 +183,27 @@ from arcus.patient
 > 
 > Notice that each column listed in the **Select Statement** first lists the name of the table that the column belongs to, then the name of the column itself (separated by a period). 
 > 
-> This is another example of the use of Dot Notation in **SQL**.
+> This is another example of the use of "**Dot Notation**" in **SQL**.
 > 
 > Though not required for a single table select statement, it is a good idea to follow this practice any time you are writing a select statement in order to make sure its clear which table each column is coming from. Doing this will make things less error-prone if you ever want to add additional tables to your query and will make it easier for other programmers to read your code.
 
 ### Adding Comments
 
-`/* ... */` 
+Before diving into any more explicit SQL coding, its important to understand the concept of adding "comments" to your **SQL** code.
 
-`--`
+Comments are essentially explanatory or helpful bits of text that programmers can add to their code as documentation for themselves or other reviewers of their code, and that don't actually effect the execution of the SQL code in any way.
+
+In **SQL** there are 2 different techniques that can be used for adding comments, **single-line** and **multi-line** comments
+
+> **Single-Line** Comments can be created by typing 2 minus signs in a row (i.e. `--`). 
+> 
+> Once added to your code, anything that appears to the right of the `--` comment delimiter will be treated as comment text.
+> 
+> **Multi-Line** Comments can be started by adding the `/*` characters to your code, and the multi-line comment can be closed by adding the `*/` characters. 
+> 
+> Once created, any text that appears between the `/*` and `*/` "tags" will be treated as comment text.
+
+The code block below provides an example of each of these styles of commenting:
 
 ```sql
 /* This is a simple demographics query*/
@@ -207,6 +220,31 @@ from arcus.patient
     Aren't Comments Great!
 */
 ```
+
+### Aliasing
+
+In SQL, it is possible to assigne a custom (or "short hand") name to a table or column in your query using a tequnique called **Aliasing**.
+
+> **Aliasing** *Tables* can be helpful for a **SQL** programmer so that they don't have to type out the full name of a table each time they want to make reference to it. 
+
+> **Aliasing** *Columns* can be helpful to consumers of your data by assigning clearer, more "comprehensible", names for a given column than the name that might be assgined to it in the database.
+
+**Aliases** are assigned by placing the `as` key word directly after the item (table/column) you would like to alias, followed by the name you would like to assign as its **alias**.
+
+In the example below, we can see **Aliasing** being used to rename the `patient` table to `p`, and renaming the `pat_id` and `state_abbr` columns to `unique_patient_id` and `state_shortname`.
+
+```sql
+select
+  p.pat_id as unique_patient_id
+  ,p.sex
+  ,p.race
+  ,p.ethnicity
+  ,p.state_abbr as state_shortname
+from arcus.patient as p
+
+```
+
+> **Note**: We will see aliasing again in a few other contexts later on in this documentation, however I wanted to be sure to make you aware of these 2 most basic/common cases of aliasing before moving fowards.
 
 ### Distinct Clause
 
@@ -404,27 +442,40 @@ order by
 
 ### Aggregate Functions
 
-`count()`
-`sum()`
-`min()`
-`max()`
-`avg()`
+**Aggregate Functions** can be used to summarize the values for multiple rows of data in some meaningful way. 
 
+When used by themselfs, **Aggregate Functions** will return a single value given multiple rows of input.
+
+See the table below for a list of the most commonly used  **Aggregate Functions**:
+
+|Function|Description|
+|:---|:---|
+|`count()`|Returns a Count of the number of non-null values amoung the column(s)/rows provided as input.|
+|`sum()`|Returns the summation of all values from a column provided as input.|
+|`min()`|Returns the minimum value from a column provided as input.|
+|`max()`|Returns the maximum value from a column provided as input.|
+|`avg()`|Returns the average of all values from a column provided as input.|
+
+The below table utilizes each of these **Aggregate Functions** functions to analys the `birth_weight_kg` column from the `patient` table:
 
 ```sql
 select
-    count(birth_weight_kg) as pat_count
-    ,min(birth_weight_kg) as min_weight_kg
-    ,max(birth_weight_kg) as max_weight_kg
-    ,avg(birth_weight_kg) as avg_weight_kg
-    ,sum(birth_weight_kg) as sum_weight_kg
+    count(patient.birth_weight_kg) as pat_count
+    ,sum(patient.birth_weight_kg) as sum_weight_kg
+    ,min(patient.birth_weight_kg) as min_weight_kg
+    ,max(patient.birth_weight_kg) as max_weight_kg
+    ,avg(patient.birth_weight_kg) as avg_weight_kg
 from arcus.patient
 
 ```
 
+> **Note**: For more information on **Aggregate Functions**, follow this [link](https://www.zentut.com/sql-tutorial/sql-aggregate-functions/).
+
 #### Group By Statement
 
-`group by`
+The `GROUP BY` statement is used to group column results into only the unique/distinct values among them, and is used in combination with [**AGGREGATE FUNCTIONS**](https://www.zentut.com/sql-tutorial/sql-aggregate-functions/) to generate summary statistics about the larger dataset that was collapsed by the `GROUP BY` statement. 
+
+The code block below shows an example of using the `GROUP BY` statement to summarize some simple information from the **patient** table.
 
 ```sql
 select
@@ -438,6 +489,8 @@ group by
     patient.sex
 
 ```
+
+> **Note**: For more on using the `GROUP BY` statement, follow this [link](https://www.w3schools.com/sql/sql_groupby.asp).
 
 ##### Having Clause
 
@@ -456,6 +509,8 @@ order by
   encounter_count desc
 
 ```
+
+> **Note**: For more on using the `GROUP BY` statement, follow this [link](https://www.w3schools.com/sql/sql_having.asp).
 
 ### Sub Queries
 
@@ -681,10 +736,12 @@ where
 ### Create Table
 ### Create View
 ### Dropping Tables/Views
+### Granting Access to Tables/Views
 ### Altering Tables/Views
 #### Renaming Tables
 #### Adding Columns
 #### Recasting Columns
+
 
 ## DML - Data Manipulation Language
 ### Update Statment
