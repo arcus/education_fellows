@@ -290,7 +290,7 @@ order by
 
 ```
 
-> **Note:** By default, all items in the `order by` clause will be sorted in `asc` order if no ordering argument/type is provided.
+> **Note:** By default, all items in the `order by` clause will be sorted in `asc` order if no explicit ordering argument/type is provided.
 
 ### Limit Clause
 
