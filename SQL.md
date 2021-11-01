@@ -277,7 +277,7 @@ from arcus.patient
 
 Another useful peace of **SQL** syntax for exporing datasets is the `order by` statement, which (as its name suggests) is used to order your result set by a given set of columns.
 
-When listing columns in the `order by` statment you can specify that they be sorted in either ascending (`asc`) or descending (`desc`) order. By default, all items in the `order by` clause will be sorted in `asc` order if no ordering argument/type is provided.
+When listing columns in the `order by` statment you can specify that they be sorted in either ascending (`asc`) or descending (`desc`) order. 
 
 ```sql
 select distinct
@@ -289,6 +289,8 @@ order by
   ,patient.ethnicity desc
 
 ```
+
+> **Note:** By default, all items in the `order by` clause will be sorted in `asc` order if no ordering argument/type is provided.
 
 ### Limit Clause
 
