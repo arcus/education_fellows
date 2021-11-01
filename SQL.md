@@ -130,6 +130,7 @@ The sections that follow will provide an overview of this basic **SQL** syntax a
 **SECTION CONTENTS**
 
 * [Select Statement](#Select-Statement)
+
  * [Adding Comments](#Adding-Comments)
  * [Aliasing](#Aliasing)
 * [Distinct Clause](#Distinct-Clause)
