@@ -252,17 +252,9 @@ from arcus.patient
 
 The `distinct`clause in **SQL** can be placed directly after the `select` key word, and can be used to limit your result set down to only the unique row values. 
 
-This can be especially useful when exploring a dataset for the first time and trying to become familiar with the data in each column of a given table. 
+> This can be especially useful when exploring a dataset for the first time and trying to become familiar with the data in each column of a given table. 
 
-First, lets use the `distinct` clause to look at all of the distinct values that the `patient.sex` column can take on:
-
-```sql
-select distinct
-  patient.sex
-from arcus.patient
-
-```
-Next, lets use this same syntax to look at all of the distinct combinations of the `patient.sex` and `patient.ethnicity` (as you can see the `distinct` clause will work on any number of columns):
+The code block below provides an example of using this syntax to invesitgate the unique combinations of values from the `sex` and `ethnicity` columns from the `patient` table; as you can see the `distinct` clause will work on any number of columns:
 
 ```sql
 select distinct
