@@ -24,60 +24,15 @@ Contents
 
 * [What is SQL?](#what-is-sql)
 
-  * [When Should SQL Be Used?](#when-should-sql-be-used)
-  * [When Should SQL Not be Used?](#when-should-sql-not-be-used)
-  * [Are all Implementations of SQL The Same?](#are-all-implementations-of-sql-the-same)
-
 * [Basic SQL Syntax](#Basic-SQL-Syntax)
-
-  * [Select Statement](#Select-Statement)
-  * [Where Clause](#Where-Clause)
-  * [Aggregate Functions](#Aggregate-Functions)
-
-    * [Group By Statement](#Group-By-Statement)
-
-      * [Having Clause](#Having-Clause)
-
-  * [Order By Statement](#Order-By-Statement)
 
 * [Advanced SQL Syntax](#Advanced-SQL-Syntax)
 
-  * [Distinct Clause](#Distinct-Clause)
-  * [Limit Clause](#Limit-Clause)
-  * [Case Statement](#Case-Statement)
-  * [Like Statment](#Like-Statment)
-  * [Sub Queries](#Sub-Queries)
-
-    * [With Statement](#With-Statement)
-
-    * [Exists Statment](#Exists-Statment)
-
 * [SQL Joins](#SQL-Joins)
-
-  * [Inner Join](#Inner-Join)
-  * [Left Join](#Left-Join)
-  * [Cross Join](#Cross-Join)
-
-* [Advanced SQL Syntax II](#Advanced-SQL-Syntax-II)
-
-  * [Regular Expression Functions](#Regular-Expression-Functions)
-  * [Ordered Analytic Functions](#Ordered-Analytic-Functions)
 
 * [DDL - Data Definition Language](#ddl---data-definition-language)
 
-  * [Create Table](#Create-Table)
-  * [Create View](#Create-View)
-  * [Dropping Tables/Views](#dropping-tablesviews)
-  * [Altering Tables/Views](#altering-tablesviews)
-  * [Renaming Tables](#Renaming-Tables)
-  * [Adding Columns](#Adding-Columns)
-  * [Recasting Columns](#Recasting-Columns)
-
 * [DML - Data Manipulation Language](#dml---data-manipulation-language)
-
-  * [Update Statment](#Update-Statment)
-  * [Insert Statment](#Insert-Statment)
-  * [Delete Statment](#Delete-Statment)
 
 ## What is SQL?
 
@@ -97,19 +52,19 @@ You can think of **SQL** as the super-secret code that you can use to “ask exp
 
 ### When Should SQL Be Used?
 
-SQL should be used any time you need to access data stored within a **Relational Database**.
+**SQL** should be used any time you need to access data stored within a **Relational Database**.
 
 More specifically, **SQL** is best suited for composing/structuring/formatting datasets for export and downstream analysis in programs like R or Python.
 
 > **Historical Note**:
 > 
-> SQL was created in the early 1970's by IBM as a method for more easily accessing information from their internal database system. 
+> **SQL** was created in the early 1970's by IBM as a method for more easily accessing information from their internal database system. 
 > 
 > By 1979 Relational Software, Inc. (now Oracle Corporation) released the first commercially available implementation of **SQL** as a part of their Oracle V2 database application.
 > 
 > Today **SQL** is the most common programing language for extracting and organizing data in Relational Database Systems.
 
-Ideally, all of your Data Transformations should be done using SQL in order to ensure that the final dataset exported from your queries don't require any additional major transformations before the analysis phase of your work can begin. 
+Ideally, all of your Data Transformations should be done using **SQL** in order to ensure that the final dataset exported from your queries don't require any additional major transformations before the analysis phase of your work can begin. 
 
 The reason for this is that, especially for large datasets, **SQL** is a much more efficient tool for large-scale data transformations than your traditional scripting or analytic packages.
 
@@ -129,11 +84,11 @@ For all of these "downstream analytics" use cases, you will want to use an actua
 
 ### Are all Implementations of SQL The Same?
 
-Although all SQL implementations have a similar structure, and the same basic syntax, each different SQL database product often has its own minor variations in dialect.
+Although all **SQL** implementations have a similar structure, and the same basic syntax, each different **SQL** database product often has its own minor variations in dialect.
 
-Colloquially people often refer to the different SQL dialects as different "flavors" of SQL.
+Colloquially people often refer to the different **SQL** dialects as different "flavors" of **SQL**.
 
-Some Popular "Flavors" of SQL:
+Some Popular "Flavors" of **SQL**:
 
 * [**MySQL**](https://www.mysql.com/) (open source)
 * [**SQLite**](https://www.sqlite.org) (open source)
@@ -141,13 +96,13 @@ Some Popular "Flavors" of SQL:
 * [**Oracle**](https://www.oracle.com/database/technologies/appdev/sql.html) (proprietary)
 * [**BigQuery**](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax) (proprietary)
 
-The most common difference between different SQL "flavors" are the availability of different functions that users can use for data manipulation, as well as the types of error messages that will be returned to the user when running code with syntax issues.
+The most common difference between different **SQL** "flavors" are the availability of different functions that users can use for data manipulation, as well as the types of error messages that will be returned to the user when running code with syntax issues.
 
-That said, knowing the specific "flavor" of SQL your database uses is especially useful when first getting started writing queries and troubleshooting errors.
+That said, knowing the specific "flavor" of **SQL** your database uses is especially useful when first getting started writing queries and troubleshooting errors.
 
 > **Important Note**:
 >
->Throughout the remainder of this documentation we will be using the [**BigQuery**](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax) SQL syntax to write our code (this is the "Flavor" of SQL used in Arcus Labs here at CHOP).
+>Throughout the remainder of this documentation we will be using the [**BigQuery**](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax) **SQL** syntax to write our code (this is the "Flavor" of **SQL** used in Arcus Labs here at CHOP).
 
 ## Basic SQL Syntax
 
@@ -157,7 +112,7 @@ At a high level, you’re going to have to provide three pieces of information w
  2. The **Column(s)** from the **Table(s)** you want to look at.
  3. The **filtering condition(s)** you want to apply to your data pull. 
 
-You put these basic pieces of information together using the syntax shown below to create a SQL query: 
+You put these basic pieces of information together using the syntax shown below to create a **SQL** query: 
 
 ```sql
 SELECT _2_ FROM _1_ WHERE _3_
@@ -175,10 +130,12 @@ The sections that follow will provide an overview of this basic **SQL** syntax a
 **SECTION CONTENTS**
 
 * [Select Statement](#Select-Statement)
+* [Adding Comments](#Adding-Comments)
+* [Distinct Clause](#Distinct-Clause)
+* [Order By Statement](#Order-By-Statement)
+* [Limit Clause](#Limit-Clause)
 * [Where Clause](#Where-Clause)
-* [Aggregate Functions](#Aggregate-Functions)
-* [Group By](#Group-By)
-* [Having Clause](#Having-Clause)
+* [Like Statment](#Like-Statment)
 
 ### Select Statement
 
@@ -190,7 +147,7 @@ The `FROM` keyword is used to specify the table you would like to use as the bas
 
 **Select All Columns**
 
-If you would like to return ALL of the columns from the table(s) specified in your SQL query, you can use the `*` wild card character as shown in the example below:
+If you would like to return ALL of the columns from the table(s) specified in your **SQL** query, you can use the `*` wild card character as shown in the example below:
 
 ```sql
 select *
@@ -225,9 +182,91 @@ from arcus.patient
 > 
 > Notice that each column listed in the **Select Statement** first lists the name of the table that the column belongs to, then the name of the column itself (separated by a period). 
 > 
-> This is another example of the use of Dot Notation in SQL.
+> This is another example of the use of Dot Notation in **SQL**.
 > 
 > Though not required for a single table select statement, it is a good idea to follow this practice any time you are writing a select statement in order to make sure its clear which table each column is coming from. Doing this will make things less error-prone if you ever want to add additional tables to your query and will make it easier for other programmers to read your code.
+
+### Adding Comments
+
+`/* ... */` 
+
+`--`
+
+```sql
+/* This is a simple demographics query*/
+select
+  patient.pat_id      --unique patient identifier.
+  ,patient.sex        --patient sex {Male, Female, Unknown, null}
+  ,patient.race       --patient race
+  ,patient.ethnicity  --patient ethnicity {Hispanic or Latino, Not Hispanic or Latino, Refused, Unknown}
+  ,patient.state_abbr --Two Character State Abbreviation.
+from arcus.patient
+
+
+/*
+    Aren't Comments Great!
+*/
+```
+
+### Distinct Clause
+
+The `distinct`clause in **SQL** can be placed directly after the `select` key word, and can be used to limit your result set down to only the unique row values. 
+
+This can be especially useful when exploring a dataset for the first time and trying to become familiar with the data in each column of a given table. 
+
+First, lets use the `distinct` clause to look at all of the distinct values that the `patient.sex` column can take on:
+
+```sql
+select distinct
+  patient.sex
+from arcus.patient
+
+```
+Next, lets use this same syntax to look at all of the distinct combinations of the `patient.sex` and `patient.ethnicity` (as you can see the `distinct` clause will work on any number of columns):
+
+```sql
+select distinct
+  patient.sex
+  ,patient.ethnicity
+from arcus.patient
+
+```
+
+> **Pro Tip**: The distinct `clause` can also be especially useful for remove duplicate rows from any result set; in the event that duplicate rows would cause errors during analysis.
+
+### Order By Statement
+
+Another useful peace of **SQL** syntax for exporing datasets is the `order by` statement, which (as its name suggests) is used to order your result set by a given set of columns.
+
+When listing columns in the `order by` statment you can specify that they be sorted in either ascending (`asc`) or descending (`desc`) order. By default, all items in the `order by` clause will be sorted in `asc` order if no ordering argument/type is provided.
+
+```sql
+select distinct
+  patient.sex
+  ,patient.ethnicity
+from arcus.patient
+order by
+  patient.sex asc
+  ,patient.ethnicity desc
+
+```
+
+### Limit Clause
+
+The `limit` clause can be used to limit the result set of your select statement to (at most) a pre-defined number of rows.
+
+To do this all you need to do is add the word `limit` as the last line of your query, followed by the number of rows you would like your result set truncated at. 
+
+The example below pulls all columns from the encounter table, and limits the result set to only 10 rows.
+
+```sql
+select * 
+from arcus.encounter
+limit 10
+
+```
+
+> **Tip**: As you can see, this is also a great peace of syntax to use for exporing tables you might be unfarmiliar with (in the event you want to see the kind of data a table/query contain but you don't want to wait for all rows of the query to return; which can take a long time for larger tables or more complex queries).
 
 ### Where Clause
 
@@ -262,20 +301,52 @@ where
 
 > **Additional Reading**:
 > 
-> To read more about the basic types of "Operators" avaiable for use in a SQL query, click [here](https://www.tutorialspoint.com/sql/sql-operators.htm) for some helpful documentation from **tutorialspoint.com**.
+> To read more about the basic types of "Operators" avaiable for use in a **SQL** query, click [here](https://www.tutorialspoint.com/sql/sql-operators.htm) for some helpful documentation from **tutorialspoint.com**.
 
-### Aggregate Functions
-#### Group By Statement
-##### Having Clause
-### Order By Statement
+#### Like Statment
+
+`like`
+`%`
+`_`
+`upper(..)` 
+
+`not like `
 
 
+```sql
+select distinct allergy.allergen_name
+from arcus.allergy
+where
+    upper(allergy.allergen_name) like upper('stra%')
+
+```
+
+```sql
+select distinct allergy.allergen_name
+from arcus.allergy
+where
+    upper(allergy.allergen_name) not like upper('stra%')
+
+```
 
 ## Advanced SQL Syntax
 
-### Distinct Clause
-### Limit Clause
+
+**SECTION CONTENTS**
+
+* [Case Statement](#Case-Statement)
+* [Dealing with Null Values](#Dealing-with-Null-Values)
+* [Aggregate Functions](#Aggregate-Functions)
+ * [Group By Statement](#Group-By-Statement)
+ * [Having Clause](#Having-Clause)
+* [Sub Queries](#Sub-Queries)
+* [With Statement](#With-Statement)
+* [Exists Statment](#Exists-Statment)
+* [Regular Expression Functions](#Regular-Expression-Functions)
+
 ### Case Statement
+
+`case when` `then x` `...` `else ...` `end`
 
 ```sql
 select
@@ -286,24 +357,323 @@ select
     when patient.state_abbr <> 'PA' then 0
     when patient.state_abbr is null then -1
     else 0
-   end is_pa_resident
+   end as is_pa_resident
 from arcus.patient
 
 ```
 
-### Like Statment
+### Dealing with Null Values
+
+`is null`
+
+```
+select 
+  allergen_name
+from arcus.allergy
+where
+    upper(allergy.allergen_name) like upper('stra%')
+    and allergy_delete_reason_name is null
+
+```
+
+`is not null`
+
+```sql
+select distinct
+  allergy_delete_reason_name
+from arcus.allergy
+where
+    allergy_delete_reason_name is not null
+
+```
+
+`coalesce(...,...)`
+
+```sql
+select distinct
+  allergen_name
+  ,coalesce(reaction_name,'unkown') reaction
+from arcus.allergy
+where
+    upper(allergy.allergen_name) like upper('stra%')
+order by
+  allergen_name asc
+  ,reaction desc
+
+```
+
+### Aggregate Functions
+
+`count()`
+`sum()`
+`min()`
+`max()`
+`avg()`
+
+
+```sql
+select
+    count(birth_weight_kg) as pat_count
+    ,min(birth_weight_kg) as min_weight_kg
+    ,max(birth_weight_kg) as max_weight_kg
+    ,avg(birth_weight_kg) as avg_weight_kg
+    ,sum(birth_weight_kg) as sum_weight_kg
+from arcus.patient
+
+```
+
+#### Group By Statement
+
+`group by`
+
+```sql
+select
+    patient.sex
+    ,count(birth_weight_kg) as pat_count
+    ,min(birth_weight_kg) as min_weight
+    ,max(birth_weight_kg) as max_weight
+    ,avg(birth_weight_kg) as avg_weight
+from arcus.patient
+group by
+    patient.sex
+
+```
+
+##### Having Clause
+
+`having x`
+
+```sql
+select
+  encounter.pat_id
+  ,count(distinct encounter_id) as encounter_count
+from arcus.encounter
+group by
+  encounter.pat_id
+having
+  count(*)>5
+order by 
+  encounter_count desc
+
+```
+
 ### Sub Queries
+
+`() as x`
+
+```sql
+select distinct
+    round(noted_age/365.25, 2) as noted_age_years
+from (
+    select allergy.*
+    from arcus.allergy
+    where
+        upper(allergy.allergen_name) like upper('strawberry%')
+) as strawberry_allergies
+order by
+  noted_age_years
+
+```
+
 #### With Statement
+
+`with` `x as ()`
+
+```sql
+with
+    strawberry_allergies as (
+        select allergy.*
+        from arcus.allergy
+        where
+            upper(allergy.allergen_name) like upper('strawberry%')
+    )
+select distinct
+    round(noted_age/365.25, 2) noted_age_years
+from strawberry_allergies
+order by
+  noted_age_years
+
+```
+
+
 #### Exists Statment
 
-## SQL Joins
-### Inner Join
-### Left Join
-### Cross Join
+`exists` 
 
-## Advanced SQL Syntax II
+```sql
+select *
+from arcus.allergy
+where
+    exists(
+        select 1
+        from arcus.patient
+        where
+            patient.birth_weight_kg > 20
+            and patient.pat_id = allergy.pat_id
+    )
+
+```
+
+`not exists`
+
+```sql
+select *
+from arcus.patient
+where
+    not exists(
+        select 1
+        from arcus.allergy
+        where
+            patient.pat_id = allergy.pat_id
+    )
+
+```
+
 ### Regular Expression Functions
-### Ordered Analytic Functions
+
+
+
+```sql
+select distinct allergy.allergen_name
+from arcus.allergy
+where
+    regexp_contains(
+        allergy.allergen_name
+        ,'stra'
+    )
+    
+```
+
+
+```sql
+select distinct allergy.allergen_name
+from arcus.allergy
+where
+    regexp_contains(
+        lower(allergy.allergen_name)
+        ,lower('stra|egg')
+    )
+order by
+    allergy.allergen_name
+    
+```
+
+
+> Link to [BigQuery Regexp Functions](https://cloud.google.com/bigquery/docs/reference/standard-sql/string_functions#regexp_contains)
+
+## SQL Joins
+
+**What are SQL Joins**
+
+**When to Use SQL Joins**
+
+
+**SECTION CONTENTS**
+
+* [Inner Join](#Inner-Join)
+* [Left Join](#Left-Join)
+
+### Inner Join
+
+```sql
+select
+  patient.pat_id
+  ,patient.sex
+  ,patient.ethnicity
+  ,patient.race
+  ,allergy.allergen_name
+  ,allergy.allergen_type_name
+  ,allergy.reaction_name
+  ,round(noted_age/365.25, 2) as noted_age_years
+  ,allergy.allergy_status_name
+  ,allergy.allergy_delete_reason_name
+from arcus.patient
+inner join arcus.allergy
+    on patient.pat_id = allergy.pat_id
+-- where
+--   allergy.pat_id is null
+```
+
+```sql
+select 
+  --------------------------
+  --encounter_diagnosis info
+  --------------------------
+  encounter_diagnosis.pat_id
+  ,encounter_diagnosis.encounter_id
+  ,encounter_diagnosis.dx_type
+  ,encounter_diagnosis.line
+  --------------------------
+  --master_diagnosis info 
+  --------------------------
+  ,master_diagnosis.dx_name
+  ,master_diagnosis.icd10_list
+  ,master_diagnosis.icd9_list
+from arcus.encounter_diagnosis
+inner join arcus.master_diagnosis
+  on encounter_diagnosis.dx_id = master_diagnosis.dx_id
+order by
+  encounter_diagnosis.encounter_id
+  ,encounter_diagnosis.line
+
+```
+
+### Left Join
+
+```sql
+select
+  patient.pat_id
+  ,patient.sex
+  ,patient.ethnicity
+  ,patient.race
+  ,allergy.allergen_name
+  ,allergy.allergen_type_name
+  ,allergy.reaction_name
+  ,round(noted_age/365.25, 2) as noted_age_years
+  ,allergy.allergy_status_name
+  ,allergy.allergy_delete_reason_name
+from arcus.patient
+left join arcus.allergy
+    on patient.pat_id = allergy.pat_id
+-- where
+--   allergy.pat_id is null
+
+```
+
+```sql
+select distinct
+  procedure_order.pat_id
+  ,procedure_order_result.result_age as result_age_days
+  ,procedure.proc_name
+  ,procedure.proc_code
+  ,procedure_order_result.result_component_name
+  ,procedure_order_result.loinc_code
+  ,procedure_order_result.line
+  ,procedure_order_result.value_number
+  ,procedure_order.abnormal_yn
+  ,procedure_order_result.abnormal_status_name
+  ,procedure_order_result.ref_low
+  ,procedure_order_result.ref_high
+  ,procedure_order_result.ref_range
+  ,procedure_order_result.ref_unit
+  --------------------------------------------
+  --More General Status info.
+  --------------------------------------------
+  ,procedure_order.proc_ord_type_name --used to flag labs vs imaging, etc.
+  ,procedure_order.proc_ord_status_name
+  ,procedure_order.proc_lab_status_name
+  ,procedure_order.proc_ord_class_name
+  ,procedure_order.proc_ord_priority_name
+  ,procedure.proc_group_name
+from arcus.procedure_order --this is a comment!
+left join arcus.procedure
+  on procedure_order.proc_id = procedure.proc_id
+left join arcus.procedure_order_result
+  on procedure_order.proc_ord_id = procedure_order_result.proc_ord_id
+where
+  upper(procedure_order.proc_ord_type_name)=upper('Lab')
+
+```
 
 ## DDL - Data Definition Language
 > **NOTE**: Up until now all of the code we have looked at have been examples of **DQL** (Data Query Language).
