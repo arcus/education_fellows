@@ -138,7 +138,7 @@ The sections that follow will provide an overview of this basic **SQL** syntax a
 * [Order By Statement](#Order-By-Statement)
 * [Limit Clause](#Limit-Clause)
 * [Where Clause](#Where-Clause)
-* [Like Statment](#Like-Statment)
+* [Like Operator](#Like-Operator)
 
 ### Select Statement
 
@@ -337,18 +337,18 @@ where
 > 
 > To read more about the basic types of "Operators" avaiable for use in a **SQL** query, click [here](https://www.tutorialspoint.com/sql/sql-operators.htm) for some helpful documentation from **tutorialspoint.com**.
 
-#### Like Statment
+#### Like Operator
 
-`like`
+In the `where` clause, the `like` operator can be used to filter on row values that contain a specific "pattern of text" in a column of interest (also known as "text/pattern matching").
 
-|Operator|Description|
+For the purpose of "pattern matching", the `like` operator is able to utilize the 2 distinct **Wildcard Charaters** listed below:
+
+|Wildcard Characters|Description|
 |---|---|
-|`%`|"Wild Card" for 0 or more characters.|
-|`_`|"Wild Card" for exactly 1 characters.|
-`upper(..)` 
+|`%`|"Wildcard" for 0 or more characters.|
+|`_`|"Wildcard" for exactly 1 characters.|
 
-`not like `
-
+The shown below uses the `like` opperator to filter on only those records from the `allergy` table where the `allergen_name` is starts with the text "stra".
 
 ```sql
 select distinct allergy.allergen_name
@@ -357,14 +357,13 @@ where
     upper(allergy.allergen_name) like upper('stra%')
 
 ```
-
-```sql
-select distinct allergy.allergen_name
-from arcus.allergy
-where
-    upper(allergy.allergen_name) not like upper('stra%')
-
-```
+> **WARNING**: 
+> 
+> The like operator (and almost everything else in **SQL**) is **CASE SENSITIVE**!
+> 
+> This means an upper and lower case version of the same letter will be treated differently (i.e. `'a'<>'A'`). 
+> 
+> For this reason I recommend that you ALWAYS use either the `lower()` or `upper()` functions, as shown above, when dealing with text/string based data in your sql queries.
 
 ## Advanced SQL Syntax
 
