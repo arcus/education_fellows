@@ -514,11 +514,11 @@ group by
 
 ##### Having Clause
 
-The `having` clause can be used to filter your result set on the value of an aggragate function (which is something you will get an error on if you try to do in the `where` clause).
+The `having` clause can be used to filter your result set on the value of an **Aggregate Function** (which is something you will get an error on if you try to do in the `where` clause).
 
 > In terms of placement in your structure, the `having` clause can be placed directly after your `group by` statement, and before your `order by` statement (if listed).
 
-The example below uses the `having` clause to filter on only those patients from the **encounter** table that have more than 5 records (i.e. encounters) listed, and then returns a list of those patients and the number of encounters they have recorded (sorted in descending order by "encounter count").
+The example below uses the `having` clause to filter on only those patients from the **encounter** table that have more than 5 records (i.e. encounters) listed, and then returns a list of the encounter counts for each of these patients (sorted in descending order by "encounter count").
 
 ```sql
 select
@@ -533,6 +533,14 @@ order by
   encounter_count desc
 
 ```
+
+> **Pro Tip**: 
+> 
+> The `having` clause is also a great tool to use for determining which columns in your tables are potential "Primary Keys" (and which are not); "primary keys" are columns that have a unique value for each row of data.
+> 
+> e.g. The query below shows that the **pat\_id** column from the patient table countains a unique value for each row.
+> 
+> `select pat_id, count(*) from patient group by pat_id having count(*)>1`
 
 ### Sub Queries
 
