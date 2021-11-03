@@ -382,43 +382,48 @@ where
 
 ### Dealing with Null Values
 
-`is null`
+Like many programing languages, **SQL** deals with "blank" values in a very specific way.
 
-```
-select 
-  allergen_name
+**SQL** uses the concept of `null` to represent "blank" row values.
+
+If you ever find yourself in a situation where you need to filter on `null` values you can use the `is null` or `is not null` opperators as shown below:
+
+```sql
+select *
 from arcus.allergy
 where
-    upper(allergy.allergen_name) like upper('stra%')
-    and allergy_delete_reason_name is null
+    allergy_delete_reason_name is null --exclude any rows where the "allergy_delete_reason_name" column has data (i.e. exclude "deleted" allergies).
 
 ```
 
-`is not null`
+Its also worth noting that `null` values are treated very differently from actual data. To illustrate this point, we can look at the below example:
+
+> The `where` clause of this code block is attempting to include all rows other than those where the **allergy\_delete\_reason\_name** is equal to **'Allergy Outgrown'**, however we can see that doing this also excludes any rows where the **allergy\_delete\_reason\_name** value is `null`.
 
 ```sql
 select distinct
   allergy_delete_reason_name
 from arcus.allergy
 where
-    allergy_delete_reason_name is not null
+    allergy_delete_reason_name <>'Allergy Outgrown'
 
 ```
-
-`coalesce(...,...)`
+In order to make sure that records where the **allergy\_delete\_reason\_name** is `null` are also included in our output we will need to add another line to the select statement to explicitly include them, as shown below:
 
 ```sql
 select distinct
-  allergen_name
-  ,coalesce(reaction_name,'unkown') reaction
+  allergy_delete_reason_name
 from arcus.allergy
 where
-    upper(allergy.allergen_name) like upper('stra%')
-order by
-  allergen_name asc
-  ,reaction desc
+    (
+        allergy_delete_reason_name <>'Allergy Outgrown'
+        or allergy_delete_reason_name is null
+    )
 
 ```
+
+> **IMPORTANT NOTE**: This is a very subtle distinction that can drastically alter the output of your SQL statements, especially when writing "exclusion" logic like in the example above, so its a good idea to make sure you have a firm grasp on this before moving forward.
+
 ### Case Statement
 
 The `case` statement is used to produce conditional row-level output based on columns/rows provided as input.
@@ -440,6 +445,8 @@ END                 --COMPONENT 4: end tag of case statment.
 >However, you can list as many occurrences of the `when/then` component as you would like. 
 >
 >When multiple `when/then` components are listed, SQL will walk through each of them in the order they are listed; and will return output for the first `when` condition to be evaluated as TRUE.
+>
+> Finally, if no `else` clause is explicitly specified SQL imposes a condition of `else null` by default (but you'll see I included it in the example query below anyway).
 
 The example below uses a `case` statement to create a column called **birth\_weight\_category**, which "buckets" patients birth weights into 1 of 3 categories ('Below Average', 'Average','Above Average').
 
@@ -456,8 +463,6 @@ select
 from arcus.patient
 
 ```
-
-> **Note**: If no `else` clause is explicitly specified SQL impost a condition of `else null` by defualt.
 
 ### Aggregate Functions
 
