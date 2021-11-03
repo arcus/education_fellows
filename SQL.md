@@ -452,8 +452,7 @@ select
     when (patient.birth_weight_kg < 2.5) then 'Below Average'
     when (patient.birth_weight_kg between 2.5 and 4.5) then 'Average'
     else null
-   end as birth_weight_category --assumes the average birth 
-   weight is between 2.5 kg and 4.5 kg
+   end as birth_weight_category --assumes the average birth weight is between 2.5 kg and 4.5 kg
 from arcus.patient
 
 ```
