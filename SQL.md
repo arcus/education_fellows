@@ -380,24 +380,6 @@ where
 * [Exists Statment](#Exists-Statment)
 * [Regular Expression Functions](#Regular-Expression-Functions)
 
-### Case Statement
-
-`case when` `then x` `...` `else ...` `end`
-
-```sql
-select
-  patient.pat_id
-  ,patient.state_abbr
-  ,case
-    when patient.state_abbr = 'PA' then 1
-    when patient.state_abbr <> 'PA' then 0
-    when patient.state_abbr is null then -1
-    else 0
-   end as is_pa_resident
-from arcus.patient
-
-```
-
 ### Dealing with Null Values
 
 `is null`
@@ -437,6 +419,44 @@ order by
   ,reaction desc
 
 ```
+### Case Statement
+
+The `case` statement is used to produce conditional row-level output based columns/rows provided as input.
+
+> Often when creating datasets you will come across the need to define your own "custom categories/groupings" given some raw row data as input. This is where the `case` statment can come in handy!
+
+The `case` statement has 4 main components (shown below). 
+
+```sql
+CASE                --start tag of the case statement.
+  WHEN (…) THEN (…) --conditional when "some input" then "some output" logic.
+  …
+  ELSE (…)          --declariation of default value to be returned if when/then conditions are not met.
+END                 --end tag of case statment.
+```
+
+Its important to note that the `case`, `else`, and `end` components can only be listed once (and the `case` and `end` components must always be listed).
+
+However, you can list as many occurences of the `when/then` component as you would like. When multiple `when/then` component are listed, SQL will walk through each of them in the order they are listed; and will return output for the first `when` condition to be evaliuated as TRUE.
+
+The example below uses a `case` statement to create a column called **birth\_weight\_category**, which "buckets" patients birth weights into 1 of 3 categories ('Below Average', 'Average','Above Average').
+
+```sql
+select
+  patient.pat_id
+  ,patient.birth_weight_kg
+  ,case
+    when (patient.birth_weight_kg > 4.5) then 'Above Average' 
+    when (patient.birth_weight_kg < 2.5) then 'Below Average'
+    when (patient.birth_weight_kg between 2.5 and 4.5) then 'Average'
+    else null
+   end as birth_weight_category --assumes the average birth 
+   weight is between 2.5 kg and 4.5 kg
+from arcus.patient
+
+```
+
+> **Note**: If no `else` clause is explicitly specified SQL impost a condition of `else null` by defualt.
 
 ### Aggregate Functions
 
