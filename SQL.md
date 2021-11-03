@@ -591,40 +591,27 @@ order by
 
 #### Exists Statment
 
-`exists` 
+The `exists` statement can be used to filter your query results on data contained (or not contained) within a separate **sub query**.
 
-```sql
-select *
-from arcus.allergy
-where
-    exists(
-        select 1
-        from arcus.patient
-        where
-            patient.birth_weight_kg > 20
-            and patient.pat_id = allergy.pat_id
-    )
-
-```
-
-`not exists`
+The example below uses the `exist` clause to filter the patient table on only those patients that have a documented "strawberry" allergy.
 
 ```sql
 select *
 from arcus.patient
 where
-    not exists(
+    exists( --filter on only patients that have a "strawberry" allergy.
         select 1
         from arcus.allergy
         where
-            patient.pat_id = allergy.pat_id
+            patient.pat_id = allergy.pat_id --tell the "exists()" statement to evaluate based on pat_id and values shared between the "allergy" and "patient" tables.
+            and upper(allergy.allergen_name) like upper('strawberry%') --limit on only "strawberry" allergy records.
     )
 
 ```
 
+> **Note**: As we will see after reading the section on **SQL Joins**, the exists clause is similar to an "`INNER JOIN`".
+
 ### Regular Expression Functions
-
-
 
 ```sql
 select distinct allergy.allergen_name
