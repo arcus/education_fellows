@@ -613,17 +613,24 @@ where
 
 ### Regular Expression Functions
 
-```sql
-select distinct allergy.allergen_name
-from arcus.allergy
-where
-    regexp_contains(
-        allergy.allergen_name
-        ,'stra'
-    )
-    
-```
+A **Regular Expression Functions** are a class of function that utilize "[Regular Expression](https://en.wikipedia.org/wiki/Regular_expression)" "[Metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended)" to preform some kind of pattern matching on text data.
 
+Similar to the [`like`](#Like-Operator) opperators "wildcard" charaters, **Regular Expression "[Metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended)"** are used in **Regular Expression Functions** to allow for more dynamic forms of pattern matching.
+
+The most common set of **Regular Expression "[Metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended)"** are listed below:
+
+|Metacharacter|Description|
+|:---|:---|
+|^|Matches the starting position within the string.|
+|\$|Matches the ending position within the string.|
+|.|Matches any single character (similar to the "_" character in a like statement).|
+|*|Matches 0 or more occurrences of the preceding character.|
+|\||This character (known as the "choice operator") can be used to delimit multiple match patterns, and will provide a match on either the expression before or the expression after it is listed in your search string.|
+
+
+> For a full list of **Regular Expression "Metacharacters "**, follow this [link](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended).
+
+The example below uses the `regexp_contains()` function to filter on records where the **allergen\_name** either starts with "stra" or ends with "egg".
 
 ```sql
 select distinct allergy.allergen_name
@@ -631,15 +638,17 @@ from arcus.allergy
 where
     regexp_contains(
         lower(allergy.allergen_name)
-        ,lower('stra|egg')
+        ,lower('^stra|egg$')
     )
 order by
     allergy.allergen_name
     
 ```
+As you can see from even just this simple example, regular expression functions can be much more useful/dynamic than the [`like`](#Like-Operator) for filtering on text based data.
 
-
-> Link to [BigQuery Regexp Functions](https://cloud.google.com/bigquery/docs/reference/standard-sql/string_functions#regexp_contains)
+> **Learning More about "Regular Expression Functions"**: 
+> 
+> For detailed documentation on all of the [BigQuery Regexp Functions](https://cloud.google.com/bigquery/docs/reference/standard-sql/string_functions#regexp_contains) that can be used, follow this [link](https://cloud.google.com/bigquery/docs/reference/standard-sql/string_functions#regexp_contains).
 
 ## SQL Joins
 
