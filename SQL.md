@@ -540,33 +540,36 @@ order by
 > 
 > e.g. The query below shows that the **pat\_id** column from the patient table contains a unique value for each row:
 > 
-> `select pat_id, count(*) from patient group by pat_id having count(*)>1`
+> `select pat_id, count(*) from arcus.patient group by pat_id having count(*)>1`
 
 ### Sub Queries
 
-`() as x`
+A **Sub Query** is essentially "nested" **SQL** query that is referenced inside of a larger **SQL** query.
+
+> **Sub Queries** can appear in the `from` section of your `select` statement like a regular table and are demarcated by open and close parentheses, followed by an alias name that you would like to use to reference it later on in your query.
+
+The example below creates a very simple subquery called **strawberry\_allergies**, which contains all records from the **allergy** table relating to patients with  "strawberry" allergies. 
+
+It then references this table to calculate the "noted age in years" for each patient.
 
 ```sql
-select distinct
-    round(noted_age/365.25, 2) as noted_age_years
+select
+    strawberry_allergies.pat_id
+    ,round(strawberry_allergies.noted_age/365.25, 2) as noted_age_years
 from (
     select allergy.*
     from arcus.allergy
     where
         upper(allergy.allergen_name) like upper('strawberry%')
 ) as strawberry_allergies
-order by
-  noted_age_years
 
 ```
 
 #### With Statement
 
-The **WITH** statement can be used to create a "temporary table(s)" that will be created before your primary **SELECT** statement runs; an which will be dropped as soon as your query returns results. 
+The **WITH** statement can be used to create a sort of "detached Sub Query" (or "Temporary Table") that will be created before your primary **SELECT** statement runs. 
 
-> This approach is often use to increase code readability, but can also be used to increase query performance in certain situations.
-
-The code block below provides and example of using the `with` statement to create a "temp table" called **strawberry_allergies** that is then refrences in the `from` clause of the main `select` statement:
+The code block below provides and example of using the `with` statement to create a "temp table" that is then refrenced in the `from` clause of the main `select` statement:
 
 ```sql
 with
@@ -584,7 +587,7 @@ order by
 
 ```
 
-> Note: For more on using the **WITH** statement, follow this [link](https://www.w3schools.com/sql/sql_groupby.asp).
+> **Pro Tip**: This approach is often use to increase code readability, but can also be used to increase query performance in certain situations.
 
 #### Exists Statment
 
