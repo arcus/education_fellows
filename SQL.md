@@ -370,8 +370,8 @@ where
 
 **SECTION CONTENTS**
 
-* [Case Statement](#Case-Statement)
 * [Dealing with Null Values](#Dealing-with-Null-Values)
+* [Case Statement](#Case-Statement)
 * [Aggregate Functions](#Aggregate-Functions)
  * [Group By Statement](#Group-By-Statement)
  * [Having Clause](#Having-Clause)
@@ -421,23 +421,25 @@ order by
 ```
 ### Case Statement
 
-The `case` statement is used to produce conditional row-level output based columns/rows provided as input.
+The `case` statement is used to produce conditional row-level output based on columns/rows provided as input.
 
-> Often when creating datasets you will come across the need to define your own "custom categories/groupings" given some raw row data as input. This is where the `case` statment can come in handy!
+> Often when creating datasets you will come across the need to define your own "custom categories/groupings" given some raw row data as input. This is where the `case` statement can come in handy!
 
 The `case` statement has 4 main components (shown below). 
 
 ```sql
-CASE                --start tag of the case statement.
-  WHEN (…) THEN (…) --conditional when "some input" then "some output" logic.
+CASE                --COMPONENT 1: start tag of the case statement.
+  WHEN (…) THEN (…) --COMPONENT 2: conditional when "some input" then "some output" logic.
   …
-  ELSE (…)          --declariation of default value to be returned if when/then conditions are not met.
-END                 --end tag of case statment.
+  ELSE (…)          --COMPONENT 3: declariation of default value to be returned if when/then conditions are not met.
+END                 --COMPONENT 4: end tag of case statment.
 ```
 
-Its important to note that the `case`, `else`, and `end` components can only be listed once (and the `case` and `end` components must always be listed).
-
-However, you can list as many occurences of the `when/then` component as you would like. When multiple `when/then` component are listed, SQL will walk through each of them in the order they are listed; and will return output for the first `when` condition to be evaliuated as TRUE.
+>Its important to note that the `case`, `else`, and `end` components can only be listed once (and the `case` and `end` components must always be listed).
+>
+>However, you can list as many occurrences of the `when/then` component as you would like. 
+>
+>When multiple `when/then` components are listed, SQL will walk through each of them in the order they are listed; and will return output for the first `when` condition to be evaluated as TRUE.
 
 The example below uses a `case` statement to create a column called **birth\_weight\_category**, which "buckets" patients birth weights into 1 of 3 categories ('Below Average', 'Average','Above Average').
 
