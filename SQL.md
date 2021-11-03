@@ -516,7 +516,9 @@ group by
 
 The `having` clause can be used to filter your result set on the value of an aggragate function (which is something you will get an error on if you try to do in the `where` clause).
 
-In terms of placement in your structure, the `having` clause can be placed directly after your `group by` 
+> In terms of placement in your structure, the `having` clause can be placed directly after your `group by` statement, and before your `order by` statement (if listed).
+
+The example below uses the `having` clause to filter on only those patients from the **encounter** table that have more than 5 records (i.e. encounters) listed, and then returns a list of those patients and the number of encounters they have recorded (sorted in descending order by "encounter count").
 
 ```sql
 select
@@ -531,8 +533,6 @@ order by
   encounter_count desc
 
 ```
-
-> **Note**: For more on using the `GROUP BY` statement, follow this [link](https://www.w3schools.com/sql/sql_having.asp).
 
 ### Sub Queries
 
