@@ -474,30 +474,28 @@ See the table below for a list of the most commonly used  **Aggregate Functions*
 
 |Function|Description|
 |:---|:---|
-|`count()`|Returns a Count of the number of non-null values amoung the column(s)/rows provided as input.|
+|`count()`|Returns a Count of the number of non-null values among the column(s)/rows provided as input.|
 |`sum()`|Returns the summation of all values from a column provided as input.|
 |`min()`|Returns the minimum value from a column provided as input.|
 |`max()`|Returns the maximum value from a column provided as input.|
 |`avg()`|Returns the average of all values from a column provided as input.|
 
-The below table utilizes each of these **Aggregate Functions** functions to analys the `birth_weight_kg` column from the `patient` table:
+The below table utilizes each of these **Aggregate Functions** to analyse the `birth_weight_kg` column from the `patient` table:
 
 ```sql
 select
-    count(patient.birth_weight_kg) as pat_count
-    ,sum(patient.birth_weight_kg) as sum_weight_kg
-    ,min(patient.birth_weight_kg) as min_weight_kg
-    ,max(patient.birth_weight_kg) as max_weight_kg
-    ,avg(patient.birth_weight_kg) as avg_weight_kg
+    count(patient.birth_weight_kg) as pat_weight_count
+    ,sum(patient.birth_weight_kg) as sum_pat_weight_kg
+    ,min(patient.birth_weight_kg) as min_pat_weight_kg
+    ,max(patient.birth_weight_kg) as max_pat_weight_kg
+    ,avg(patient.birth_weight_kg) as avg_pat_weight_kg
 from arcus.patient
 
 ```
 
-> **Note**: For more information on **Aggregate Functions**, follow this [link](https://www.zentut.com/sql-tutorial/sql-aggregate-functions/).
-
 #### Group By Statement
 
-The `GROUP BY` statement is used to group column results into only the unique/distinct values among them, and is used in combination with [**AGGREGATE FUNCTIONS**](https://www.zentut.com/sql-tutorial/sql-aggregate-functions/) to generate summary statistics about the larger dataset that was collapsed by the `GROUP BY` statement. 
+The `GROUP BY` statement is used to group column results into only the unique/distinct values among them, and is used in combination with [**AGGREGATE FUNCTIONS**](https://www.zentut.com/sql-tutorial/sql-aggregate-functions/) to generate summary statistics about the larger dataset that was "grouped" (i.e. "collapsed") by the `GROUP BY` statement. 
 
 The code block below shows an example of using the `GROUP BY` statement to summarize some simple information from the **patient** table.
 
@@ -514,11 +512,11 @@ group by
 
 ```
 
-> **Note**: For more on using the `GROUP BY` statement, follow this [link](https://www.w3schools.com/sql/sql_groupby.asp).
-
 ##### Having Clause
 
-`having x`
+The `having` clause can be used to filter your result set on the value of an aggragate function (which is something you will get an error on if you try to do in the `where` clause).
+
+In terms of placement in your structure, the `having` clause can be placed directly after your `group by` 
 
 ```sql
 select
