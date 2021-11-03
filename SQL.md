@@ -495,7 +495,7 @@ from arcus.patient
 
 #### Group By Statement
 
-The `GROUP BY` statement is used to group column results into only the unique/distinct values among them, and is used in combination with [**AGGREGATE FUNCTIONS**](https://www.zentut.com/sql-tutorial/sql-aggregate-functions/) to generate summary statistics about the larger dataset that was "grouped" (i.e. "collapsed") by the `GROUP BY` statement. 
+The `GROUP BY` statement is used to group column results into only the unique/distinct values among them, and is used in combination with [**AGGREGATE FUNCTIONS**](#Aggregate-Functions) to generate summary statistics about the larger dataset that was "grouped" (i.e. "collapsed") by the `GROUP BY` statement. 
 
 The code block below shows an example of using the `GROUP BY` statement to summarize some simple information from the **patient** table.
 
@@ -538,7 +538,7 @@ order by
 > 
 > The `having` clause is also a great tool to use for determining which columns in your tables are potential "Primary Keys" (and which are not); "primary keys" are columns that have a unique value for each row of data.
 > 
-> e.g. The query below shows that the **pat\_id** column from the patient table countains a unique value for each row.
+> e.g. The query below shows that the **pat\_id** column from the patient table contains a unique value for each row:
 > 
 > `select pat_id, count(*) from patient group by pat_id having count(*)>1`
 
