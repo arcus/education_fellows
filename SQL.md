@@ -682,8 +682,6 @@ In the simplest case, your **Join Criteria** will be an equality statement refer
 
 For instance if you would like to join the **Allergy** and **Patient** Tables together you would need to use the shared **pat\_id** (as shown below) as your **Join Criteria**. 
 
-> Reading this **join** logic in plain engligh, it says "for each row in the **Allergy** table give me rows from the **Patient** table that have the same **pat\_id**.
-
 ```sql
 select *
 from arcus.allergy
@@ -691,6 +689,8 @@ inner join arcus.patient --join (and join type) declaration.
   on allergy.pat_id = patient.pat_id --join criteria.
 
 ``` 
+
+> Reading the above **join** logic in plain engligh, it says "for each row in the **Allergy** table give me rows from the **Patient** table that have the same **pat\_id**
 
 **JOIN TYPES**
 
