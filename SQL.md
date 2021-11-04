@@ -670,20 +670,22 @@ Most queries require something more complex than referencing data from a single 
 There are two basic peaces of information you need to know to write successful **joins**:
 
  1. What "**Type**" of **join** do you want to use?
- 2. What "**Criteria**" you would like your **join** evaluated against?
+ 2. What "**Criteria**" would you like your **join** evaluated against?
 
 **JOIN CRITERIA**
 
-**Join Criteria** are conditions that you would like evaluated as the basis for your **SQL Join**.
+**Join Criteria** are "conditions" that you would like evaluated as the basis for your **SQL Join**. 
 
-> In most situations your **join criteria** will be an equality statement referencing the shared columns (between your 2 tables) that you would like to use as the basis for your join.
+In most situations your **join criteria** will be an equality statement referencing the shared columns (between your 2 tables) that you would like to use as the basis for your join.
 
-For example, if you would like to join the **Allergy** and **Patient** Tables together you would need to use the shared `pat_id` as your **Join Criteria**.
+For example, if you would like to join the **Allergy** and **Patient** Tables together you would need to use the shared `pat_id` as your **Join Criteria**. 
+
+The code block below shows the sql logic for writting this join:
  
 ```sql
 select *
 from arcus.allergy
-join arcus.patient --join (and join type) declaration.
+inner join arcus.patient --join (and join type) declaration.
   on allergy.pat_id = patient.pat_id --join criteria.
   
 ```
