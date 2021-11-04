@@ -637,7 +637,6 @@ The example below uses the BigQuery SQL `regexp_contains()` function to filter o
 
 > **WARNING**: In BigQuery **SQL** regular expression functions are "**Case Sensitive**".
 >
-> 
 > This means an upper and lower case version of the same letter will be treated differently (i.e. `'a'<>'A'`). 
 > 
 > For this reason I recommend that you ALWAYS use either the `lower()` or `upper()` functions, as shown below, when dealing with text/string based data in your sql queries.
