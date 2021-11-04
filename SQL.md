@@ -682,7 +682,7 @@ In the simplest case, your **Join Criteria** will be an equality statement refer
 
 For instance if you would like to join the **Allergy** and **Patient** Tables together you would need to use the shared **pat\_id** (as shown below) as your **Join Criteria**. 
 
-> Reading this **join** in plain engligh, it says "for each row in the **Allergy** table 
+> Reading this **join** logic in plain engligh, it says "for each row in the **Allergy** table give me rows from the **Patient** table that have the same **pat\_id**.
  
 ```sql
 select *
