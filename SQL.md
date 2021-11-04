@@ -715,9 +715,7 @@ The image below uses a different **ven-diagram**  to provide a visual representa
 
 That said, check out the next few sections of this documentation for a detailed explanation of the `inner`, `left`, and `outer` **join types**.
 
-> **Note**: 
-> 
-> I don't recommend using the `right` join type in any situation so you will notice it has been omitted from the rest of this documentation. 
+> **Note**: I don't recommend using the `right` join type in any situation so you will notice it has been omitted from the rest of this documentation. 
 > 
 > The reason for this is that anything you want to do with a right join can be done by re-ordering your query and using a `left` join. This means that the `right` join is at best a bit redundant, and at most is sort of confusing for anyone reading your queries.
 
