@@ -677,15 +677,22 @@ There are two basic peaces of information you need to know to write successful *
 
 **Join Types**
 
-"**Venn-diagrams**" are often helpful tools for discussing (and visualizing) the different **Types** of **SQL Joins** that can be performed. An image of your typical **Venn-diagram** is displayed below.
+There are 4 basic **Join Types** that can be used. Each of these **Join Types** are listed below, and have their unique behavior:
 
-> When depicting **SQL Joins** in a "**Venn-diagram**" it is typical to imagine that the circle on the left hand side represents all data from your "base table" (i.e. the table in your query that is referenced first), and that the circle on the right represents all data in the table you would like to join too.
+- `left join`
+- `right join`
+- `inner join`  
+- `outer join`  
+
+"**Venn-diagrams**" are often helpful tools for discussing (and visualizing) the unique behaviors of each different **Join Type**. An image of your typical **Venn-diagram** is displayed below.
+
+> When depicting **SQL Joins** in a "**Venn-diagram**" you can imagine that the circle on the left hand side represents all data from your "base table" (i.e. the table in your query that is referenced first), and the circle on the right represents all data in your "join table" (i.e. the table you would like to join too).
 > 
 > Using this model, each of the sections of the **ven-diagram** can be thought of as representing a different type of join. 
 
 ![](img/venn-diagram.png)
 
-The image below uses ven-diagrams to provide a visual representation of each different **Join Type** (which are referred to as  "**inner**", "**left**", "**right**", "**full**" joins respectively).
+The image below uses a different **ven-diagram**  to provide a visual representation of each different **Join Type** (which are referred to as  "**inner**", "**left**", "**right**", "**full**" joins respectively).
 
 ![](img/join-types.jpg)
 
