@@ -676,9 +676,11 @@ There are two basic peaces of information you need to know to write successful *
 
 **Join Criteria** are "conditions" that you would like evaluated as the basis for your **SQL Join**. 
 
-In most situations your **join criteria** will be an equality statement referencing the shared columns (between your 2 tables) that you would like to use as the basis for your join.
+> When the "conditions" in your **Join Criteria** evaluate as TRUE for a row then a join will be performed for those rows, and when the **Join Criteria** are evaluate as FALSE no join for those rows will take place.
 
-For instance if you would like to join the **Allergy** and **Patient** Tables together you would need to use the shared `pat_id` when writting **Join Criteria**, an example of this is shown below:
+In the simplest case, your **Join Criteria** will be an equality statement referencing the shared columns (between your tables) that you would like evaluated when resolving your join.
+
+For instance if you would like to join the **Allergy** and **Patient** Tables together you would need to use the shared `pat_id` (as shown below) as your **Join Criteria**.
  
 ```sql
 select *
