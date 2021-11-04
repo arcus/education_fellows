@@ -672,13 +672,11 @@ There are two basic peaces of information you need to know to write successful *
  1. What "**Type**" of **join** do you want to use?
  2. What "**Criteria**" you would like your **join** evaluated against?
 
-<hr>
-
 **JOIN CRITERIA**
 
 **Join Criteria** are conditions that you would like evaluated as the basis for your **SQL Join**.
 
->In most situations your **join criteria** will be an equality statement referencing the shared columns (between your 2 tables) that you would like to use as the basis for your join.
+> In most situations your **join criteria** will be an equality statement referencing the shared columns (between your 2 tables) that you would like to use as the basis for your join.
 
 For example, if you would like to join the **Allergy** and **Patient** Tables together you would need to use the shared `pat_id` as your **Join Criteria**.
  
@@ -689,8 +687,6 @@ join arcus.patient <--join (and join type) declaration.
   on allergy.pat_id = patient.pat_id <--join criteria.
   
 ```
-
-<hr>
 
 **JOIN TYPES**
 
@@ -720,8 +716,6 @@ That said, check out the next few sections of this documentation for a detailed 
 > I don't recommend using the `right` join type in any situation so you will notice it has been omitted from the rest of this documentation. 
 > 
 > The reason for this is that anything you want to do with a right join can be done by re-ordering your query and using a `left` join. This means that the `right` join is at best a bit redundant, and at most is sort of confusing for anyone reading your queries.
-
-<hr>
 
 **SECTION CONTENTS**
 
