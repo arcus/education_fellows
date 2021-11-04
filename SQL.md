@@ -683,8 +683,8 @@ For example, if you would like to join the **Allergy** and **Patient** Tables to
 ```sql
 select *
 from arcus.allergy
-join arcus.patient <--join (and join type) declaration.
-  on allergy.pat_id = patient.pat_id <--join criteria.
+join arcus.patient --join (and join type) declaration.
+  on allergy.pat_id = patient.pat_id --join criteria.
   
 ```
 
