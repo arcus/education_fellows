@@ -389,13 +389,13 @@ The sections that follow will expand upon the concepts we learned about in the p
 * [Regular Expression Functions](#Regular-Expression-Functions)
 * [Aggregate Functions](#Aggregate-Functions)
 
-    * [Group By Statement](#Group-By-Statement)
-    * [Having Clause](#Having-Clause)
+  * [Group By Statement](#Group-By-Statement)
+  * [Having Clause](#Having-Clause)
 
 * [Sub Queries](#Sub-Queries)
 
-    * [With Statement](#With-Statement)
-    * [Exists Statment](#Exists-Statment)
+  * [With Statement](#With-Statement)
+  * [Exists Statment](#Exists-Statment)
 
 ### Case Statement
 
