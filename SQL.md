@@ -835,7 +835,7 @@ An **n:m** (where n>1 & m>1) joins are referred to as Cartesian Joins.
 
 The final result set of a Cartesian join will have a total row count less than or equal to the “product of the number of rows in both input tables 
 
-The query below results in an unstable "n:m" (**Cartesian**) join
+The query below provides an example of an unstable "n:m" (**Cartesian**) join,
 
 ```sql
 select count(*)
@@ -843,7 +843,6 @@ from allergy as a
 inner join encounter as e
     on a.pat_id = e.pat_id --this is an n:m level join
 ```
-
 
 “Cartesian” Joins can be very "memory intensive" operations as the size of the result set increases exponentially with the size of their 2 input tables. Additionally, if they go “unnoticed”, they can seriously effect the validity of your SQL reports (e.g. if your trying to infer a count of something by counting the number of rows, an unintentional cartesian join will result in you overcounting the value you were trying to measure).
 
