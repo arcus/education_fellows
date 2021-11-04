@@ -665,20 +665,20 @@ where
 
 Most queries require something more complex than referencing data from a single table. This is where **SQL**’s "**Join**" functionality comes into play.
 
-"**SQL Joins**" are used to combine **Rows** from 2 (or more) **Tables**, based on some set of **Columns** the **Tables** have in common.
+"**SQL Joins**" are used to combine **Rows** from 2 (or more) **Tables**, based on some set of **Columns** they have in common.
 
-There are two basic things you need for a successful join:
+There are two basic peaces of information you need to know to write successful join:
 
-1). **Join Type**:
+1). **Join Criteria**:
+
+  - What columns between your 2 input tables have to match in order for the join to successfully resolve? 
+    - Such as `pat_id`, `encounter_id`, etc.
+
+2). **Join Type**:
 
   - What Type of Join do you want to use (`inner`, `left`, etc)?
 
     - This will effect  the total number of rows returned by your join
-
-2). **Join Criteria**:
-
-  - What columns between your 2 input tables have to match in order for the join to successfully resolve? 
-    - Such as `pat_id`, `encounter_id`, Etc.
 
 <hr>
 
