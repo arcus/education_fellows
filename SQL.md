@@ -677,7 +677,7 @@ There are two basic peaces of information you need to know to write successful *
 
 **Join Types**
 
-There are 4 basic **Join Types** that can be used. Each of these **Join Types** are listed below, and have their unique behavior:
+There are 4 basic **Join Types** that can be used. Each of these **Join Types** are listed below, and have their own unique behavior:
 
 - `left join`
 - `right join`
@@ -686,24 +686,31 @@ There are 4 basic **Join Types** that can be used. Each of these **Join Types** 
 
 "**Venn-diagrams**" are often helpful tools for discussing (and visualizing) the unique behaviors of each different **Join Type**. An image of your typical **Venn-diagram** is displayed below.
 
-> When depicting **SQL Joins** in a "**Venn-diagram**" you can imagine that the circle on the left hand side represents all data from your "base table" (i.e. the table in your query that is referenced first), and the circle on the right represents all data in your "join table" (i.e. the table you would like to join too).
-> 
-> Using this model, each of the sections of the **ven-diagram** can be thought of as representing a different type of join. 
-
 ![](img/venn-diagram.png)
+
+> When depicting **SQL Joins** in a "**Venn-diagram**" like this you can imagine that the circle on the left hand side represents all data from your "base table" (i.e. the table in your query that is referenced first), and the circle on the right represents all data in your "join table" (i.e. the table you would like to join too).
+> 
+> Using this model, each of the segments of the **ven-diagram** can be thought of as representing a different type of join. 
 
 The image below uses a different **ven-diagram**  to provide a visual representation of each different **Join Type** (which are referred to as  "**inner**", "**left**", "**right**", "**full**" joins respectively).
 
 ![](img/join-types.jpg)
 
-<hr>
+That said, check out the next few sections of this documentation for a detailed explanation of the `inner`, `left`, and `outer` **join types**.
+
+> **Note**: I don't recommend using the `right` join type in any situation so you will notice it has been omitted from the rest of this documentation.
 
 **SECTION CONTENTS**
 
 * [Inner Join](#Inner-Join)
 * [Left Join](#Left-Join)
+* [Full Join](#Full-Join)
 
 ### Inner Join
+
+![](img/inner-join-venn-diagram.png)
+
+![](img/inner-join-table-example.png)
 
 ```sql
 select
@@ -749,6 +756,10 @@ order by
 ```
 
 ### Left Join
+
+![](img/left-join-venn-diagram.png)
+
+![](img/left-join-table-example.png)
 
 ```sql
 select
@@ -804,6 +815,12 @@ where
   upper(procedure_order.proc_ord_type_name)=upper('Lab')
 
 ```
+
+### Full Join
+
+![](img/full-join-venn-diagram.png)
+
+![](img/full-join-table-example.png)
 
 ## DDL - Data Definition Language
 > **NOTE**: Up until now all of the code we have looked at have been examples of **DQL** (Data Query Language).
