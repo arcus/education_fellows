@@ -590,7 +590,7 @@ order by
 
 ### Sub Queries
 
-A **Sub Query** is essentially "nested" **SQL** query that is referenced inside of a larger **SQL** query.
+A **Sub Query** is essentially a "nested" **SQL** query that is referenced inside of a larger **SQL** query.
 
 > **Sub Queries** can appear in the `from` section of your `select` statement like a regular table and are demarcated by open and close parentheses, followed by an alias name that you would like to use to reference it later on in your query.
 
