@@ -375,11 +375,13 @@ where
 * [Aggregate Functions](#Aggregate-Functions)
 
     * [Group By Statement](#Group-By-Statement)
+
     * [Having Clause](#Having-Clause)
 
 * [Sub Queries](#Sub-Queries)
 
     * [With Statement](#With-Statement)
+
     * [Exists Statment](#Exists-Statment)
 
 * [Regular Expression Functions](#Regular-Expression-Functions)
