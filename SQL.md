@@ -30,9 +30,6 @@ Contents
 
 * [SQL Joins](#SQL-Joins)
 
-* [DDL - Data Definition Language](#ddl---data-definition-language)
-
-* [DML - Data Manipulation Language](#dml---data-manipulation-language)
 
 ## What is SQL?
 
@@ -806,21 +803,4 @@ left join arcus.allergy
 
 ```
 
-## DDL - Data Definition Language
-> **NOTE**: Up until now all of the code we have looked at have been examples of **DQL** (Data Query Language).
-
-### Create Table
-### Create View
-### Dropping Tables/Views
-### Granting Access to Tables/Views
-### Altering Tables/Views
-#### Renaming Tables
-#### Adding Columns
-#### Recasting Columns
-
-
-## DML - Data Manipulation Language
-### Update Statment
-### Insert Statment
-### Delete Statment
 
