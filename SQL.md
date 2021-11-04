@@ -373,11 +373,15 @@ where
 * [Dealing with Null Values](#Dealing-with-Null-Values)
 * [Case Statement](#Case-Statement)
 * [Aggregate Functions](#Aggregate-Functions)
- * [Group By Statement](#Group-By-Statement)
- * [Having Clause](#Having-Clause)
+
+    * [Group By Statement](#Group-By-Statement)
+    * [Having Clause](#Having-Clause)
+
 * [Sub Queries](#Sub-Queries)
-* [With Statement](#With-Statement)
-* [Exists Statment](#Exists-Statment)
+
+    * [With Statement](#With-Statement)
+    * [Exists Statment](#Exists-Statment)
+
 * [Regular Expression Functions](#Regular-Expression-Functions)
 
 ### Dealing with Null Values
@@ -615,22 +619,21 @@ where
 
 A **Regular Expression Functions** are a class of function that utilize "[Regular Expression](https://en.wikipedia.org/wiki/Regular_expression)" "[Metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended)" to preform some kind of pattern matching on text data.
 
-Similar to the [`like`](#Like-Operator) opperators "wildcard" charaters, **Regular Expression "[Metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended)"** are used in **Regular Expression Functions** to allow for more dynamic forms of pattern matching.
+Similar to the [`like`](#Like-Operator) opperators "wildcard" charaters, **Regular Expression "[Metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended)"** are used in **Regular Expression Functions** to allow for more dynamic forms of text based pattern matching.
 
-The most common set of **Regular Expression "[Metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended)"** are listed below:
-
-|Metacharacter|Description|
+> The most common set of **Regular Expression "[Metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended)"** are listed below:
+>
+>|Metacharacter|Description|
 |:---|:---|
 |^|Matches the starting position within the string.|
 |\$|Matches the ending position within the string.|
 |.|Matches any single character (similar to the "_" character in a like statement).|
 |*|Matches 0 or more occurrences of the preceding character.|
 |\||This character (known as the "choice operator") can be used to delimit multiple match patterns, and will provide a match on either the expression before or the expression after it is listed in your search string.|
-
-
+>
 > For a full list of **Regular Expression "Metacharacters "**, follow this [link](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended).
 
-The example below uses the `regexp_contains()` function to filter on records where the **allergen\_name** either starts with "stra" or ends with "egg".
+The example below uses the BigQuery SQL `regexp_contains()` function to filter on records where the **allergen\_name** either *starts* with "stra" or *ends* with "egg".
 
 ```sql
 select distinct allergy.allergen_name
@@ -653,6 +656,8 @@ As you can see from even just this simple example, regular expression functions 
 ## SQL Joins
 
 **What are SQL Joins**
+
+
 
 **When to Use SQL Joins**
 
