@@ -683,6 +683,7 @@ Most queries require something more complex than only referencing a single table
 
 A helpful tool for discussing (and visualizing) the concept of **SQL Joins** are "**venn-diagrams**"
 
+![](img/venn-diagram.png)
 ![](img/join-types.png)
 
 **SECTION CONTENTS**
