@@ -667,25 +667,34 @@ Most queries require something more complex than referencing data from a single 
 
 "**SQL Joins**" are used to combine **Rows** from 2 (or more) **Tables**, based on some set of **Columns** the **Tables** have in common.
 
-> There are two basic things you need for a successful join:
->
->
-> 1). **Join Type**:
-> 
->   - What Type of Join do you want to use (`inner`, `left`, etc)?
-> 
->     - This will effect  the total number of rows returned by your join
-> 
-> 2). **Join Criteria**:
-> 
->   - What columns between your 2 input tables have to match in order for the join to successfully resolve? 
-> 
->     - Such as `pat_id`, `encounter_id`, Etc.
+There are two basic things you need for a successful join:
 
-A helpful tool for discussing (and visualizing) the concept of **SQL Joins** are "**venn-diagrams**"
+1). **Join Type**:
 
-![](img/venn-diagram.png)
-![](img/join-types.png)
+  - What Type of Join do you want to use (`inner`, `left`, etc)?
+
+    - This will effect  the total number of rows returned by your join
+
+2). **Join Criteria**:
+
+  - What columns between your 2 input tables have to match in order for the join to successfully resolve? 
+    - Such as `pat_id`, `encounter_id`, Etc.
+
+<hr>
+
+**Join Types**
+
+"**Venn-diagrams**" are often helpful tools for discussing (and visualizing) the concept of **SQL Joins**.
+
+The image below uses ven-diagrams to provide a visual representation of each different **Join Type** (which are refered to as  "**inner**", "**left**", "**right**", "**full**" joins respectively).
+
+![](img/join-types.jpg)
+
+<hr>
+
+**Join Criteria**
+
+<hr>
 
 **SECTION CONTENTS**
 
