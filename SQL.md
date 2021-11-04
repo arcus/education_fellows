@@ -624,12 +624,12 @@ Similar to the [`like`](#Like-Operator) opperators "wildcard" charaters, **Regul
 > The most common set of **Regular Expression "[Metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended)"** are listed below:
 >
 >|Metacharacter|Description|
-|:---|:---|
-|^|Matches the starting position within the string.|
-|\$|Matches the ending position within the string.|
-|.|Matches any single character (similar to the "_" character in a like statement).|
-|*|Matches 0 or more occurrences of the preceding character.|
-|\||This character (known as the "choice operator") can be used to delimit multiple match patterns, and will provide a match on either the expression before or the expression after it is listed in your search string.|
+>|:---|:---|
+>|^|Matches the starting position within the string.|
+>|\$|Matches the ending position within the string.|
+>|.|Matches any single character (similar to the "_" character in a like statement).|
+>|*|Matches 0 or more occurrences of the preceding character.|
+>|\||This character (known as the "choice operator") can be used to delimit multiple match patterns, and will provide a match on either the expression before or the expression after it is listed in your search string.|
 >
 > For a full list of **Regular Expression "Metacharacters "**, follow this [link](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended).
 
