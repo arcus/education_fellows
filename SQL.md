@@ -668,7 +668,6 @@ Most queries require something more complex than referencing data from a single 
 There are two basic peaces of information you need to know to write successful **joins**:
 
  1. What "**Type**" of **join** do you want to use?
- 
  2. What "**Criteria**" you would like your **join** evaluated against?
 
 
