@@ -663,9 +663,7 @@ where
 
 **What are SQL Joins**
 
-Most queries require something more complex than only referencing a single table.  
-
-This is where **SQL**’s "**Join**" functionality comes into play.
+Most queries require something more complex than only referencing a single table. This is where **SQL**’s "**Join**" functionality comes into play.
 
 "**SQL Joins**" are used to combine **Rows** from 2 (or more) **Tables**, based on some set of **Columns** the **Tables** have in common.
 
@@ -673,19 +671,19 @@ This is where **SQL**’s "**Join**" functionality comes into play.
 >  
 > 1). **Join Type**:
 > 
-> - What Type of Join do you want to use (`inner`, `left`, etc)?
+>   - What Type of Join do you want to use (`inner`, `left`, etc)?
 > 
 >     - This will effect  the total number of rows returned by your join
 > 
 > 2). **Join Criteria**:
 > 
-> - What columns between your 2 input tables have to match in order for the join to successfully resolve? 
+>   - What columns between your 2 input tables have to match in order for the join to successfully resolve? 
 > 
 >     - Such as `pat_id`, `encounter_id`, Etc.
 
+A helpful tool for discussing (and visualizing) the concept of **SQL Joins** are "**venn-diagrams**"
 
-**When to Use SQL Joins**
-
+![](img/join-types.png)
 
 **SECTION CONTENTS**
 
