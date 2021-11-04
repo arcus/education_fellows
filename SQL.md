@@ -441,7 +441,7 @@ from arcus.patient
 
 #### Like Operator
 
-In the `where` clause, the `like` operator can be used to filter on row values that contain a specific "pattern of text" in a column of interest (also known as "text/pattern matching").
+The `like` operator can be used to filter on row values that contain a specific "pattern of text" in a column of interest (also known as "text/pattern matching").
 
 For the purpose of "pattern matching", the `like` operator is able to utilize the 2 distinct **Wildcard Charaters** listed below:
 
@@ -450,7 +450,7 @@ For the purpose of "pattern matching", the `like` operator is able to utilize th
 |`%`|"Wildcard" for 0 or more characters.|
 |`_`|"Wildcard" for exactly 1 characters.|
 
-The shown below uses the `like` opperator to filter on only those records from the `allergy` table where the `allergen_name` is starts with the text "stra".
+The code block shown below uses the `like` opperator, in the `where` clause, to filter on records from the `allergy` table where the `allergen_name` is starts with the text "stra".
 
 ```sql
 select distinct allergy.allergen_name
@@ -469,7 +469,7 @@ where
 
 ### Regular Expression Functions
 
-A **Regular Expression Functions** are a class of function that utilize "[Regular Expression](https://en.wikipedia.org/wiki/Regular_expression)" "[Metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended)" to perform some kind of pattern matching on text data.
+**Regular Expression Functions** are a class of function that utilize "[Regular Expression](https://en.wikipedia.org/wiki/Regular_expression)" "[Metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended)" to perform some kind of pattern matching on text data.
 
 Similar to the [`like`](#Like-Operator) opperator's "wildcard" characters, **Regular Expression "[Metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended)"** are used in **Regular Expression Functions** to allow for more dynamic forms of text based pattern matching.
 
