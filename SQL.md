@@ -804,4 +804,49 @@ left join arcus.allergy
 
 ```
 
+### Cartesian Joins - When Joining Goes Wrong
 
+A “**Cartesian**” Join is essentially a join that “results in more rows than it started with”.
+
+This can be done intentionally by using something called a `cross` join (which is another type of join we ommitted from this documentation), however it can also occur un-intentionally if your join criteria result in an "n:m" relationship (i.e. if its not a "1:1" or "1:n" join key mapping between your 2 tables). 
+
+
+**“STABLE” (n:1) JOINS**
+
+A "**1:n**" (or "n:1") joins can be considered “Stable” because the result set of this join will have the same number of rows of as “the join input table with the most rows”. 
+
+![](img/stable-join-product.png)
+
+The query below is an example of a stable "n:1" join, where the **allergy** table can contain multiple rows with the same **pat\_id** value and the **patient** table can contains at most 1 row per **pat\_id** (i.e. **pat\_id** is a **primary key** in the patient table).
+
+```sql
+select count(*)
+from arcus.allergy as a
+inner join arcus.patient as p
+    on a.pat_id = p.pat_id --this is an n:1 level join
+
+```
+
+**“CARTESIAN” (n:m) JOINS**
+
+An **n:m** (where n>1 & m>1) joins are referred to as Cartesian Joins.
+
+![](img/cartesian-join-product.png)
+
+The final result set of a Cartesian join will have a total row count less than or equal to the “product of the number of rows in both input tables 
+
+The query below results in an unstable "n:m" (**Cartesian**) join
+
+```sql
+select count(*)
+from allergy as a
+inner join encounter as e
+    on a.pat_id = e.pat_id --this is an n:m level join
+```
+
+
+“Cartesian” Joins can be very "memory intensive" operations as the size of the result set increases exponentially with the size of their 2 input tables. Additionally, if they go “unnoticed”, they can seriously effect the validity of your SQL reports (e.g. if your trying to infer a count of something by counting the number of rows, an unintentional cartesian join will result in you overcounting the value you were trying to measure).
+
+In order to make sure you aren't accidentally writing a **Cartesian** Join, make sure that at least one of the columns in your join equality (either from your "base" or "join" table) are a "**primary key**".
+
+> **Pro Tip:** DON'T WRITE CARTESIAN JOINS !!!
