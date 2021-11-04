@@ -437,7 +437,7 @@ from arcus.patient
 
 ```
 
-#### Like Operator
+### Like Operator
 
 The `like` operator can be used to filter on row values that contain a specific "pattern of text" in a column of interest (also known as "text/pattern matching").
 
