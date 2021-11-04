@@ -131,14 +131,16 @@ The sections that follow will provide an overview of this basic **SQL** syntax a
 
 * [Select Statement](#Select-Statement)
 
-  * [Aliasing](#Aliasing)
-  * [Adding Comments](#Adding-Comments)
+  * [Distinct Clause](#Distinct-Clause)
 
-* [Distinct Clause](#Distinct-Clause)
+* [Where Clause](#Where-Clause)
+
+  * [Dealing with Null Values](#Dealing=with-Null-Values)
+
 * [Order By Statement](#Order-By-Statement)
 * [Limit Clause](#Limit-Clause)
-* [Where Clause](#Where-Clause)
-* [Like Operator](#Like-Operator)
+* [Adding Comments](#Adding-Comments)
+* [Aliasing](#Aliasing)
 
 ### Select Statement
 
@@ -189,65 +191,6 @@ from arcus.patient
 > 
 > Though not required for a single table select statement, it is a good idea to follow this practice any time you are writing a select statement in order to make sure its clear which table each column is coming from. Doing this will make things less error-prone if you ever want to add additional tables to your query and will make it easier for other programmers to read your code.
 
-### Aliasing
-
-In SQL, it is possible to assigne a custom (or "short hand") name to a table or column in your query using a tequnique called **Aliasing**.
-
-> **Aliasing** *Tables* can be helpful for a **SQL** programmer so that they don't have to type out the full name of a table each time they want to make reference to it. 
-
-> **Aliasing** *Columns* can be helpful to consumers of your data by assigning clearer, more "comprehensible", names for a given column than the name that might be assgined to it in the database.
-
-**Aliases** are assigned by placing the `as` key word directly after the item (table/column) you would like to alias, followed by the name you would like to assign as its **alias**.
-
-In the example below, we can see **Aliasing** being used to rename the `patient` table to `p`, and renaming the `pat_id` and `state_abbr` columns to `unique_patient_id` and `state_shortname`.
-
-```sql
-select
-  p.pat_id as unique_patient_id
-  ,p.sex
-  ,p.race
-  ,p.ethnicity
-  ,p.state_abbr as state_shortname
-from arcus.patient as p
-
-```
-
-> **Note**: We will see aliasing again in a few other contexts later on in this documentation, however I wanted to be sure to make you aware of these 2 most basic/common cases of aliasing before moving fowards.
-
-### Adding Comments
-
-Before diving into any more explicit SQL coding, its important to understand the concept of adding "comments" to your **SQL** code.
-
-Comments are essentially explanatory or helpful bits of text that programmers can add to their code as documentation for themselves or other reviewers of their code, and that don't actually effect the execution of the SQL code in any way.
-
-In **SQL** there are 2 different techniques that can be used for adding comments, **single-line** and **multi-line** comments
-
-> **Single-Line** Comments can be created by typing 2 minus signs in a row (i.e. `--`). 
-> 
-> Once added to your code, anything that appears to the right of the `--` comment delimiter will be treated as comment text.
-> 
-> **Multi-Line** Comments can be started by adding the `/*` characters to your code, and the multi-line comment can be closed by adding the `*/` characters. 
-> 
-> Once created, any text that appears between the `/*` and `*/` "tags" will be treated as comment text.
-
-The code block below provides an example of each of these styles of commenting:
-
-```sql
-/* This is a simple demographics query*/
-select
-  patient.pat_id      --unique patient identifier.
-  ,patient.sex        --patient sex {Male, Female, Unknown, null}
-  ,patient.race       --patient race
-  ,patient.ethnicity  --patient ethnicity {Hispanic or Latino, Not Hispanic or Latino, Refused, Unknown}
-  ,patient.state_abbr --Two Character State Abbreviation.
-from arcus.patient
-
-
-/*
-    Aren't Comments Great!
-*/
-```
-
 ### Distinct Clause
 
 The `distinct`clause in **SQL** can be placed directly after the `select` key word, and can be used to limit your result set down to only the unique row values. 
@@ -265,42 +208,6 @@ from arcus.patient
 ```
 
 > **Pro Tip**: The `distinct` clause is especially useful for removing duplicates rows from the result set of your `SQL` queries; in the event that duplicate rows would cause errors during analysis.
-
-### Order By Statement
-
-Another useful peace of **SQL** syntax for exporing datasets is the `order by` statement, which (as its name suggests) is used to order your result set by a given set of columns.
-
-When listing columns in the `order by` statment you can specify that they be sorted in either ascending (`asc`) or descending (`desc`) order. 
-
-```sql
-select distinct
-  patient.sex
-  ,patient.ethnicity
-from arcus.patient
-order by
-  patient.sex asc
-  ,patient.ethnicity desc
-
-```
-
-> **Note:** By default, all items in the `order by` clause will be sorted in `asc` order if no explicit ordering argument/type is provided.
-
-### Limit Clause
-
-The `limit` clause can be used to limit the result set of your select statement to (at most) a pre-defined number of rows.
-
-> To do this all you need to do is add the word `limit` as the last line of your query, followed by the number of rows you would like your result set truncated at. 
-
-The example below pulls all columns from the encounter table, and limits the result set to only 10 rows.
-
-```sql
-select * 
-from arcus.encounter
-limit 10
-
-```
-
-> **Tip**: As you can see, this is also a great peace of syntax to use for exporing tables you might be unfarmiliar with (in the event you want to see the kind of data a table/query contain but you don't want to wait for all rows of the query to return; which can take a long time for larger tables or more complex queries).
 
 ### Where Clause
 
@@ -336,53 +243,6 @@ where
 > **Additional Reading**:
 > 
 > To read more about the basic types of "Operators" avaiable for use in a **SQL** query, click [here](https://www.tutorialspoint.com/sql/sql-operators.htm) for some helpful documentation from **tutorialspoint.com**.
-
-#### Like Operator
-
-In the `where` clause, the `like` operator can be used to filter on row values that contain a specific "pattern of text" in a column of interest (also known as "text/pattern matching").
-
-For the purpose of "pattern matching", the `like` operator is able to utilize the 2 distinct **Wildcard Charaters** listed below:
-
-|Wildcard Characters|Description|
-|---|---|
-|`%`|"Wildcard" for 0 or more characters.|
-|`_`|"Wildcard" for exactly 1 characters.|
-
-The shown below uses the `like` opperator to filter on only those records from the `allergy` table where the `allergen_name` is starts with the text "stra".
-
-```sql
-select distinct allergy.allergen_name
-from arcus.allergy
-where
-    upper(allergy.allergen_name) like upper('stra%')
-
-```
-> **WARNING**: 
-> 
-> The `like` operator (and almost everything else in **SQL**) is **CASE SENSITIVE**!
-> 
-> This means an upper and lower case version of the same letter will be treated differently (i.e. `'a'<>'A'`). 
-> 
-> For this reason I recommend that you ALWAYS use either the `lower()` or `upper()` functions, as shown above, when dealing with text/string based data in your sql queries.
-
-## Advanced SQL Syntax
-
-
-**SECTION CONTENTS**
-
-* [Dealing with Null Values](#Dealing-with-Null-Values)
-* [Case Statement](#Case-Statement)
-* [Aggregate Functions](#Aggregate-Functions)
-
-    * [Group By Statement](#Group-By-Statement)
-    * [Having Clause](#Having-Clause)
-
-* [Sub Queries](#Sub-Queries)
-
-    * [With Statement](#With-Statement)
-    * [Exists Statment](#Exists-Statment)
-
-* [Regular Expression Functions](#Regular-Expression-Functions)
 
 ### Dealing with Null Values
 
@@ -428,6 +288,117 @@ where
 
 > **IMPORTANT NOTE**: This is a very subtle distinction that can drastically alter the output of your SQL statements, especially when writing "exclusion" logic like in the example above, so its a good idea to make sure you have a firm grasp on this before moving forward.
 
+### Order By Statement
+
+Another useful peace of **SQL** syntax for exporing datasets is the `order by` statement, which (as its name suggests) is used to order your result set by a given set of columns.
+
+When listing columns in the `order by` statment you can specify that they be sorted in either ascending (`asc`) or descending (`desc`) order. 
+
+```sql
+select distinct
+  patient.sex
+  ,patient.ethnicity
+from arcus.patient
+order by
+  patient.sex asc
+  ,patient.ethnicity desc
+
+```
+
+> **Note:** By default, all items in the `order by` clause will be sorted in `asc` order if no explicit ordering argument/type is provided.
+
+### Limit Clause
+
+The `limit` clause can be used to limit the result set of your select statement to (at most) a pre-defined number of rows.
+
+> To do this all you need to do is add the word `limit` as the last line of your query, followed by the number of rows you would like your result set truncated at. 
+
+The example below pulls all columns from the encounter table, and limits the result set to only 10 rows.
+
+```sql
+select * 
+from arcus.encounter
+limit 10
+
+```
+
+> **Tip**: As you can see, this is also a great peace of syntax to use for exporing tables you might be unfarmiliar with (in the event you want to see the kind of data a table/query contain but you don't want to wait for all rows of the query to return; which can take a long time for larger tables or more complex queries).
+
+### Adding Comments
+
+"**Comments**" are essentially explanatory or helpful bits of text that programmers can add to their code as documentation for themselves or other reviewers of their code, and that don't actually effect the execution of the SQL code in any way.
+
+In **SQL** there are 2 different techniques that can be used for adding comments, **single-line** and **multi-line** comments
+
+> **Single-Line** Comments can be created by typing 2 minus signs in a row (i.e. `--`). 
+> 
+> Once added to your code, anything that appears to the right of the `--` comment delimiter will be treated as comment text.
+> 
+> **Multi-Line** Comments can be started by adding the `/*` characters to your code, and the multi-line comment can be closed by adding the `*/` characters. 
+> 
+> Once created, any text that appears between the `/*` and `*/` "tags" will be treated as comment text.
+
+The code block below provides an example of each of these styles of commenting:
+
+```sql
+/* This is a simple demographics query*/
+select
+  patient.pat_id      --unique patient identifier.
+  ,patient.sex        --patient sex {Male, Female, Unknown, null}
+  ,patient.race       --patient race
+  ,patient.ethnicity  --patient ethnicity {Hispanic or Latino, Not Hispanic or Latino, Refused, Unknown}
+  ,patient.state_abbr --Two Character State Abbreviation.
+from arcus.patient
+
+
+/*
+    Aren't Comments Great!
+*/
+```
+
+### Aliasing
+
+In SQL, it is possible to assigne a custom (or "short hand") name to a table or column in your query using a tequnique called **Aliasing**.
+
+> **Aliasing** *Tables* can be helpful for a **SQL** programmer so that they don't have to type out the full name of a table each time they want to make reference to it. 
+
+> **Aliasing** *Columns* can be helpful to consumers of your data by assigning clearer, more "comprehensible", names for a given column than the name that might be assgined to it in the database.
+
+**Aliases** are assigned by placing the `as` key word directly after the item (table/column) you would like to alias, followed by the name you would like to assign as its **alias**.
+
+In the example below, we can see **Aliasing** being used to rename the `patient` table to `p`, and renaming the `pat_id` and `state_abbr` columns to `unique_patient_id` and `state_shortname`.
+
+```sql
+select
+  p.pat_id as unique_patient_id
+  ,p.sex
+  ,p.race
+  ,p.ethnicity
+  ,p.state_abbr as state_shortname
+from arcus.patient as p
+
+```
+
+> **Note**: We will see aliasing again in a few other contexts later on in this documentation, however I wanted to be sure to make you aware of these 2 most basic/common cases of aliasing before moving fowards.
+
+## Advanced SQL Syntax
+
+
+**SECTION CONTENTS**
+
+* [Case Statement](#Case-Statement)
+* [Like Operator](#Like-Operator)
+* [Regular Expression Functions](#Regular-Expression-Functions)
+* [Aggregate Functions](#Aggregate-Functions)
+
+    * [Group By Statement](#Group-By-Statement)
+    * [Having Clause](#Having-Clause)
+
+* [Sub Queries](#Sub-Queries)
+
+    * [With Statement](#With-Statement)
+    * [Exists Statment](#Exists-Statment)
+
 ### Case Statement
 
 The `case` statement is used to produce conditional row-level output based on columns/rows provided as input.
@@ -467,6 +438,79 @@ select
 from arcus.patient
 
 ```
+
+#### Like Operator
+
+In the `where` clause, the `like` operator can be used to filter on row values that contain a specific "pattern of text" in a column of interest (also known as "text/pattern matching").
+
+For the purpose of "pattern matching", the `like` operator is able to utilize the 2 distinct **Wildcard Charaters** listed below:
+
+|Wildcard Characters|Description|
+|---|---|
+|`%`|"Wildcard" for 0 or more characters.|
+|`_`|"Wildcard" for exactly 1 characters.|
+
+The shown below uses the `like` opperator to filter on only those records from the `allergy` table where the `allergen_name` is starts with the text "stra".
+
+```sql
+select distinct allergy.allergen_name
+from arcus.allergy
+where
+    upper(allergy.allergen_name) like upper('stra%')
+
+```
+> **WARNING**: 
+> 
+> The `like` operator (and almost everything else in **SQL**) is **CASE SENSITIVE**!
+> 
+> This means an upper and lower case version of the same letter will be treated differently (i.e. `'a'<>'A'`). 
+> 
+> For this reason I recommend that you ALWAYS use either the `lower()` or `upper()` functions, as shown above, when dealing with text/string based data in your sql queries.
+
+### Regular Expression Functions
+
+A **Regular Expression Functions** are a class of function that utilize "[Regular Expression](https://en.wikipedia.org/wiki/Regular_expression)" "[Metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended)" to perform some kind of pattern matching on text data.
+
+Similar to the [`like`](#Like-Operator) opperator's "wildcard" characters, **Regular Expression "[Metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended)"** are used in **Regular Expression Functions** to allow for more dynamic forms of text based pattern matching.
+
+The most common set of **Regular Expression "[Metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended)"** are listed below:
+
+|Metacharacter|Description|
+|:---|:---|
+|^|Matches the starting position within the string.|
+|\$|Matches the ending position within the string.|
+|.|Matches any single character (similar to the `_` wildcard in a `like` statement).|
+|*|Matches 0 or more occurrences of the preceding character.|
+|\||This character (known as the "choice operator") can be used to delimit multiple match patterns, and will provide a match on either the expression before or the expression after it is listed in your search string.|
+
+> For a full list of **Regular Expression "Metacharacters "**, follow this [link](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended).
+
+The example below uses the **BigQuery SQL** `regexp_contains()` function to filter on records where the **allergen\_name** either *starts* with "stra" or *ends* with "egg".
+
+> **WARNING**: In BigQuery **SQL** regular expression functions are "**Case Sensitive**".
+>
+> This means an upper and lower case version of the same letter will be treated differently (i.e. `'a'<>'A'`). 
+> 
+> For this reason I recommend that you ALWAYS use either the `lower()` or `upper()` functions, as shown below, when dealing with text/string based data in your sql queries.
+
+```sql
+select distinct allergy.allergen_name
+from arcus.allergy
+where
+    regexp_contains(
+        lower(allergy.allergen_name)
+        ,lower('^stra|egg$')
+    )
+order by
+    allergy.allergen_name
+    
+```
+As you can see from even just this simple example, regular expression functions can be much more useful & dynamic than the [`like`](#Like-Operator) operator for filtering on complex text based data.
+
+> **Learning More about "Regular Expression Functions"**: 
+> 
+> For detailed documentation on all of the [BigQuery Regexp Functions](https://cloud.google.com/bigquery/docs/reference/standard-sql/string_functions#regexp_contains) that can be used, follow this [link](https://cloud.google.com/bigquery/docs/reference/standard-sql/string_functions#regexp_contains).
+
 
 ### Aggregate Functions
 
@@ -614,50 +658,6 @@ where
 ```
 
 > **Note**: As we will see after reading the section on **SQL Joins**, the exists clause is similar to an "`INNER JOIN`".
-
-### Regular Expression Functions
-
-A **Regular Expression Functions** are a class of function that utilize "[Regular Expression](https://en.wikipedia.org/wiki/Regular_expression)" "[Metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended)" to preform some kind of pattern matching on text data.
-
-Similar to the [`like`](#Like-Operator) opperators "wildcard" charaters, **Regular Expression "[Metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended)"** are used in **Regular Expression Functions** to allow for more dynamic forms of text based pattern matching.
-
-The most common set of **Regular Expression "[Metacharacters](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended)"** are listed below:
-
-|Metacharacter|Description|
-|:---|:---|
-|^|Matches the starting position within the string.|
-|\$|Matches the ending position within the string.|
-|.|Matches any single character (similar to the "_" character in a like statement).|
-|*|Matches 0 or more occurrences of the preceding character.|
-|\||This character (known as the "choice operator") can be used to delimit multiple match patterns, and will provide a match on either the expression before or the expression after it is listed in your search string.|
-
-> For a full list of **Regular Expression "Metacharacters "**, follow this [link](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended).
-
-The example below uses the BigQuery SQL `regexp_contains()` function to filter on records where the **allergen\_name** either *starts* with "stra" or *ends* with "egg".
-
-> **WARNING**: In BigQuery **SQL** regular expression functions are "**Case Sensitive**".
->
-> This means an upper and lower case version of the same letter will be treated differently (i.e. `'a'<>'A'`). 
-> 
-> For this reason I recommend that you ALWAYS use either the `lower()` or `upper()` functions, as shown below, when dealing with text/string based data in your sql queries.
-
-```sql
-select distinct allergy.allergen_name
-from arcus.allergy
-where
-    regexp_contains(
-        lower(allergy.allergen_name)
-        ,lower('^stra|egg$')
-    )
-order by
-    allergy.allergen_name
-    
-```
-As you can see from even just this simple example, regular expression functions can be much more useful/dynamic than the [`like`](#Like-Operator) for filtering on text based data.
-
-> **Learning More about "Regular Expression Functions"**: 
-> 
-> For detailed documentation on all of the [BigQuery Regexp Functions](https://cloud.google.com/bigquery/docs/reference/standard-sql/string_functions#regexp_contains) that can be used, follow this [link](https://cloud.google.com/bigquery/docs/reference/standard-sql/string_functions#regexp_contains).
 
 ## SQL Joins
 
