@@ -380,6 +380,7 @@ from arcus.patient as p
 
 ## Advanced SQL Syntax
 
+The sections that follow will expand upon the concepts we learned about in the previous section on [Basic SQL Syntax](#Basic-SQL-Syntax) and will introduce us to serveral more advance fuctions and concepts.
 
 **SECTION CONTENTS**
 
