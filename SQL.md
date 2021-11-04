@@ -359,7 +359,7 @@ where
 ```
 > **WARNING**: 
 > 
-> The like operator (and almost everything else in **SQL**) is **CASE SENSITIVE**!
+> The `like` operator (and almost everything else in **SQL**) is **CASE SENSITIVE**!
 > 
 > This means an upper and lower case version of the same letter will be treated differently (i.e. `'a'<>'A'`). 
 > 
@@ -634,6 +634,13 @@ Similar to the [`like`](#Like-Operator) opperators "wildcard" charaters, **Regul
 > For a full list of **Regular Expression "Metacharacters "**, follow this [link](https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended).
 
 The example below uses the BigQuery SQL `regexp_contains()` function to filter on records where the **allergen\_name** either *starts* with "stra" or *ends* with "egg".
+
+> **WARNING**: In BigQuery **SQL** regular expression functions are "**Case Sensitive**".
+>
+> 
+> This means an upper and lower case version of the same letter will be treated differently (i.e. `'a'<>'A'`). 
+> 
+> For this reason I recommend that you ALWAYS use either the `lower()` or `upper()` functions, as shown below, when dealing with text/string based data in your sql queries.
 
 ```sql
 select distinct allergy.allergen_name
