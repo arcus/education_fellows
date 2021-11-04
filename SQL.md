@@ -661,6 +661,8 @@ where
 
 ## SQL Joins
 
+**What are SQL Joins**
+
 Most queries require something more complex than referencing data from a single table. This is where **SQL**’s "**Join**" functionality comes into play.
 
 "**SQL Joins**" are used to combine **Rows** from 2 (or more) **Tables**, based on some set of **Columns** they have in common.
@@ -671,21 +673,17 @@ There are two basic peaces of information you need to know to write successful *
  2. What "**Criteria**" you would like your **join** evaluated against?
 
 
-
-
-"**Venn-diagrams**" are often helpful tools for discussing (and visualizing) the concept of **SQL Joins**. 
-
-![](img/venn-diagram.png)
-
-When depicted in a "**Venn-diagram**" 
-
-
-
 **Join Criteria**
 
-
-
 **Join Types**
+
+"**Venn-diagrams**" are often helpful tools for discussing (and visualizing) the different **Types** of **SQL Joins** that can be performed. An image of your typical **Venn-diagram** is displayed below.
+
+> When depicting **SQL Joins** in a "**Venn-diagram**" it is typical to imagine that the circle on the left hand side represents all data from your "base table" (i.e. the table in your query that is referenced first), and that the circle on the right represents all data in the table you would like to join too.
+> 
+> Using this model, each of the sections of the **ven-diagram** can be thought of as representing a different type of join. 
+
+![](img/venn-diagram.png)
 
 The image below uses ven-diagrams to provide a visual representation of each different **Join Type** (which are referred to as  "**inner**", "**left**", "**right**", "**full**" joins respectively).
 
