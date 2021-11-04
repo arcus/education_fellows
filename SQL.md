@@ -663,12 +663,12 @@ where
 
 **What are SQL Joins**
 
-Most queries require something more complex than only referencing a single table. This is where **SQL**’s "**Join**" functionality comes into play.
+Most queries require something more complex than referencing data from a single table. This is where **SQL**’s "**Join**" functionality comes into play.
 
 "**SQL Joins**" are used to combine **Rows** from 2 (or more) **Tables**, based on some set of **Columns** the **Tables** have in common.
 
 > There are two basic things you need for a successful join:
->  
+>
 > 1). **Join Type**:
 > 
 >   - What Type of Join do you want to use (`inner`, `left`, etc)?
