@@ -713,9 +713,13 @@ The image below uses a different **ven-diagram**  to provide a visual representa
 
 ![](img/join-types.jpg)
 
-That said, check out the next few sections of this documentation for a detailed explanation of the `inner`, `left`, and `outer` **join types**.
+That said, check out the next few sections of this documentation for a detailed explanation of the `inner` and `left`**join types**.
 
-> **Note**: I don't recommend using the `right` join type in any situation so you will notice it has been omitted from the rest of this documentation. 
+> **TLDR on ignoring the `right` and `full` joins**: 
+> 
+> The `full` join type is a bit covluted and only useful in a very narrow set of situations, so I wont be going into any more detail on it in this text.
+> 
+> Additinally, I don't recommend using the `right` join type in any situation so you will notice it has also been omitted from the rest of this documentation. 
 > 
 > The reason for this is that anything you want to do with a right join can be done by re-ordering your query and using a `left` join. This means that the `right` join is at best a bit redundant, and at most is sort of confusing for anyone reading your queries.
 
@@ -723,32 +727,23 @@ That said, check out the next few sections of this documentation for a detailed 
 
 * [Inner Join](#Inner-Join)
 * [Left Join](#Left-Join)
-* [Full Join](#Full-Join)
 
 ### Inner Join
 
+The `inner` join type tells your query to only return records where your join criteria evaluate as TRUE (i.e. it it will only return rows that have shared "join keys" between the 2 tables that your are attempting to join).
+
+This concept is represented in the 2 diagrams below: 
+
 ![](img/inner-join-venn-diagram.png)
+
+This first diagram (shown above) uses the **Venn-Diagram** analogy to show that the only rows that will be returned are those that have shared values for your join keys, which is represented by the inner most section of the **ven-diagram** (i.e. the section where data between your 2 tables "over laps").
+
 
 ![](img/inner-join-table-example.png)
 
-```sql
-select
-  patient.pat_id
-  ,patient.sex
-  ,patient.ethnicity
-  ,patient.race
-  ,allergy.allergen_name
-  ,allergy.allergen_type_name
-  ,allergy.reaction_name
-  ,round(noted_age/365.25, 2) as noted_age_years
-  ,allergy.allergy_status_name
-  ,allergy.allergy_delete_reason_name
-from arcus.patient
-inner join arcus.allergy
-    on patient.pat_id = allergy.pat_id
--- where
---   allergy.pat_id is null
-```
+This second diagram (shown above) uses a table based representation of this same `inner join` behavior, where the only rows that we end up with are rows that have shared "join keys" between the 2 tables we are attempting to join, and provides a greate illistration of what the columns in our final result set will look like (where the "matching" rows from table 1 and table 2 are appended together).
+
+To provide you with a more concrete example of a query that uses an `inner join` check out the **SQL** below, which can be used to pull all encounter level diagnosis information from Dataset in our "**Arcus Lab**".
 
 ```sql
 select 
@@ -776,13 +771,24 @@ order by
 
 ### Left Join
 
+The `left` join type tells your query to return ALL records from your "base table" and any rows from your "join table" where your join criteria evaluate as TRUE (i.e. it won't filter out any rows from your first table, even when the table your trying to join to doesn't have any "matching" rows based on your **join criteria**).
+
+This concept is represented in the 2 diagrams below: 
+
 ![](img/left-join-venn-diagram.png)
+
+This first diagram (shown above) uses the **Venn-Diagram** analogy to show that ALL rows from your "base table" will be returned as well as any rows from your "join table" that have shared join key values (and any rows from your "join table" that don't have shared join key values will be ommitted). This is represented by the left most and inner most sections of the **ven-diagram** (i.e. the sections where data from your "base table" are represented).
 
 ![](img/left-join-table-example.png)
 
+This second diagram (shown above) uses a table based representation of this same `left join` behavior, where we end up will all rows from our original "base table" and any rows from our "join table" that have shared "join keys". This visual also provides a greate illistration of what the columns in our final result set will look like (where the "matching" rows from table "a" and table "b" are appended together, and any rows where our "join table" does not have a mapping join key are assigned all `null` values).
+
+To provide you with a more concrete example of a query that uses a `left join`, check out the **SQL** below which can be used to pull all **Patient** level demographic information and patient **Allergy** information from our "**Arcus Lab**" into a single select statement (which also won't ommit any patients who dont have allergys).
+
 ```sql
 select
-  patient.pat_id
+  allergy.allergy_id
+  ,patient.pat_id
   ,patient.sex
   ,patient.ethnicity
   ,patient.race
@@ -795,51 +801,10 @@ select
 from arcus.patient
 left join arcus.allergy
     on patient.pat_id = allergy.pat_id
--- where
---   allergy.pat_id is null
+<!--where
+  allergy.-->allergy_id is null
 
 ```
-
-```sql
-select distinct
-  procedure_order.pat_id
-  ,procedure_order_result.result_age as result_age_days
-  ,procedure.proc_name
-  ,procedure.proc_code
-  ,procedure_order_result.result_component_name
-  ,procedure_order_result.loinc_code
-  ,procedure_order_result.line
-  ,procedure_order_result.value_number
-  ,procedure_order.abnormal_yn
-  ,procedure_order_result.abnormal_status_name
-  ,procedure_order_result.ref_low
-  ,procedure_order_result.ref_high
-  ,procedure_order_result.ref_range
-  ,procedure_order_result.ref_unit
-  --------------------------------------------
-  --More General Status info.
-  --------------------------------------------
-  ,procedure_order.proc_ord_type_name --used to flag labs vs imaging, etc.
-  ,procedure_order.proc_ord_status_name
-  ,procedure_order.proc_lab_status_name
-  ,procedure_order.proc_ord_class_name
-  ,procedure_order.proc_ord_priority_name
-  ,procedure.proc_group_name
-from arcus.procedure_order --this is a comment!
-left join arcus.procedure
-  on procedure_order.proc_id = procedure.proc_id
-left join arcus.procedure_order_result
-  on procedure_order.proc_ord_id = procedure_order_result.proc_ord_id
-where
-  upper(procedure_order.proc_ord_type_name)=upper('Lab')
-
-```
-
-### Full Join
-
-![](img/full-join-venn-diagram.png)
-
-![](img/full-join-table-example.png)
 
 ## DDL - Data Definition Language
 > **NOTE**: Up until now all of the code we have looked at have been examples of **DQL** (Data Query Language).
