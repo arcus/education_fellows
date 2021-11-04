@@ -669,6 +669,7 @@ Most queries require something more complex than referencing data from a single 
 
 > There are two basic things you need for a successful join:
 >
+>
 > 1). **Join Type**:
 > 
 >   - What Type of Join do you want to use (`inner`, `left`, etc)?
