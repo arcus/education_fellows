@@ -678,9 +678,7 @@ There are two basic peaces of information you need to know to write successful *
 
 In most situations your **join criteria** will be an equality statement referencing the shared columns (between your 2 tables) that you would like to use as the basis for your join.
 
-For example, if you would like to join the **Allergy** and **Patient** Tables together you would need to use the shared `pat_id` as your **Join Criteria**. 
-
-The code block below shows the sql logic for writting this join:
+For instance if you would like to join the **Allergy** and **Patient** Tables together you would need to use the shared `pat_id` when writting **Join Criteria**, an example of this is shown below:
  
 ```sql
 select *
