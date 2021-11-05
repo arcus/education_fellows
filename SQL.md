@@ -667,8 +667,8 @@ Most queries require something more complex than referencing data from a single 
 
 There are two basic peaces of information you need to know to write successful **joins**:
 
- 1. What "**Type**" of **join** do you want to use?
- 2. What "**Criteria**" would you like your **join** evaluated against?
+ 1. What "**Criteria**" would you like your **join** evaluated against?
+ 2. What "**Type**" of **join** do you want to use?
 
 **JOIN CRITERIA**
 
@@ -676,19 +676,13 @@ There are two basic peaces of information you need to know to write successful *
 
 > When the "conditions" in your **Join Criteria** evaluate as TRUE for a row then a join will be performed for those rows, and when the **Join Criteria** are evaluated as FALSE no join for those rows will take place.
 
-In the simplest case, your **Join Criteria** will be an equality statement referencing the shared columns (between your tables) that you would like evaluated when resolving your join.
+In the simplest case, your **Join Criteria** will be an equality statement referencing the shared columns (between your tables) that you would like evaluated when resolving your join. 
 
-For instance if you would like to join the **Allergy** and **Patient** Tables together you would need to use the shared **pat\_id** (as shown below) as your **Join Criteria**. 
+The "shared columns" used in your **Join Criteria** are also some times called **Join Keys**. There are 2 different categories of **Join Keys**, these are known as **Primary Keys** and **Foreign Keys** respectively.
 
-```sql
-select *
-from arcus.allergy
-inner join arcus.patient --join (and join type) declaration.
-  on allergy.pat_id = patient.pat_id --join criteria.
+- A **Primary Key** is a column (or set of columns) that contain a unique value for each row in your Table.
 
-``` 
-
-> Reading the above **join** logic in plain engligh, it says "for each row in the **Allergy** table give me rows from the **Patient** table that have the same **pat\_id**
+- A **Foreign Key** is a column (or set of columns) in your table that make reference to a **Primary Key** in some other Table (or set of Tables) in your Database.
 
 **JOIN TYPES**
 
@@ -711,20 +705,23 @@ The image below uses a different **ven-diagram**  to provide a visual representa
 
 ![](img/join-types.jpg)
 
-That said, check out the next few sections of this documentation for a detailed explanation of the `inner` and `left`**join types**.
+That said, check out the next few sections of this documentation for a detailed explanation of the `inner` and `left` **join types**.
 
 > **TLDR on ignoring the `right` and `full` joins**: 
 > 
-> The `full` join type is a bit covluted and only useful in a very narrow set of situations, so I wont be going into any more detail on it in this text.
+> The `full` join type is a bit convoluted and only useful in a very narrow set of situations, so I wont be going into any more detail on it in this text.
 > 
-> Additinally, I don't recommend using the `right` join type in any situation so you will notice it has also been omitted from the rest of this documentation. 
+> Additionally, I don't recommend using the `right` join type in any situation so you will notice it has also been omitted from the rest of this documentation. 
 > 
 > The reason for this is that anything you want to do with a right join can be done by re-ordering your query and using a `left` join. This means that the `right` join is at best a bit redundant, and at most is sort of confusing for anyone reading your queries.
 
 **SECTION CONTENTS**
 
+
 * [Inner Join](#Inner-Join)
 * [Left Join](#Left-Join)
+
+  * [Cartesian Joins - When Joining Goes Wrong](#cartesian-joins---when-joining-goes-wrong)
 
 ### Inner Join
 
@@ -741,7 +738,7 @@ This first diagram (shown above) uses the **Venn-Diagram** analogy to show that 
 
 This second diagram (shown above) uses a table based representation of this same `inner join` behavior, where the only rows that we end up with are rows that have shared "join keys" between the 2 tables we are attempting to join, and provides a greate illistration of what the columns in our final result set will look like (where the "matching" rows from table 1 and table 2 are appended together).
 
-To provide you with a more concrete example of a query that uses an `inner join` check out the **SQL** below, which can be used to pull all encounter level diagnosis information from Dataset in our "**Arcus Lab**".
+To provide you with a more concrete example of a query that uses an `inner join` check out the **SQL** below, which can be used to pull all encounter level diagnosis information in our "**Arcus Lab**". This query uses an `inner join` to connect the **encounter\_diagnosis** and **master\_diagnosis** tables on their shared **dx\_id** columns.
 
 ```sql
 select 
@@ -767,6 +764,8 @@ order by
 
 ```
 
+> **Note**: The **dx\_id** column in the **encounter\_diagnosis** table is a **foreign key**, and the **dx\_id** column in the **master\_diagnosis** table is a "**primary key**".
+
 ### Left Join
 
 The `left` join type tells your query to return ALL records from your "base table" and any rows from your "join table" where your join criteria evaluate as TRUE (i.e. it won't filter out any rows from your first table, even when the table your trying to join to doesn't have any "matching" rows based on your **join criteria**).
@@ -781,7 +780,8 @@ This first diagram (shown above) uses the **Venn-Diagram** analogy to show that 
 
 This second diagram (shown above) uses a table based representation of this same `left join` behavior, where we end up will all rows from our original "base table" and any rows from our "join table" that have shared "join keys". This visual also provides a greate illistration of what the columns in our final result set will look like (where the "matching" rows from table "a" and table "b" are appended together, and any rows where our "join table" does not have a mapping join key are assigned all `null` values).
 
-To provide you with a more concrete example of a query that uses a `left join`, check out the **SQL** below which can be used to pull all **Patient** level demographic information and patient **Allergy** information from our "**Arcus Lab**" into a single select statement (which also won't ommit any patients who dont have allergys).
+To provide you with a more concrete example of a query that uses a `left join`, check out the **SQL** below which can be used to pull all **Patient** level demographic information and patient **Allergy** information from our "**Arcus Lab**" into a single select statement (which also won't ommit any patients who dont have allergys). This query uses a `left join` to connect the **patient** and **allergy** tables on their shared **pat\_id** columns.
+
 
 ```sql
 select
@@ -799,53 +799,29 @@ select
 from arcus.patient
 left join arcus.allergy
     on patient.pat_id = allergy.pat_id
-<!--where
-  allergy.-->allergy_id is null
+-- where
+--   allergy.allergy_id is null
 
 ```
+> **Note**: The **pat\_id** column in the **patient** table is a "**primary key**", and the **pat\_id** column in the **pat\_id** in the **allergy** ctable is a **foreign key**.
 
 ### Cartesian Joins - When Joining Goes Wrong
 
-A “**Cartesian**” Join is essentially a join that “results in more rows than it started with”.
+A “**Cartesian**” Join is essentially a join that “results in more rows than either of the individual tables it started with”. This happens when niether of the colums referenced in your **Join Criteria** are a "**Primary Key**".
 
-This can be done intentionally by using something called a `cross` join (which is another type of join we ommitted from this documentation), however it can also occur un-intentionally if your join criteria result in an "n:m" relationship (i.e. if its not a "1:1" or "1:n" join key mapping between your 2 tables). 
+ 
+**"PRIMARY KEY" JOINS**
 
-
-**“STABLE” (n:1) JOINS**
-
-A "**1:n**" (or "n:1") joins can be considered “Stable” because the result set of this join will have the same number of rows of as “the join input table with the most rows”. 
+"**Primary Key**" joins can be considered “Stable” because the result set of these joins will have (at most) the same number of rows as the original “**foreign key**” table in the join, as shown in the diagram below: 
 
 ![](img/stable-join-product.png)
 
-The query below is an example of a stable "n:1" join, where the **allergy** table can contain multiple rows with the same **pat\_id** value and the **patient** table can contains at most 1 row per **pat\_id** (i.e. **pat\_id** is a **primary key** in the patient table).
+**“CARTESIAN” JOINS**
 
-```sql
-select count(*)
-from arcus.allergy as a
-inner join arcus.patient as p
-    on a.pat_id = p.pat_id --this is an n:1 level join
-
-```
-
-**“CARTESIAN” (n:m) JOINS**
-
-An **n:m** (where n>1 & m>1) joins are referred to as Cartesian Joins.
+**Cartesian** Joins (i.e. a join where neither of the columns in the **Join Criteria** are a "**Primary Keys**") are considered "Unstable" because the result set of these joins will increase exponentially the larger your tables are. This effect is depected in the diagram below:
 
 ![](img/cartesian-join-product.png)
 
-The final result set of a Cartesian join will have a total row count less than or equal to the “product of the number of rows in both input tables 
-
-The query below provides an example of an unstable "n:m" (**Cartesian**) join,
-
-```sql
-select count(*)
-from allergy as a
-inner join encounter as e
-    on a.pat_id = e.pat_id --this is an n:m level join
-```
-
 “Cartesian” Joins can be very "memory intensive" operations as the size of the result set increases exponentially with the size of their 2 input tables. Additionally, if they go “unnoticed”, they can seriously effect the validity of your SQL reports (e.g. if your trying to infer a count of something by counting the number of rows, an unintentional cartesian join will result in you overcounting the value you were trying to measure).
 
-In order to make sure you aren't accidentally writing a **Cartesian** Join, make sure that at least one of the columns in your join equality (either from your "base" or "join" table) are a "**primary key**".
-
-> **Pro Tip:** DON'T WRITE CARTESIAN JOINS !!!
+That said, make sure you understand the relationship between each of the columns you are using in your **Join Criteria** to make sure that you aren't accidentally writing a **Cartesian** Join.
