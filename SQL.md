@@ -803,7 +803,7 @@ left join arcus.allergy
 --   allergy.allergy_id is null
 
 ```
-> **Note**: The **pat\_id** column in the **patient** table is a "**primary key**", and the **pat\_id** column in the **pat\_id** in the **allergy** ctable is a **foreign key**.
+> **Note**: The **pat\_id** column in the **patient** table is a "**primary key**", and the **pat\_id** column in the **allergy** ctable is a **foreign key**.
 
 ### Cartesian Joins - When Joining Goes Wrong
 
