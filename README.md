@@ -9,7 +9,7 @@ This repository is **public** and cannot contain trade secrets, PHI, PII, or com
 ||||
 |--|--|--|
 |Reproducibility, Generalizability, and Reuse: How Technology Can Help |[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_fellows/main/reproducibility.md) | [Markdown](reproducibility.md)|
-SQL 101: Using Arcus Labs to Explore Clinical Data at CHOP|||
+Introduction to SQL|[Training Course](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_fellows/main/SQL.md)|[Markdown](SQL.md)|
 Introduction to R and RStudio||||
 R Markdown for Scientific Communication |||
 Introduction to Arcus for the Clinician Researcher |||
