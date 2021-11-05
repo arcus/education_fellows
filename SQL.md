@@ -818,7 +818,7 @@ A “**Cartesian**” Join is essentially a join that “results in more rows th
 
 **“CARTESIAN” JOINS**
 
-**Cartesian** Joins (i.e. a join where neither of the columns in the **Join Criteria** are a "**Primary Keys**") are considered "Unstable" because the result set of these joins will increase exponentially the larger your tables are. This effect is depected in the diagram below:
+**Cartesian** Joins (i.e. a join where neither of the columns in the **Join Criteria** are a "**Primary Keys**") are considered "Unstable" because the result set of these joins will increase exponentially the larger your tables are. This effect is depicted in the diagram below:
 
 ![](img/cartesian-join-product.png)
 
