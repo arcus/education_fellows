@@ -24,11 +24,38 @@ Contents
 
 * [What is SQL?](#what-is-sql)
 
+  * [When Should SQL be Used?](#when-should-sql-be-used)
+  * [When Should SQL Not be Used?](#when-should-sql-not-be-used)
+  * [Are all Implementations of SQL The Same?](#when-should-sql-be-used)
+
 * [Basic SQL Syntax](#Basic-SQL-Syntax)
+
+  * [Select Statement](#Select-Statement)
+  * [Distinct Clause](#Distinct-Clause)
+  * [Where Clause](#Where-Clause)
+  * [Dealing with Null Values](#Dealing=with-Null-Values)
+  * [Order By Statement](#Order-By-Statement)
+  * [Limit Clause](#Limit-Clause)
+  * [Adding Comments](#Adding-Comments)
+  * [Aliasing](#Aliasing)
 
 * [Advanced SQL Syntax](#Advanced-SQL-Syntax)
 
+  * [Case Statement](#Case-Statement)
+  * [Like Operator](#Like-Operator)
+  * [Regular Expression Functions](#Regular-Expression-Functions)
+  * [Aggregate Functions](#Aggregate-Functions)
+  * [Group By Statement](#Group-By-Statement)
+  * [Having Clause](#Having-Clause)
+  * [Sub Queries](#Sub-Queries)
+  * [With Statement](#With-Statement)
+  * [Exists Statment](#Exists-Statment)
+
 * [SQL Joins](#SQL-Joins)
+
+  * [Inner Join](#Inner-Join)
+  * [Left Join](#Left-Join)
+  * [Cartesian Joins - When Joining Goes Wrong](#cartesian-joins---when-joining-goes-wrong)
 
 
 ## What is SQL?
