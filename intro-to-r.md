@@ -1,7 +1,8 @@
 <!--
-author:   Joy Payton, Arcus Education, Children's Hospital of Philadelphia
+
+author:   Joy Payton
 email:    paytonk@chop.edu
-version:  0.0.2
+version:  1.0.1
 language: en
 narrator: US English Female
 comment:  Learn to use R and RStudio in this introduction that uses an Arcus training lab.
@@ -60,12 +61,14 @@ script:   https://code.jquery.com/jquery-3.6.0.slim.min.js
 })(jQuery);
 </script>
 @end
+title: Introduction to R and RStudio
+comment:  Learn about the statistical programming language R and a very helpful tool for working with R called RStudio.
+link:  https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
 
 -->
+# Introduction to R and RStudio
 
-# Intro to R and RStudio
-
-<div class = "hint">
+<div class = "overview">
 
 ## Overview
 
@@ -73,13 +76,13 @@ This module provides learners with an approachable introduction to the R languag
 
 ### Is this module right for me?
 
-If you are curious about R or RStudio and would like to understand whether these tools can be helpful to you as a researcher or other data user, this module will be helpful.
+If you're interested in working with data (that could be many things, such as bringing data into your system, cleaning and reshaping data, making statistical discoveries, creating graphs and figures, or many other types of work) and you want to try using a programming language, R is a good place to start.   This will also be a good course for you if you are joining a team or project where R is used.
 
 ### Details
 
 **Estimated time to completion**: 1 hour didactic instruction, 1 hour personal work.
 
-**Pre-requisites**: It is helpful if learners have used data in a tabular (table-shaped) format, with rows and columns.  Examples of this kind of data include comma separated values files (.csv) and spreadsheets (for example, Microsoft Excel).  Learners do *not* need to have access to R or RStudio on their own computers.  No previous experience with R, RStudio, or computer programming is required
+**Pre-requisites**: It is helpful if learners have used data in a tabular (table-shaped) format, with rows and columns.  Examples of this kind of data include comma separated values files (.csv) and spreadsheets (for example, Microsoft Excel).  Learners do *not* need to have access to R or RStudio on their own computers.  
 
 **Format**: This module uses text, still images, hands-on activities, and video.  Audio is optional.
 
@@ -93,16 +96,23 @@ If you are curious about R or RStudio and would like to understand whether these
 
 </div>
 
-## Contents
+**Contents**
+====
 
-* [What is R?](#What-is-R)
-* [What is RStudio?](#What-is-RStudio)
+* [Lesson Preparation](#Lesson-Preparation)
+* [What is R?](#What-is-R-?)
+* [What is R?](#What-is-R-)
+* [What is R?](#What-is-R-%63)
+* [What is R?](#What-is-R-%3F)
+* [What is R?](#What-is-R%63)
+* [What is R?](#What-is-R%3F)
+* [What is RStudio?](#What-is-RStudio?)
 * [Starting RStudio](#Starting-RStudio)
 * [Using a File](#Using-a-File)
 * [Why Use R and RStudio?](#Why-Use-R-and-RStudio)
 * [RStudio Features](#rstudio-features)
 * [Terminology](#Terminology)
-* [Additional Resources](#Additional-Resources)
+* *Optional* [Additional Resources](#Additional-Resources)
 
   - [Hands-On Activities Demo](#Hands-On-Activities-Demo).  This is a video demo of the hands-on activities we've asked you to do in this module.  
   - [Researchers: Why R?](https://www.youtube.com/watch?v=Ids4FO5nTBE&t=07m19s) (section of interest is around 4 minutes).  This is a clip from a longer presentation given to learners at the Children's Hospital of Philadelphia.
@@ -154,16 +164,30 @@ You can write R code and execute it in many ways, including using the command li
 
 RStudio is an **IDE**, or **Integrated Development Environment**, which pulls together (integrates) useful tools like help files, image viewers,  data previews, and version control for people writing (developing) code, and it puts all these tools together in a visually pleasing and helpful environment.  It's an add-on tool that makes working with R easier because it gives extra help and context.
 
-### Without RStudio
+<div class = "question">
 
-We could run the code above in a simple **R console**, which is what you get when you install R by itself without using RStudio.  This isn't the most user friendly experience! In the screen recording shown below, we are **not** using RStudio, but rather the R Console.  Click on the image to play the gif.
+Which of these correctly describes the relationship between R and RStudio?
 
-<div style="display:none">@gifPreload</div>
+[[ ]] R is a free, open source language used for data analysis, while RStudio is a related language that costs money but comes with a support agreement
+[[X]] R is a free, open source language used for data analysis, and RStudio is software that makes R easier to use by adding tools and scaffolding
+[[ ]] R is a mathematical and statistical system of notation, and RStudio is a free, open source language used for data analysis that uses R for statistics
+[[ ]] R is a mathematical and statistical system of notation, and RStudio converts software like Stata or SPSS to use R as the underlying paradigm
+
+<div class = "answer">
+<details><summary>Click to see an explanation of the answer.</summary>
 
 <figure style = "border: 1px solid rgb(var(--lia-grey))">
   <img src="https://github.com/arcus/education_fellows/blob/main/img/r_console.png?raw=true" height="500" width="800" alt="R.app, or the R Console" data-alt="https://github.com/arcus/education_fellows/blob/main/img/r_console.gif?raw=true">
 <figcaption>Click on the image to play the demo.</figcaption>
 </figure>
+R is a language that was specifically designed for the statistical analysis of data.  It's free and open source, and while you can use it alone, it's much easier to use RStudio software to help you write R code more quickly.  RStudio also comes with additional bells and whistles that will help you create documentation of your data analysis and statistical thinking.
+</details>
+</div>
+</div>
+
+### Without RStudio
+
+We could run the code above in a simple **R console**, which is what you get when you install R by itself without using RStudio.  This isn't the most user friendly experience! In the screen recording shown below, we are **not** using RStudio, but rather the R Console.
 
 
 Above, you can see that the R console had to open a new program (in a Mac, it's the Quartz viewer) to display the histogram.  You can't tell much about the `breast_cancer_data` datset and you don't get tips and support around using R.  For example, here are some questions you may have after watching the animation above.
@@ -173,7 +197,7 @@ Above, you can see that the R console had to open a new program (in a Mac, it's 
 * How can I get more information on how to use the `hist` command?
 * How can I save my work for later re-use and expansion?
 
-Using the R.app or R console tool means very basic, bare-bones support for you as someone who is trying to write code.
+Using the R.app, also known as the R console tool, means very basic, bare-bones support for you as someone who is trying to write code.
 
 ### With RStudio
 
@@ -190,9 +214,9 @@ On the other hand, you could run the same code in RStudio and see something like
 
 Using RStudio, you:
 
-* Can easily create a script to save your code for reuse later (it's currently "Untitled1")
+* Can easily create a **script** to save your code for reuse later (it's currently "Untitled1")
 * Get a sneak peek at the data to help you to decide what to do next (here we have 116 rows of 10 columns)
-* See the plot in the same window as everything else
+* See the plot in the same application window as everything else
 * Can use other helpful tools, like
   - File browser
   - Help tab
@@ -200,8 +224,7 @@ Using RStudio, you:
   - Operating system terminal
   - And much more!  
 
-RStudio is the preferred method for most uses of R, and it's generally what we use to teach.
-
+RStudio is the preferred method for most uses of R, and it's generally what we use to teach.  We will only scratch the surface of this tool in this module, and we won't get to some important topics you may have already heard of, like R Markdown.
 
 ## Starting RStudio
 
