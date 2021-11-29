@@ -100,10 +100,9 @@ If you're interested in working with data (that could be many things, such as br
 ====
 
 * [Lesson Preparation](#Lesson-Preparation)
-* [What is R?](#What-is-R-?)
-* [What is R?](#What-is-R-)
-* [What is R?](#What-is-R-%63)
-* [What is R?](#What-is-R-%3F)
+* [What is R?](#What-is-R-\?)
+* [What is R?](#What-is-R\?)
+* [What is R?](#What-is-R-%3f)
 * [What is R?](#What-is-R%63)
 * [What is R?](#What-is-R%3F)
 * [What is RStudio?](#What-is-RStudio?)
