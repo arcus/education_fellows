@@ -103,6 +103,7 @@ If you're interested in working with data (that could be many things, such as br
 * [What is R?](#What-is-R-%3f)
 * [What is R?](#What-is-R%63)
 * [What is R?](#What-is-R%3F)
+* [What is R?](#What-is-R--)
 * [What is RStudio?](#What-is-RStudio?)
 * [Starting RStudio](#Starting-RStudio)
 * [Using a File](#Using-a-File)
