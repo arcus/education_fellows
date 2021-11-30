@@ -86,7 +86,6 @@ If you're interested in working with data (that could be many things, such as br
 **Learning Objectives**:  After completion of this module, learners will be able to:
 
 * Describe what R is and what RStudio is
-* Understand what a script is and how using a script can improve research
 * Execute given R code within RStudio
 * Explain what a data frame is
 * Use the Environment tab within RStudio to examine a data frame
@@ -143,7 +142,7 @@ Ideally, R code includes helpful hints along the way to help readers understand 
 
 For example, the following may be a bit easier to understand, even if you are brand new to R.
 
-<div class = "question" style = "min-height: 6rem;">
+<div class = "question" style = "min-height: 8rem;">
 What distinguishes a comment from code in the sample below?</div>
 
 ```r
@@ -239,6 +238,24 @@ Using RStudio, you:
   - And much more!  
 
 RStudio is the preferred method for most uses of R, and it's generally what we use to teach.  We will only scratch the surface of this tool in this module, and we'll take our next session to talk about R Markdown in depth.  
+
+## Why Use R and RStudio?
+
+Fine, you now know a bit more about R and RStudio, but why does this matter?  You may already know how to conduct statistical data analysis in tools like SPSS, Excel, or other software.  Why, then, learn R?  Is R only for professional data scientists?
+
+R and RStudio are great tools for professional data scientists, but they are also increasingly part of the research tool kit, much like other lab equipment that researchers have to learn to use.  This is because the **reproducibility crisis** of studies that cannot be reproduced or fail to reproduce can be ameliorated in part by the use of scripted data analysis.
+
+R and other free, open source, and scripted (code-based) methods of data analysis are widely considered more reproducible because:
+
+* Anyone can obtain the software needed to use R scripts, with no license cost.
+* Operations you perform to data are recorded in a script, which means they are not lost to history in the same way you might forget to precisely record a step you took in, say, Excel.
+* Scripted languages can do multiple stages of data analysis in a single tool, such as downloading data, cleaning and reshaping data, performing statistical tests, displaying data visualizations, and more.  
+
+There are many reasons why the research community is pivoting to languages like R.  While learning a new technical skill can be time consuming, working with R will pay off in the long run, because it makes it easier for you to re-run your analyses, describe your methods precisely, share your work with colleagues, and meet the requirements of funders and publications when it comes to reproducible research.
+
+Want to hear more?  Watch around 4 minutes of one of our optional additional resources:
+
+- [Researchers: Why R?](https://www.youtube.com/watch?v=Ids4FO5nTBE&t=07m19s) (section of interest is around 4 minutes).  This is a clip from a longer presentation given to learners at the Children's Hospital of Philadelphia.
 
 ## Starting RStudio
 
@@ -339,27 +356,41 @@ Go ahead and run the rest of the script.  You can do this by clicking "Run" for 
 
 We'll pause to let everyone run the entire script, and see if there are any errors we need to resolve.
 
+<div class = "question">
+
+Quick refresher from our reproducibility presentation from a few weeks ago:  Which of the following are accurate descriptions of R scripts?  Check all that apply!
+
+[[X]] R scripts allow you to capture each step you do in data ingestion, data cleaning and preparation, and statistical analysis.
+[[X]] R scripts make it easier for you to re-run your analysis if more data comes in or you need to check your work.
+[[ ]] R scripts allow you to avoid writing code entirely and just describe what you want to happen in regular English.  The translator engine of R converts your instructions into code.
+[[X]] R scripts usually open in the upper left pane of RStudio unless you decide to rearrange the panes.
+[[ ]] R scripts can only contain code, never any extra helper text that contextualize or explain the code for humans.
+[[ ]] R scripts can only be created in the R app or in command line, not in RStudio.
+[[?]] Hint: Three of these things are accurate descriptions!
+
+<div class = "answer">
+<details><summary>Click to see an explanation of the answer.</summary>
+
+R scripts do in fact allow you to record not only the concrete steps you do, but also allow you to include comments that give human-readable explanations of what you're doing.  This makes it much easier for you to re-run your analysis or share your methods with others.
+
+You do still have to learn how to write code, because there's no "magic wand" just yet that will allow you do describe what you want in English and have software translate that into R code.
+
+R scripts work great in the RStudio software and generally will appear (once opened) in the upper left pane of RStudio.   
+</details>
+</div>
+</div>
+
 ### Data Frames
 
-By running this code, you have instructed the computer to read in some data from the SQL database attached to the lab -- the same database we used in the SQL session a couple of weeks ago (see ) `read_csv` and to add that data to a new **data frame** object, which will be called `breast_cancer_data`.  Technically, this is a special kind of data frame called a **tibble**, but we won't talk about what makes a tibble special right now.  It's enough to remember that you can bring in data that's already in rows and columns, like a .csv, and make it into an R data frame.
+By running this code, you have instructed the computer to read in some data from the SQL database attached to the lab -- the same database we used in the SQL session a couple of weeks ago.  We read the data into an object in your R environment, an object called a data frame.  Technically, this is a special kind of data frame called a **tibble**, but we won't talk about what makes a tibble special right now.  It's enough to remember that you can bring in data that's already in rows and columns, like a .csv or the results from a SQL query, and make it into an R data frame.
 
-Data frames (including special kinds of data frames like tibbles) consist of data arranged into rows and columns.  The combination of rows and columns is often called a table, and you'll sometimes hear people refer to "tabular", or table shaped, data.  Data frames can look much like a spreadsheet that you might use Excel for.  Each row is an observation (in our case, a patient) and each column is a measurement (like age and insulin values).
+Data frames (including special kinds of data frames like tibbles) consist of data arranged into rows and columns.  The combination of rows and columns is often called a table, and you'll sometimes hear people refer to "tabular", or table shaped, data.  Data frames can look much like a spreadsheet that you might use Excel for.  Each row is an observation (in our case, a recorded strawberry allergy) and each column is a measurement (like allergen name and race).
 
-The new data frame / tibble object, `breast_cancer_data`, appears in your "Environment" tab in the upper right pane.  You can click on the small blue icon beside the name of the object to see the structure of the data frame (column names and data types stored in the columns).
+The new data frame / tibble object, `strawberry_allergies`, appears in your "Environment" tab in the upper right pane.  You can click on the small blue icon beside the name of the object to see the structure of the data frame (column names and data types stored in the columns).
 
 You can also click on the name of the object to open a view of the data in the Source pane.  Or, in your R code, you can do the same thing using the `View` command.
 
-### On your own
-
-Now run the next few lines of code.  You can:
-
-* Run them one by one, using the Run button, or
-* Use a keyboard shortcut (command or control and the enter key) to run code one line at a time, or
-* Highlight several complete lines of code (don't start in the middle of a line!) and click the Run button to run all of them.
-
-It won't hurt to run these lines several times, so try various methods!
-
-What does the `hist` command accomplish?  The `summary` command? `View`?  
+Take a look into your data frame.  Are there columns you'd like to have added?  How do you think you might do that?  Any questions about the data?  What unique values are there for, say, `reaction_name`?
 
 <div class = "question">
 
@@ -370,7 +401,6 @@ Where can you find more information about your data frame?  Try figuring this ou
 [[ ]] Use the `Show` command to open a display of the data frame, like `Show(my_data)`
 [[X]] In the Environment tab of the Environment/History/Connections pane (usually in the upper right), click on the name of the data frame to see a view into the data.
 [[?]] Hint: Only one of these methods won't work!
-
 
 <div class = "answer">
 <details><summary>Click to see an explanation of the answer.</summary>
@@ -391,59 +421,21 @@ You can also use point-and-click for viewing data, including:
 </div>
 </div>
 
-## Why Use R and RStudio?
 
-Fine, you now know a bit more about R and RStudio, but why does this matter?  You may already know how to conduct statistical data analysis in tools like SPSS, Excel, or other software.  Why, then, learn R?  Is R only for professional data scientists?
-
-R and RStudio are great tools for professional data scientists, but they are also increasingly part of the research tool kit, much like other lab equipment that researchers have to learn to use.  This is because the **reproducibility crisis** of studies that cannot be reproduced or fail to reproduce can be ameliorated in part by the use of scripted data analysis.
-
-R and other free, open source, and scripted (code-based) methods of data analysis are widely considered more reproducible because:
-
-* Anyone can obtain the software needed to use R scripts, with no license cost.
-* Operations you perform to data are recorded in a script, which means they are not lost to history in the same way you might forget to precisely record a step you took in, say, Excel.
-* Scripted languages can do multiple stages of data analysis in a single tool, such as downloading data, cleaning and reshaping data, performing statistical tests, displaying data visualizations, and more.  
-
-There are many reasons why the research community is pivoting to languages like R.  While learning a new technical skill can be time consuming, working with R will pay off in the long run, because it makes it easier for you to re-run your analyses, describe your methods precisely, share your work with colleagues, and meet the requirements of funders and publications when it comes to reproducible research.
-
-Want to hear more?  Watch around 4 minutes of one of our optional additional resources:
-
-- [Researchers: Why R?](https://www.youtube.com/watch?v=Ids4FO5nTBE&t=07m19s) (section of interest is around 4 minutes).  This is a clip from a longer presentation given to learners at the Children's Hospital of Philadelphia.
 
 ## RStudio Features
 
-*5 minute hands-on*
 
 We're only going to touch on three of many useful tools here.  When time permits, you may want to explore more.  In the meantime, however, let's consider what we've learned so far about R scripts:
 
-<div class = "question">
 
-Which of the following are accurate descriptions of R scripts?  Check all that apply!
-
-[[X]] R scripts allow you to capture each step you do in data ingestion, data cleaning and preparation, and statistical analysis.
-[[X]] R scripts make it easier for you to re-run your analysis if more data comes in or you need to check your work.
-[[ ]] R scripts allow you to avoid writing code entirely and just describe what you want to happen in regular English.  The translator engine of R converts your instructions into code.
-[[X]] R scripts usually open in the upper left pane of RStudio unless you decide to rearrange the panes.
-[[ ]] R scripts can only contain code, never any extra helper text that contextualize or explain the code for humans.
-[[ ]] R scripts can only be created in the R app or in command line, not in RStudio.
-[[?]] Hint: Three of these things are accurate descriptions!
-
-
-<div class = "answer">
-<details><summary>Click to see an explanation of the answer.</summary>
-
-R scripts do in fact allow you to record not only the concrete steps you do, but also allow you to include comments that give human-readable explanations of what you're doing.  This makes it much easier for you to re-run your analysis or share your methods with others.
-
-You do still have to learn how to write code, because there's no "magic wand" just yet that will allow you do describe what you want in English and have software translate that into R code.
-
-R scripts work great in the RStudio software and generally will appear (once opened) in the upper left pane of RStudio.   
-</details>
-</div>
-</div>
 
 
 ### Help
 
-Within RStudio, click on the "Help" tab in the lower right pane.  Choose one promising help topic to click on.  It appears as a new tab or window in your browser.
+In case some of these commands don't make sense to you, try working in the "Help" tab of the Files / Plots / Packages / etc. pane (usually the lower right).  There are two search boxes.  The uppermost search box in the top right of the pane is used to search for a topic (like "bigrquery" or "library").  The one that's lower and toward the center or left is for searching for text *within* a help file (say, if you're looking for "Example" within a help article, to copy code.)
+
+Within RStudio, click on the "Help" tab in the lower right pane.  Choose one promising help topic to click on, or search for a term or topic in the search box in the upper right of the pane.  It appears as a new tab or window in your browser.
 
 ![Search boxes in RStudio Help tab](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/search_boxes_rstudio.png?raw=true)
 
