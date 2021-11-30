@@ -92,25 +92,7 @@ If you're interested in working with data (that could be many things, such as br
 
 </div>
 
-**Contents**
-====
-
-* [Lesson Preparation](#Lesson-Preparation)
-* [What is R?](#What-is-R?)
-* [What is RStudio?](#What-is-RStudio?)
-* [Starting RStudio](#Starting-RStudio)
-* [Using a File](#Using-a-File)
-* [Why Use R and RStudio?](#Why-Use-R-and-RStudio)
-* [RStudio Features](#rstudio-features)
-* [Terminology](#Terminology)
-* *Optional* [Additional Resources](#Additional-Resources)
-
-  - [Hands-On Activities Demo](#Hands-On-Activities-Demo).  This is a video demo of the hands-on activities we've asked you to do in this module.  
-  - [Researchers: Why R?](https://www.youtube.com/watch?v=Ids4FO5nTBE&t=07m19s) (section of interest is around 4 minutes).  This is a clip from a longer presentation given to learners at the Children's Hospital of Philadelphia.
-* [Feedback](#Feedback)
-
 ## Lesson Preparation
-
 
 If you intend to do the hands on activity in this module, we have a bit of preparation for you to do now.  Please log in to the clinical informatics fellows training lab at https://train-268.lab.arcus.chop.edu/ . You'll need to be on the CHOP network for this to work, and we strongly suggest using the Chrome browser.
 
@@ -127,7 +109,7 @@ R is a statistical programming language.  As a programming language, R requires 
 
 R code looks something like this. Note that this is code that uses external data from the University of California, Irvine.  This is example code, the output of which I can share publicly, unlike the output of data from the Arcus Training Lab.  We won't actually use this code in our hands-on work.
 
-Can't see the entire line of code?  You should be able to scroll over using the bottom scrollbar, mouse, or keyboard.
+Can't see the entire line of code?  You should be able to scroll over using mouse or keyboard.
 
 ```r
 
@@ -200,7 +182,7 @@ Using this application isn't the most user friendly experience! In the screen re
 
 <div style="display:none">@gifPreload</div>
 
-<figure style = "border: 1px solid rgb(var(--lia-grey))">
+<figure>
   <img src="https://github.com/arcus/education_fellows/blob/joy-intro-r/intro_to_r_rstudio/media/r_console.png?raw=true" height="500" width="800" alt="R.app, or the R Console" data-alt="https://github.com/arcus/education_fellows/blob/joy-intro-r/intro_to_r_rstudio/media/r_console.gif?raw=true">
 <figcaption>Click on the image to play the demo.</figcaption>
 </figure>
@@ -220,7 +202,7 @@ On the other hand, you could run the same code in RStudio and see something like
 
 <div style="display:none">@gifPreload</div>
 
-<figure style = "border: 1px solid rgb(var(--lia-grey))">
+<figure>
   <img src="https://github.com/arcus/education_fellows/blob/joy-intro-r/intro_to_r_rstudio/media/rstudio.png?raw=true" height="500" width="800" alt="Running code in RStudio" data-alt="https://github.com/arcus/education_fellows/blob/joy-intro-r/intro_to_r_rstudio/media/rstudio.gif?raw=true">
 <figcaption>Click on the image to play the demo.</figcaption>
 </figure>
@@ -266,18 +248,21 @@ Once you click and your RStudio tool has loaded, you will be able to see somethi
 ![RStudio within training lab](https://github.com/arcus/education_fellows/raw/joy-intro-r/intro_to_r_rstudio/media/arcus_lab_rstudio.png)
 
 <div class = "question">
-Take a look around your own lab and RStudio tool.  What do you see?  How would you describe the layout of panes and tabs to another person?  What do you think the different parts do?  How does what you see differ from the image above?
+Take a look around your own lab and RStudio tool.  
+
+* What do you see?  
+* How would you describe the layout of panes and tabs to another person?  
+* What do you think the different parts do?  
+* How does what you see differ from the image above?
 </div>
 
-Have extra time?  By yourself? Try describing RStudio's appearance out loud to yourself (or your cats, or [your rubber duck](https://en.wikipedia.org/wiki/Rubber_duck_debugging)).  This may seem silly but it is another way to consolidate your learning.
+Have extra time?  By yourself? Try describing RStudio's appearance out loud to yourself (or your cats, or [your rubber duck](https://en.wikipedia.org/wiki/Rubber_duck_debugging)).  This may seem silly, but it is another way to consolidate your learning.
 
 ## Using a File
 
 Before you are ready to write your own code, you might find it useful to work with an existing file.
 
-There are several ways to write R code using RStudio.  We'll start with an R **script**.  
-
-An R script is a file that includes all the R code and any comments that you want to save in a file so you don't lose track of a process.  
+There are several ways to write R code using RStudio.  We'll start with an R **script**.  An R script is a file that includes all the R code and any comments that you want to save in a file so you don't lose track of a process.  
 
 For example, let's say that we know we'll want to work on some data stored in a .csv file, and it will take us several days or weeks to slowly write the code.  We can use an R script to store what we've figured out so far.  
 
@@ -285,13 +270,16 @@ Keeping this script means that in a few months, after having forgotten what we d
 
 <div class = "hint">
 
-Pro tip:  You'll recognize an R script because it ends in `.R`!</div>
+Pro tip:  You'll recognize an R script because it ends in `.R`!
+
+</div>
 
 In the lower right of your RStudio window, you should see a pane that has tabs marked "Files", "Plots", "Packages", "Help", and "Viewer".  Click on the "Files" tab, and (if you're in Chrome...) you'll see, above the file and folder display, a series of "breadcrumbs" that show your current path.  You probably see something like `/ > mnt > arcus > lab > users > yourusername`.
 
 You can navigate to a directory in your breadcrumb path by clicking on it.  You can go up one level from where you are by clicking on the up arrow with double dots (the top icon in your list of files and folders).
 
-<div class = "learnmore">
+<div class = "hint">
+
 In most operating systems, `.` means "the directory I'm currently in" and `..` means "the directory that contains my current directory".  
 
 So, say I imagine my directory system like this:
@@ -310,15 +298,15 @@ So, say I imagine my directory system like this:
 └──  kitchen
     ├── counter.md
     ├── fridge
-    │   ├── leftovers.mp4
+    │   ├── leftovers.R
     │   └── butter.png
     └── sink
         ├── brownie_pan.Rmd
         └── sponge.ipynb
 ```
-For `butter.png`, the definition of `.`, or the current directory, is `fridge`.  
+For a program running in `fridge` (say, R running `leftovers.R`), the definition of `.`, or the current directory, is `fridge`.  
 
-For `butter.png`, the definition of `..`, or the directory holding the current directory, is `kitchen`.
+For a program running in `fridge` (say, R running `leftovers.R`), the definition of `..`, or the directory holding the current directory, is `kitchen`.
 
 Let's say you need to describe how to get to the cat, from within the sink.  You could:
 
@@ -422,16 +410,7 @@ You can also use point-and-click for viewing data, including:
 </div>
 
 
-
-## RStudio Features
-
-
-We're only going to touch on three of many useful tools here.  When time permits, you may want to explore more.  In the meantime, however, let's consider what we've learned so far about R scripts:
-
-
-
-
-### Help
+## Help
 
 In case some of these commands don't make sense to you, try working in the "Help" tab of the Files / Plots / Packages / etc. pane (usually the lower right).  There are two search boxes.  The uppermost search box in the top right of the pane is used to search for a topic (like "bigrquery" or "library").  The one that's lower and toward the center or left is for searching for text *within* a help file (say, if you're looking for "Example" within a help article, to copy code.)
 
@@ -443,7 +422,7 @@ There are two search boxes related to help.  The one on the left, just above the
 
 The other search box is in the upper right part of the pane and can be used for searching across all available help.  For example, search for "hist" in this search box.  
 
-### History
+## History
 
 Within RStudio, click on the "History" tab in the upper right pane.  The commands that have been executed during your current session are listed.
 
@@ -451,15 +430,13 @@ Choose one of the commands by clicking on it, and choose the "To Console" button
 
 ![History Tab](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/history_rstudio.png?raw=true)
 
-### Display
+## Display
 
 Use the "Tools" menu at the top of RStudio, choose "Global Options", then  "Appearance".
 
 Experiment with editor settings (font size and theme), and if you want to try it out, choose "Apply".
 
 ## Terminology
-
-*5 minute read*
 
 * code: computer instructions written with specific syntax rules: `summary(patients$age)`
 * comment: text within a script that is intended for humans and will not be run by the computer: `# print summary stats here`
@@ -474,32 +451,17 @@ Experiment with editor settings (font size and theme), and if you want to try it
 
 ## Additional Resources
 
-*10 minutes watch, optional*
-
-- [Hands-On Activities Demo](#Hands-On-Activities-Demo).  This is a video demo of the hands-on activities we've asked you to do in this module.
 - [Researchers: Why R?](https://www.youtube.com/watch?v=Ids4FO5nTBE&t=07m19s) (stop after this section, around 4 minutes long).  This is a clip from a longer presentation given to learners at the Children's Hospital of Philadelphia.
 
-### Hands-On Activities Demo
-
-!?[Hands on Activity](https://www.youtube.com/embed/O8rKGHXSXlc)
-
-
-### Researchers: Why R?
-
-You can stop this video after around 4 minutes.
-
-!?[Researchers: Why Use R?](https://www.youtube.com/embed/Ids4FO5nTBE?start=439?cc_load_policy=1)
 
 ## Feedback
 
-*5 minute feedback*
 
 In the beginning, we stated some goals.
 
 **Learning Objectives**:  After completion of this module, learners will be able to:
 
 * Describe what R is and what RStudio is
-* Understand what a script is and how using a script can improve research
 * Execute given R code within RStudio
 * Explain what a data frame is
 * Use the Environment tab within RStudio to examine a data frame
