@@ -97,15 +97,7 @@ If you're interested in working with data (that could be many things, such as br
 ====
 
 * [Lesson Preparation](#Lesson-Preparation)
-* [What is R?](#What-is-R-\?)
-* [What is R?](#What-is-R\?)
-* [What is R?](#What-is-R-%3f)
-* [What is R?](#What-is-R%63)
-* [What is R?](#What-is-R--)
 * [What is R?](#What-is-R?)
-* [What is R?](#what-is-r?)
-
-
 * [What is RStudio?](#What-is-RStudio?)
 * [Starting RStudio](#Starting-RStudio)
 * [Using a File](#Using-a-File)
@@ -225,6 +217,8 @@ Using the R.app, also known as the R console tool, means very basic, bare-bones 
 
 On the other hand, you could run the same code in RStudio and see something like this:
 
+<div style="display:none">@gifPreload</div>
+
 <figure style = "border: 1px solid rgb(var(--lia-grey))">
   <img src="https://github.com/arcus/education_modules/blob/joy-intro-r/intro_to_r_rstudio/media/rstudio.png?raw=true" height="500" width="800" alt="Running code in RStudio" data-alt="https://github.com/arcus/education_modules/blob/joy-intro-r/intro_to_r_rstudio/media/rstudio.gif?raw=true">
 <figcaption>Click on the image to play the demo.</figcaption>
@@ -328,6 +322,8 @@ Once you've saved it in your own folder, see if you can make some educated guess
 Use your mouse to add a cursor (be careful not to highlight text) somewhere in the first line of code (or in the first line, period -- it's okay if the first line is a comment). Then, click "Run" in the upper right corner of the Source pane.  Below, here's what that might look like.  
 
 Keep in mind that these animations show public data and different code than what we're using in the live session together.
+
+<div style="display:none">@gifPreload</div>
 
 <figure style = "border: 1px solid rgb(var(--lia-grey))">
   <img src="https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/rstudio_run.png?raw=true)" height="500" width="800" alt="Running code in the Source pane using the Run button" data-alt="https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/rstudio_run.gif?raw=true)">
