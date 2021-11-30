@@ -102,6 +102,10 @@ If you're interested in working with data (that could be many things, such as br
 * [What is R?](#What-is-R-%3f)
 * [What is R?](#What-is-R%63)
 * [What is R?](#What-is-R--)
+* [What is R?](#What-is-R?)
+* [What is R?](#what-is-r?)
+
+
 * [What is RStudio?](#What-is-RStudio?)
 * [Starting RStudio](#Starting-RStudio)
 * [Using a File](#Using-a-File)
@@ -197,14 +201,14 @@ R is a language that was specifically designed for the statistical analysis of d
 
 ### Without RStudio
 
-We could run the code sample above in a simple **R console**, which is what you get when you install R by itself on your own computer without using RStudio.  
+We could (but shouldn't) run the code sample above in a simple **R console**, which is what you get when you install R by itself on your own computer without using RStudio.  
 
 Note that we don't include the R Console / R app in the tool kit supplied by the Arcus Training Lab.  Still, because you might have the R console (or "R app") installed on your own computer, it's worth touching on briefly.  
 
 Using this application isn't the most user friendly experience! In the screen recording shown below, we are **not** using RStudio, but rather the R Console.  Again, the code we're running here is not code that we'll use in our hands-on work, but you can certainly use this code if you have R installed on a local computer.
 
 <figure style = "border: 1px solid rgb(var(--lia-grey))">
-  <img src="https://github.com/arcus/education_fellows/blob/main/img/r_console.png?raw=true" height="500" width="800" alt="R.app, or the R Console" data-alt="https://github.com/arcus/education_fellows/blob/main/img/r_console.gif?raw=true">
+  <img src="https://github.com/arcus/education_fellows/blob/joy-intro-r/intro_to_r_rstudio/media/r_console.png?raw=true" height="500" width="800" alt="R.app, or the R Console" data-alt="https://github.com/arcus/education_fellows/blob/joy-intro-r/intro_to_r_rstudio/media/r_console.gif?raw=true">
 <figcaption>Click on the image to play the demo.</figcaption>
 </figure>
 
@@ -215,13 +219,16 @@ Above, you can see that the R console had to open a new program (in a Mac, it's 
 * How can I get more information on how to use the `hist` command?
 * How can I save my work for later re-use and expansion?
 
-Using the R.app, also known as the R console tool, means very basic, bare-bones support for you as someone who is trying to write code.
+Using the R.app, also known as the R console tool, means very basic, bare-bones support for you as someone who is trying to write code.  That's why we strongly suggest using RStudio, which is a separate install, but well worth the slight additional effort.
 
 ### With RStudio
 
 On the other hand, you could run the same code in RStudio and see something like this:
 
-![Running code in RStudio](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/rstudio.gif?raw=true)
+<figure style = "border: 1px solid rgb(var(--lia-grey))">
+  <img src="https://github.com/arcus/education_modules/blob/joy-intro-r/intro_to_r_rstudio/media/rstudio.png?raw=true" height="500" width="800" alt="Running code in RStudio" data-alt="https://github.com/arcus/education_modules/blob/joy-intro-r/intro_to_r_rstudio/media/rstudio.gif?raw=true">
+<figcaption>Click on the image to play the demo.</figcaption>
+</figure>
 
 Using RStudio, you:
 
@@ -235,26 +242,23 @@ Using RStudio, you:
   - Operating system terminal
   - And much more!  
 
-RStudio is the preferred method for most uses of R, and it's generally what we use to teach.  We will only scratch the surface of this tool in this module, and we won't get to some important topics you may have already heard of, like R Markdown.
+RStudio is the preferred method for most uses of R, and it's generally what we use to teach.  We will only scratch the surface of this tool in this module, and we'll take our next session to talk about R Markdown in depth.  
 
 ## Starting RStudio
 
-In your Training Lab, RStudio is an installed tool that you can reach
+In your Training Lab, RStudio is an installed tool that you can reach by clicking on the "RStudio" text in your tools pane (if you're in the dashboard) or via the "burger" menu (☰) in the upper left, if you're out of the dashboard and in a different part of your lab.  If you've only just fired up your lab after it's been at rest, give a couple of minutes for the tools to all load.  You may get a transient error about the lab not being ready while it's still booting up.
 
+Once you click and your RStudio tool has loaded, you will be able to see something like the following:
 
+![RStudio within training lab](https://github.com/arcus/education_fellows/raw/joy-intro-r/intro_to_r_rstudio/media/arcus_lab_rstudio.png)
 
+<div class = "question">
+Take a look around your own lab and RStudio tool.  What do you see?  How would you describe the layout of panes and tabs to another person?  What do you think the different parts do?  How does what you see differ from the image above?
+</div>
 
-Once your environment has loaded, you will be able to see something like the following:
-
-![RStudio Environment](https://github.com/arcus/education_fellows/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/rstudio_pangeo.png?raw=true)
-
-Take a look around.  What do you see?  How would you describe the layout of panes and tabs to another person?  What do you think the different parts do?
-
-Try describing RStudio's appearance out loud to yourself.  This may seem silly but it is another way to consolidate your learning.
+Have extra time?  By yourself? Try describing RStudio's appearance out loud to yourself (or your cats, or [your rubber duck](https://en.wikipedia.org/wiki/Rubber_duck_debugging)).  This may seem silly but it is another way to consolidate your learning.
 
 ## Using a File
-
-*10 minutes hands-on*
 
 Before you are ready to write your own code, you might find it useful to work with an existing file.
 
@@ -270,25 +274,73 @@ Keeping this script means that in a few months, after having forgotten what we d
 
 Pro tip:  You'll recognize an R script because it ends in `.R`!</div>
 
-In the lower right of your RStudio window, you should see a pane that has tabs marked "Files", "Plots", "Packages", "Help", and "Viewer".  Click on the "Files" tab, click on the name of this course (`intro_to_r_rstudio`) to open that folder, and find the R script.  Remember that R scripts end with the file extension `.R`.
+In the lower right of your RStudio window, you should see a pane that has tabs marked "Files", "Plots", "Packages", "Help", and "Viewer".  Click on the "Files" tab, and (if you're in Chrome...) you'll see, above the file and folder display, a series of "breadcrumbs" that show your current path.  You probably see something like `/ > mnt > arcus > lab > users > yourusername`.
 
-Did you find it?  It's called `intro_to_R.R`.  Click on the file name and it will open in a new "Source" pane which will appear as the upper left pane.  You should see something similar to the graphic below.
+You can navigate to a directory in your breadcrumb path by clicking on it.  You can go up one level from where you are by clicking on the up arrow with double dots (the top icon in your list of files and folders).
 
-![RStudio source pane displays R script](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/source_pane.png?raw=true)
+<div class = "hint"> In most operating systems, `.` means "the directory I'm currently in" and `..` means "the directory that contains my current directory".  
+
+So, say I imagine my directory system like this:
+
+```
+./
+├── welcome_mat.txt
+├── living_room
+│   ├── recliner.R
+│   ├── sofa
+│   │   ├── cat.py
+│   │   └── dog.R
+│   └── media_cabinet
+│       ├── family_movie.min
+│       └── apple_tv.js
+└──  kitchen
+    ├── counter.md
+    ├── fridge
+    │   ├── leftovers.mp4
+    │   └── butter.png
+    └── sink
+        ├── brownie_pan.Rmd
+        └── sponge.ipynb
+```
+For `butter.png`, `.`, or the current directory, is `fridge`.  `..`, or the directory holding the current directory, is `kitchen`.
+
+Let's say you need to describe how to get to the cat, from within the sink.  You could:
+
+* describe the full pathway, starting at the root directory (`./`): `/living_room/sofa/cat.py`
+* describe a relative path, from the perspective of the sink.  First you go up a level to the kitchen, using `..`, then you still can't "see" the cat so you go up one more level, to the root directory (`..`), then from there you can go into the living room, the sofa, and to the cat: `../../living_room/sofa/cat.py`
+
+</div>
+
+In your files pane, navigate to the `shared` folder inside `lab`.  This is the area that everyone who has access to this lab can put files that they want other people to also work with and have access to.  Once you're in the right folder, you will see something like the following (there may be more files when you look than there are in this picture):
+
+![File system shown in RStudio](media/arcus_training_lab_files.png)
+
+Now, find the file titled "Strawberry.R" and click on it to open this file in RStudio.  Hopefully you see something like this:
+
+![RStudio source pane displays R script](media/strawberry_r.png)
+
+This is R code that has been written into a file and saved as an R script.  While the code itself is adequate, this could be improved with the addition of some comments.  So that everyone can have their own copy, please "Save As" and save this file in *your* user folder.  Let's take some time and do that now, and make sure everyone can save a copy in their own folder.
+
+Once you've saved it in your own folder, see if you can make some educated guesses as to what is happening in the script, and add some comments.  Don't forget to save as you go!
 
 ### Running Code in RStudio
 
-Use your mouse to add a cursor (be careful not to highlight text) somewhere in lines 1-8.  These lines make up our first comments.  Then, click "Run" in the upper right corner of the Source pane:
+Use your mouse to add a cursor (be careful not to highlight text) somewhere in the first line of code (or in the first line, period -- it's okay if the first line is a comment). Then, click "Run" in the upper right corner of the Source pane.  Below, here's what that might look like.  
 
-![Running code in the Source pane using the Run button](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/rstudio_run.gif?raw=true)
+Keep in mind that these animations show public data and different code than what we're using in the live session together.
 
-What do you see now in the Console (the bottom left pane)?  Remember that comments are ignored by R, so the first line of actual R code that could be run was line 10.  That's what ends up running (or executing) in the console!
+<figure style = "border: 1px solid rgb(var(--lia-grey))">
+  <img src="https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/rstudio_run.png?raw=true)" height="500" width="800" alt="Running code in the Source pane using the Run button" data-alt="https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/rstudio_run.gif?raw=true)">
+<figcaption>Click on the image to play the demo.</figcaption>
+</figure>
 
-Click to move the cursor to a point in line 15 and click the "Run" button again.  
+What do you see now in the Console (the bottom left pane)?  Remember that comments are ignored by R, so the first line of actual R code that could be run is what ends up running (or executing) in the console.
 
-![Running code in the Source pane using the Run button](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/rstudio_run_line_15.gif?raw=true)
+Sometimes a command may take a while to execute, and you might see a red "Stop Sign" emblem appear in the upper right of your console pane.  When you see the stop sign, you know that something is still running and you have the option of stopping it (but you don't want to, usually).
 
-It may take a while to execute, and you might see a red "Stop Sign" emblem appear in the upper right of your console pane.  When you see the stop sign, you know that something is still running and you have the option of stopping it (but don't, this time).
+Go ahead and run the rest of the script.  You can do this by clicking "Run" for each line, or highlighting the entire script and hitting Run.  There is also a keyboard shortcut that allows you to quickly run the line where your cursor currently is... can you figure out what that keyboard shortcut is?
+
+We'll pause to let everyone run the entire script, and see if there are any errors we need to resolve.
 
 ### Data Frames
 
@@ -311,7 +363,6 @@ Now run the next few lines of code.  You can:
 It won't hurt to run these lines several times, so try various methods!
 
 What does the `hist` command accomplish?  The `summary` command? `View`?  
-
 
 <div class = "question">
 
@@ -344,8 +395,6 @@ You can also use point-and-click for viewing data, including:
 </div>
 
 ## Why Use R and RStudio?
-
-*5 minutes*
 
 Fine, you now know a bit more about R and RStudio, but why does this matter?  You may already know how to conduct statistical data analysis in tools like SPSS, Excel, or other software.  Why, then, learn R?  Is R only for professional data scientists?
 
