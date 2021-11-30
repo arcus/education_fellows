@@ -117,7 +117,7 @@ If you intend to do the hands on activity in this module, we have a bit of prepa
 
 An Arcus Training Lab holds real, deidentified data for around 300k CHOP patients, taken from Epic's Clarity reporting database and reshaped into what we call the "Arcus Data Repository" schema.  This is a bit different than the CDW and we'll go over some of the differences and why they exist in the "Arcus" module later on.
 
-The Arcus training lab has a number of tools you can use to work with the data contained in the lab.  The mental model is a "clean room" -- all work takes place in the lab, and individual-level data cannot be taken out of the lab (as per the terms of use you all signed).  When not in use, the Arcus lab shuts down to save money, so you'll probably need to click to start.  Go ahead and do that now!
+The Arcus training lab has a number of tools you can use to work with the data contained in the lab.  The mental model is a "clean room" -- all work takes place in the lab, and individual-level data cannot be taken out of the lab (as per the terms of use you all signed).  When not in use, the Arcus lab shuts down to save money, so you'll probably need to click to "resume your lab".  Go ahead and do that now!
 
 
 ![Screenshot of Arcus Training Lab](media/training_lab.png)
@@ -199,6 +199,8 @@ Note that we don't include the R Console / R app in the tool kit supplied by the
 
 Using this application isn't the most user friendly experience! In the screen recording shown below, we are **not** using RStudio, but rather the R Console.  Again, the code we're running here is not code that we'll use in our hands-on work, but you can certainly use this code if you have R installed on a local computer.
 
+<div style="display:none">@gifPreload</div>
+
 <figure style = "border: 1px solid rgb(var(--lia-grey))">
   <img src="https://github.com/arcus/education_fellows/blob/joy-intro-r/intro_to_r_rstudio/media/r_console.png?raw=true" height="500" width="800" alt="R.app, or the R Console" data-alt="https://github.com/arcus/education_fellows/blob/joy-intro-r/intro_to_r_rstudio/media/r_console.gif?raw=true">
 <figcaption>Click on the image to play the demo.</figcaption>
@@ -220,7 +222,7 @@ On the other hand, you could run the same code in RStudio and see something like
 <div style="display:none">@gifPreload</div>
 
 <figure style = "border: 1px solid rgb(var(--lia-grey))">
-  <img src="https://github.com/arcus/education_modules/blob/joy-intro-r/intro_to_r_rstudio/media/rstudio.png?raw=true" height="500" width="800" alt="Running code in RStudio" data-alt="https://github.com/arcus/education_modules/blob/joy-intro-r/intro_to_r_rstudio/media/rstudio.gif?raw=true">
+  <img src="https://github.com/arcus/education_fellows/blob/joy-intro-r/intro_to_r_rstudio/media/rstudio.png?raw=true" height="500" width="800" alt="Running code in RStudio" data-alt="https://github.com/arcus/education_fellows/blob/joy-intro-r/intro_to_r_rstudio/media/rstudio.gif?raw=true">
 <figcaption>Click on the image to play the demo.</figcaption>
 </figure>
 
@@ -240,7 +242,7 @@ RStudio is the preferred method for most uses of R, and it's generally what we u
 
 ## Starting RStudio
 
-In your Training Lab, RStudio is an installed tool that you can reach by clicking on the "RStudio" text in your tools pane (if you're in the dashboard) or via the "burger" menu (☰) in the upper left, if you're out of the dashboard and in a different part of your lab.  If you've only just fired up your lab after it's been at rest, give a couple of minutes for the tools to all load.  You may get a transient error about the lab not being ready while it's still booting up.
+In your Training Lab, RStudio is an installed tool that you can reach by clicking on the "RStudio" text in your tools pane (if you're in the dashboard) or via the "burger" menu (☰) in the upper left, if you're out of the dashboard and in a different part of your lab.  If you've only just fired up your lab after it's been at rest, give a couple of minutes for the tools to all load.  You may get a transient error about the tool not being ready while your lab is still booting up.
 
 Once you click and your RStudio tool has loaded, you will be able to see something like the following:
 
@@ -272,7 +274,8 @@ In the lower right of your RStudio window, you should see a pane that has tabs m
 
 You can navigate to a directory in your breadcrumb path by clicking on it.  You can go up one level from where you are by clicking on the up arrow with double dots (the top icon in your list of files and folders).
 
-<div class = "hint"> In most operating systems, `.` means "the directory I'm currently in" and `..` means "the directory that contains my current directory".  
+<div class = "learnmore">
+In most operating systems, `.` means "the directory I'm currently in" and `..` means "the directory that contains my current directory".  
 
 So, say I imagine my directory system like this:
 
@@ -296,7 +299,9 @@ So, say I imagine my directory system like this:
         ├── brownie_pan.Rmd
         └── sponge.ipynb
 ```
-For `butter.png`, `.`, or the current directory, is `fridge`.  `..`, or the directory holding the current directory, is `kitchen`.
+For `butter.png`, the definition of `.`, or the current directory, is `fridge`.  
+
+For `butter.png`, the definition of `..`, or the directory holding the current directory, is `kitchen`.
 
 Let's say you need to describe how to get to the cat, from within the sink.  You could:
 
@@ -313,34 +318,30 @@ Now, find the file titled "Strawberry.R" and click on it to open this file in RS
 
 ![RStudio source pane displays R script](media/strawberry_r.png)
 
-This is R code that has been written into a file and saved as an R script.  While the code itself is adequate, this could be improved with the addition of some comments.  So that everyone can have their own copy, please "Save As" and save this file in *your* user folder.  Let's take some time and do that now, and make sure everyone can save a copy in their own folder.
+This is R code that has been written into a file and saved as an R script.  While the code itself is adequate, this could be improved with the addition of some comments.  So that everyone can have their own copy, please "Save As" and save this file in *your* user folder (it will be named the same as your CHOP identity, so, `lastnamef`).  Let's take some time and do that now (you might have to stumble around to find your folder), and make sure everyone can save a copy in their own folder.  
 
-Once you've saved it in your own folder, see if you can make some educated guesses as to what is happening in the script, and add some comments.  Don't forget to save as you go!
+Once you've saved Strawberry.R in your own folder, here's a list of to-do, hands-on work to accomplish:
+
+* See if you can make some educated guesses as to what is happening in the script, and add some **comments**.  Don't forget to save as you go!
+* Try changing the width and height of the various panes in RStudio.
+* Check out the Help menu, especially "Cheatsheets".
+* Click on the various tabs to see what they hold.  
 
 ### Running Code in RStudio
 
-Use your mouse to add a cursor (be careful not to highlight text) somewhere in the first line of code (or in the first line, period -- it's okay if the first line is a comment). Then, click "Run" in the upper right corner of the Source pane.  Below, here's what that might look like.  
-
-Keep in mind that these animations show public data and different code than what we're using in the live session together.
-
-<div style="display:none">@gifPreload</div>
-
-<figure style = "border: 1px solid rgb(var(--lia-grey))">
-  <img src="https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/rstudio_run.png?raw=true)" height="500" width="800" alt="Running code in the Source pane using the Run button" data-alt="https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/rstudio_run.gif?raw=true)">
-<figcaption>Click on the image to play the demo.</figcaption>
-</figure>
+Use your mouse to add a cursor (be careful not to highlight text) somewhere in the first line of code (or in the first line, period -- it's okay if the first line is a comment). Then, click "Run" in the upper right corner of the Source pane.  
 
 What do you see now in the Console (the bottom left pane)?  Remember that comments are ignored by R, so the first line of actual R code that could be run is what ends up running (or executing) in the console.
 
 Sometimes a command may take a while to execute, and you might see a red "Stop Sign" emblem appear in the upper right of your console pane.  When you see the stop sign, you know that something is still running and you have the option of stopping it (but you don't want to, usually).
 
-Go ahead and run the rest of the script.  You can do this by clicking "Run" for each line, or highlighting the entire script and hitting Run.  There is also a keyboard shortcut that allows you to quickly run the line where your cursor currently is... can you figure out what that keyboard shortcut is?
+Go ahead and run the rest of the script.  You can do this by clicking "Run" for each line (it will automatically move the cursor to the next line after execution), or highlighting the entire script and hitting Run.  There is also a keyboard shortcut that allows you to quickly run the line where your cursor currently is... can you figure out what that keyboard shortcut is?
 
 We'll pause to let everyone run the entire script, and see if there are any errors we need to resolve.
 
 ### Data Frames
 
-By running line 15, you have instructed the computer to read in a csv using `read_csv` and to add that data to a new **data frame** object, which will be called `breast_cancer_data`.  Technically, this is a special kind of data frame called a **tibble**, but we won't talk about what makes a tibble special right now.  It's enough to remember that you can bring in data that's already in rows and columns, like a .csv, and make it into an R data frame.
+By running this code, you have instructed the computer to read in some data from the SQL database attached to the lab -- the same database we used in the SQL session a couple of weeks ago (see ) `read_csv` and to add that data to a new **data frame** object, which will be called `breast_cancer_data`.  Technically, this is a special kind of data frame called a **tibble**, but we won't talk about what makes a tibble special right now.  It's enough to remember that you can bring in data that's already in rows and columns, like a .csv, and make it into an R data frame.
 
 Data frames (including special kinds of data frames like tibbles) consist of data arranged into rows and columns.  The combination of rows and columns is often called a table, and you'll sometimes hear people refer to "tabular", or table shaped, data.  Data frames can look much like a spreadsheet that you might use Excel for.  Each row is an observation (in our case, a patient) and each column is a measurement (like age and insulin values).
 
