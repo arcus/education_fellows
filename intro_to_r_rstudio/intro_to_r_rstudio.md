@@ -332,7 +332,7 @@ Once you've saved Strawberry.R in your own folder, here's a list of to-do, hands
 * Check out the Help menu, especially "Cheatsheets".
 * Click on the various tabs to see what they hold.  
 
-### Running Code in RStudio
+## Running Code in RStudio
 
 Use your mouse to add a cursor (be careful not to highlight text) somewhere in the first line of code (or in the first line, period -- it's okay if the first line is a comment). Then, click "Run" in the upper right corner of the Source pane.  
 
@@ -368,7 +368,7 @@ R scripts work great in the RStudio software and generally will appear (once ope
 </div>
 </div>
 
-### Data Frames
+## Data Frames
 
 By running this code, you have instructed the computer to read in some data from the SQL database attached to the lab -- the same database we used in the SQL session a couple of weeks ago.  We read the data into an object in your R environment, an object called a data frame.  Technically, this is a special kind of data frame called a **tibble**, but we won't talk about what makes a tibble special right now.  It's enough to remember that you can bring in data that's already in rows and columns, like a .csv or the results from a SQL query, and make it into an R data frame.
 
@@ -409,8 +409,30 @@ You can also use point-and-click for viewing data, including:
 </div>
 </div>
 
+## An Aside About Comments
 
-## Help
+Comments are great, but when you add comments to a script, it can be annoying -- you have to:
+
+* Remember to preface each line with a `#`
+* Add your own line breaks
+* Try to describe things without handy formatting like bulleted lists, bold text, etc.
+
+That's why we really like and encourage the use of a special kind of R file called **R Markdown**.  R Markdown is a special feature that is supported by RStudio, and it combines two types of content: R, and Markdown.  
+
+We'll go into deeper examination of what R Markdown is next week, but for now, we want to show you what R Markdown looks like and how to work with an R Markdown file.
+
+In the Files section (you should be able to figure out where this is), navigate to the `shared` folder (you might have to click around to find it) and open `Strawberry.Rmd` by clicking on the name of the file.  Just as you did with the other file, you're going to save a copy of this (use "Save As") in your own user folder.
+
+Once you do that, take a look around.  This file has the same code as what you've already seen.  But the code appears in **code chunks** that are preceded by `\`\`\`\`{r}` and followed by `\`\`\`` .  Between the code chunks, regular-ish text appears.  It's fairly human readable but has some additional marks that indicate what the text should look like in a final document.
+
+
+<div class = "hint">
+
+`.Rmd` means "R Markdown" -- a file type that contains R code as well as a type of text formatting called "Markdown".
+
+</div>
+
+## RStudio Features: Help
 
 In case some of these commands don't make sense to you, try working in the "Help" tab of the Files / Plots / Packages / etc. pane (usually the lower right).  There are two search boxes.  The uppermost search box in the top right of the pane is used to search for a topic (like "bigrquery" or "library").  The one that's lower and toward the center or left is for searching for text *within* a help file (say, if you're looking for "Example" within a help article, to copy code.)
 
@@ -422,15 +444,13 @@ There are two search boxes related to help.  The one on the left, just above the
 
 The other search box is in the upper right part of the pane and can be used for searching across all available help.  For example, search for "hist" in this search box.  
 
-## History
+## RStudio Features: History
 
 Within RStudio, click on the "History" tab in the upper right pane.  The commands that have been executed during your current session are listed.
 
 Choose one of the commands by clicking on it, and choose the "To Console" button.  The code should now appear in the console in the lower left pane, ready for you to hit enter and run that command anew.
 
-![History Tab](https://github.com/arcus/education_modules/blob/intro_to_r_rstudio/intro_to_r_rstudio/media/history_rstudio.png?raw=true)
-
-## Display
+## RStudio Features: Display
 
 Use the "Tools" menu at the top of RStudio, choose "Global Options", then  "Appearance".
 
@@ -455,7 +475,6 @@ Experiment with editor settings (font size and theme), and if you want to try it
 
 
 ## Feedback
-
 
 In the beginning, we stated some goals.
 
