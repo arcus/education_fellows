@@ -96,7 +96,7 @@ If you're interested in working with data (that could be many things, such as br
 
 If you intend to do the hands on activity in this module, we have a bit of preparation for you to do now.  Please log in to the clinical informatics fellows training lab at https://train-268.lab.arcus.chop.edu/ . You'll need to be on the CHOP network for this to work, and we strongly suggest using the Chrome browser.
 
-An Arcus Training Lab holds real, deidentified data for around 300k CHOP patients, taken from Epic's Clarity reporting database and reshaped into what we call the "Arcus Data Repository" schema.  This is a bit different than the CDW and we'll go over some of the differences and why they exist in the "Arcus" module later on.
+An Arcus training lab holds real, deidentified data for around 300k CHOP patients, taken from Epic's Clarity reporting database and reshaped into what we call the "Arcus Data Repository" schema.  This is a bit different than the CDW and we'll go over some of the differences and why they exist in the "Arcus" module later on.
 
 The Arcus training lab has a number of tools you can use to work with the data contained in the lab.  The mental model is a "clean room" -- all work takes place in the lab, and individual-level data cannot be taken out of the lab (as per the terms of use you all signed).  When not in use, the Arcus lab shuts down to save money, so you'll probably need to click to "resume your lab".  Go ahead and do that now!
 
@@ -107,7 +107,7 @@ The Arcus training lab has a number of tools you can use to work with the data c
 
 R is a statistical programming language.  As a programming language, R requires that you write **code** that instructs a computer in what to do.  It's not point-and-click software like Excel or SPSS.
 
-R code looks something like this. Note that this is code that uses external data from the University of California, Irvine.  This is example code, the output of which I can share publicly, unlike the output of data from the Arcus Training Lab.  We won't actually use this code in our hands-on work.
+R code looks something like this. Note that this is code that uses external data from the University of California, Irvine.  This is example code, the output of which I can share publicly, unlike the output of data from the Arcus training lab.  We won't actually use this code in our hands-on work.
 
 Can't see the entire line of code?  You should be able to scroll over using your mouse or keyboard.
 
@@ -147,11 +147,11 @@ summary(breast_cancer_data$HOMA)
 
 ```
 
-You can write R code and execute it in many ways, including using the command line, the R console, and in a Jupyter notebook.  Here, however, we're going to concentrate on using RStudio.  This tool is already installed in your Arcus Training Lab.
+You can write R code and execute it in many ways, including using the command line, the R console, and in a Jupyter notebook.  Here, however, we're going to concentrate on using RStudio.  This tool is already installed in your Arcus training lab.
 
 ## What is RStudio?
 
-RStudio is an **IDE**, or **Integrated Development Environment**, which pulls together (integrates) useful tools like help files, image viewers,  data previews, and version control for people writing (developing) code, and it puts all these tools together in a visually pleasing and helpful environment.  It's an add-on tool that makes working with R easier because it gives extra help and context.
+RStudio is an **IDE**, or **Integrated Development Environment**, which pulls together (*integrates*) useful tools like help files, image viewers,  data previews, and version control for people writing (*developing*) code, and it puts all these tools together in a visually pleasing and helpful *environment*.  It's an add-on tool that makes working with R easier because it gives extra help and context.
 
 RStudio is like R in that it's free (at least, the desktop community version of RStudio is free), but unlike R in its ownership.  While changes and updates to R are handled by the non-profit R Consortium, RStudio is a company with various products.  RStudio (the software) provides a number of additional bells and whistles for users of R, and RStudio (the company) is very influential in the R community... but RStudio doesn't "own" R.
 
@@ -176,7 +176,7 @@ R is a language that was specifically designed for the statistical analysis of d
 
 We could (but shouldn't) run the code sample above in a simple **R console**, which is what you get when you install R by itself on your own computer without using RStudio.  
 
-Note that we don't include the R Console / R app in the tool kit supplied by the Arcus Training Lab.  Still, because you might have the R console (or "R app") installed on your own computer, it's worth touching on briefly.  
+Note that we don't include the R Console / R app in the tool kit supplied by the Arcus training lab.  Still, because you might have the R console (or "R app") installed on your own computer, it's worth touching on briefly.  
 
 Using this application isn't the most user friendly experience! In the screen recording shown below, we are **not** using RStudio, but rather the R Console.  Again, the code we're running here is not code that we'll use in our hands-on work, but you can certainly use this code if you have R installed on a local computer.
 
@@ -226,7 +226,11 @@ RStudio is the preferred method for most uses of R, and it's generally what we u
 
 Fine, you now know a bit more about R and RStudio, but why does this matter?  You may already know how to conduct statistical data analysis in tools like SPSS, Excel, or other software.  Why, then, learn R?  Is R only for professional data scientists?
 
-R and RStudio are great tools for professional data scientists, but they are also increasingly part of the research tool kit, much like other lab equipment that researchers have to learn to use.  This is because the **reproducibility crisis** of studies that cannot be reproduced or fail to reproduce can be ameliorated in part by the use of scripted data analysis.
+R and RStudio are great tools for professional data scientists, but they are also increasingly part of the research tool kit, much like other lab equipment that researchers have to learn to use.  This is because the **reproducibility crisis** of studies that cannot be reproduced or fail to reproduce can be ameliorated in part by the use of scripted data analysis.  **Every researcher should know the basics of reproducible data analysis using code, whether in R, Python, Julia, or another free, open source language.**  Many researchers may go on to delegate this work to someone else in their lab, but PIs should still have enough knowledge to be able to guide lab staff, critique analytic scripts, and understand the analysis that forms the basis of their findings and publications.
+
+Just as we can't imagine practicing medicine today (at least in the United States) without interacting with an EHR, and can't imagine turfing that work to a specialized group, the same is true of researchers and software.  Tech is part of medicine, and tech is part of research.  The authors of *[Merely Useful](https://merely-useful.tech/py-rse/)* open their text with much the same opinion:
+
+> We believe every researcher should know how to write short programs that clean and analyze data in a reproducible way and how to use version control to keep track of what they have done.
 
 R and other free, open source, and scripted (code-based) methods of data analysis are widely considered more reproducible because:
 
@@ -242,7 +246,7 @@ Want to hear more?  Watch around 4 minutes of one of our optional additional res
 
 ## Starting RStudio
 
-In your Training Lab, RStudio is an installed tool that you can reach by clicking on the "RStudio" text in your tools pane (if you're in the dashboard) or via the "burger" menu (☰) in the upper left, if you're out of the dashboard and in a different part of your lab.  If you've only just fired up your lab after it's been at rest, give a couple of minutes for the tools to all load.  You may get a transient error about the tool not being ready while your lab is still booting up.
+In your training lab, RStudio is an installed tool that you can reach by clicking on the "RStudio" text in your tools pane (if you're in the dashboard) or via the "burger" menu (☰) in the upper left, if you're out of the dashboard and in a different part of your lab.  If you've only just fired up your lab after it's been at rest, give a couple of minutes for the tools to all load.  You may get a transient error about the tool not being ready while your lab is still booting up.
 
 Once you click and your RStudio tool has loaded, you will be able to see something like the following:
 
