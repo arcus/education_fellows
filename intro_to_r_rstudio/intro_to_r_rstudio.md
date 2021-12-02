@@ -375,7 +375,7 @@ R scripts work great in the RStudio software and generally will appear (once ope
 
 ## Data Frames
 
-By running this code, you have instructed the computer to read in some data from the SQL database attached to the lab -- the same database we used in the SQL session a couple of weeks ago.  We read the data into an object in your R environment, an object called a data frame.  Technically, this is a special kind of data frame called a **tibble**, but we won't talk about what makes a tibble special right now.  It's enough to remember that you can bring in data that's already in rows and columns, like a .csv or the results from a SQL query, and make it into an R data frame.
+By running this code, you have instructed the computer to read in some data from the SQL database attached to the lab -- the same database we used in the SQL session a couple of weeks ago.  We read the data into an object in your R environment, an object called a **data frame**.  Technically, this is a special kind of data frame called a **tibble**, but we won't talk about what makes a tibble special right now.  It's enough to remember that you can bring in data that's already in rows and columns, like a .csv or the results from a SQL query, and make it into an R data frame.
 
 Data frames (including special kinds of data frames like tibbles) consist of data arranged into rows and columns.  The combination of rows and columns is often called a table, and you'll sometimes hear people refer to "tabular", or table shaped, data.  Data frames can look much like a spreadsheet that you might use Excel for.  Each row is an observation (in our case, a recorded strawberry allergy) and each column is a measurement (like allergen name and race).
 
@@ -430,14 +430,89 @@ In the Files section (you should be able to figure out where this is), navigate 
 
 Once you do that, take a look around.  This file has the same code as what you've already seen.  But the code appears in **code chunks** that are preceded by `\`\`\`{r}` and followed by `\`\`\`` .  Between the code chunks, regular-ish text appears.  It's fairly human readable but has some additional marks that indicate what the text should look like in a final document.
 
-
 <div class = "hint">
 
 `.Rmd` means "R Markdown" -- a file type that contains R code as well as a type of text formatting called "Markdown".
 
 </div>
 
+Why do these special marks exist?  They don't seem to add much to the text in the .Rmd file!  Well, the nice thing about R Markdown is that it allows you to write a document (like a web page or .pdf) that interweaves three things:
+
+* your explanations about what you're doing and why (statistical and scientific thinking, code explanations, etc.)
+* code you write
+* the output of code you write
+
+You can run individual bits of code in a very similar way to what you already know how to do, but you can also "knit" your R Markdown.  Knitting creates an output (assuming there are no errors) that can be:
+
+* an html document you look at locally
+* an html document you publish online
+* a "notebook" similar to Jupyter notebooks
+* a blog post (via `blogdown`)
+* a manuscript/book (via `bookdown`)
+* a journal article (`rticles` is great for this and allows you to format your writing in the way journals have specified)
+* a Word document (additional software necessary)
+* a pdf (additional software necessary)
+* an interactive app (using `shiny`)
+* a dashboard (using `flexdash`)
+* and more!
+
+<div class = "question">
+What differences do you see between the R script and the R Markdown file you're working with?  What new elements appear in the R Markdown file?
+</div>
+
+## Anatomy of an R Markdown File
+
+The first part of an R Markdown file is a section with settings, formatted in **YAML**.  These key-value pairs help determine what kind of resource gets created when you "knit" R Markdown.
+
+Then the rest of the file consists of markdown sections and code chunks, as we already described.  Ideally, the markdown sections include information that will add to the usefulness and understandability of your analysis.  You might explain why you're removing certain outliers, describe why you're creating a new column, or leave yourself a reminder that you should check for normality before using a parametric test.  Code should be broken up into small units (what "small" means may be different for different use cases) and enclosed in `\`\`\`{r}` and `\`\`\``.
+
+You can run a single line of code just as you did before, or you can run the entire chunk by hitting the green "play" button on the chunk.
+
+Once you have saved a copy of the .Rmd file to your own user folder, try running all of the code in the file.  How is running code from an R Markdown file different from running code within an R script?  How is it the same?
+
+Now, let's try knitting the document.  Before we get started with knitting, I want to change the metaphor space from textile work (knitting) to cooking instead.
+
+A good, reproducible, useful R Markdown file is like a complete recipe kit that includes all the ingredients you need and also makes it clear what tools you need.
+
+An incomplete R Markdown file (one that will fail) is like a recipe kit that doesn't provide all of the ingredients or assumes you already have the right tools out and about.
+
+An important step to testing recipes is to make sure someone can follow your recipe in their own kitchen, without all your handy-dandy extras.  You might add white pepper to a dish without including it in the ingredients list because for you, it's already on the counter and it's second nature for you to reach for it.  But most people don't have white pepper ready at hand!
+
+When you run code, you're in your own environment (your own kitchen).  Code runs in your reality, using what you have made available.  Knitting an R Markdown document switches the context to an empty environment that doesn't have anything in it, to make sure that all the steps of the analysis are there and correct.  Why does this matter?
+
+Let's say you are creating a report for length of stay for various common childhood conditions.  In separate work you did last week, you brought in a data frame that consists of the name of a common childhood condition and the ICD-10 codes that correspond to each one, and called it `condition_code`.  Today, you start writing a new report.  In your R Markdown, you:
+
+* Pull in some Epic data that includes length of stay, insurance type, sex, race, and ICD-10 code for patients with a completed admission of over 24 hours where the admission ended in the past 30 days.
+* Combine that Epic data with `condition_code` so that you have the name, not just the code, for each condition, in a new combined data frame
+* Keep just the rows associated with ten conditions of greater interest in a new data frame called `top_ten`
+* Create a grouped bar chart that shows median LOS for males v females, pulling from `top_ten`
+
+It works beautifully... when you run each chunk, it completes and you get a great data visualization.  But when you knit this, you get an error, and it won't create the beautiful report / dashboard you were hoping for.
+
+Why?
+
+## Knit!
+
+To knit an R Markdown document, find the yarn icon in RStudio and click it to "knit" your document.  You might get a pop-up blocker, and if so, just hit "try again" or "allow pop-ups".  What happens?  What do you see?
+
+Can you see how some of the formatting marks in the .Rmd document affect the appearance of the resulting html file?
+
+Now, here's a challenge to try on your own.  
+
+* Copy the SQL query from the .Rmd file (just the part in single quotes, from `SELECT` to `;`)
+* Open SQLPad (you can go to https://train-268.lab.arcus.chop.edu/ in a new tab and open SQLPad, or you can use the burger menu to open SQLPad in your current tab)
+* Paste the query and run it.  It should work!
+* Now, improve the query.  Add additional columns you're interested in!  You may want to take another peek at [Pete Camacho's SQL material](https://liascript.io/course/?https://raw.githubusercontent.com/arcus/education_fellows/main/SQL.md#1)
+* Or, if you're feeling really bold, pull data from a different table altogether!
+* Once you get a new query working, copy it from SQLPad and go back into RStudio.  Paste that query to replace the existing query in the R Markdown file.  Make sure you save your changed file using "Save As", giving your file a name that better describes what you're doing (like `banana_allergies.Rmd` or `patient_demographics.Rmd`)
+* Does anything else need to change?  The R code after the SQL query assumes that you are working with a data frame called `strawberry_allergies` that has a column titled `allergy_severity_name`.  If those assumptions are no longer valid, change the code as needed.
+* Run your code chunks to make sure they work as expected
+* Knit your R Markdown!
+
 ## RStudio Features: Help
+
+
+**Help Tab**
 
 In case some of these commands don't make sense to you, try working in the "Help" tab of the Files / Plots / Packages / etc. pane (usually the lower right).  There are two search boxes.  The uppermost search box in the top right of the pane is used to search for a topic (like "bigrquery" or "library").  The one that's lower and toward the center or left is for searching for text *within* a help file (say, if you're looking for "Example" within a help article, to copy code.)
 
@@ -449,17 +524,52 @@ There are two search boxes related to help.  The one on the left, just above the
 
 The other search box is in the upper right part of the pane and can be used for searching across all available help.  For example, search for "hist" in this search box.  
 
+**Help Menu**
+
+The Help menu in the menu bar across the top of RStudio has lots of tools, including helpful information about learning the R language, cheatsheets for using R Markdown, and much more.  Spend a few minutes looking around!
+
 ## RStudio Features: History
 
 Within RStudio, click on the "History" tab in the upper right pane.  The commands that have been executed during your current session are listed.
 
 Choose one of the commands by clicking on it, and choose the "To Console" button.  The code should now appear in the console in the lower left pane, ready for you to hit enter and run that command anew.
 
+![History tab](media/history_tab.png)
+
 ## RStudio Features: Display
 
 Use the "Tools" menu at the top of RStudio, choose "Global Options", then  "Appearance".
 
-Experiment with editor settings (font size and theme), and if you want to try it out, choose "Apply".
+Experiment with editor settings (font size and theme), and if you want to try it out, choose "Apply".  
+
+![Appearance menu](media/appearance_menu.png)
+
+## Hands-On Experimentation
+
+Try creating a new R Markdown document (File, New...) and you'll be prompted to give a title and author name for the new document.  Then you'll have some "boilerplate" sample text that you can leave in place to guide you, or you can delete it and start fresh.
+
+Some of you have worked with R before, others not so much.  Instead of us all doing the same work, here are some questions you might want to ask of the clinical data.  Can you figure out how to gather some data in SQL and then do deeper analysis in R?  There are many approaches, but here is one I recommend:
+
+* Do a "rough cut" using SQL to get a rough shape of the data you want to study.  Don't try, for example, to answer complex questions about group differences related to race, sex, and language needs of patients, but simply create a query that extracts race, sex, and language needs as columns.
+* Pull that data into R for the heavy lifting -- rearranging, removing outliers or incomplete data, grouping, visualizing, etc.
+
+None of these are particularly "easy" -- all will require you to stumble around a bit, maybe search online, go back into SQL material, or ask for help from your neighbor or the group.  
+
+Challenges you can solve looking into just one table from the `arcus` database:
+
+* What are some demographic characteristics of patients who hail from Alabama?
+* How many different type of flu vaccines are recorded?  What is the most and least frequent subtype of flu vaccine?
+* What are some of the characteristics (ED encounter or not, etc.) of the encounters found in the database?
+
+Challenges that require you to use more than two tables from the `arcus` database:
+
+* Are boys or girls more likely to have received a flu vaccine?  Black or white patients? Any discernible difference across religions or languages?
+* Among encounter diagnoses, what are the most frequent ICD-10 diagnosis codes?
+
+Challenge that requires the use of three or more tables from the `arcus` database:
+
+* Among encounter diagnoses, what are the English names of the most frequent diagnoses?  Any difference between patients from Pennsylvania and patients not from Pennsylvania?
+
 
 ## Terminology
 
