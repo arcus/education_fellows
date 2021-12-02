@@ -6,7 +6,7 @@ language: en
 narrator: US English Female
 title: Introduction to R and RStudio
 comment:  Learn to use R and RStudio in this introduction that uses an Arcus training lab.
-link:     https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/custom.css
+link:     https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
 logo: https://github.com/arcus/education_fellows/raw/main/img/chop-icon.png
 icon: https://github.com/arcus/education_fellows/raw/main/img/favicon.ico
 
@@ -109,7 +109,7 @@ R is a statistical programming language.  As a programming language, R requires 
 
 R code looks something like this. Note that this is code that uses external data from the University of California, Irvine.  This is example code, the output of which I can share publicly, unlike the output of data from the Arcus Training Lab.  We won't actually use this code in our hands-on work.
 
-Can't see the entire line of code?  You should be able to scroll over using mouse or keyboard.
+Can't see the entire line of code?  You should be able to scroll over using your mouse or keyboard.
 
 ```r
 
@@ -213,11 +213,12 @@ Using RStudio, you:
 * Get a sneak peek at the data to help you to decide what to do next (here we have 116 rows of 10 columns)
 * See the plot in the same application window as everything else
 * Can use other helpful tools, like
-  - File browser
-  - Help tab
-  - History of commands you've run recently
-  - Operating system terminal
-  - And much more!  
+
+  * File browser
+  * Help tab
+  * History of commands you've run recently
+  * Operating system terminal
+  * And much more!  
 
 RStudio is the preferred method for most uses of R, and it's generally what we use to teach.  We will only scratch the surface of this tool in this module, and we'll take our next session to talk about R Markdown in depth.  
 
@@ -423,7 +424,7 @@ We'll go into deeper examination of what R Markdown is next week, but for now, w
 
 In the Files section (you should be able to figure out where this is), navigate to the `shared` folder (you might have to click around to find it) and open `Strawberry.Rmd` by clicking on the name of the file.  Just as you did with the other file, you're going to save a copy of this (use "Save As") in your own user folder.
 
-Once you do that, take a look around.  This file has the same code as what you've already seen.  But the code appears in **code chunks** that are preceded by `\`\`\`\`{r}` and followed by `\`\`\`` .  Between the code chunks, regular-ish text appears.  It's fairly human readable but has some additional marks that indicate what the text should look like in a final document.
+Once you do that, take a look around.  This file has the same code as what you've already seen.  But the code appears in **code chunks** that are preceded by `\`\`\`{r}` and followed by `\`\`\`` .  Between the code chunks, regular-ish text appears.  It's fairly human readable but has some additional marks that indicate what the text should look like in a final document.
 
 
 <div class = "hint">
