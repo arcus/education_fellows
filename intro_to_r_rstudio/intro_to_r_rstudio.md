@@ -184,6 +184,7 @@ Using this application isn't the most user friendly experience! In the screen re
 
 <figure>
   <img src="https://github.com/arcus/education_fellows/blob/main/intro_to_r_rstudio/media/r_console.png?raw=true" height="500" width="800" alt="R.app, or the R Console" data-alt="https://github.com/arcus/education_fellows/blob/main/intro_to_r_rstudio/media/r_console.gif?raw=true">
+
 <figcaption>Click on the image to play the demo.</figcaption>
 </figure>
 
@@ -203,7 +204,9 @@ On the other hand, you could run the same code in RStudio and see something like
 <div style="display:none">@gifPreload</div>
 
 <figure>
+
   <img src="https://github.com/arcus/education_fellows/blob/main/intro_to_r_rstudio/media/rstudio.png?raw=true" height="500" width="800" alt="Running code in RStudio" data-alt="https://github.com/arcus/education_fellows/blob/main/intro_to_r_rstudio/media/rstudio.gif?raw=true">
+
 <figcaption>Click on the image to play the demo.</figcaption>
 </figure>
 
