@@ -77,7 +77,7 @@ If you're interested in working with data (that could be many things, such as br
 
 ### Details
 
-**Estimated time to completion**: 1 hour
+**Estimated time to completion**: 1.5 - 2 hours
 
 **Pre-requisites**: It is helpful if learners have used data in a tabular (table-shaped) format, with rows and columns.  Examples of this kind of data include comma separated values files (.csv) and spreadsheets (for example, Microsoft Excel).  Learners do *not* need to have access to R or RStudio on their own computers.  
 
@@ -183,7 +183,7 @@ Using this application isn't the most user friendly experience! In the screen re
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_fellows/blob/joy-intro-r/intro_to_r_rstudio/media/r_console.png?raw=true" height="500" width="800" alt="R.app, or the R Console" data-alt="https://github.com/arcus/education_fellows/blob/joy-intro-r/intro_to_r_rstudio/media/r_console.gif?raw=true">
+  <img src="https://github.com/arcus/education_fellows/blob/main/intro_to_r_rstudio/media/r_console.png?raw=true" height="500" width="800" alt="R.app, or the R Console" data-alt="https://github.com/arcus/education_fellows/blob/main/intro_to_r_rstudio/media/r_console.gif?raw=true">
 <figcaption>Click on the image to play the demo.</figcaption>
 </figure>
 
@@ -203,7 +203,7 @@ On the other hand, you could run the same code in RStudio and see something like
 <div style="display:none">@gifPreload</div>
 
 <figure>
-  <img src="https://github.com/arcus/education_fellows/blob/joy-intro-r/intro_to_r_rstudio/media/rstudio.png?raw=true" height="500" width="800" alt="Running code in RStudio" data-alt="https://github.com/arcus/education_fellows/blob/joy-intro-r/intro_to_r_rstudio/media/rstudio.gif?raw=true">
+  <img src="https://github.com/arcus/education_fellows/blob/main/intro_to_r_rstudio/media/rstudio.png?raw=true" height="500" width="800" alt="Running code in RStudio" data-alt="https://github.com/arcus/education_fellows/blob/main/intro_to_r_rstudio/media/rstudio.gif?raw=true">
 <figcaption>Click on the image to play the demo.</figcaption>
 </figure>
 
@@ -250,7 +250,7 @@ In your training lab, RStudio is an installed tool that you can reach by clickin
 
 Once you click and your RStudio tool has loaded, you will be able to see something like the following:
 
-![RStudio within training lab](https://github.com/arcus/education_fellows/raw/joy-intro-r/intro_to_r_rstudio/media/arcus_lab_rstudio.png)
+![RStudio within training lab](https://github.com/arcus/education_fellows/raw/main/intro_to_r_rstudio/media/arcus_lab_rstudio.png)
 
 <div class = "question">
 Take a look around your own lab and RStudio tool.  
