@@ -10,7 +10,7 @@ script: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
 @AlaSQL.eval
 <script>
 try {
-    var myList=JSON.stringify(alasql(`@input`), null, 3);
+    var myList=alasql(`@input`)
 } catch(e) {
   let error = new LiaError(e.message, 1);
   try {
@@ -75,7 +75,7 @@ try {
 
 # AlaSQL
 
-Test2 query
+Test3 query
 
 ```sql
 CREATE TABLE test (language INT, hello STRING);
