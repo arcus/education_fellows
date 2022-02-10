@@ -1,36 +1,10 @@
-# AlaSQL
-
 <!--
-
-author: Peter Camacho (camachop@chop.edu)
-
-email: None
-
-language: en
-
-narrator: US English Female
-
-logo:     https://jquery-plugins.net/image/plugin/alasql-javascript-sql-database-library.png
 
 comment:  Macros for executing SQL code snippets with AlaSQL in LiaScript.
 
-script:   https://cdn.jsdelivr.net/npm/alasql@0.6.5/dist/alasql.min.js
-
-attribute: [AlaSQL](https://alasql.org)
-           by [Andrey Gershun](agershun@gmail.com)
-           & [Mathias Rangel Wulff](m@rawu.dk)
-           is licensed under [MIT](https://opensource.org/licenses/MIT)
-
-
-script:  https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.6.1/papaparse.min.js
-
-attribute: [PapaParse](https://www.papaparse.com)
-           by [Matthew Holt](https://twitter.com/mholt6)
-           is licensed under [MIT](https://opensource.org/licenses/MIT)
-
-
+script: https://cdn.jsdelivr.net/npm/alasql@0.6.5/dist/alasql.min.js
+script: https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.6.1/papaparse.min.js
 script: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
-attribute: [Jquery](https://api.jquery.com/)
 
 
 @AlaSQL.eval
@@ -61,15 +35,10 @@ function buildHtmlTable() {
          }
          $("#excelDataTable").append(row$);
      }
- }
- 
- // Adds a header row to the table and returns the set of columns.
- // Need to do union of keys from all records as some records may not contain
- // all records
-
-
+}
 try {
-    buildHtmlTable(JSON.stringify(alasql(`@input`), null, 3));
+    var myList=JSON.stringify(alasql(`@input`), null, 3);
+    buildHtmlTable()
 } catch(e) {
   let error = new LiaError(e.message, 1);
   try {
@@ -104,7 +73,7 @@ try {
 
 -->
 
-
+# AlaSQL
 
 ```sql
 CREATE TABLE test (language INT, hello STRING);
@@ -116,4 +85,4 @@ INSERT INTO test VALUES (3,'Bonjour!');
 
 SELECT * FROM test WHERE language > 1;
 ```
-@AlaSQL.eval_with_csv
+@AlaSQL.eval
