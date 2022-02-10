@@ -75,6 +75,8 @@ try {
 
 # AlaSQL
 
+Test query
+
 ```sql
 CREATE TABLE test (language INT, hello STRING);
 
