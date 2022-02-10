@@ -71,18 +71,22 @@ try {
 </script>
 @end
 
+@AlaSQL.build_tables
 <script>
 alasql("CREATE TABLE test (language INT, hello STRING)");
 alasql("INSERT INTO test VALUES (1,'Hello!')");
 alasql("INSERT INTO test VALUES (2,'Aloha!')");
 alasql("INSERT INTO test VALUES (3,'Bonjour!')");
 </script>
+@end
 
 -->
 
 # AlaSQL
 
-Test4 query
+Test5 query
+
+@AlaSQL.build_tables
 
 ```sql
 SELECT * FROM test WHERE language > 1;
