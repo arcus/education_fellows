@@ -9,6 +9,17 @@ script: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
 
 @AlaSQL.eval
 <script>
+try {
+    var myList=JSON.stringify(alasql(`@input`), null, 3);
+} catch(e) {
+  let error = new LiaError(e.message, 1);
+  try {
+    let log = e.message.match(/.*line (\d):.*\n.*\n.*\n(.*)/);
+    error.add_detail(0, e.name+": "+log[2], "error", log[1] -1 , 0);
+  } catch(e) {
+  }
+  throw error;
+}
 function addAllColumnHeaders(myList) {
      var columnSet = [];
      var headerTr$ = $('<tr/>');
@@ -36,18 +47,7 @@ function buildHtmlTable() {
          $("#excelDataTable").append(row$);
      }
 }
-try {
-    var myList=JSON.stringify(alasql(`@input`), null, 3);
-    buildHtmlTable()
-} catch(e) {
-  let error = new LiaError(e.message, 1);
-  try {
-    let log = e.message.match(/.*line (\d):.*\n.*\n.*\n(.*)/);
-    error.add_detail(0, e.name+": "+log[2], "error", log[1] -1 , 0);
-  } catch(e) {
-  }
-  throw error;
-}
+buildHtmlTable()
 </script>
 @end
 
@@ -75,7 +75,7 @@ try {
 
 # AlaSQL
 
-Test query
+Test2 query
 
 ```sql
 CREATE TABLE test (language INT, hello STRING);
