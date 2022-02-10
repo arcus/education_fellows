@@ -71,20 +71,20 @@ try {
 </script>
 @end
 
+<script>
+alasql("CREATE TABLE test (language INT, hello STRING)");
+alasql("INSERT INTO test VALUES (1,'Hello!')");
+alasql("INSERT INTO test VALUES (2,'Aloha!')");
+alasql("INSERT INTO test VALUES (3,'Bonjour!')");
+</script>
+
 -->
 
 # AlaSQL
 
-Test3 query
+Test4 query
 
 ```sql
-CREATE TABLE test (language INT, hello STRING);
-
--- insert dummy values
-INSERT INTO test VALUES (1,'Hello!');
-INSERT INTO test VALUES (2,'Aloha!');
-INSERT INTO test VALUES (3,'Bonjour!');
-
 SELECT * FROM test WHERE language > 1;
 ```
 @AlaSQL.eval
