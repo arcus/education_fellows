@@ -48,7 +48,7 @@ try {
         var myList=alasql(myStriptArray[i])
         if (myList != 1 ) { // If data is returned, format output as table.
               buildHtmlTable();
-              JSON.stringify(alasql(<table id="excelDataTable" border="1">), null, 3);
+              JSON.stringify('<table id="excelDataTable" border="1"></table>', null, 3);
         }
     }
 } catch(e) {
@@ -67,7 +67,7 @@ try {
 
 # AlaSQL
 
-Test HTML Table Output 3.
+Test HTML Table Output 4.
 
 ```sql
 CREATE TABLE test (language INT, hello STRING);
