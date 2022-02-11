@@ -26,7 +26,7 @@ attribute: [PapaParse](https://www.papaparse.com)
            is licensed under [MIT](https://opensource.org/licenses/MIT)
            
 script: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
-
+attribute: [jQuery](https://jquery.com/)
 
 @AlaSQL.eval
 <script>
