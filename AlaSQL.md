@@ -10,7 +10,15 @@ script: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
 @AlaSQL.eval
 <script>
 try {
-    var myList=alasql(`@input`)
+    var myinput=`@input`
+    var myStriptArray= myinput.split(';');
+    var arrayLength = myStriptArray.length;
+    for (var i = 0; i < arrayLength; i++) {
+        myList=alasql(myStriptArray[i])
+        if (myList != 1 ) { // If data is returned, format output as table.
+              buildHtmlTable();
+        }
+    }
 } catch(e) {
   let error = new LiaError(e.message, 1);
   try {
@@ -20,63 +28,37 @@ try {
   }
   throw error;
 }
-function addAllColumnHeaders(myList) {
-     var columnSet = [];
-     var headerTr$ = $('<tr/>');
-     for (var i = 0 ; i < myList.length ; i++) {
-         var rowHash = myList[i];
-         for (var key in rowHash) {
-             if ($.inArray(key, columnSet) == -1){
-                 columnSet.push(key);
-                 headerTr$.append($('<th/>').html(key));
-             }
-         }
-     }
-     $("#excelDataTable").append(headerTr$);
-     return columnSet;
-}
+// Builds the HTML Table out of myList json data from Ivy restful service.
 function buildHtmlTable() {
-     var columns = addAllColumnHeaders(myList);
-     for (var i = 0 ; i < myList.length ; i++) {
-         var row$ = $('<tr/>');
-         for (var colIndex = 0 ; colIndex < columns.length ; colIndex++) {
-             var cellValue = myList[i][columns[colIndex]];
-             if (cellValue == null) { cellValue = ""; }
-             row$.append($('<td/>').html(cellValue));
-         }
-         $("#excelDataTable").append(row$);
-     }
+  var columns = addAllColumnHeaders(myList);
+  for (var i = 0 ; i < myList.length ; i++) {
+    var row$ = $('<tr/>');
+    for (var colIndex = 0 ; colIndex < columns.length ; colIndex++) {
+      var cellValue = myList[i][columns[colIndex]];
+      if (cellValue == null) { cellValue = ""; }
+      row$.append($('<td/>').html(cellValue));
+    }
+    $("#excelDataTable").append(row$);
+  }
 }
-buildHtmlTable()
-</script>
-@end
-
-@AlaSQL.eval_with_csv
-<script>
-let data = Papa.parse(`@input(1)`, {header: true});
-let error = "";
-if(data.errors.length != 0) {
-    error = JSON.stringify(data.errors, null, 3)+"\n";
+// Adds a header row to the table and returns the set of columns.
+// Need to do union of keys from all records as some records may not contain
+// all records
+function addAllColumnHeaders(myList) {
+  var columnSet = [];
+  var headerTr$ = $('<tr/>');
+  for (var i = 0 ; i < myList.length ; i++) {
+    var rowHash = myList[i];
+    for (var key in rowHash) {
+      if ($.inArray(key, columnSet) == -1){
+        columnSet.push(key);
+        headerTr$.append($('<th/>').html(key));
+      }
+    }
+  }
+  $("#excelDataTable").append(headerTr$);
+  return columnSet;
 }
-try {
-  error += JSON.stringify(alasql(`@input`, [data.data]), null, 3);
-} catch(e) {
-  let error = new LiaError(e.message, 1);
-  try {
-    let log = e.message.match(/.*line (\d):.*\n.*\n.*\n(.*)/);
-    error.add_detail(0, e.name+": "+log[2], "error", log[1] -1 , 0);
-  } catch(e) {}
-  throw error ;
-}
-</script>
-@end
-
-@AlaSQL.build_tables
-<script>
-alasql("CREATE TABLE test (language INT, hello STRING)");
-alasql("INSERT INTO test VALUES (1,'Hello!')");
-alasql("INSERT INTO test VALUES (2,'Aloha!')");
-alasql("INSERT INTO test VALUES (3,'Bonjour!')");
 </script>
 @end
 
@@ -86,9 +68,9 @@ alasql("INSERT INTO test VALUES (3,'Bonjour!')");
 
 Test5 query
 
-@AlaSQL.build_tables
-
 ```sql
 SELECT * FROM test WHERE language > 1;
 ```
 @AlaSQL.eval
+
+<table id="excelDataTable" border="1">
