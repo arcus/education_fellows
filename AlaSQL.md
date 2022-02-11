@@ -80,7 +80,7 @@ try {
 
 # AlaSQL
 
-Test HTML Table Output 19.
+Test HTML Table Output 20.
 
 ```sql
 CREATE TABLE test (language INT, hello STRING);
@@ -89,13 +89,13 @@ INSERT INTO test VALUES (2,'Aloha!');
 INSERT INTO test VALUES (3,'Bonjour!');
 SELECT * FROM test;
 ```
-@AlaSQL.eval("#excelDataTable")
+@AlaSQL.eval("#dataTable1")
 
-<table id="excelDataTable" border="1"></table>
+<table id="dataTable1" border="1"></table><br>
 
 ```sql
 SELECT * FROM test where language>1;
 ```
-@AlaSQL.eval("#excelDataTable2")
+@AlaSQL.eval("#dataTable2")
 
-<table id="excelDataTable2" border="1"></table>
+<table id="dataTable2" border="1"></table><br>
