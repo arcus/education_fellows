@@ -45,6 +45,7 @@ try {
     var myStriptArray= myinput.split(';');
     var arrayLength = myStriptArray.length;
     $("#excelDataTable").html(""); // clear out existing data
+    console.clear();
     for (var i = 0; i < arrayLength; i++) {
         if((myStriptArray[i].trim()).length != 0) { // ignore blank queries.
             var myList=alasql(myStriptArray[i])
@@ -69,7 +70,7 @@ try {
 
 # AlaSQL
 
-Test HTML Table Output 9.
+Test HTML Table Output 10.
 
 ```sql
 CREATE TABLE test (language INT, hello STRING);
