@@ -43,18 +43,19 @@ function addAllColumnHeaders(myList) {
 }
 try {
     var myinput=`@input`
+    myinput=myinput.replace(/;$/, ""); // remove trailing semi-colon
     var myStriptArray= myinput.split(';');
     var arrayLength = myStriptArray.length;
     console.clear();
     for (var i = 0; i < arrayLength; i++) {
         if((myStriptArray[i].trim()).length != 0) { // ignore blank queries.
             var myList=alasql(myStriptArray[i])
+            JSON.stringify("No Data to Return..");
         }
         if (myList != 1  & ((myStriptArray[i].trim()).length) != 0) { // If data is returned, format output as table.
               $("#excelDataTable").html(""); // clear out existing data
               buildHtmlTable();
         }
-        JSON.stringify(null, null, 3);
     }
 } catch(e) {
   let error = new LiaError(e.message, 1);
@@ -72,7 +73,7 @@ try {
 
 # AlaSQL
 
-Test HTML Table Output 13.
+Test HTML Table Output 14.
 
 ```sql
 CREATE TABLE test (language INT, hello STRING);
