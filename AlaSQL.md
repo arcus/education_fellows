@@ -49,12 +49,13 @@ try {
     console.clear();
     for (var i = 0; i < arrayLength; i++) {
         if((myStriptArray[i].trim()).length != 0) { // ignore blank queries.
-            var myList=alasql(myStriptArray[i])
-            JSON.stringify("No Data to Return..");
+            var myList=alasql(myStriptArray[i]);
         }
         if (myList != 1  & ((myStriptArray[i].trim()).length) != 0) { // If data is returned, format output as table.
-              $("#excelDataTable").html(""); // clear out existing data
-              buildHtmlTable();
+            $("#excelDataTable").html(""); // clear out existing data
+            buildHtmlTable();
+        } else {
+            JSON.stringify("No Data to Return..");
         }
     }
 } catch(e) {
@@ -73,7 +74,7 @@ try {
 
 # AlaSQL
 
-Test HTML Table Output 14.
+Test HTML Table Output 15.
 
 ```sql
 CREATE TABLE test (language INT, hello STRING);
