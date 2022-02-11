@@ -19,7 +19,7 @@ function buildHtmlTable() {
       if (cellValue == null) { cellValue = ""; }
       row$.append($('<td/>').html(cellValue));
     }
-    $("@0").append(row$);
+    $(@0).append(row$);
   }
   return "Query Execution Complete! (See Result Set Below)...";
 }
@@ -38,7 +38,7 @@ function addAllColumnHeaders(myList) {
       }
     }
   }
-  $("@0").append(headerTr$);
+  $(@0).append(headerTr$);
   return columnSet;
 }
 try {
@@ -52,7 +52,7 @@ try {
             var myList=alasql(myStriptArray[i]);
         }
         if (myList != 1  & ((myStriptArray[i].trim()).length) != 0) { // If data is returned, format output as table.
-            $("@0").html(""); // clear out existing data
+            $(@0).html(""); // clear out existing data
             buildHtmlTable();
         } else {
             JSON.stringify("No Data to Return..");
@@ -74,7 +74,7 @@ try {
 
 # AlaSQL
 
-Test HTML Table Output 17.
+Test HTML Table Output 18.
 
 ```sql
 CREATE TABLE test (language INT, hello STRING);
