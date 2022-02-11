@@ -21,6 +21,7 @@ function buildHtmlTable() {
     }
     $("#excelDataTable").append(row$);
   }
+  return "Query Execution Complete! (See Result Set Below)...";
 }
 // Adds a header row to the table and returns the set of columns.
 // Need to do union of keys from all records as some records may not contain
@@ -70,7 +71,7 @@ try {
 
 # AlaSQL
 
-Test HTML Table Output 10.
+Test HTML Table Output 11.
 
 ```sql
 CREATE TABLE test (language INT, hello STRING);
