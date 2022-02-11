@@ -66,7 +66,7 @@ function addAllColumnHeaders(myList) {
 
 # AlaSQL
 
-Test5 query
+Test HTML Table Output
 
 ```sql
 SELECT * FROM test WHERE language > 1;
