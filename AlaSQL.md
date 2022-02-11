@@ -9,6 +9,11 @@ script: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
 
 @AlaSQL.eval
 <script>
+///////////
+// USER NOTE: 
+//   An element_id tag must be passed as an argument to this macro as a string. 
+//   The results of his macro will then be rendered in any HTML element on this page referencing the specified element_id tag.
+//////////
 // Builds the HTML Table out of myList json data from Ivy restful service.
 function buildHtmlTable() {
   var columns = addAllColumnHeaders(myList);
@@ -55,6 +60,7 @@ try {
             $(@0).html(""); // clear out existing data
             buildHtmlTable();
         } else {
+            $(@0).html(""); // clear out existing data
             JSON.stringify("No Data to Return..");
         }
     }
@@ -74,7 +80,7 @@ try {
 
 # AlaSQL
 
-Test HTML Table Output 18.
+Test HTML Table Output 19.
 
 ```sql
 CREATE TABLE test (language INT, hello STRING);
@@ -86,3 +92,10 @@ SELECT * FROM test;
 @AlaSQL.eval("#excelDataTable")
 
 <table id="excelDataTable" border="1"></table>
+
+```sql
+SELECT * FROM test where language>1;
+```
+@AlaSQL.eval("#excelDataTable2")
+
+<table id="excelDataTable2" border="1"></table>
