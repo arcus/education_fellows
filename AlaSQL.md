@@ -11,7 +11,6 @@ script: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
 <script>
 // Builds the HTML Table out of myList json data from Ivy restful service.
 function buildHtmlTable() {
-  $("#excelDataTable").html("");
   var columns = addAllColumnHeaders(myList);
   for (var i = 0 ; i < myList.length ; i++) {
     var row$ = $('<tr/>');
@@ -45,6 +44,7 @@ try {
     var myinput=`@input`
     var myStriptArray= myinput.split(';');
     var arrayLength = myStriptArray.length;
+    $("#excelDataTable").html(""); // clear out existing data
     for (var i = 0; i < arrayLength; i++) {
         if(myStriptArray[i].length != 0) { // ignore blank queries.
             var myList=alasql(myStriptArray[i])
