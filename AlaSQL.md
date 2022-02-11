@@ -69,7 +69,7 @@ try {
 
 # AlaSQL
 
-Test HTML Table Output 7.
+Test HTML Table Output 8.
 
 ```sql
 CREATE TABLE test (language INT, hello STRING);
