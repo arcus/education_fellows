@@ -78,19 +78,23 @@ try {
 
 -->
 
-<body onload="loaded();"></body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/alasql@0.6.5/dist/alasql.min.js">
-function loaded() {
-    alasql("CREATE TABLE test (language INT, hello STRING);");
-    alasql("INSERT INTO test VALUES (1,'Hello!');");
-    alasql("INSERT INTO test VALUES (2,'Aloha!');");
-    alasql("INSERT INTO test VALUES (3,'Bonjour!');");
-}
-</script>
+<head>
+    <title>Test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/alasql@0.6.5/dist/alasql.min.js">
+    function buildTables() {
+        alasql("CREATE TABLE test (language INT, hello STRING);");
+        alasql("INSERT INTO test VALUES (1,'Hello!');");
+        alasql("INSERT INTO test VALUES (2,'Aloha!');");
+        alasql("INSERT INTO test VALUES (3,'Bonjour!');");
+    }
+    window.onload = buildTables;
+    </script>
+</head>
 
 # AlaSQL
 
-Test HTML Table Output 23.
+Test HTML Table Output 24.
 
 ```sql
 SELECT * FROM test;
