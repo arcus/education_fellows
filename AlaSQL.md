@@ -45,13 +45,13 @@ try {
     var myinput=`@input`
     var myStriptArray= myinput.split(';');
     var arrayLength = myStriptArray.length;
-    $("#excelDataTable").html(""); // clear out existing data
     console.clear();
     for (var i = 0; i < arrayLength; i++) {
         if((myStriptArray[i].trim()).length != 0) { // ignore blank queries.
             var myList=alasql(myStriptArray[i])
         }
-        if (myList != 1  & myStriptArray[i].length > 1) { // If data is returned, format output as table.
+        if (myList != 1  & ((myStriptArray[i].trim()).length) != 0) { // If data is returned, format output as table.
+              $("#excelDataTable").html(""); // clear out existing data
               buildHtmlTable();
         }
     }
@@ -71,7 +71,7 @@ try {
 
 # AlaSQL
 
-Test HTML Table Output 11.
+Test HTML Table Output 12.
 
 ```sql
 CREATE TABLE test (language INT, hello STRING);
