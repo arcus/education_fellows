@@ -1,5 +1,17 @@
 <!--
 
+author:   Peter EF Camacho
+
+email:    camachop@chop.edu
+
+version:  1.0.0
+
+language: en
+
+narrator: US English Female
+
+logo:     https://liascript.github.io/img/bg-showcase-2.jpg
+
 comment:  Macros for executing SQL code snippets with AlaSQL in LiaScript.
 
 script: https://cdn.jsdelivr.net/npm/alasql@0.6.5/dist/alasql.min.js
@@ -76,25 +88,20 @@ try {
 </script>
 @end
 
--->
+@AlaSQL.buildTables
+alasql("CREATE TABLE test (language INT, hello STRING);");
+alasql("INSERT INTO test VALUES (1,'Hello!');");
+alasql("INSERT INTO test VALUES (2,'Aloha!');");
+alasql("INSERT INTO test VALUES (3,'Bonjour!');");
+@end
 
-<head>
-    <title>Test</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/alasql@0.6.5/dist/alasql.min.js">
-    function buildTables() {
-        alasql("CREATE TABLE test (language INT, hello STRING);");
-        alasql("INSERT INTO test VALUES (1,'Hello!');");
-        alasql("INSERT INTO test VALUES (2,'Aloha!');");
-        alasql("INSERT INTO test VALUES (3,'Bonjour!');");
-    }
-    window.onload = buildTables;
-    </script>
-</head>
+-->
 
 # AlaSQL
 
-Test HTML Table Output 24.
+@AlaSQL.buildTables
+
+Test HTML Table Output 25.
 
 ```sql
 SELECT * FROM test;
