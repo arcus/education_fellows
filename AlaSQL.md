@@ -14,7 +14,7 @@ try {
     var myStriptArray= myinput.split(';');
     var arrayLength = myStriptArray.length;
     for (var i = 0; i < arrayLength; i++) {
-        myList=alasql(myStriptArray[i])
+        var myList=alasql(myStriptArray[i])
         if (myList != 1 ) { // If data is returned, format output as table.
               buildHtmlTable();
         }
@@ -69,7 +69,11 @@ function addAllColumnHeaders(myList) {
 Test HTML Table Output
 
 ```sql
-SELECT * FROM test WHERE language > 1;
+CREATE TABLE test (language INT, hello STRING);
+INSERT INTO test VALUES (1,'Hello!');
+INSERT INTO test VALUES (2,'Aloha!');
+INSERT INTO test VALUES (3,'Bonjour!');
+SELECT * FROM test;
 ```
 @AlaSQL.eval
 
