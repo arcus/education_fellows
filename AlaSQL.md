@@ -78,15 +78,19 @@ try {
 
 -->
 
+
+<script>
+alasql("CREATE TABLE test (language INT, hello STRING);")
+alasql("INSERT INTO test VALUES (1,'Hello!');")
+alasql("INSERT INTO test VALUES (2,'Aloha!');")
+alasql("INSERT INTO test VALUES (3,'Bonjour!');")
+</script>
+
 # AlaSQL
 
-Test HTML Table Output 20.
+Test HTML Table Output 21.
 
 ```sql
-CREATE TABLE test (language INT, hello STRING);
-INSERT INTO test VALUES (1,'Hello!');
-INSERT INTO test VALUES (2,'Aloha!');
-INSERT INTO test VALUES (3,'Bonjour!');
 SELECT * FROM test;
 ```
 @AlaSQL.eval("#dataTable1")
