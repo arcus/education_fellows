@@ -9,8 +9,14 @@ script: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
 
 @AlaSQL.eval
 <script>
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
 // Builds the HTML Table out of myList json data from Ivy restful service.
 function buildHtmlTable() {
+  removeAllChildNodes($("#excelDataTable"));
   var columns = addAllColumnHeaders(myList);
   for (var i = 0 ; i < myList.length ; i++) {
     var row$ = $('<tr/>');
@@ -66,7 +72,7 @@ try {
 
 # AlaSQL
 
-Test HTML Table Output 4.
+Test HTML Table Output 5.
 
 ```sql
 CREATE TABLE test (language INT, hello STRING);
