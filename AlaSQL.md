@@ -111,7 +111,7 @@ JSON.stringify("Note: Backed SQL Tables Where Created on Page Load..");
 
 # AlaSQL
 
-Test HTML Table Output 26.
+Test HTML Table Output 27.
 
 ```sql
 SELECT * FROM test;
