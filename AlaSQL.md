@@ -46,9 +46,8 @@ try {
     var arrayLength = myStriptArray.length;
     for (var i = 0; i < arrayLength; i++) {
         var myList=alasql(myStriptArray[i])
-        if (myList != 1 ) { // If data is returned, format output as table.
+        if (myList != 1  & myStriptArray[i].length > 1) { // If data is returned, format output as table.
               buildHtmlTable();
-              JSON.stringify('<table id="excelDataTable" border="1"></table>', null, 3);
         }
     }
 } catch(e) {
@@ -77,3 +76,5 @@ INSERT INTO test VALUES (3,'Bonjour!');
 SELECT * FROM test;
 ```
 @AlaSQL.eval
+
+<table id=excelDataTable border="1"></table>
