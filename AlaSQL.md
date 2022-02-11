@@ -54,6 +54,7 @@ try {
               $("#excelDataTable").html(""); // clear out existing data
               buildHtmlTable();
         }
+        JSON.stringify(null, null, 3);
     }
 } catch(e) {
   let error = new LiaError(e.message, 1);
@@ -71,7 +72,7 @@ try {
 
 # AlaSQL
 
-Test HTML Table Output 12.
+Test HTML Table Output 13.
 
 ```sql
 CREATE TABLE test (language INT, hello STRING);
