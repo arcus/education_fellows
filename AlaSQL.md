@@ -10,7 +10,7 @@ script: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
 @AlaSQL.eval
 <script>
 // Builds the HTML Table out of myList json data from Ivy restful service.
-function buildHtmlTable(x) {
+function buildHtmlTable() {
   var columns = addAllColumnHeaders(myList);
   for (var i = 0 ; i < myList.length ; i++) {
     var row$ = $('<tr/>');
@@ -19,7 +19,7 @@ function buildHtmlTable(x) {
       if (cellValue == null) { cellValue = ""; }
       row$.append($('<td/>').html(cellValue));
     }
-    $(x).append(row$);
+    $("@0").append(row$);
   }
   return "Query Execution Complete! (See Result Set Below)...";
 }
@@ -38,7 +38,7 @@ function addAllColumnHeaders(myList) {
       }
     }
   }
-  $(x).append(headerTr$);
+  $("@0").append(headerTr$);
   return columnSet;
 }
 try {
@@ -52,7 +52,7 @@ try {
             var myList=alasql(myStriptArray[i]);
         }
         if (myList != 1  & ((myStriptArray[i].trim()).length) != 0) { // If data is returned, format output as table.
-            $(x).html(""); // clear out existing data
+            $("@0").html(""); // clear out existing data
             buildHtmlTable();
         } else {
             JSON.stringify("No Data to Return..");
@@ -74,7 +74,7 @@ try {
 
 # AlaSQL
 
-Test HTML Table Output 16.
+Test HTML Table Output 17.
 
 ```sql
 CREATE TABLE test (language INT, hello STRING);
