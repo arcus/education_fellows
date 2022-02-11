@@ -78,17 +78,19 @@ try {
 
 -->
 
-
-<script>
-alasql("CREATE TABLE test (language INT, hello STRING);");
-alasql("INSERT INTO test VALUES (1,'Hello!');");
-alasql("INSERT INTO test VALUES (2,'Aloha!');");
-alasql("INSERT INTO test VALUES (3,'Bonjour!');");
-</script>
+<body>
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/alasql@0.6.5/dist/alasql.min.js">
+    <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.6.1/papaparse.min.js">
+    alasql("CREATE TABLE test (language INT, hello STRING);");
+    alasql("INSERT INTO test VALUES (1,'Hello!');");
+    alasql("INSERT INTO test VALUES (2,'Aloha!');");
+    alasql("INSERT INTO test VALUES (3,'Bonjour!');");
+    </script>
+</body>
 
 # AlaSQL
 
-Test HTML Table Output 21.
+Test HTML Table Output 22.
 
 ```sql
 SELECT * FROM test;
