@@ -15,7 +15,16 @@ logo:     https://liascript.github.io/img/bg-showcase-2.jpg
 comment:  Macros for executing SQL code snippets with AlaSQL in LiaScript.
 
 script: https://cdn.jsdelivr.net/npm/alasql@0.6.5/dist/alasql.min.js
+attribute: [AlaSQL](https://alasql.org)
+           by [Andrey Gershun](agershun@gmail.com)
+           & [Mathias Rangel Wulff](m@rawu.dk)
+           is licensed under [MIT](https://opensource.org/licenses/MIT)
+
 script: https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.6.1/papaparse.min.js
+attribute: [PapaParse](https://www.papaparse.com)
+           by [Matthew Holt](https://twitter.com/mholt6)
+           is licensed under [MIT](https://opensource.org/licenses/MIT)
+           
 script: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
 
 
@@ -94,6 +103,7 @@ alasql("CREATE TABLE test (language INT, hello STRING);");
 alasql("INSERT INTO test VALUES (1,'Hello!');");
 alasql("INSERT INTO test VALUES (2,'Aloha!');");
 alasql("INSERT INTO test VALUES (3,'Bonjour!');");
+JSON.stringify("Note: Backed SQL Tables Where Created on Page Load..");
 </script>
 @end
 
@@ -101,9 +111,7 @@ alasql("INSERT INTO test VALUES (3,'Bonjour!');");
 
 # AlaSQL
 
-@AlaSQL.buildTables
-
-Test HTML Table Output 25.
+Test HTML Table Output 26.
 
 ```sql
 SELECT * FROM test;
@@ -118,3 +126,7 @@ SELECT * FROM test where language>1;
 @AlaSQL.eval("#dataTable2")
 
 <table id="dataTable2" border="1"></table><br>
+
+<hr/>
+
+@AlaSQL.buildTables
