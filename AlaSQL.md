@@ -48,6 +48,13 @@ function buildHtmlTable() {
     }
     $(@0).append(row$);
   }
+  var rowCount = document.getElementById(id_tag.substring(1)).rows.length-1;
+  if (rowCount > 0) {
+    complete_message="Query Execution Complete! (See Result Set Below)..."
+  } else {
+    complete_message="No Data to Return.."
+  }
+  return JSON.stringify(complete_message, null, 3);
 }
 // Adds a header row to the table and returns the set of columns.
 // Need to do union of keys from all records as some records may not contain
@@ -80,7 +87,6 @@ try {
         if (myList != 1  & ((myStriptArray[i].trim()).length) != 0) { // If data is returned, format output as table.
             $(@0).html(""); // clear out existing data
             buildHtmlTable();
-            JSON.stringify("Query Execution Complete! (See Result Set Below)...", null, 3);
         } else {
             $(@0).html(""); // clear out existing data
             JSON.stringify("No Data to Return..", null, 3);
@@ -112,7 +118,7 @@ JSON.stringify(@0);
 
 # AlaSQL
 
-Test HTML Table Output 34.
+Test HTML Table Output 35.
 
 ```sql
 SELECT * FROM test;
