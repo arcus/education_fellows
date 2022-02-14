@@ -112,7 +112,7 @@ JSON.stringify(@0);
 
 # AlaSQL
 
-Test HTML Table Output 31.
+Test HTML Table Output 32.
 
 ```sql
 SELECT * FROM test;
