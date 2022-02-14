@@ -50,9 +50,9 @@ function buildHtmlTable() {
   }
   var rowCount = document.getElementById(@0.substring(1)).rows.length-1;
   if (rowCount > 0) {
-    complete_message="Query Execution Complete! (See Result Set Below)..."
+    var complete_message = "Query Execution Complete! (See Result Set Below)..."
   } else {
-    complete_message="No Data to Return.."
+    var complete_message = "No Data to Return.."
   }
   return JSON.stringify(complete_message, null, 3);
 }
@@ -106,7 +106,7 @@ try {
 
 @AlaSQL.buildTables
 <script>
-alasql("CREATE TABLE test (language INT, hello STRING);");
+alasql("CREATE TABLE IF NOT EXISTS test (language INT, hello STRING);");
 alasql("INSERT INTO test VALUES (1,'Hello!');");
 alasql("INSERT INTO test VALUES (2,'Aloha!');");
 alasql("INSERT INTO test VALUES (3,'Bonjour!');");
@@ -118,7 +118,7 @@ JSON.stringify(@0);
 
 # AlaSQL
 
-Test HTML Table Output 36.
+Test HTML Table Output 37.
 
 ```sql
 SELECT * FROM test;
