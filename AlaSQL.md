@@ -31,13 +31,11 @@ attribute: [jQuery](https://jquery.com/)
            
 @AlaSQL.eval
 <script>
-///////////
-// USER NOTE: 
-//   An element_id tag must be passed as an argument to this macro as a string. 
-//   The results of his macro will then be rendered in any HTML element on this page referencing the specified element_id tag.
-//////////
-// Builds the HTML Table out of myList json data from Ivy restful service.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// BUILD FUNCTIONS
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function buildHtmlTable() {
+  // Builds the HTML Table out of myList, and writes output to the id attribute assigned via the "@0" argument to this marco.
   var columns = addAllColumnHeaders(myList);
   for (var i = 0 ; i < myList.length ; i++) {
     var row$ = $('<tr/>');
@@ -60,10 +58,8 @@ function buildHtmlTable() {
   }
   return JSON.stringify(complete_message, null, 3);
 }
-// Adds a header row to the table and returns the set of columns.
-// Need to do union of keys from all records as some records may not contain
-// all records
 function addAllColumnHeaders(myList) {
+  // Creates and Returns Header Row From Array Data Provided as Input.
   var columnSet = [];
   var headerTr$ = $('<tr/>');
   for (var i = 0 ; i < myList.length ; i++) {
@@ -78,6 +74,9 @@ function addAllColumnHeaders(myList) {
   $(@0).append(headerTr$);
   return columnSet;
 }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 try {
     var myinput=`@input`
     myinput=myinput.replace(/;$/, ""); // remove trailing semi-colon
