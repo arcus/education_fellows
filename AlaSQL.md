@@ -110,7 +110,7 @@ try {
 @AlaSQL.buildTables
 <script>
 alasql("DROP TABLE IF EXISTS greeting;");
-alasql("CREATE TABLE IF NOT EXISTS test (language_id INT, hello STRING);");
+alasql("CREATE TABLE IF NOT EXISTS greeting (language_id INT, hello STRING);");
 alasql("INSERT INTO greeting VALUES (1,'Hello!');");
 alasql("INSERT INTO greeting VALUES (2,'Aloha!');");
 alasql("INSERT INTO greeting VALUES (3,'Bonjour!');");
@@ -127,7 +127,7 @@ JSON.stringify(@0);
 
 # AlaSQL
 
-Test HTML Table Output 39.
+Test HTML Table Output 40.
 
 ```sql
 SELECT * FROM greeting
