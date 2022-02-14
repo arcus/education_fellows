@@ -112,7 +112,7 @@ JSON.stringify(@0);
 
 # AlaSQL
 
-Test HTML Table Output 29.
+Test HTML Table Output 30.
 
 ```sql
 SELECT * FROM test;
@@ -130,4 +130,4 @@ SELECT * FROM test where language>1;
 
 <hr/>
 
-@AlaSQL.buildTables(Note: Click the `</>` button under each text-box to run the SQL code.)
+@AlaSQL.buildTables('Note: Click the `</>` button under each text-box to run the SQL code.')
