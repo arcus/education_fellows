@@ -128,6 +128,6 @@ SELECT * FROM test where language>1;
 
 <table id="dataTable2" border="1"></table><br>
 
-<hr/>
+<hr/><hr/>
 
 @AlaSQL.buildTables('Note: Click the `</>` button under each text-box to run the SQL code.')
