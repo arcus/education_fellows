@@ -109,10 +109,16 @@ try {
 
 @AlaSQL.buildTables
 <script>
-alasql("CREATE TABLE IF NOT EXISTS test (language INT, hello STRING);");
-alasql("INSERT INTO test VALUES (1,'Hello!');");
-alasql("INSERT INTO test VALUES (2,'Aloha!');");
-alasql("INSERT INTO test VALUES (3,'Bonjour!');");
+alasql("DROP TABLE IF EXISTS greeting;");
+alasql("CREATE TABLE IF NOT EXISTS test (language_id INT, hello STRING);");
+alasql("INSERT INTO greeting VALUES (1,'Hello!');");
+alasql("INSERT INTO greeting VALUES (2,'Aloha!');");
+alasql("INSERT INTO greeting VALUES (3,'Bonjour!');");
+alasql("DROP TABLE IF EXISTS language;");
+alasql("CREATE TABLE IF NOT EXISTS language (language_id INT, language_name STRING);");
+alasql("INSERT INTO language VALUES (1,'English');");
+alasql("INSERT INTO language VALUES (2,'Hawaiian');");
+alasql("INSERT INTO language VALUES (3,'French');");
 JSON.stringify(@0);
 </script>
 @end
@@ -121,17 +127,22 @@ JSON.stringify(@0);
 
 # AlaSQL
 
-Test HTML Table Output 38.
+Test HTML Table Output 39.
 
 ```sql
-SELECT * FROM test;
+SELECT * FROM greeting
 ```
 @AlaSQL.eval("#dataTable1")
 
 <table id="dataTable1" border="1"></table><br>
 
 ```sql
-SELECT * FROM test where language>1;
+SELECT * 
+FROM greeting
+LEFT JOIN language
+  ON language.language_id = greeting.language_id 
+where
+  greeting.language_id > 1
 ```
 @AlaSQL.eval("#dataTable2")
 
@@ -144,7 +155,7 @@ SELECT * FROM test where language>1;
 # AlaSQL - Page 2
 
 ```sql
-SELECT * FROM test;
+SELECT * FROM test
 ```
 @AlaSQL.eval("#dataTable3")
 
