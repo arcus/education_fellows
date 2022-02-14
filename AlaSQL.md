@@ -131,3 +131,12 @@ SELECT * FROM test where language>1;
 <hr/><hr/>
 
 @AlaSQL.buildTables('Note: Click the `</>` button under each text-box to run the SQL code.')
+
+# AlaSQL - Page 2
+
+```sql
+SELECT * FROM test;
+```
+@AlaSQL.eval("#dataTable3")
+
+<table id="dataTable2" border="1"></table><br>
