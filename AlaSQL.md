@@ -48,7 +48,7 @@ function buildHtmlTable() {
     }
     $(@0).append(row$);
   }
-  var rowCount = document.getElementById(id_tag.substring(1)).rows.length-1;
+  var rowCount = document.getElementById(@0.substring(1)).rows.length-1;
   if (rowCount > 0) {
     complete_message="Query Execution Complete! (See Result Set Below)..."
   } else {
@@ -118,7 +118,7 @@ JSON.stringify(@0);
 
 # AlaSQL
 
-Test HTML Table Output 35.
+Test HTML Table Output 36.
 
 ```sql
 SELECT * FROM test;
