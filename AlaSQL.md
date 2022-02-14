@@ -104,7 +104,7 @@ alasql("CREATE TABLE test (language INT, hello STRING);");
 alasql("INSERT INTO test VALUES (1,'Hello!');");
 alasql("INSERT INTO test VALUES (2,'Aloha!');");
 alasql("INSERT INTO test VALUES (3,'Bonjour!');");
-JSON.stringify("Note: Backed SQL Tables Where Created on Page Load..");
+JSON.stringify(@0);
 </script>
 @end
 
@@ -130,4 +130,4 @@ SELECT * FROM test where language>1;
 
 <hr/>
 
-@AlaSQL.buildTables
+@AlaSQL.buildTables("Note: Click the `</>` button under each text to run the SQL code.")
