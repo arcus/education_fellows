@@ -80,7 +80,7 @@ try {
         if (myList != 1  & ((myStriptArray[i].trim()).length) != 0) { // If data is returned, format output as table.
             $(@0).html(""); // clear out existing data
             buildHtmlTable();
-            JSON.stringify("Query Execution Complete! (See Result Set Below)...");
+            // JSON.stringify("Query Execution Complete! (See Result Set Below)...");
         } else {
             $(@0).html(""); // clear out existing data
             JSON.stringify("No Data to Return..");
@@ -112,7 +112,7 @@ JSON.stringify(@0);
 
 # AlaSQL
 
-Test HTML Table Output 30.
+Test HTML Table Output 31.
 
 ```sql
 SELECT * FROM test;
