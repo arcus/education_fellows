@@ -27,7 +27,8 @@ attribute: [PapaParse](https://www.papaparse.com)
            
 script: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
 attribute: [jQuery](https://jquery.com/)
-
+           is licensed under [OpenJS Foundation](https://openjsf.org/)
+           
 @AlaSQL.eval
 <script>
 ///////////
