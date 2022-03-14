@@ -24,11 +24,11 @@ script: https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.6.1/papaparse.min.js
 attribute: [PapaParse](https://www.papaparse.com)
            by [Matthew Holt](https://twitter.com/mholt6)
            is licensed under [MIT](https://opensource.org/licenses/MIT)
-           
+
 script: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
 attribute: [jQuery](https://jquery.com/)
            is licensed under [OpenJS Foundation](https://openjsf.org/)
-           
+
 @AlaSQL.eval
 <script>
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -240,7 +240,6 @@ try {
 </script>
 @end
 
-
 @AlaSQL.buildTable_allergies
 <script>
     alasql("DROP TABLE IF EXISTS allergies;");
@@ -406,7 +405,6 @@ try {
 </script>
 @end
 
-
 @AlaSQL.buildTable_observations
 <script>
     alasql("DROP TABLE IF EXISTS observations;");
@@ -491,7 +489,7 @@ where
 
 # AlaSQL - Page 2
 
-Test 14.
+Test 15.
 
 ```sql
 SELECT * FROM patients
