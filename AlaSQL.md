@@ -226,15 +226,14 @@ where
 
 # AlaSQL - Page 2
 
-Test 7.
-
+Test 8.
 
 ```sql
 SELECT * FROM patients
 ```
 @AlaSQL.eval("#dataTable3")
 
-<table id="dataTable2" border="1"></table><br>
+<table id="dataTable3" border="1"></table><br>
 
 <hr/><hr/>
 
