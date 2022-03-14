@@ -109,89 +109,353 @@ try {
 
 @AlaSQL.buildTables
 <script>
-alasql("DROP TABLE IF EXISTS greeting;");
-alasql("CREATE TABLE IF NOT EXISTS greeting (language_id INT, hello STRING);");
-alasql("INSERT INTO greeting VALUES (1,'Hello!');");
-alasql("INSERT INTO greeting VALUES (2,'Aloha!');");
-alasql("INSERT INTO greeting VALUES (3,'Bonjour!');");
-alasql("DROP TABLE IF EXISTS language;");
-alasql("CREATE TABLE IF NOT EXISTS language (language_id INT, language_name STRING);");
-alasql("INSERT INTO language VALUES (1,'English');");
-alasql("INSERT INTO language VALUES (2,'Hawaiian');");
-alasql("INSERT INTO language VALUES (3,'French');");
-JSON.stringify(@0);
+    alasql("DROP TABLE IF EXISTS greeting;");
+    alasql("CREATE TABLE IF NOT EXISTS greeting (language_id INT, hello STRING);");
+    alasql("INSERT INTO greeting VALUES (1,'Hello!');");
+    alasql("INSERT INTO greeting VALUES (2,'Aloha!');");
+    alasql("INSERT INTO greeting VALUES (3,'Bonjour!');");
+    alasql("DROP TABLE IF EXISTS language;");
+    alasql("CREATE TABLE IF NOT EXISTS language (language_id INT, language_name STRING);");
+    alasql("INSERT INTO language VALUES (1,'English');");
+    alasql("INSERT INTO language VALUES (2,'Hawaiian');");
+    alasql("INSERT INTO language VALUES (3,'French');");
+    JSON.stringify(@0);
 </script>
 @end
 
 @AlaSQL.buildTable_patients
 <script>
-alasql("DROP TABLE IF EXISTS patients;");
-alasql("create table patients (id text,birthdate date,deathdate date,ssn text,drivers text,passport text,prefix text,first text,last text,suffix text,maiden text,marital text,race text,ethnicity text,gender text,birthplace text,address text,city text,state text,county text,zip integer,lat real,lon real);");
-alasql("INSERT INTO patients VALUES ('76982e06-f8b8-4509-9ca3-65a99c8650fe','1982-09-01',null,'999-21-5604','S99957470','X55072337X','Ms.','Christal240','Brown30',null,null,'S','white','nonhispanic','F','Bellingham  Massachusetts  US','1060 Hansen Overpass Suite 86','Boston','Massachusetts','Suffolk County',2118,42.2845984733578,-71.1344967487613);");
-alasql("INSERT INTO patients VALUES ('71ba0469-f0cc-4177-ac70-ea07cb01c8b8','2000-11-21','2012-11-21','999-28-2716',null,null,null,'Carmelia328','Konopelski743',null,null,null,'white','nonhispanic','F','Lee  Massachusetts  US','1025 Collier Arcade','Ashland','Massachusetts','Middlesex County',null,42.2919859634347,-71.4637238426449);");
-alasql("INSERT INTO patients VALUES ('bf35e4fa-ea4f-40a4-8fe6-1f2f26e0aa45','2000-11-21',null,'999-87-8860','S99917788',null,'Ms.','Cecila397','Feil794',null,null,null,'white','nonhispanic','F','Nahant  Massachusetts  US','873 Mueller Arcade Unit 96','Ashland','Massachusetts','Middlesex County',null,42.2138985577807,-71.503695110333);");
-alasql("INSERT INTO patients VALUES ('e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','2013-07-02',null,'999-82-6451',null,null,null,'Lorrie905','Leannon79',null,null,null,'white','nonhispanic','F','Winthrop  Massachusetts  US','813 Casper Street','Peabody','Massachusetts','Essex County',1940,42.4951616189433,-71.0071749067398);");
-alasql("INSERT INTO patients VALUES ('ddfa05a6-b8a6-4208-b609-28f9a6a8d79e','2001-12-27',null,'999-83-2956','S99936978',null,'Ms.','Joleen561','Quitzon246',null,null,null,'white','nonhispanic','F','Woburn  Massachusetts  US','976 Bode Parade Apt 52','Greenfield','Massachusetts','Franklin County',null,42.6425538261325,-72.6360572438334);");
-alasql("INSERT INTO patients VALUES ('df91aedf-3e17-44c3-b273-62e35f518475','2008-10-24',null,'999-97-9250',null,null,null,'Sean831','Casper496',null,null,null,'white','nonhispanic','M','Marblehead  Massachusetts  US','173 Leuschke Club Unit 65','Waltham','Massachusetts','Middlesex County',2453,42.428920338643,-71.2288547808303);");
-alasql("INSERT INTO patients VALUES ('0c5aa52a-3b1d-4289-af16-29f7a2d07fec','1984-06-24',null,'999-82-1441','S99919484','X25592388X','Mrs.','Elvira561','Navarro863',null,'Cabrera242','M','white','hispanic','F','Santiago de los Caballeros  Santiago  DO','451 Buckridge Harbor','Attleboro','Massachusetts','Bristol County',null,41.8458658446907,-71.3317871538724);");
-alasql("INSERT INTO patients VALUES ('2a88cb57-86fa-4259-93bf-3956e91b07f4','2017-12-23',null,'999-28-4976',null,null,null,'Mateo562','Palacios784',null,null,null,'white','hispanic','M','Santiago  Santiago Province  CL','841 McGlynn Knoll Suite 67','Taunton','Massachusetts','Bristol County',2780,41.959978467312,-71.0141637048784);");
-alasql("INSERT INTO patients VALUES ('71e13815-55fb-4734-bcac-6079160d82a0','1973-06-02',null,'999-94-8759','S99996780','X23275205X','Mrs.','Laticia649','Flatley871',null,'Rempel203','M','white','nonhispanic','F','Boston  Massachusetts  US','469 Gerhold Bay Unit 34','Waltham','Massachusetts','Middlesex County',2451,42.4312144913848,-71.2680783842969);");
-alasql("INSERT INTO patients VALUES ('852f4588-ba8f-4eeb-94fe-5c3c974ab114','1956-01-02',null,'999-60-6320','S99945237','X75083103X','Mrs.','Keren761','Kiehn525',null,'Jast432','M','white','hispanic','F','Whitman  Massachusetts  US','167 Bosco Boulevard Unit 9','Lynn','Massachusetts','Essex County',1904,42.4446755379841,-70.9866011586124);");
-alasql("INSERT INTO patients VALUES ('09616ead-22c8-4210-8cb9-2fdc28e043ca','1953-08-03',null,'999-68-5321','S99927707','X54034630X','Mrs.','Christena299','Lang846',null,'Reynolds644','M','white','nonhispanic','F','Boston  Massachusetts  US','124 Fadel Dam Apt 81','Attleboro','Massachusetts','Bristol County',2703,41.9761886591609,-71.3242228778937);");
-alasql("INSERT INTO patients VALUES ('f7d7b580-e670-4921-bc67-550ec468d506','1975-02-16',null,'999-29-4371','S99927874','X76480436X','Mrs.','Micki733','Witting912',null,'Turner526','M','white','nonhispanic','F','Chelsea  Massachusetts  US','589 Pfeffer Avenue','Tewksbury','Massachusetts','Middlesex County',null,42.59289752343,-71.1833293183252);");
-alasql("INSERT INTO patients VALUES ('24bca5cf-ba55-457f-8e80-49690202443c','1977-06-28',null,'999-31-8026','S99975475','X46617643X','Mr.','Lionel365','Fadel536',null,null,'M','white','nonhispanic','M','Dighton  Massachusetts  US','1015 Parisian Divide Unit 26','Fairhaven','Massachusetts','Bristol County',null,41.6529893063487,-70.8948756027136);");
-alasql("INSERT INTO patients VALUES ('f36775e8-bf5a-40a2-a223-679c05b46004','2008-01-18',null,'999-56-1320',null,null,null,'Scott935','Boyer713',null,null,null,'black','nonhispanic','M','Templeton  Massachusetts  US','203 Sporer Esplanade Unit 14','Oxford','Massachusetts','Worcester County',null,42.1336968374336,-71.8348235441901);");
-alasql("INSERT INTO patients VALUES ('8be68b2d-8054-4882-8715-65297d36767a','1988-05-12',null,'999-15-5114','S99941698','X21674254X','Mrs.','James276','McClure239',null,'Toy286','M','white','nonhispanic','F','Somerville  Massachusetts  US','385 DAmore Byway Unit 19','Westport','Massachusetts','Bristol County',null,41.5719802553537,-71.092897914972);");
-alasql("INSERT INTO patients VALUES ('59669e7c-0190-4cbf-9e27-4898f1a35d03','1986-01-31',null,'999-65-7058','S99967380','X42303726X','Mr.','Julio255','Juárez383',null,null,'M','white','hispanic','M','Caracas  Capital District  VE','1013 Skiles Trafficway Unit 29','North Brookfield','Massachusetts','Worcester County',1535,42.3016733122009,-72.0730981041963);");
-alasql("INSERT INTO patients VALUES ('4b92e3f1-b92b-48ec-9baa-2905409d1743','2015-09-18',null,'999-27-7943',null,null,null,'Demetrice140','Zieme486',null,null,null,'white','nonhispanic','F','Revere  Massachusetts  US','856 Yundt Harbor Suite 60','Belchertown','Massachusetts','Hampshire County',null,42.3164507288839,-72.3610840980465);");
-alasql("INSERT INTO patients VALUES ('9fda53d4-6fcc-4ef5-a1fe-16e007182ec2','1999-05-24',null,'999-91-6914','S99935557','X43776419X','Ms.','Ardath226','Spinka232',null,null,null,'white','nonhispanic','F','Templeton  Massachusetts  US','934 Little Crossroad Apt 52','Fitchburg','Massachusetts','Worcester County',null,42.6195236351258,-71.8595947155867);");
-alasql("INSERT INTO patients VALUES ('8ba79a69-6f3f-4aa5-be2a-dfbd0119d3ea','2015-08-06',null,'999-43-7577',null,null,null,'Latonia966','Watsica258',null,null,null,'white','nonhispanic','F','Grafton  Massachusetts  US','1092 Lowe Alley','Wareham','Massachusetts','Plymouth County',null,41.7824350691882,-70.7367243449479);");
-alasql("INSERT INTO patients VALUES ('128d5c93-dfce-49a1-8d08-e9b24abcb4db','2015-09-03',null,'999-19-4863',null,null,null,'Tifany477','Wilderman619',null,null,null,'black','nonhispanic','F','Worcester  Massachusetts  US','975 Murphy Tunnel Apt 27','Plymouth','Massachusetts','Plymouth County',2360,41.8801316490312,-70.6619548788536);");
-alasql("INSERT INTO patients VALUES ('eba0f292-1951-4af9-9f14-9d6e9db8e480','2007-08-06',null,'999-48-3220',null,null,null,'Eugena417','Kris249',null,null,null,'white','nonhispanic','F','Concord  Massachusetts  US','652 Swaniawski Crossroad','Rochester','Massachusetts','Plymouth County',null,41.7398459280911,-70.8018859892228);");
-alasql("INSERT INTO patients VALUES ('5846c531-ad71-4b34-9607-3a1022cddffa','2008-09-07',null,'999-46-6114',null,null,null,'Marty115','Abshire638',null,null,null,'white','nonhispanic','F','Springfield  Massachusetts  US','728 Lynch Crossing','Weymouth','Massachusetts','Norfolk County',2190,42.1606760073641,-70.916636029243);");
-alasql("INSERT INTO patients VALUES ('d00fc5dd-be0e-47aa-a52a-5cf9ee3a78b5','2002-11-27',null,'999-12-8726','S99977695',null,null,'Maxwell782','Reichel38',null,null,null,'white','nonhispanic','M','Braintree  Massachusetts  US','693 Greenfelder Annex Suite 77','Needham','Massachusetts','Norfolk County',2492,42.2858720986636,-71.2510457960187);");
-alasql("INSERT INTO patients VALUES ('7e4e6d32-15cd-4d5f-a4cc-e5c95ab35eb0','1962-12-18',null,'999-35-9139','S99942641','X7322252X','Mrs.','Ellamae709','Bins636',null,'Jacobs452','M','white','nonhispanic','F','Lynn  Massachusetts  US','1075 Stokes Mall Apt 14','Ware','Massachusetts','Hampshire County',1082,42.2926402063468,-72.2362947721484);");
-alasql("INSERT INTO patients VALUES ('841095eb-d29f-4492-8f0e-08011321e85d','2017-04-08',null,'999-81-1909',null,null,null,'Carlton317','Leffler128',null,null,null,'asian','nonhispanic','M','Ipswich  Massachusetts  US','344 Feest Camp Suite 73','Wakefield','Massachusetts','Middlesex County',1880,42.4780284069299,-71.0892699664186);");
-alasql("INSERT INTO patients VALUES ('e112cedd-a98e-489e-abb0-875420d40397','2013-09-08',null,'999-98-4107',null,null,null,'Bobby524','Robel940',null,null,null,'white','nonhispanic','F','Milford  Massachusetts  US','389 Beier Annex Unit 70','Brookline','Massachusetts','Norfolk County',null,42.2978552171746,-71.1677734007861);");
-alasql("INSERT INTO patients VALUES ('ab6a2662-f6d1-4da6-b3ce-3929d68650d7','1971-01-16',null,'999-76-3317','S99978505','X28929072X','Mrs.','Miesha237','Wyman904',null,'Jacobs452','M','white','nonhispanic','F','Harvard  Massachusetts  US','850 Thiel Road Unit 0','Westfield','Massachusetts','Hampden County',1086,42.0904434489837,-72.7927566478986);");
-alasql("INSERT INTO patients VALUES ('c844d8ac-d5bf-45eb-b8cf-84327c9a4e97','1965-07-08',null,'999-43-1836','S99911853','X60743162X','Mrs.','Dannette613','Bartoletti50',null,'Murray856','M','white','nonhispanic','F','Hudson  Massachusetts  US','152 Heller Wynd Apt 16','Holyoke','Massachusetts','Hampden County',1040,42.1701286966339,-72.6412540036445);");
-alasql("INSERT INTO patients VALUES ('c4f221f2-611b-4cdd-a0b6-958bbbfcf346','1987-03-18',null,'999-30-7178','S99914950','X7202355X','Mr.','Homero668','Reyes140',null,null,'M','white','hispanic','M','La Paz  Baja California  MX','257 Gutmann Highlands Apt 89','Hopkinton','Massachusetts','Middlesex County',1748,42.2597000095724,-71.4923689837963);");
-alasql("INSERT INTO patients VALUES ('77a0cd86-92bb-4c6d-a91a-49ee66e353b9','1989-08-19',null,'999-62-5886','S99996704','X23047417X','Mrs.','Norma469','Mayer370',null,'Deckow585','M','white','nonhispanic','F','Medfield  Massachusetts  US','192 Wilderman Trafficway Unit 13','Canton','Massachusetts','Norfolk County',null,42.1352712126216,-71.1121525530781);");
-alasql("INSERT INTO patients VALUES ('ea8e6623-5590-4d01-bfc1-25d86b1b4491','1994-04-21',null,'999-70-5118','S99979218','X10796024X','Ms.','Winona266','Reinger292',null,null,null,'asian','nonhispanic','F','Brockton  Massachusetts  US','525 Mills Quay Apt 74','Douglas','Massachusetts','Worcester County',null,42.0434467134591,-71.7811000556293);");
-alasql("INSERT INTO patients VALUES ('1a289f28-b73b-4d3a-83ef-2216e8837bad','2005-10-15',null,'999-68-7312',null,null,null,'Earl438','Friesen796',null,null,null,'white','nonhispanic','M','Framingham  Massachusetts  US','820 Stehr Fort Suite 88','Quincy','Massachusetts','Norfolk County',2170,42.2884273095886,-71.000040216754);");
-alasql("INSERT INTO patients VALUES ('ca8803ac-66ef-4895-a8c4-290313fcee6f','1980-05-06',null,'999-49-8670','S99952852','X444716X','Ms.','Rowena386','Borer986',null,null,'S','white','nonhispanic','F','Rockland  Massachusetts  US','825 Waters Landing','Somerville','Massachusetts','Middlesex County',2143,42.4136427791832,-71.1018363493116);");
-alasql("INSERT INTO patients VALUES ('9ec6d974-df2b-44ec-acc2-77d96725f4f4','1955-03-31',null,'999-89-7709','S99978137','X68810143X','Mrs.','Shala169','Keeling57',null,'Spinka232','M','white','nonhispanic','F','Wilbraham  Massachusetts  US','653 White Dam Unit 20','Quincy','Massachusetts','Norfolk County',2170,42.2741014792848,-71.0416632956233);");
-alasql("INSERT INTO patients VALUES ('bab51ea9-2945-4f8a-8015-e430f80a908e','2013-03-26',null,'999-65-6656',null,null,null,'Brooks264','Hirthe744',null,null,null,'black','nonhispanic','M','Marion  Massachusetts  US','330 Klein Mews','Boston','Massachusetts','Suffolk County',2121,42.3927574250863,-71.0940017494868);");
-alasql("INSERT INTO patients VALUES ('1d4f63d2-ddc0-47bc-b2cc-6f58068a5901','2014-10-16',null,'999-78-4113',null,null,null,'Imogene688','Friesen796',null,null,null,'white','nonhispanic','F','Brockton  Massachusetts  US','1057 Davis Walk Suite 15','Hanson','Massachusetts','Plymouth County',null,42.0425599559534,-70.8794910837097);");
-alasql("INSERT INTO patients VALUES ('2174522f-1d23-47cf-b56c-4ce3193c5bab','2009-10-16',null,'999-49-6603',null,null,null,'Alyce744','Prohaska837',null,null,null,'white','nonhispanic','F','Dedham  Massachusetts  US','909 Skiles Run Unit 77','Southwick','Massachusetts','Hampden County',null,42.0210227015259,-72.7761888145871);");
-alasql("INSERT INTO patients VALUES ('5c520448-6728-42cb-8cf2-457bc7c2b1f1','2008-08-31',null,'999-19-1869',null,null,null,'Noble66','Pagac496',null,null,null,'white','nonhispanic','M','Boston  Massachusetts  US','123 Jaskolski Terrace','Arlington','Massachusetts','Middlesex County',2474,42.45897606462,-71.1355026869962);");
-alasql("INSERT INTO patients VALUES ('a694ecfc-e39e-46dc-876e-029b32ba0135','2006-08-15',null,'999-31-6511',null,null,null,'Teisha100','Lockman863',null,null,null,'white','nonhispanic','F','Worcester  Massachusetts  US','475 Wolf Hollow Suite 53','Chicopee','Massachusetts','Hampden County',1020,42.1484557774119,-72.5498374009455);");
-alasql("INSERT INTO patients VALUES ('d7d1f837-a2c8-4648-b498-a02278b91a08','1987-03-11',null,'999-58-8342','S99936824','X83937653X','Mr.','Haywood675','Jast432',null,null,'M','white','nonhispanic','M','Gloucester  Massachusetts  US','757 Jenkins Crossroad','Wakefield','Massachusetts','Middlesex County',null,42.4884045933728,-71.0396652735026);");
-alasql("INSERT INTO patients VALUES ('8b119fdd-0fea-46dd-9106-b5c7813e7260','2000-07-25',null,'999-88-6112','S99942965',null,'Mr.','Christian753','Williamson769',null,null,null,'white','nonhispanic','M','Chelsea  Massachusetts  US','348 Beier Walk Unit 18','Medford','Massachusetts','Middlesex County',null,42.402047492327,-71.1513611400876);");
-alasql("INSERT INTO patients VALUES ('25f2b770-8821-48f0-a7fe-460dfe3b15b8','2000-05-15',null,'999-25-3887','S99990531',null,'Mr.','Winford225','Hoeger474',null,null,null,'white','nonhispanic','M','Holliston  Massachusetts  US','1027 Morar Road','Swansea','Massachusetts','Bristol County',null,41.7944024270971,-71.2494160992204);");
-alasql("INSERT INTO patients VALUES ('26ca976d-0b5b-4662-af41-535ff670dd5a','2014-09-22',null,'999-70-4950',null,null,null,'Shanti441','Lesch175',null,null,null,'white','nonhispanic','F','Boston  Massachusetts  US','234 Sawayn Drive','Amherst','Massachusetts','Hampshire County',null,42.4102817384995,-72.4674140466375);");
-alasql("INSERT INTO patients VALUES ('65243e61-da11-42a6-826e-a43d960d1e84','1990-09-16',null,'999-29-3981','S99976520','X24497111X','Mrs.','Anja508','Lubowitz58',null,'Huels583','M','white','nonhispanic','F','Lowell  Massachusetts  US','635 Bruen Bypass','New Bedford','Massachusetts','Bristol County',2744,41.6994267318715,-70.9845945618785);");
-alasql("INSERT INTO patients VALUES ('08ea9043-5f84-46ab-9815-81d90024169a','1960-10-27',null,'999-55-8341','S99929107','X74835475X','Mrs.','Mui729','Kihn564',null,'Ullrich385','M','white','nonhispanic','F','Somerville  Massachusetts  US','763 Smitham Rue','Worthington','Massachusetts','Hampshire County',null,42.368206635543,-72.9164963896378);");
-alasql("INSERT INTO patients VALUES ('a3abc11b-0fd1-4eb9-a69a-9075b4737612','1911-11-19',null,'999-47-9209','S99947584','X12431671X','Mr.','Irvin970','Goodwin327',null,null,'M','white','nonhispanic','M','Framingham  Massachusetts  US','114 Cummerata Parade','West Tisbury','Massachusetts','Dukes County',null,41.4143885882757,-70.6248836943567);");
-alasql("INSERT INTO patients VALUES ('5a1848d9-9b49-4529-94f1-e463b502c73b','1965-02-12','2000-03-03','999-56-6320','S99966540','X651013X','Mr.','Harris789','Metz686',null,null,'M','black','nonhispanic','M','Lowell  Massachusetts  US','904 Blick Pathway Apt 45','Easthampton','Massachusetts','Hampshire County',1027,42.3040223726238,-72.7895477376863);");
-alasql("INSERT INTO patients VALUES ('f504b982-e99b-4064-ad25-9e5480e769cd','1957-04-28',null,'999-15-8346','S99921820','X72325996X','Mr.','Jerrold404','Purdy2',null,null,'S','white','nonhispanic','M','Sutton  Massachusetts  US','544 Luettgen View Unit 73','Holyoke','Massachusetts','Hampden County',1040,42.1673552322292,-72.6594823655034);");
-alasql("INSERT INTO patients VALUES ('076688b0-f0d5-4c45-8bc6-b206684fa9ac','1959-04-24',null,'999-81-5413','S99922421','X12417642X','Ms.','Manie910','Torp761',null,null,'S','white','nonhispanic','F','Methuen  Massachusetts  US','359 Powlowski Parade','South Hadley','Massachusetts','Hampshire County',null,42.222849492012,-72.6142782115898);");
-alasql("INSERT INTO patients VALUES ('8aeeef59-43b3-4983-8f1d-54f3e8d5ea92','1988-01-03',null,'999-16-7944','S99944313','X89775026X','Mr.','Vaughn909','Beatty507',null,null,'M','white','nonhispanic','M','Rome  Lazio  IT','843 Wyman Village','Essex','Massachusetts','Essex County',null,42.6424493599461,-70.7641867001207);");
-alasql("INSERT INTO patients VALUES ('13db4bb8-d1dc-4158-a820-d2d1b7084fc4','1946-05-11',null,'999-99-3770','S99960086','X86202856X','Mrs.','Dulce933','Keebler762',null,'Hirthe744','M','white','nonhispanic','F','Everett  Massachusetts  US','911 Lebsack Route Unit 85','Malden','Massachusetts','Middlesex County',2155,42.3795762890418,-71.1151716913763);");
-alasql("INSERT INTO patients VALUES ('e188fafe-c1bb-45dc-9627-4ff4e4bc0ec0','2008-07-16',null,'999-93-5743',null,null,null,'Frances376','Schumm995',null,null,null,'white','nonhispanic','M','Chelsea  Massachusetts  US','826 Hammes Mission Apt 1','Natick','Massachusetts','Middlesex County',null,42.2584672080661,-71.3444415391516);");
-alasql("INSERT INTO patients VALUES ('b4d1167c-9adf-40e0-8295-4c3f25fdb3b4','2010-04-06',null,'999-62-7550',null,null,null,'Yong583','Zulauf375',null,null,null,'white','nonhispanic','M','Peabody  Massachusetts  US','791 Schoen Rest Suite 25','Wellesley','Massachusetts','Norfolk County',null,42.3121457217313,-71.238329167143);");
-alasql("INSERT INTO patients VALUES ('a4222dad-09bb-4049-b3dc-01b79f41012f','1963-05-21',null,'999-66-9769','S99944670','X8075158X','Mr.','Colin861','Jacobson885',null,null,'M','white','nonhispanic','M','Essex  Massachusetts  US','756 Skiles Underpass','Worcester','Massachusetts','Worcester County',1606,42.2410954683905,-71.8685532504472);");
-alasql("INSERT INTO patients VALUES ('0e1ad739-81d1-4170-841d-414ddc97c93a','1997-07-30',null,'999-18-8253','S99982219','X314488X','Ms.','Vanda440','Cruickshank494',null,null,null,'white','nonhispanic','F','Worcester  Massachusetts  US','811 Hoppe Loaf','Boston','Massachusetts','Suffolk County',2114,42.3819756196788,-71.0440702038103);");
-alasql("INSERT INTO patients VALUES ('92709d5b-63d2-4e47-b857-dccb09724ea3','1962-11-22',null,'999-37-3365','S99965897','X2354917X','Mr.','Diego848','Witting912',null,null,'M','white','nonhispanic','M','Wellesley  Massachusetts  US','811 Becker Gardens Unit 23','Medford','Massachusetts','Middlesex County',2145,42.4281944325234,-71.0711909930217);");
-alasql("INSERT INTO patients VALUES ('22415347-d2fb-4357-aaeb-ddba23e5cdf0','2018-03-12',null,'999-12-3897',null,null,null,'Buford910','Schultz619',null,null,null,'white','nonhispanic','M','Newburyport  Massachusetts  US','725 Fadel Byway Unit 97','Newburyport','Massachusetts','Essex County',1951,42.8505747515068,-70.8432980226202);");
-alasql("INSERT INTO patients VALUES ('b37c9b35-6fea-4570-b7f6-379baf4c9399','1982-07-25',null,'999-24-2069','S99948585','X63010439X','Mrs.','Stephany248','Larson43',null,'Hauck852','M','white','nonhispanic','F','New Bedford  Massachusetts  US','164 Friesen Trail Unit 13','Seekonk','Massachusetts','Bristol County',null,41.7946147725916,-71.2749171006568);");
-alasql("INSERT INTO patients VALUES ('b1b10f6e-e97a-426a-9581-f1a5c29b6e05','1914-09-06','1998-10-10','999-22-8602','S99961447','X28933673X','Mr.','Richie600','Steuber698',null,null,'M','white','nonhispanic','M','Boston  Massachusetts  US','1025 Kreiger Pathway','Worcester','Massachusetts','Worcester County',null,42.2313390454105,-71.7745961879125);");
-alasql("INSERT INTO patients VALUES ('0aaa2164-8de6-4152-8674-14d254aae13a','2008-05-11',null,'999-38-9488',null,null,null,'Drew592','Kunze215',null,null,null,'white','nonhispanic','M','Boston  Massachusetts  US','536 Cassin Mall','Lynn','Massachusetts','Essex County',1907,42.4261038655636,-70.969762559067);");
-alasql("INSERT INTO patients VALUES ('1c2aa038-9366-4c7d-9a3e-52cb753a670f','1962-09-13',null,'999-19-8817','S99966954','X83180931X','Mr.','Homero668','Carrillo204',null,null,'M','white','hispanic','M','Gaudalajara  Jalisco  MX','627 Weissnat Fork','Boston','Massachusetts','Suffolk County',2128,42.3109346386431,-71.0700902117231);");
-alasql("INSERT INTO patients VALUES ('8bf8631f-2fd4-4dc7-af2b-c400499fedfc','2002-03-14',null,'999-50-9855','S99949403',null,'Ms.','Enriqueta274','Ferry570',null,null,null,'black','nonhispanic','F','Norwood  Massachusetts  US','255 Christiansen Way','Uxbridge','Massachusetts','Worcester County',null,42.1010545480247,-71.5971893773271);");
-alasql("INSERT INTO patients VALUES ('c5d6bdfa-5554-4927-8fa8-794e5514cb56','1978-10-26',null,'999-42-1582','S99912021','X572354X','Mr.','Edmundo94','Romaguera67',null,null,'M','white','nonhispanic','M','Chelsea  Massachusetts  US','1065 Hackett Ville Suite 4','Gloucester','Massachusetts','Essex County',1930,42.5899646892389,-70.6792943103089);");
-alasql("INSERT INTO patients VALUES ('2a6d1e58-88eb-4be0-b6b4-59a471257c2e','1964-10-10',null,'999-22-8704','S99976805','X66668021X','Ms.','Nikia872','Herzog843',null,null,'S','white','nonhispanic','F','Wareham  Massachusetts  US','679 Robel Junction Apt 36','Quincy','Massachusetts','Norfolk County',2169,42.2640821758816,-71.0518467413496);");
-JSON.stringify(@0);
+    alasql("DROP TABLE IF EXISTS patients;");+
+    alasql("create table patients (id text,birthdate date,deathdate date,ssn text,drivers text,passport text,prefix text,first text,last text,suffix text,maiden text,marital text,race text,ethnicity text,gender text,birthplace text,address text,city text,state text,county text,zip integer,lat real,lon real);");+
+    alasql("INSERT INTO patients VALUES ('bf35e4fa-ea4f-40a4-8fe6-1f2f26e0aa45','2000-11-21',null'999-87-8860','S99917788',null'Ms.','Cecila397','Feil794',null,null'white','nonhispanic','F','Nahant  Massachusetts  US','873 Mueller Arcade Unit 96','Ashland','Massachusetts','Middlesex County',null42.2138985577807,-71.503695110333);");+
+    alasql("INSERT INTO patients VALUES ('e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','2013-07-02',null'999-82-6451',null,null'Lorrie905','Leannon79',null,null'white','nonhispanic','F','Winthrop  Massachusetts  US','813 Casper Street','Peabody','Massachusetts','Essex County',1940,42.4951616189433,-71.0071749067398);");+
+    alasql("INSERT INTO patients VALUES ('e061409e-4b85-4ec1-b1f7-02677d51f763','1997-09-11',null'999-32-2366','S99995098','X50396137X','Ms.','Tabetha269','OHara248',null,null'white','nonhispanic','F','Auburn  Massachusetts  US','1080 Sawayn Gateway Suite 9','Framingham','Massachusetts','Middlesex County',1701,42.3224819015944,-71.4003256055831);");+
+    alasql("INSERT INTO patients VALUES ('71e13815-55fb-4734-bcac-6079160d82a0','1973-06-02',null'999-94-8759','S99996780','X23275205X','Mrs.','Laticia649','Flatley871',null'Rempel203','M','white','nonhispanic','F','Boston  Massachusetts  US','469 Gerhold Bay Unit 34','Waltham','Massachusetts','Middlesex County',2451,42.4312144913848,-71.2680783842969);");+
+    alasql("INSERT INTO patients VALUES ('ca3330c5-bbbc-47e7-addb-302f2e069986','2003-06-23',null'999-44-5854','S99912993',null,'Golden321','Pollich983',null,null'white','nonhispanic','F','Carlisle  Massachusetts  US','792 OKon Byway','Springfield','Massachusetts','Hampden County',1105,42.0930726815877,-72.5803988374441);");+
+    alasql("INSERT INTO patients VALUES ('24bca5cf-ba55-457f-8e80-49690202443c','1977-06-28',null'999-31-8026','S99975475','X46617643X','Mr.','Lionel365','Fadel536',null,'M','white','nonhispanic','M','Dighton  Massachusetts  US','1015 Parisian Divide Unit 26','Fairhaven','Massachusetts','Bristol County',null41.6529893063487,-70.8948756027136);");+
+    alasql("INSERT INTO patients VALUES ('841095eb-d29f-4492-8f0e-08011321e85d','2017-04-08',null'999-81-1909',null,null'Carlton317','Leffler128',null,null'asian','nonhispanic','M','Ipswich  Massachusetts  US','344 Feest Camp Suite 73','Wakefield','Massachusetts','Middlesex County',1880,42.4780284069299,-71.0892699664186);");+
+    alasql("INSERT INTO patients VALUES ('ee7f6c74-a8ed-4147-b8e2-4879c8657b0f','1950-04-11',null'999-24-8407','S99984370','X70737069X','Mr.','Kelvin159','Powlowski563',null,'M','white','nonhispanic','M','Fall River  Massachusetts  US','623 Runolfsson Annex Suite 88','Revere','Massachusetts','Suffolk County',2151,42.4674386785624,-71.0070987954362);");+
+    alasql("INSERT INTO patients VALUES ('ab6a2662-f6d1-4da6-b3ce-3929d68650d7','1971-01-16',null'999-76-3317','S99978505','X28929072X','Mrs.','Miesha237','Wyman904',null'Jacobs452','M','white','nonhispanic','F','Harvard  Massachusetts  US','850 Thiel Road Unit 0','Westfield','Massachusetts','Hampden County',1086,42.0904434489837,-72.7927566478986);");+
+    alasql("INSERT INTO patients VALUES ('4440ff11-69ec-440b-a2bd-dc1c14105e8e','2001-11-20',null'999-68-1710','S99968894',null'Ms.','Ona426','Dooley940',null,null'white','hispanic','F','Athol  Massachusetts  US','1048 Weimann Throughway','Northborough','Massachusetts','Worcester County',null42.3661545339449,-71.6515505734496);");+
+    alasql("INSERT INTO patients VALUES ('1aa71b23-790e-4d22-92da-c689682c8993','1993-05-03',null'999-84-7590','S99922416','X45217366X','Ms.','Jeannie478','VonRueden376',null,null'white','nonhispanic','F','Ashburnham  Massachusetts  US','711 Williamson Dale','Ayer','Massachusetts','Middlesex County',null42.5198988512541,-71.6009012317879);");+
+    alasql("INSERT INTO patients VALUES ('848e0227-5d5d-4bdf-8603-207cdea72e2a','1949-03-27',null'999-87-5716','S99971093','X51980015X','Mrs.','Alda400','Kris249',null'Satterfield305','M','white','nonhispanic','F','Mansfield  Massachusetts  US','1090 Wiegand Union','Attleboro','Massachusetts','Bristol County',null41.9326094578451,-71.3272454816091);");+
+    alasql("INSERT INTO patients VALUES ('eafd1fd3-3778-423a-ba79-4584bd310eb4','2003-07-05',null'999-39-2345','S99942603',null,'Buford910','Lynch190',null,null'white','nonhispanic','M','Walpole  Massachusetts  US','332 Witting Mission','Malden','Massachusetts','Middlesex County',null42.4569197038897,-71.0641138577902);");+
+    alasql("INSERT INTO patients VALUES ('0288abb6-633c-40c3-ba0c-66c7d957727e','1950-11-28',null'999-18-7195','S99953954','X15598453X','Mrs.','Keva141','Shanahan202',null'Reichel38','M','white','nonhispanic','F','Winchendon  Massachusetts  US','169 Witting Orchard Unit 98','Williamstown','Massachusetts','Berkshire County',null42.7353013466036,-73.1923384461437);");+
+    alasql("INSERT INTO patients VALUES ('097079b1-ff8f-4ee0-8ce3-0ea744ecfa21','2003-06-18',null'999-43-8940','S99945945',null,'Maribeth658','DAmore443',null,null'white','hispanic','F','Fall River  Massachusetts  US','238 Mills Hollow','Holyoke','Massachusetts','Hampden County',1040,42.1738356843755,-72.6457553208547);");+
+    alasql("INSERT INTO patients VALUES ('78a9a8d6-b3b2-47dc-b4a0-867abec7c78f','1993-05-01',null'999-75-7372','S99974220','X59022582X','Mr.','James276','Wyman904',null,null'white','nonhispanic','M','Stoughton  Massachusetts  US','702 Stoltenberg Course Apt 16','Attleboro','Massachusetts','Bristol County',2703,41.9406317547512,-71.311136544988);");+
+    alasql("INSERT INTO patients VALUES ('c05478a7-a4df-4fd3-8d68-60b9452d4781','2010-10-14',null'999-96-3194',null,null'Brandon214','Hagenes547',null,null'white','nonhispanic','M','Natick  Massachusetts  US','519 Thiel Annex Apt 55','Pittsfield','Massachusetts','Berkshire County',null42.4079671056193,-73.3177862656724);");+
+    alasql("INSERT INTO patients VALUES ('e188fafe-c1bb-45dc-9627-4ff4e4bc0ec0','2008-07-16',null'999-93-5743',null,null'Frances376','Schumm995',null,null'white','nonhispanic','M','Chelsea  Massachusetts  US','826 Hammes Mission Apt 1','Natick','Massachusetts','Middlesex County',null42.2584672080661,-71.3444415391516);");+
+    alasql("INSERT INTO patients VALUES ('8db0d104-4c3f-40d3-bcf5-f5eb81b7308f','2002-03-02',null'999-93-1045','S99931036',null'Ms.','Essie785','Kutch271',null,null'white','nonhispanic','F','Cambridge  Massachusetts  US','219 Gorczany Gateway Unit 71','Chelmsford','Massachusetts','Middlesex County',null42.5642627698721,-71.3448142130082);");+
+    alasql("INSERT INTO patients VALUES ('df7c1d66-eac2-49bd-9d12-ee17e8758f68','1979-11-19',null'999-19-4886','S99963281','X82905419X','Mrs.','Iraida50','Oberbrunner298',null'Sporer811','M','white','nonhispanic','F','Hanson  Massachusetts  US','903 Spencer Gate Suite 97','Springfield','Massachusetts','Hampden County',null42.018977154431,-72.5783835627201);");+
+    alasql("INSERT INTO patients VALUES ('68878f91-5962-4ef2-83e7-43b8298c1708','1977-11-07',null'999-40-6743','S99988503','X59484000X','Mr.','Ali918','Maggio310',null,'S','asian','nonhispanic','M','Taunton  Massachusetts  US','448 Rath Glen','Boston','Massachusetts','Suffolk County',2118,42.3425177110989,-71.1548454376564);");+
+    alasql("INSERT INTO patients VALUES ('1c2aa038-9366-4c7d-9a3e-52cb753a670f','1962-09-13',null'999-19-8817','S99966954','X83180931X','Mr.','Homero668','Carrillo204',null,'M','white','hispanic','M','Gaudalajara  Jalisco  MX','627 Weissnat Fork','Boston','Massachusetts','Suffolk County',2128,42.3109346386431,-71.0700902117231);");+
+    alasql("INSERT INTO patients VALUES ('8d202c65-427d-4190-8c28-3aa27e1a9f4c','1986-10-24',null'999-82-4546','S99932840','X66208297X','Mrs.','Mariam937','Bogisich202',null'Hermann103','M','white','nonhispanic','F','Milton  Massachusetts  US','1032 McClure Extension Unit 88','Framingham','Massachusetts','Middlesex County',1701,42.3029088307893,-71.4025310847364);");+
+    alasql("INSERT INTO patients VALUES ('2a6d1e58-88eb-4be0-b6b4-59a471257c2e','1964-10-10',null'999-22-8704','S99976805','X66668021X','Ms.','Nikia872','Herzog843',null,'S','white','nonhispanic','F','Wareham  Massachusetts  US','679 Robel Junction Apt 36','Quincy','Massachusetts','Norfolk County',2169,42.2640821758816,-71.0518467413496);");+
+    alasql("INSERT INTO patients VALUES ('e6ff4bf9-09c2-4976-aa84-cca142207cf8','1998-12-23',null'999-91-5603','S99952608','X23816401X','Ms.','Corie618','Howe413',null,null'white','nonhispanic','F','West Boylston  Massachusetts  US','580 Hickle Dam','Brookline','Massachusetts','Norfolk County',2215,42.3312937592791,-71.1672225619312);");+
+    JSON.stringify(@0);
+</script>
+@end
+
+@AlaSQL.buildTable_encounters
+<script>
+    alasql("DROP TABLE IF EXISTS encounters;");+
+    alasql("create table encounters (id text,start date,stop date,patient text,organization text,provider text,encounterclass text,description text,reasondescription text);");+
+    alasql("INSERT INTO encounters VALUES ('a61f97fa-70c3-4366-90e1-7c6fdcba5cbb','2002-01-24T20:46:46Z','2002-01-24T21:31:46Z','bf35e4fa-ea4f-40a4-8fe6-1f2f26e0aa45','24cb4eab-6166-3530-bddc-a5a8a14a4fc1','7bd4e666-a82d-3ad1-bc7c-b49eb726577b','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('469fbd8a-ec48-4da9-9165-027144ccf9a0','2014-12-04T23:28:40Z','2014-12-05T00:08:40Z','e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','d692e283-0833-3201-8e55-4f868a9c0736','f4eb93d1-9187-3cfb-83a4-6d9cd77f7df6','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('022ad487-e41c-43ba-90f3-eb2d6711f4d3','1998-07-19T12:55:35Z','1998-07-19T13:38:35Z','e061409e-4b85-4ec1-b1f7-02677d51f763','465de31f-3098-365c-af70-48a071e1f5aa','0a8a9359-7b33-3256-a068-b5a7d18ebe4b','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('9607667e-4c98-4087-9c59-0fd5b6331078','1974-05-17T10:52:30Z','1974-05-17T11:07:30Z','71e13815-55fb-4734-bcac-6079160d82a0','6f122869-a856-3d65-8db9-099bf4f5bbb8','3180b739-e823-37a0-b307-52a6d67db4a5','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('d8f2b92b-5971-455f-a0b9-99da66d03899','2004-07-03T22:12:27Z','2004-07-03T22:57:27Z','ca3330c5-bbbc-47e7-addb-302f2e069986','60457c13-adb2-3415-82c5-86ab5dab5f93','47cb5349-d261-324a-9109-c888f4a0e966','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('1d475126-f3c0-41c9-a9ed-f4a0c9a955c4','1978-11-04T06:05:02Z','1978-11-04T06:51:02Z','24bca5cf-ba55-457f-8e80-49690202443c','ef6ab57c-ed94-3dbe-9861-812d515918b3','77a7881d-6dd5-32e1-9e18-521a59749572','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('32622f63-734e-4433-8628-942ce1585e6a','2018-03-20T11:48:11Z','2018-03-20T12:36:11Z','841095eb-d29f-4492-8f0e-08011321e85d','d692e283-0833-3201-8e55-4f868a9c0736','f4eb93d1-9187-3cfb-83a4-6d9cd77f7df6','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('0b7d2e65-a9df-4b74-84ed-25feffc23f62','1951-04-21T08:40:57Z','1951-04-21T08:55:57Z','ee7f6c74-a8ed-4147-b8e2-4879c8657b0f','d692e283-0833-3201-8e55-4f868a9c0736','f4eb93d1-9187-3cfb-83a4-6d9cd77f7df6','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('603a0692-9302-459a-84b4-af631dc3aee8','1971-03-07T16:13:43Z','1971-03-07T16:28:43Z','ab6a2662-f6d1-4da6-b3ce-3929d68650d7','ebc3f5c4-6700-34af-8323-85621c313726','eabb2bff-3216-34da-9f29-824dbca901c3','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('38de2a79-6bea-438e-963f-804823c1e32d','2002-05-31T06:08:11Z','2002-05-31T07:01:11Z','4440ff11-69ec-440b-a2bd-dc1c14105e8e','331f4c11-d298-308b-aaa1-d7825b29b57f','8ee28b4a-9018-3065-9f6b-0c9b69de7080','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('228c992b-3877-454c-920d-fa629bb8c5d9','1994-05-12T20:03:59Z','1994-05-12T20:47:59Z','1aa71b23-790e-4d22-92da-c689682c8993','ac8356a5-78f8-3a63-8a1e-59e832fd54e7','f6065151-bf86-330b-a526-ac86b53b440b','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('77427b07-f03b-49bc-9556-d69b4feed7ef','1950-01-07T13:40:23Z','1950-01-07T13:55:23Z','848e0227-5d5d-4bdf-8603-207cdea72e2a','5e765f2b-e908-3888-9fc7-df2cb87beb58','0359f968-d1a6-30eb-b1cc-e6cc0b4d3513','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('36279aee-15ff-48ad-a4a6-8ba334466278','2004-12-06T09:48:16Z','2004-12-06T10:36:16Z','eafd1fd3-3778-423a-ba79-4584bd310eb4','d692e283-0833-3201-8e55-4f868a9c0736','f4eb93d1-9187-3cfb-83a4-6d9cd77f7df6','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('a64c55df-b288-4f78-9996-d2ecf0b65c9d','1952-03-11T04:07:36Z','1952-03-11T04:22:36Z','0288abb6-633c-40c3-ba0c-66c7d957727e','4f3a530e-a2f7-3de0-9a09-c0a70a9ab894','3f15c687-0cfe-3bf2-9e62-34f3c85ff3cb','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('9c3c633f-c33c-426c-b771-b6117ba7d6fc','2004-04-26T14:03:38Z','2004-04-26T14:42:38Z','097079b1-ff8f-4ee0-8ce3-0ea744ecfa21','5d4b9df1-93ae-3bc9-b680-03249990e558','af01a385-31d3-3c77-8fdb-2867fe88df2f','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('7c0482a4-04fc-4cdc-9c2b-ff1f28f704db','1994-06-07T13:13:50Z','1994-06-07T13:57:50Z','78a9a8d6-b3b2-47dc-b4a0-867abec7c78f','5e765f2b-e908-3888-9fc7-df2cb87beb58','0359f968-d1a6-30eb-b1cc-e6cc0b4d3513','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','2011-10-24T09:24:08Z','2011-10-24T10:01:08Z','c05478a7-a4df-4fd3-8d68-60b9452d4781','4f3a530e-a2f7-3de0-9a09-c0a70a9ab894','3f15c687-0cfe-3bf2-9e62-34f3c85ff3cb','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('5e4a49f2-47e7-4b76-9120-276a79f1766f','2009-01-22T22:23:00Z','2009-01-22T23:15:00Z','e188fafe-c1bb-45dc-9627-4ff4e4bc0ec0','465de31f-3098-365c-af70-48a071e1f5aa','0a8a9359-7b33-3256-a068-b5a7d18ebe4b','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('e75460f0-5f5c-4aa2-ab0b-200310a96c63','2003-06-13T09:58:22Z','2003-06-13T10:35:22Z','8db0d104-4c3f-40d3-bcf5-f5eb81b7308f','b0e04623-b02c-3f8b-92ea-943fc4db60da','58b66cc1-2b86-377f-ad77-ad8164388e50','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('a232db22-565f-4559-bb56-edf9021b74b2','1981-01-29T12:47:12Z','1981-01-29T13:33:12Z','df7c1d66-eac2-49bd-9d12-ee17e8758f68','fd328395-ab1d-35c6-a2d0-d05a9a79cf11','1530e81b-106c-32d5-95d5-42a710c92068','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('95099931-0042-4524-b808-dd6b6447fc0e','1978-07-20T13:40:53Z','1978-07-20T14:17:53Z','68878f91-5962-4ef2-83e7-43b8298c1708','69176529-fd1f-3b3f-abce-a0a3626769eb','c9b3c857-2e24-320c-a79a-87b8a60de63c','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('c90b2536-b388-479c-aa7e-3406fe4c2211','1963-07-23T15:56:00Z','1963-07-23T16:11:00Z','1c2aa038-9366-4c7d-9a3e-52cb753a670f','ff9863d3-3fa3-3861-900e-f00148f5d9c2','e49edc61-6ba6-324c-bef7-b65f0e10799f','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('16bc6376-a1cc-4d63-8307-c5d7479dc021','1987-11-30T13:51:47Z','1987-11-30T14:41:47Z','8d202c65-427d-4190-8c28-3aa27e1a9f4c','465de31f-3098-365c-af70-48a071e1f5aa','0a8a9359-7b33-3256-a068-b5a7d18ebe4b','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('f7ff5032-50cc-480e-90ca-848c85d6d014','1965-09-23T13:40:01Z','1965-09-23T13:55:01Z','2a6d1e58-88eb-4be0-b6b4-59a471257c2e','12c9daf5-a29c-36c9-ac55-28972463e566','aa89beb2-7bc6-35fa-83f7-4b32039e84eb','ambulatory','Encounter for problem',null);");+
+    alasql("INSERT INTO encounters VALUES ('6c760807-a6b7-4af4-8d50-f32325803448','2000-01-03T07:32:25Z','2000-01-03T08:22:25Z','e6ff4bf9-09c2-4976-aa84-cca142207cf8','3d10019f-c88e-3de5-9916-6107b9c0263d','4b04cd2f-3f27-35bc-8069-f4ca6339529f','ambulatory','Encounter for problem',null);");+
+    JSON.stringify(@0);
+</script>
+@end
+
+@AlaSQL.buildTable_providers
+<script>
+    alasql("DROP TABLE IF EXISTS providers;");+
+    alasql("create table providers (id text,name text,gender text,speciality text,address text,city text,state text,zip text,lat real,lon real);");+
+    alasql("INSERT INTO providers VALUES ('7bd4e666-a82d-3ad1-bc7c-b49eb726577b','Lonna614 Dietrich576','F','GENERAL PRACTICE','14 PROSPECT STREET','MILFORD','MA','01757',42.158692,-71.521419);");+
+    alasql("INSERT INTO providers VALUES ('f4eb93d1-9187-3cfb-83a4-6d9cd77f7df6','Vern731 Powlowski563','M','GENERAL PRACTICE','585 LEBANON STREET','MELROSE','MA','02176',42.455723,-71.059019);");+
+    alasql("INSERT INTO providers VALUES ('0a8a9359-7b33-3256-a068-b5a7d18ebe4b','Keri25 Schmidt332','F','GENERAL PRACTICE','115 LINCOLN STREET','FRAMINGHAM','MA','01701',42.307905,-71.436196);");+
+    alasql("INSERT INTO providers VALUES ('3180b739-e823-37a0-b307-52a6d67db4a5','Zana914 Considine820','F','GENERAL PRACTICE','41 & 45 MALL ROAD','BURLINGTON','MA','01803',42.503227,-71.201713);");+
+    alasql("INSERT INTO providers VALUES ('47cb5349-d261-324a-9109-c888f4a0e966','Mohammed454 Parisian75','M','GENERAL PRACTICE','759 CHESTNUT STREET','SPRINGFIELD','MA','01199',42.115454,-72.539978);");+
+    alasql("INSERT INTO providers VALUES ('77a7881d-6dd5-32e1-9e18-521a59749572','Phillip440 McCullough561','M','GENERAL PRACTICE','88 LEWIS BAY ROAD','HYANNIS','MA','02601',41.748854,-70.740536);");+
+    alasql("INSERT INTO providers VALUES ('eabb2bff-3216-34da-9f29-824dbca901c3','Óscar156 Mateo562','M','GENERAL PRACTICE','115 WEST SILVER STREET','WESTFIELD','MA','01085',42.138838,-72.755911);");+
+    alasql("INSERT INTO providers VALUES ('8ee28b4a-9018-3065-9f6b-0c9b69de7080','Malinda718 Cassin499','F','GENERAL PRACTICE','201 HIGHLAND STREET','CLINTON','MA','01510',42.411887,-71.690005);");+
+    alasql("INSERT INTO providers VALUES ('f6065151-bf86-330b-a526-ac86b53b440b','Tressa150 Kovacek682','F','GENERAL PRACTICE','200 GROTON ROAD','AYER','MA','01432',42.562221,-71.584844);");+
+    alasql("INSERT INTO providers VALUES ('0359f968-d1a6-30eb-b1cc-e6cc0b4d3513','Gaynell126 Streich926','F','GENERAL PRACTICE','211 PARK STREET','ATTLEBORO','MA','02703',41.931653,-71.294503);");+
+    alasql("INSERT INTO providers VALUES ('3f15c687-0cfe-3bf2-9e62-34f3c85ff3cb','Jesús825 Quiroz936','M','GENERAL PRACTICE','725 NORTH STREET','PITTSFIELD','MA','01201',42.452045,-73.26054);");+
+    alasql("INSERT INTO providers VALUES ('af01a385-31d3-3c77-8fdb-2867fe88df2f','Garth972 Wyman904','M','GENERAL PRACTICE','575 BEECH STREET','HOLYOKE','MA','01040',42.211656,-72.642448);");+
+    alasql("INSERT INTO providers VALUES ('58b66cc1-2b86-377f-ad77-ad8164388e50','Veda284 Pfeffer420','F','GENERAL PRACTICE','295 VARNUM AVENUE','LOWELL','MA','01854',42.638893,-71.322107);");+
+    alasql("INSERT INTO providers VALUES ('1530e81b-106c-32d5-95d5-42a710c92068','Wayne846 Mertz280','M','GENERAL PRACTICE','271 CAREW STREET','SPRINGFIELD','MA','01104',42.115454,-72.539978);");+
+    alasql("INSERT INTO providers VALUES ('c9b3c857-2e24-320c-a79a-87b8a60de63c','Suzette512 Monahan736','F','GENERAL PRACTICE','330 MOUNT AUBURN STREET','CAMBRIDGE','MA','02138',42.375967,-71.118275);");+
+    alasql("INSERT INTO providers VALUES ('e49edc61-6ba6-324c-bef7-b65f0e10799f','Carolyne559 Howell947','F','GENERAL PRACTICE','51 BLOSSOM STREET','BOSTON','MA','02114',42.33196,-71.020173);");+
+    alasql("INSERT INTO providers VALUES ('aa89beb2-7bc6-35fa-83f7-4b32039e84eb','Sanford861 Gottlieb798','M','GENERAL PRACTICE','199 REEDSDALE ROAD','MILTON','MA','02186',42.241589,-71.082651);");+
+    alasql("INSERT INTO providers VALUES ('4b04cd2f-3f27-35bc-8069-f4ca6339529f','Maile198 Frami345','F','GENERAL PRACTICE','2014 WASHINGTON STREET','NEWTON','MA','02462',42.331876,-71.208402);");+
+    JSON.stringify(@0);
+</script>
+
+@AlaSQL.buildTable_organizations
+<script>
+    alasql("DROP TABLE IF EXISTS organizations;");+
+    alasql("create table organizations (id text,name text,address text,city text,state text,zip text,lat real,lon real,phone text);");
+    alasql("INSERT INTO organizations VALUES ('24cb4eab-6166-3530-bddc-a5a8a14a4fc1','MILFORD REGIONAL MEDICAL CENTER','14 PROSPECT STREET','MILFORD','MA','01757',42.158692,-71.521419,'5084731190');");+
+    alasql("INSERT INTO organizations VALUES ('d692e283-0833-3201-8e55-4f868a9c0736','HALLMARK HEALTH SYSTEM','585 LEBANON STREET','MELROSE','MA','02176',42.455723,-71.059019,'7819793000');");+
+    alasql("INSERT INTO organizations VALUES ('465de31f-3098-365c-af70-48a071e1f5aa','METROWEST MEDICAL CENTER','115 LINCOLN STREET','FRAMINGHAM','MA','01701',42.307905,-71.436196,'5083831000');");+
+    alasql("INSERT INTO organizations VALUES ('6f122869-a856-3d65-8db9-099bf4f5bbb8','LAHEY HOSPITAL & MEDICAL CENTER  BURLINGTON','41 & 45 MALL ROAD','BURLINGTON','MA','01803',42.503227,-71.201713,'7817445100');");+
+    alasql("INSERT INTO organizations VALUES ('60457c13-adb2-3415-82c5-86ab5dab5f93','BAYSTATE MEDICAL CENTER','759 CHESTNUT STREET','SPRINGFIELD','MA','01199',42.115454,-72.539978,'4137940000');");+
+    alasql("INSERT INTO organizations VALUES ('ef6ab57c-ed94-3dbe-9861-812d515918b3','CAPE COD HOSPITAL','88 LEWIS BAY ROAD','HYANNIS','MA','02601',41.748854,-70.740536,'5087711800');");+
+    alasql("INSERT INTO organizations VALUES ('ebc3f5c4-6700-34af-8323-85621c313726','NOBLE HOSPITAL','115 WEST SILVER STREET','WESTFIELD','MA','01085',42.138838,-72.755911,'4135682811');");+
+    alasql("INSERT INTO organizations VALUES ('331f4c11-d298-308b-aaa1-d7825b29b57f','CLINTON HOSPITAL ASSOCIATION','201 HIGHLAND STREET','CLINTON','MA','01510',42.411887,-71.690005,'9783683000');");+
+    alasql("INSERT INTO organizations VALUES ('ac8356a5-78f8-3a63-8a1e-59e832fd54e7','NASHOBA VALLEY MEDICAL CENTER','200 GROTON ROAD','AYER','MA','01432',42.562221,-71.584844,'9787849000');");+
+    alasql("INSERT INTO organizations VALUES ('5e765f2b-e908-3888-9fc7-df2cb87beb58','STURDY MEMORIAL HOSPITAL','211 PARK STREET','ATTLEBORO','MA','02703',41.931653,-71.294503,'5082225200');");+
+    alasql("INSERT INTO organizations VALUES ('4f3a530e-a2f7-3de0-9a09-c0a70a9ab894','BERKSHIRE MEDICAL CENTER INC - 1','725 NORTH STREET','PITTSFIELD','MA','01201',42.452045,-73.26054,'4134472000');");+
+    alasql("INSERT INTO organizations VALUES ('5d4b9df1-93ae-3bc9-b680-03249990e558','HOLYOKE MEDICAL CENTER','575 BEECH STREET','HOLYOKE','MA','01040',42.211656,-72.642448,'4135342500');");+
+    alasql("INSERT INTO organizations VALUES ('b0e04623-b02c-3f8b-92ea-943fc4db60da','LOWELL GENERAL HOSPITAL','295 VARNUM AVENUE','LOWELL','MA','01854',42.638893,-71.322107,'9789376000');");+
+    alasql("INSERT INTO organizations VALUES ('fd328395-ab1d-35c6-a2d0-d05a9a79cf11','MERCY MEDICAL CTR','271 CAREW STREET','SPRINGFIELD','MA','01104',42.115454,-72.539978,'4137489000');");+
+    alasql("INSERT INTO organizations VALUES ('69176529-fd1f-3b3f-abce-a0a3626769eb','MOUNT AUBURN HOSPITAL','330 MOUNT AUBURN STREET','CAMBRIDGE','MA','02138',42.375967,-71.118275,'6174923500');");+
+    alasql("INSERT INTO organizations VALUES ('ff9863d3-3fa3-3861-900e-f00148f5d9c2','SHRINERS HOSPITAL FOR CHILDREN - BOSTON  THE','51 BLOSSOM STREET','BOSTON','MA','02114',42.33196,-71.020173,'6177223000');");+
+    alasql("INSERT INTO organizations VALUES ('12c9daf5-a29c-36c9-ac55-28972463e566','BETH ISRAEL DEACONESS HOSPITAL-MILTON INC','199 REEDSDALE ROAD','MILTON','MA','02186',42.241589,-71.082651,'6176964600');");+
+    alasql("INSERT INTO organizations VALUES ('3d10019f-c88e-3de5-9916-6107b9c0263d','NEWTON-WELLESLEY HOSPITAL','2014 WASHINGTON STREET','NEWTON','MA','02462',42.331876,-71.208402,'6172436000');");+
+    JSON.stringify(@0);
+</script>
+@end
+
+
+@AlaSQL.buildTable_allergies
+<script>
+    alasql("DROP TABLE IF EXISTS allergies;");+
+    alasql("create table allergies (start date,stop date,patient text,encounter text,description text);");+
+    alasql("INSERT INTO allergies VALUES ('2002-01-24',null'bf35e4fa-ea4f-40a4-8fe6-1f2f26e0aa45','a61f97fa-70c3-4366-90e1-7c6fdcba5cbb','Latex allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2002-01-24',null'bf35e4fa-ea4f-40a4-8fe6-1f2f26e0aa45','a61f97fa-70c3-4366-90e1-7c6fdcba5cbb','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('2002-01-24',null'bf35e4fa-ea4f-40a4-8fe6-1f2f26e0aa45','a61f97fa-70c3-4366-90e1-7c6fdcba5cbb','House dust mite allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2002-01-24',null'bf35e4fa-ea4f-40a4-8fe6-1f2f26e0aa45','a61f97fa-70c3-4366-90e1-7c6fdcba5cbb','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2002-01-24',null'bf35e4fa-ea4f-40a4-8fe6-1f2f26e0aa45','a61f97fa-70c3-4366-90e1-7c6fdcba5cbb','Allergy to grass pollen');");+
+    alasql("INSERT INTO allergies VALUES ('2002-01-24',null'bf35e4fa-ea4f-40a4-8fe6-1f2f26e0aa45','a61f97fa-70c3-4366-90e1-7c6fdcba5cbb','Allergy to tree pollen');");+
+    alasql("INSERT INTO allergies VALUES ('2002-01-24',null'bf35e4fa-ea4f-40a4-8fe6-1f2f26e0aa45','a61f97fa-70c3-4366-90e1-7c6fdcba5cbb','Allergy to wheat');");+
+    alasql("INSERT INTO allergies VALUES ('2002-01-24',null'bf35e4fa-ea4f-40a4-8fe6-1f2f26e0aa45','a61f97fa-70c3-4366-90e1-7c6fdcba5cbb','Shellfish allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2002-01-24',null'bf35e4fa-ea4f-40a4-8fe6-1f2f26e0aa45','a61f97fa-70c3-4366-90e1-7c6fdcba5cbb','Allergy to fish');");+
+    alasql("INSERT INTO allergies VALUES ('2002-01-24',null'bf35e4fa-ea4f-40a4-8fe6-1f2f26e0aa45','a61f97fa-70c3-4366-90e1-7c6fdcba5cbb','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('2014-12-04',null'e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Latex allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2014-12-04',null'e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('2014-12-04',null'e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','House dust mite allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2014-12-04',null'e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2014-12-04',null'e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Allergy to grass pollen');");+
+    alasql("INSERT INTO allergies VALUES ('2014-12-04',null'e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Allergy to tree pollen');");+
+    alasql("INSERT INTO allergies VALUES ('2014-12-04',null'e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Allergy to wheat');");+
+    alasql("INSERT INTO allergies VALUES ('2014-12-04',null'e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Allergy to fish');");+
+    alasql("INSERT INTO allergies VALUES ('2014-12-04',null'e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('1998-07-19','2014-03-20','e061409e-4b85-4ec1-b1f7-02677d51f763','022ad487-e41c-43ba-90f3-eb2d6711f4d3','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('1998-07-19','2014-03-20','e061409e-4b85-4ec1-b1f7-02677d51f763','022ad487-e41c-43ba-90f3-eb2d6711f4d3','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1998-07-19',null'e061409e-4b85-4ec1-b1f7-02677d51f763','022ad487-e41c-43ba-90f3-eb2d6711f4d3','Allergy to grass pollen');");+
+    alasql("INSERT INTO allergies VALUES ('1998-07-19',null'e061409e-4b85-4ec1-b1f7-02677d51f763','022ad487-e41c-43ba-90f3-eb2d6711f4d3','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('1974-05-17',null'71e13815-55fb-4734-bcac-6079160d82a0','9607667e-4c98-4087-9c59-0fd5b6331078','Allergy to tree pollen');");+
+    alasql("INSERT INTO allergies VALUES ('1974-05-17',null'71e13815-55fb-4734-bcac-6079160d82a0','9607667e-4c98-4087-9c59-0fd5b6331078','Allergy to fish');");+
+    alasql("INSERT INTO allergies VALUES ('1974-05-17',null'71e13815-55fb-4734-bcac-6079160d82a0','9607667e-4c98-4087-9c59-0fd5b6331078','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('2004-07-03',null'ca3330c5-bbbc-47e7-addb-302f2e069986','d8f2b92b-5971-455f-a0b9-99da66d03899','Allergy to bee venom');");+
+    alasql("INSERT INTO allergies VALUES ('2004-07-03','2019-12-30','ca3330c5-bbbc-47e7-addb-302f2e069986','d8f2b92b-5971-455f-a0b9-99da66d03899','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('2004-07-03',null'ca3330c5-bbbc-47e7-addb-302f2e069986','d8f2b92b-5971-455f-a0b9-99da66d03899','House dust mite allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2004-07-03',null'ca3330c5-bbbc-47e7-addb-302f2e069986','d8f2b92b-5971-455f-a0b9-99da66d03899','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2004-07-03',null'ca3330c5-bbbc-47e7-addb-302f2e069986','d8f2b92b-5971-455f-a0b9-99da66d03899','Allergy to tree pollen');");+
+    alasql("INSERT INTO allergies VALUES ('2004-07-03',null'ca3330c5-bbbc-47e7-addb-302f2e069986','d8f2b92b-5971-455f-a0b9-99da66d03899','Allergy to dairy product');");+
+    alasql("INSERT INTO allergies VALUES ('2004-07-03',null'ca3330c5-bbbc-47e7-addb-302f2e069986','d8f2b92b-5971-455f-a0b9-99da66d03899','Allergy to nut');");+
+    alasql("INSERT INTO allergies VALUES ('2004-07-03',null'ca3330c5-bbbc-47e7-addb-302f2e069986','d8f2b92b-5971-455f-a0b9-99da66d03899','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('1978-11-04',null'24bca5cf-ba55-457f-8e80-49690202443c','1d475126-f3c0-41c9-a9ed-f4a0c9a955c4','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('1978-11-04',null'24bca5cf-ba55-457f-8e80-49690202443c','1d475126-f3c0-41c9-a9ed-f4a0c9a955c4','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1978-11-04',null'24bca5cf-ba55-457f-8e80-49690202443c','1d475126-f3c0-41c9-a9ed-f4a0c9a955c4','Allergy to fish');");+
+    alasql("INSERT INTO allergies VALUES ('1978-11-04',null'24bca5cf-ba55-457f-8e80-49690202443c','1d475126-f3c0-41c9-a9ed-f4a0c9a955c4','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('2018-03-20',null'841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('2018-03-20',null'841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','House dust mite allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2018-03-20',null'841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2018-03-20',null'841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Allergy to grass pollen');");+
+    alasql("INSERT INTO allergies VALUES ('2018-03-20',null'841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Allergy to tree pollen');");+
+    alasql("INSERT INTO allergies VALUES ('2018-03-20',null'841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Shellfish allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2018-03-20',null'841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Allergy to nut');");+
+    alasql("INSERT INTO allergies VALUES ('2018-03-20',null'841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('1951-04-21',null'ee7f6c74-a8ed-4147-b8e2-4879c8657b0f','0b7d2e65-a9df-4b74-84ed-25feffc23f62','Allergy to bee venom');");+
+    alasql("INSERT INTO allergies VALUES ('1951-04-21',null'ee7f6c74-a8ed-4147-b8e2-4879c8657b0f','0b7d2e65-a9df-4b74-84ed-25feffc23f62','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('1971-03-07',null'ab6a2662-f6d1-4da6-b3ce-3929d68650d7','603a0692-9302-459a-84b4-af631dc3aee8','Allergy to bee venom');");+
+    alasql("INSERT INTO allergies VALUES ('1971-03-07',null'ab6a2662-f6d1-4da6-b3ce-3929d68650d7','603a0692-9302-459a-84b4-af631dc3aee8','Allergy to fish');");+
+    alasql("INSERT INTO allergies VALUES ('1971-03-07',null'ab6a2662-f6d1-4da6-b3ce-3929d68650d7','603a0692-9302-459a-84b4-af631dc3aee8','Allergy to nut');");+
+    alasql("INSERT INTO allergies VALUES ('1971-03-07',null'ab6a2662-f6d1-4da6-b3ce-3929d68650d7','603a0692-9302-459a-84b4-af631dc3aee8','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('2002-05-31',null'4440ff11-69ec-440b-a2bd-dc1c14105e8e','38de2a79-6bea-438e-963f-804823c1e32d','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('2002-05-31',null'4440ff11-69ec-440b-a2bd-dc1c14105e8e','38de2a79-6bea-438e-963f-804823c1e32d','House dust mite allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2002-05-31',null'4440ff11-69ec-440b-a2bd-dc1c14105e8e','38de2a79-6bea-438e-963f-804823c1e32d','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2002-05-31',null'4440ff11-69ec-440b-a2bd-dc1c14105e8e','38de2a79-6bea-438e-963f-804823c1e32d','Allergy to grass pollen');");+
+    alasql("INSERT INTO allergies VALUES ('2002-05-31',null'4440ff11-69ec-440b-a2bd-dc1c14105e8e','38de2a79-6bea-438e-963f-804823c1e32d','Allergy to tree pollen');");+
+    alasql("INSERT INTO allergies VALUES ('2002-05-31','2020-03-21','4440ff11-69ec-440b-a2bd-dc1c14105e8e','38de2a79-6bea-438e-963f-804823c1e32d','Allergy to eggs');");+
+    alasql("INSERT INTO allergies VALUES ('2002-05-31','2020-03-21','4440ff11-69ec-440b-a2bd-dc1c14105e8e','38de2a79-6bea-438e-963f-804823c1e32d','Allergy to wheat');");+
+    alasql("INSERT INTO allergies VALUES ('2002-05-31',null'4440ff11-69ec-440b-a2bd-dc1c14105e8e','38de2a79-6bea-438e-963f-804823c1e32d','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('1994-05-12','2011-02-03','1aa71b23-790e-4d22-92da-c689682c8993','228c992b-3877-454c-920d-fa629bb8c5d9','Latex allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1994-05-12',null'1aa71b23-790e-4d22-92da-c689682c8993','228c992b-3877-454c-920d-fa629bb8c5d9','Allergy to nut');");+
+    alasql("INSERT INTO allergies VALUES ('1994-05-12',null'1aa71b23-790e-4d22-92da-c689682c8993','228c992b-3877-454c-920d-fa629bb8c5d9','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('1950-01-07',null'848e0227-5d5d-4bdf-8603-207cdea72e2a','77427b07-f03b-49bc-9556-d69b4feed7ef','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('1950-01-07',null'848e0227-5d5d-4bdf-8603-207cdea72e2a','77427b07-f03b-49bc-9556-d69b4feed7ef','House dust mite allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1950-01-07',null'848e0227-5d5d-4bdf-8603-207cdea72e2a','77427b07-f03b-49bc-9556-d69b4feed7ef','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1950-01-07',null'848e0227-5d5d-4bdf-8603-207cdea72e2a','77427b07-f03b-49bc-9556-d69b4feed7ef','Allergy to tree pollen');");+
+    alasql("INSERT INTO allergies VALUES ('1950-01-07',null'848e0227-5d5d-4bdf-8603-207cdea72e2a','77427b07-f03b-49bc-9556-d69b4feed7ef','Allergy to soya');");+
+    alasql("INSERT INTO allergies VALUES ('1950-01-07',null'848e0227-5d5d-4bdf-8603-207cdea72e2a','77427b07-f03b-49bc-9556-d69b4feed7ef','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('2004-12-06',null'eafd1fd3-3778-423a-ba79-4584bd310eb4','36279aee-15ff-48ad-a4a6-8ba334466278','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('1952-03-10',null'0288abb6-633c-40c3-ba0c-66c7d957727e','a64c55df-b288-4f78-9996-d2ecf0b65c9d','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('1952-03-10',null'0288abb6-633c-40c3-ba0c-66c7d957727e','a64c55df-b288-4f78-9996-d2ecf0b65c9d','House dust mite allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1952-03-10',null'0288abb6-633c-40c3-ba0c-66c7d957727e','a64c55df-b288-4f78-9996-d2ecf0b65c9d','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1952-03-10',null'0288abb6-633c-40c3-ba0c-66c7d957727e','a64c55df-b288-4f78-9996-d2ecf0b65c9d','Allergy to grass pollen');");+
+    alasql("INSERT INTO allergies VALUES ('1952-03-10',null'0288abb6-633c-40c3-ba0c-66c7d957727e','a64c55df-b288-4f78-9996-d2ecf0b65c9d','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('2004-04-26','2019-12-25','097079b1-ff8f-4ee0-8ce3-0ea744ecfa21','9c3c633f-c33c-426c-b771-b6117ba7d6fc','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('2004-04-26',null'097079b1-ff8f-4ee0-8ce3-0ea744ecfa21','9c3c633f-c33c-426c-b771-b6117ba7d6fc','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2004-04-26',null'097079b1-ff8f-4ee0-8ce3-0ea744ecfa21','9c3c633f-c33c-426c-b771-b6117ba7d6fc','Allergy to grass pollen');");+
+    alasql("INSERT INTO allergies VALUES ('2004-04-26',null'097079b1-ff8f-4ee0-8ce3-0ea744ecfa21','9c3c633f-c33c-426c-b771-b6117ba7d6fc','Allergy to tree pollen');");+
+    alasql("INSERT INTO allergies VALUES ('2004-04-26',null'097079b1-ff8f-4ee0-8ce3-0ea744ecfa21','9c3c633f-c33c-426c-b771-b6117ba7d6fc','Allergy to dairy product');");+
+    alasql("INSERT INTO allergies VALUES ('2004-04-26',null'097079b1-ff8f-4ee0-8ce3-0ea744ecfa21','9c3c633f-c33c-426c-b771-b6117ba7d6fc','Allergy to soya');");+
+    alasql("INSERT INTO allergies VALUES ('2004-04-26',null'097079b1-ff8f-4ee0-8ce3-0ea744ecfa21','9c3c633f-c33c-426c-b771-b6117ba7d6fc','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('1994-06-07',null'78a9a8d6-b3b2-47dc-b4a0-867abec7c78f','7c0482a4-04fc-4cdc-9c2b-ff1f28f704db','Allergy to bee venom');");+
+    alasql("INSERT INTO allergies VALUES ('1994-06-07',null'78a9a8d6-b3b2-47dc-b4a0-867abec7c78f','7c0482a4-04fc-4cdc-9c2b-ff1f28f704db','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('1994-06-07',null'78a9a8d6-b3b2-47dc-b4a0-867abec7c78f','7c0482a4-04fc-4cdc-9c2b-ff1f28f704db','House dust mite allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1994-06-07',null'78a9a8d6-b3b2-47dc-b4a0-867abec7c78f','7c0482a4-04fc-4cdc-9c2b-ff1f28f704db','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1994-06-07',null'78a9a8d6-b3b2-47dc-b4a0-867abec7c78f','7c0482a4-04fc-4cdc-9c2b-ff1f28f704db','Allergy to tree pollen');");+
+    alasql("INSERT INTO allergies VALUES ('1994-06-07','2011-03-09','78a9a8d6-b3b2-47dc-b4a0-867abec7c78f','7c0482a4-04fc-4cdc-9c2b-ff1f28f704db','Allergy to dairy product');");+
+    alasql("INSERT INTO allergies VALUES ('1994-06-07',null'78a9a8d6-b3b2-47dc-b4a0-867abec7c78f','7c0482a4-04fc-4cdc-9c2b-ff1f28f704db','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('2011-10-24',null'c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Latex allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2011-10-24',null'c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Allergy to bee venom');");+
+    alasql("INSERT INTO allergies VALUES ('2011-10-24',null'c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('2011-10-24',null'c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','House dust mite allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2011-10-24',null'c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2011-10-24',null'c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Allergy to grass pollen');");+
+    alasql("INSERT INTO allergies VALUES ('2011-10-24',null'c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Allergy to tree pollen');");+
+    alasql("INSERT INTO allergies VALUES ('2011-10-24',null'c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Allergy to eggs');");+
+    alasql("INSERT INTO allergies VALUES ('2011-10-24',null'c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('2009-01-22',null'e188fafe-c1bb-45dc-9627-4ff4e4bc0ec0','5e4a49f2-47e7-4b76-9120-276a79f1766f','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('2009-01-22',null'e188fafe-c1bb-45dc-9627-4ff4e4bc0ec0','5e4a49f2-47e7-4b76-9120-276a79f1766f','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2009-01-22',null'e188fafe-c1bb-45dc-9627-4ff4e4bc0ec0','5e4a49f2-47e7-4b76-9120-276a79f1766f','Allergy to grass pollen');");+
+    alasql("INSERT INTO allergies VALUES ('2009-01-22',null'e188fafe-c1bb-45dc-9627-4ff4e4bc0ec0','5e4a49f2-47e7-4b76-9120-276a79f1766f','Allergy to tree pollen');");+
+    alasql("INSERT INTO allergies VALUES ('2009-01-22',null'e188fafe-c1bb-45dc-9627-4ff4e4bc0ec0','5e4a49f2-47e7-4b76-9120-276a79f1766f','Allergy to wheat');");+
+    alasql("INSERT INTO allergies VALUES ('2009-01-22',null'e188fafe-c1bb-45dc-9627-4ff4e4bc0ec0','5e4a49f2-47e7-4b76-9120-276a79f1766f','Allergy to fish');");+
+    alasql("INSERT INTO allergies VALUES ('2009-01-22',null'e188fafe-c1bb-45dc-9627-4ff4e4bc0ec0','5e4a49f2-47e7-4b76-9120-276a79f1766f','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('2003-06-13','2018-09-08','8db0d104-4c3f-40d3-bcf5-f5eb81b7308f','e75460f0-5f5c-4aa2-ab0b-200310a96c63','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('2003-06-13','2018-09-08','8db0d104-4c3f-40d3-bcf5-f5eb81b7308f','e75460f0-5f5c-4aa2-ab0b-200310a96c63','House dust mite allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2003-06-13','2018-09-08','8db0d104-4c3f-40d3-bcf5-f5eb81b7308f','e75460f0-5f5c-4aa2-ab0b-200310a96c63','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2003-06-13',null'8db0d104-4c3f-40d3-bcf5-f5eb81b7308f','e75460f0-5f5c-4aa2-ab0b-200310a96c63','Allergy to grass pollen');");+
+    alasql("INSERT INTO allergies VALUES ('2003-06-13',null'8db0d104-4c3f-40d3-bcf5-f5eb81b7308f','e75460f0-5f5c-4aa2-ab0b-200310a96c63','Allergy to tree pollen');");+
+    alasql("INSERT INTO allergies VALUES ('2003-06-13','2019-05-02','8db0d104-4c3f-40d3-bcf5-f5eb81b7308f','e75460f0-5f5c-4aa2-ab0b-200310a96c63','Allergy to eggs');");+
+    alasql("INSERT INTO allergies VALUES ('2003-06-13','2019-05-02','8db0d104-4c3f-40d3-bcf5-f5eb81b7308f','e75460f0-5f5c-4aa2-ab0b-200310a96c63','Allergy to wheat');");+
+    alasql("INSERT INTO allergies VALUES ('2003-06-13',null'8db0d104-4c3f-40d3-bcf5-f5eb81b7308f','e75460f0-5f5c-4aa2-ab0b-200310a96c63','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('1981-01-29',null'df7c1d66-eac2-49bd-9d12-ee17e8758f68','a232db22-565f-4559-bb56-edf9021b74b2','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('1981-01-29',null'df7c1d66-eac2-49bd-9d12-ee17e8758f68','a232db22-565f-4559-bb56-edf9021b74b2','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1981-01-29',null'df7c1d66-eac2-49bd-9d12-ee17e8758f68','a232db22-565f-4559-bb56-edf9021b74b2','Allergy to grass pollen');");+
+    alasql("INSERT INTO allergies VALUES ('1981-01-29',null'df7c1d66-eac2-49bd-9d12-ee17e8758f68','a232db22-565f-4559-bb56-edf9021b74b2','Allergy to tree pollen');");+
+    alasql("INSERT INTO allergies VALUES ('1981-01-29',null'df7c1d66-eac2-49bd-9d12-ee17e8758f68','a232db22-565f-4559-bb56-edf9021b74b2','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('1978-07-20',null'68878f91-5962-4ef2-83e7-43b8298c1708','95099931-0042-4524-b808-dd6b6447fc0e','Allergy to bee venom');");+
+    alasql("INSERT INTO allergies VALUES ('1978-07-20',null'68878f91-5962-4ef2-83e7-43b8298c1708','95099931-0042-4524-b808-dd6b6447fc0e','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('1978-07-20',null'68878f91-5962-4ef2-83e7-43b8298c1708','95099931-0042-4524-b808-dd6b6447fc0e','House dust mite allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1978-07-20',null'68878f91-5962-4ef2-83e7-43b8298c1708','95099931-0042-4524-b808-dd6b6447fc0e','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1978-07-20',null'68878f91-5962-4ef2-83e7-43b8298c1708','95099931-0042-4524-b808-dd6b6447fc0e','Allergy to grass pollen');");+
+    alasql("INSERT INTO allergies VALUES ('1978-07-20',null'68878f91-5962-4ef2-83e7-43b8298c1708','95099931-0042-4524-b808-dd6b6447fc0e','Allergy to tree pollen');");+
+    alasql("INSERT INTO allergies VALUES ('1978-07-20',null'68878f91-5962-4ef2-83e7-43b8298c1708','95099931-0042-4524-b808-dd6b6447fc0e','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('1963-07-23',null'1c2aa038-9366-4c7d-9a3e-52cb753a670f','c90b2536-b388-479c-aa7e-3406fe4c2211','Latex allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1963-07-23',null'1c2aa038-9366-4c7d-9a3e-52cb753a670f','c90b2536-b388-479c-aa7e-3406fe4c2211','Allergy to bee venom');");+
+    alasql("INSERT INTO allergies VALUES ('1963-07-23',null'1c2aa038-9366-4c7d-9a3e-52cb753a670f','c90b2536-b388-479c-aa7e-3406fe4c2211','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('1963-07-23',null'1c2aa038-9366-4c7d-9a3e-52cb753a670f','c90b2536-b388-479c-aa7e-3406fe4c2211','House dust mite allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1963-07-23',null'1c2aa038-9366-4c7d-9a3e-52cb753a670f','c90b2536-b388-479c-aa7e-3406fe4c2211','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1963-07-23',null'1c2aa038-9366-4c7d-9a3e-52cb753a670f','c90b2536-b388-479c-aa7e-3406fe4c2211','Allergy to grass pollen');");+
+    alasql("INSERT INTO allergies VALUES ('1963-07-23',null'1c2aa038-9366-4c7d-9a3e-52cb753a670f','c90b2536-b388-479c-aa7e-3406fe4c2211','Allergy to tree pollen');");+
+    alasql("INSERT INTO allergies VALUES ('1963-07-23',null'1c2aa038-9366-4c7d-9a3e-52cb753a670f','c90b2536-b388-479c-aa7e-3406fe4c2211','Shellfish allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1963-07-23',null'1c2aa038-9366-4c7d-9a3e-52cb753a670f','c90b2536-b388-479c-aa7e-3406fe4c2211','Allergy to fish');");+
+    alasql("INSERT INTO allergies VALUES ('1963-07-23',null'1c2aa038-9366-4c7d-9a3e-52cb753a670f','c90b2536-b388-479c-aa7e-3406fe4c2211','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('1987-11-30',null'8d202c65-427d-4190-8c28-3aa27e1a9f4c','16bc6376-a1cc-4d63-8307-c5d7479dc021','Allergy to bee venom');");+
+    alasql("INSERT INTO allergies VALUES ('1987-11-30',null'8d202c65-427d-4190-8c28-3aa27e1a9f4c','16bc6376-a1cc-4d63-8307-c5d7479dc021','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('1987-11-30',null'8d202c65-427d-4190-8c28-3aa27e1a9f4c','16bc6376-a1cc-4d63-8307-c5d7479dc021','House dust mite allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1987-11-30',null'8d202c65-427d-4190-8c28-3aa27e1a9f4c','16bc6376-a1cc-4d63-8307-c5d7479dc021','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1987-11-30',null'8d202c65-427d-4190-8c28-3aa27e1a9f4c','16bc6376-a1cc-4d63-8307-c5d7479dc021','Allergy to tree pollen');");+
+    alasql("INSERT INTO allergies VALUES ('1987-11-30',null'8d202c65-427d-4190-8c28-3aa27e1a9f4c','16bc6376-a1cc-4d63-8307-c5d7479dc021','Allergy to nut');");+
+    alasql("INSERT INTO allergies VALUES ('1987-11-30',null'8d202c65-427d-4190-8c28-3aa27e1a9f4c','16bc6376-a1cc-4d63-8307-c5d7479dc021','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('1965-09-23',null'2a6d1e58-88eb-4be0-b6b4-59a471257c2e','f7ff5032-50cc-480e-90ca-848c85d6d014','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('1965-09-23',null'2a6d1e58-88eb-4be0-b6b4-59a471257c2e','f7ff5032-50cc-480e-90ca-848c85d6d014','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1965-09-23',null'2a6d1e58-88eb-4be0-b6b4-59a471257c2e','f7ff5032-50cc-480e-90ca-848c85d6d014','Allergy to grass pollen');");+
+    alasql("INSERT INTO allergies VALUES ('1965-09-23',null'2a6d1e58-88eb-4be0-b6b4-59a471257c2e','f7ff5032-50cc-480e-90ca-848c85d6d014','Allergy to tree pollen');");+
+    alasql("INSERT INTO allergies VALUES ('1965-09-23',null'2a6d1e58-88eb-4be0-b6b4-59a471257c2e','f7ff5032-50cc-480e-90ca-848c85d6d014','Allergy to wheat');");+
+    alasql("INSERT INTO allergies VALUES ('1965-09-23',null'2a6d1e58-88eb-4be0-b6b4-59a471257c2e','f7ff5032-50cc-480e-90ca-848c85d6d014','Shellfish allergy');");+
+    alasql("INSERT INTO allergies VALUES ('1965-09-23',null'2a6d1e58-88eb-4be0-b6b4-59a471257c2e','f7ff5032-50cc-480e-90ca-848c85d6d014','Allergy to peanuts');");+
+    alasql("INSERT INTO allergies VALUES ('2000-01-03','2016-06-25','e6ff4bf9-09c2-4976-aa84-cca142207cf8','6c760807-a6b7-4af4-8d50-f32325803448','Latex allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2000-01-03',null'e6ff4bf9-09c2-4976-aa84-cca142207cf8','6c760807-a6b7-4af4-8d50-f32325803448','Allergy to mould');");+
+    alasql("INSERT INTO allergies VALUES ('2000-01-03',null'e6ff4bf9-09c2-4976-aa84-cca142207cf8','6c760807-a6b7-4af4-8d50-f32325803448','House dust mite allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2000-01-03',null'e6ff4bf9-09c2-4976-aa84-cca142207cf8','6c760807-a6b7-4af4-8d50-f32325803448','Dander (animal) allergy');");+
+    alasql("INSERT INTO allergies VALUES ('2000-01-03',null'e6ff4bf9-09c2-4976-aa84-cca142207cf8','6c760807-a6b7-4af4-8d50-f32325803448','Allergy to grass pollen');");+
+    alasql("INSERT INTO allergies VALUES ('2000-01-03',null'e6ff4bf9-09c2-4976-aa84-cca142207cf8','6c760807-a6b7-4af4-8d50-f32325803448','Allergy to tree pollen');");+
+    alasql("INSERT INTO allergies VALUES ('2000-01-03',null'e6ff4bf9-09c2-4976-aa84-cca142207cf8','6c760807-a6b7-4af4-8d50-f32325803448','Allergy to eggs');");+
+    alasql("INSERT INTO allergies VALUES ('2000-01-03',null'e6ff4bf9-09c2-4976-aa84-cca142207cf8','6c760807-a6b7-4af4-8d50-f32325803448','Allergy to peanuts');");+
+    JSON.stringify(@0);
+</script>
+@end
+
+@AlaSQL.buildTable_observations
+<script>
+    alasql("DROP TABLE IF EXISTS observations;");+
+    alasql("create table observations (observed date,patient text,encounter text,description text,value text,units text,type text);");
+    alasql("INSERT INTO observations VALUES ('2014-12-04T23:28:40Z','e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','American house dust mite IgE Ab in Serum','26.0','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2014-12-04T23:28:40Z','e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Cat dander IgE Ab in Serum','92.2','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2014-12-04T23:28:40Z','e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Cladosporium herbarum IgE Ab in Serum','56.9','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2014-12-04T23:28:40Z','e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Codfish IgE Ab in Serum','70.1','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2014-12-04T23:28:40Z','e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Common Ragweed IgE Ab in Serum','93.7','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2014-12-04T23:28:40Z','e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Cow milk IgE Ab in Serum','0.1','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2014-12-04T23:28:40Z','e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Egg white IgE Ab in Serum','0.3','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2014-12-04T23:28:40Z','e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Honey bee IgE Ab in Serum','0.2','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2014-12-04T23:28:40Z','e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Latex IgE Ab in Serum','6.0','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2014-12-04T23:28:40Z','e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Peanut IgE Ab in Serum','26.6','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2014-12-04T23:28:40Z','e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Shrimp IgE Ab in Serum','0.1','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2014-12-04T23:28:40Z','e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Soybean IgE Ab in Serum','0.1','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2014-12-04T23:28:40Z','e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Walnut IgE Ab in Serum','0.3','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2014-12-04T23:28:40Z','e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','Wheat IgE Ab in Serum','75.4','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2014-12-04T23:28:40Z','e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','469fbd8a-ec48-4da9-9165-027144ccf9a0','White oak IgE Ab in Serum','10.4','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2018-03-20T11:48:11Z','841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','American house dust mite IgE Ab in Serum','63.2','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2018-03-20T11:48:11Z','841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Cat dander IgE Ab in Serum','83.5','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2018-03-20T11:48:11Z','841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Cladosporium herbarum IgE Ab in Serum','3.1','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2018-03-20T11:48:11Z','841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Codfish IgE Ab in Serum','0.3','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2018-03-20T11:48:11Z','841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Common Ragweed IgE Ab in Serum','58.7','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2018-03-20T11:48:11Z','841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Cow milk IgE Ab in Serum','0.3','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2018-03-20T11:48:11Z','841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Egg white IgE Ab in Serum','0.2','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2018-03-20T11:48:11Z','841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Honey bee IgE Ab in Serum','0.2','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2018-03-20T11:48:11Z','841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Latex IgE Ab in Serum','0.1','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2018-03-20T11:48:11Z','841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Peanut IgE Ab in Serum','37.3','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2018-03-20T11:48:11Z','841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Shrimp IgE Ab in Serum','85.0','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2018-03-20T11:48:11Z','841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Soybean IgE Ab in Serum','0.2','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2018-03-20T11:48:11Z','841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Walnut IgE Ab in Serum','89.9','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2018-03-20T11:48:11Z','841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','Wheat IgE Ab in Serum','0.3','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2018-03-20T11:48:11Z','841095eb-d29f-4492-8f0e-08011321e85d','32622f63-734e-4433-8628-942ce1585e6a','White oak IgE Ab in Serum','56.4','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2011-10-24T09:24:08Z','c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','American house dust mite IgE Ab in Serum','42.2','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2011-10-24T09:24:08Z','c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Cat dander IgE Ab in Serum','37.0','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2011-10-24T09:24:08Z','c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Cladosporium herbarum IgE Ab in Serum','58.7','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2011-10-24T09:24:08Z','c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Codfish IgE Ab in Serum','0.2','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2011-10-24T09:24:08Z','c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Common Ragweed IgE Ab in Serum','42.0','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2011-10-24T09:24:08Z','c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Cow milk IgE Ab in Serum','0.2','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2011-10-24T09:24:08Z','c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Egg white IgE Ab in Serum','60.3','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2011-10-24T09:24:08Z','c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Honey bee IgE Ab in Serum','61.8','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2011-10-24T09:24:08Z','c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Latex IgE Ab in Serum','2.3','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2011-10-24T09:24:08Z','c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Peanut IgE Ab in Serum','12.1','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2011-10-24T09:24:08Z','c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Shrimp IgE Ab in Serum','0.3','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2011-10-24T09:24:08Z','c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Soybean IgE Ab in Serum','0.3','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2011-10-24T09:24:08Z','c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Walnut IgE Ab in Serum','0.3','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2011-10-24T09:24:08Z','c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','Wheat IgE Ab in Serum','0.2','kU/L','numeric');");+
+    alasql("INSERT INTO observations VALUES ('2011-10-24T09:24:08Z','c05478a7-a4df-4fd3-8d68-60b9452d4781','6dbce8d2-3bb0-4ff9-8e9b-7152ff03cc0c','White oak IgE Ab in Serum','60.7','kU/L','numeric');");+
+    JSON.stringify(@0);
 </script>
 @end
 
@@ -226,7 +490,7 @@ where
 
 # AlaSQL - Page 2
 
-Test 8.
+Test 9.
 
 ```sql
 SELECT * FROM patients
@@ -237,4 +501,17 @@ SELECT * FROM patients
 
 <hr/><hr/>
 
-@AlaSQL.buildTable_patients('`patients` table loaded')
+<br/>
+@AlaSQL.buildTable_patients('`patients` table queryable from this page!')
+<br/>
+@AlaSQL.buildTable_encounters('`encounters` queryable from this page!')
+<br/>
+@AlaSQL.buildTable_providers('`providers` queryable from this page!')
+<br/>
+@AlaSQL.buildTable_organizations('`organizations` queryable from this page!')
+<br/>
+@AlaSQL.buildTable_observations('`observations` queryable from this page!')
+<br/>
+@AlaSQL.buildTable_allergies('`allergies` queryable from this page!')
+<br/>
+
