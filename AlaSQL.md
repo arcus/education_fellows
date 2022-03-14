@@ -226,7 +226,7 @@ where
 
 # AlaSQL - Page 2
 
-Test 6.
+Test 7.
 
 
 ```sql
@@ -238,7 +238,4 @@ SELECT * FROM patients
 
 <hr/><hr/>
 
-@AlaSQL.buildTable_patients('`patients` table loaded!')
-
-@AlaSQL.buildTable_allergies('`allergies` table loaded!')
-
+@AlaSQL.buildTable_patients('`patients` table loaded')
