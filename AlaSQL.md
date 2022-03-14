@@ -126,7 +126,7 @@ try {
 @AlaSQL.buildTable_patients
 <script>
     alasql("DROP TABLE IF EXISTS patients;");
-    alasql("create table patients (id text,birthdate date,deathdate date,ssn text,drivers text,passport text,prefix text,first text,last text,suffix text,maiden text,marital text,race text,ethnicity text,gender text,birthplace text,address text,city text,state text,county text,zip integer,lat real,lon real);");
+    alasql("create table patients (id text,birthdate date,deathdate date,ssn text,drivers text,passport text,prefix text,first text,last text,suffix text,maiden text,marital text,race text,ethnicity text,sex text,birthplace text,address text,city text,state text,county text,zip integer,lat real,lon real);");
     alasql("INSERT INTO patients VALUES ('bf35e4fa-ea4f-40a4-8fe6-1f2f26e0aa45','2000-11-21',null,'999-87-8860','S99917788',null,'Ms.','Cecila','Feil',null,null,null,'white','nonhispanic','F','Nahant  Massachusetts  US','873 Mueller Arcade Unit 96','Ashland','Massachusetts','Middlesex County',null,42.2138985577807,-71.503695110333);");
     alasql("INSERT INTO patients VALUES ('e3af2463-f4c9-4dbb-a8d2-d6a08c5b1460','2013-07-02',null,'999-82-6451',null,null,null,'Lorrie','Leannon',null,null,null,'white','nonhispanic','F','Winthrop  Massachusetts  US','813 Casper Street','Peabody','Massachusetts','Essex County',1940,42.4951616189433,-71.0071749067398);");
     alasql("INSERT INTO patients VALUES ('e061409e-4b85-4ec1-b1f7-02677d51f763','1997-09-11',null,'999-32-2366','S99995098','X50396137X','Ms.','Tabetha','OHara',null,null,null,'white','nonhispanic','F','Auburn  Massachusetts  US','1080 Sawayn Gateway Suite 9','Framingham','Massachusetts','Middlesex County',1701,42.3224819015944,-71.4003256055831);");
@@ -489,7 +489,7 @@ where
 
 # AlaSQL - Page 2
 
-Test 15.
+Test 16.
 
 ```sql
 SELECT * FROM patients
@@ -499,7 +499,6 @@ SELECT * FROM patients
 <table id="dataTable3" border="1"></table><br>
 
 <hr/><hr/>
-
 
 @AlaSQL.buildTable_patients('patients table queryable from this page!')
 
