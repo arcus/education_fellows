@@ -5,7 +5,7 @@ version:  0.0.0
 language: en
 narrator: US English Female
 comment:  SQL (Structured Query Language) is a domain-specific language used in programming and designed for managing data held in a Relational Database Management System (RDBMS), or for stream processing in a relational data stream management system (RDSMS).
-link:     https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/custom.css
+link:     https://storage.googleapis.com/chop-dbhi-arcus-education-website-assets/css/custom.css
 logo:     https://github.com/arcus/education_fellows/raw/main/img/chop-icon.png
 -->
 

@@ -5,7 +5,7 @@ version:  0.0.2
 language: en
 narrator: US English Female
 comment:  Reproducibility is essential to scientific efforts.  Generalizability and data reuse are also important for the application and expansion of scientific inquiry. Technology can help achieve these goals.
-link:     https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/custom.css
+link:     https://storage.googleapis.com/chop-dbhi-arcus-education-website-assets/css/custom.css
 logo: https://github.com/arcus/education_fellows/raw/main/img/chop-icon.png
 icon: https://github.com/arcus/education_fellows/raw/main/img/favicon.ico
 -->
