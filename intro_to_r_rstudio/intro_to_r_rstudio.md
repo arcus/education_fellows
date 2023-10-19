@@ -6,7 +6,7 @@ language: en
 narrator: US English Female
 title: Introduction to R and RStudio
 comment:  Learn to use R and RStudio in this introduction that uses an Arcus training lab.
-link:     https://storage.googleapis.com/chop-dbhi-arcus-education-website-assets/css/custom.css
+link:     https://chop-dbhi-arcus-education-website-assets.s3.amazonaws.com/css/modules.css
 logo: https://github.com/arcus/education_fellows/raw/main/img/chop-icon.png
 icon: https://github.com/arcus/education_fellows/raw/main/img/favicon.ico
 
